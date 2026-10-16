@@ -1,0 +1,5 @@
+side,time_to_reach_ms,end_error_steps,peak_load_pct,peak_current_mA,volts,temp_C
+-,5896,-33,23.6,32,11.9,27
++,1238,7,51.6,150,11.9,27
+-,1261,-6,49.6,91,11.9,27
++,1261,7,50.8,150,11.9,27

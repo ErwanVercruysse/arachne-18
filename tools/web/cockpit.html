@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARACHNE cockpit</title>
+<link rel="stylesheet" href="/web/cockpit.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%226%22 fill=%22%236aa7ff%22/%3E%3Cpath d=%22M16 16L4 6M16 16L2 16M16 16L4 26M16 16L28 6M16 16L30 16M16 16L28 26%22 stroke=%22%236aa7ff%22 stroke-width=%222.5%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="app">
+  <header id="bar">
+    <div class="brand"><span class="logo">ARACHNE</span><span class="slash">/</span><span>cockpit</span></div>
+    <div class="seg" id="target" title="wat de knoppen besturen">
+      <button data-t="sim" class="on">Simulatie</button><button data-t="robot" id="t-robot">Echte robot</button>
+    </div>
+    <div class="chips">
+      <span class="chip" id="c-mode">—</span>
+      <span class="chip" id="c-link"><i></i><span>verbinden…</span></span>
+      <span class="chip" id="c-pad" title="game controller"><i></i><span>geen controller</span></span>
+    </div>
+    <div class="tools">
+      <a id="who" hidden class="who"></a>
+      <a class="btn" href="/sim" title="volledige simulatie met alle instellingen">simulatie</a>
+      <a class="btn" href="/" title="live twin met servo-details">twin</a>
+      <button id="b-set" class="icon" title="instellingen">⚙</button>
+    </div>
+  </header>
+
+  <main id="stage">
+      <div id="v-cam" class="view cam small" title="tik om te wisselen">
+        <img id="camimg" alt="">
+        <div id="camnone"><b>Geen camera</b><span id="camwhy">Er is nog geen camerabeeld. Een Pi-camera wordt vanzelf gevonden; een ESP32-CAM of andere stream stel je in via ⚙.</span></div>
+        <span class="tag" id="camtag">camera</span>
+        <button id="camnext" hidden title="andere camera">⇄</button>
+      </div>
+      <div id="v-3d" class="view big" title="tik om te wisselen"><iframe id="frame" title="3D"></iframe><span class="tag" id="tag3d">simulatie</span></div>
+    <div id="gauges">
+      <div class="gauge"><b id="g-speed">0.0</b><span>cm/s</span></div>
+      <div class="gauge"><b id="g-head">0°</b><span>koers</span></div>
+      <div class="gauge"><b id="g-h">0</b><span>mm hoog</span></div>
+      <div class="gauge"><b id="g-margin">–</b><span>mm stabiel</span></div>
+      <div class="gauge"><b id="g-v">–</b><span>V</span></div>
+      <div class="gauge"><b id="g-a">–</b><span>A</span></div>
+    </div>
+    <div id="sticks">
+      <div class="stick" id="s-move"><div class="knob"></div><span>lopen</span></div>
+      <div class="stick wide" id="s-turn"><div class="knob"></div><span>draaien</span></div>
+    </div>
+    <div id="toasts"></div>
+    <div id="viewonly" hidden>Alleen kijken: de echte robot kan nog niet vanuit de cockpit bestuurd worden.</div>
+  </main>
+
+  <aside id="side">
+    <button id="b-stop" class="stop">■ STOP</button>
+    <div class="grid2">
+      <button data-do="stand" class="big">Opstaan</button><button data-do="lie" class="big">Liggen</button>
+    </div>
+    <h3>Moves</h3>
+    <div class="grid3">
+      <button data-do="dance">Dansen</button><button data-do="wave">Zwaaien</button><button data-do="pushups">Push-ups</button>
+      <button data-do="look">Rondkijken</button><button data-do="bow">Buigen</button><button data-do="twist">Twist</button>
+    </div>
+    <h3>Gang</h3>
+    <div class="seg full" id="gait"><button data-gait="tripod">tripod</button><button data-gait="ripple">ripple</button><button data-gait="wave">golf</button></div>
+    <label>snelheid <output id="o-speed"></output><input type="range" id="r-speed" min=".2" max="1.5" step=".05" value="1"></label>
+    <label>hoogte <output id="o-height"></output><input type="range" id="r-height" min="-.035" max=".025" step=".001" value="0"></label>
+    <label>staphoogte <output id="o-step"></output><input type="range" id="r-step" min=".008" max=".05" step=".001" value=".025"></label>
+    <h3>Controller</h3>
+    <div class="gpmap" id="gpmap">
+      <kbd data-gp="ls">L-stick</kbd><span>lopen</span><kbd data-gp="rs">R-stick</kbd><span>draaien</span>
+      <kbd data-gp="0">A</kbd><span>opstaan</span><kbd data-gp="1">B</kbd><span>liggen</span>
+      <kbd data-gp="2">X</kbd><span>dansen</span><kbd data-gp="3">Y</kbd><span>zwaaien</span>
+      <kbd data-gp="10">L3</kbd><span>push-ups</span><kbd data-gp="11">R3</kbd><span>rondkijken</span>
+      <kbd data-gp="8">View</kbd><span>buigen</span><kbd data-gp="9">Menu</kbd><span>twist</span>
+      <kbd data-gp="4">LB</kbd><span>houding (vasthouden)</span><kbd data-gp="5">RB</kbd><span>volgende gang</span>
+      <kbd data-gp="6">LT/RT</kbd><span>lager / hoger</span><kbd data-gp="12">↑↓</kbd><span>snelheid</span>
+      <kbd data-gp="14">←→</kbd><span>staphoogte</span><kbd data-gp="16">Xbox</kbd><span>stop</span>
+    </div>
+  </aside>
+</div>
+
+<dialog id="settings">
+  <form method="dialog">
+    <h2>Instellingen</h2>
+    <label>Camera-stream (MJPEG of JPG)
+      <input id="camurl" placeholder="leeg = camera van de Pi (/camera.mjpg)" autocapitalize="off" autocorrect="off">
+    </label>
+    <p class="muted">Voorbeelden: <code>http://192.168.68.86:81/stream</code> (ESP32-CAM met de standaard webserver), <code>http://spin.local:5870/camera.mjpg</code>.</p>
+    <label class="check"><input type="checkbox" id="camfirst"> camera groot, 3D klein</label>
+    <label>3D-camera
+      <select id="cam3d"><option value="follow">volgen</option><option value="orbit">vrij</option><option value="top">boven</option></select>
+    </label>
+    <div class="row"><button value="ok" class="primary">Klaar</button></div>
+  </form>
+</dialog>
+
+<script type="module" src="/web/cockpit.js"></script>
+</body>
+</html>

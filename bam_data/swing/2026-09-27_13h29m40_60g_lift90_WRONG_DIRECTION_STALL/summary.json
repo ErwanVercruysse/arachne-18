@@ -1,0 +1,21 @@
+{
+  "mass_g": 60.0,
+  "servo_id": 2,
+  "mode": "lift",
+  "amplitude_deg": 90,
+  "length_m": 0.22,
+  "arm_mass_g": 52.4,
+  "duration_s": 3.925,
+  "samples": 4792,
+  "sample_rate_hz": 1220.9,
+  "swings": 1,
+  "mean_time_to_reach_ms": 3301.0,
+  "mean_peak_load_pct": 100.0,
+  "max_peak_load_pct": 100.0,
+  "mean_peak_current_mA": 2932.0,
+  "max_current_mA": 2931.5,
+  "volts_min": 9.4,
+  "temp_start_C": 30,
+  "temp_end_C": 31,
+  "centre_steps": 2048
+}

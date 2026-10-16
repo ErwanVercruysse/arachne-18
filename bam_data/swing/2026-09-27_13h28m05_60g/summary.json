@@ -1,0 +1,20 @@
+{
+  "mass_g": 60.0,
+  "servo_id": 2,
+  "amplitude_deg": 45,
+  "length_m": 0.22,
+  "arm_mass_g": 52.4,
+  "duration_s": 30.041,
+  "samples": 35307,
+  "sample_rate_hz": 1175.3,
+  "swings": 24,
+  "mean_time_to_reach_ms": 1211.5416666666667,
+  "mean_peak_load_pct": 49.63333333333333,
+  "max_peak_load_pct": 52.0,
+  "mean_peak_current_mA": 123.375,
+  "max_current_mA": 162.5,
+  "volts_min": 11.7,
+  "temp_start_C": 29,
+  "temp_end_C": 30,
+  "centre_steps": 2048
+}

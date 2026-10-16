@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARACHNE simulatie</title>
+<link rel="stylesheet" href="/web/sim.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%226%22 fill=%22%236aa7ff%22/%3E%3Cpath d=%22M16 16L4 6M16 16L2 16M16 16L4 26M16 16L28 6M16 16L30 16M16 16L28 26%22 stroke=%22%236aa7ff%22 stroke-width=%222.5%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+</head>
+<body>
+<script>if (location.search.includes('embed')) document.body.classList.add('embed');</script>
+<div id="app">
+  <!-- ============================================================ viewport -->
+  <main id="view">
+    <header id="top">
+      <div class="brand">
+        <a href="/" class="back" title="terug naar de live twin van de echte robot">← live</a>
+        <span class="logo">ARACHNE</span><span class="slash">/</span><span>simulatie</span>
+      </div>
+      <div class="chips">
+        <span class="chip" id="c-mode" title="wat de robot nu doet">—</span>
+        <span class="chip mono" id="c-time" title="simulatietijd">0.0 s</span>
+        <span class="chip mono" id="c-rtf" title="realtime-factor: 1.00 = even snel als echt">rtf –</span>
+        <span class="chip" id="c-view" title="mensen die nu meekijken (iedereen op het wifi ziet dezelfde virtuele robot)">1 kijker</span>
+      </div>
+      <div class="tools">
+        <a id="who" hidden class="who"></a>
+        <div class="seg" id="cam" title="camera">
+          <button data-cam="orbit" class="on">vrij</button><button data-cam="follow">volgen</button><button data-cam="top">boven</button>
+        </div>
+        <button id="b-share" class="icon" title="delen: open deze simulatie op je gsm of laptop">⇪</button>
+        <button id="b-pause" class="icon" title="pauze (P)">❚❚</button>
+        <button id="b-reset" class="icon" title="opnieuw beginnen, liggend (R)">⟲</button>
+      </div>
+    </header>
+    <div id="toasts"></div>
+    <div id="cluster">
+      <div class="gauge"><b id="g-speed">0.0</b><span>cm/s</span></div>
+      <div class="gauge"><b id="g-head">0°</b><span>koers</span></div>
+      <div class="gauge"><b id="g-h">0</b><span>mm hoog</span></div>
+      <div class="gauge"><b id="g-margin">–</b><span>mm stabiel</span></div>
+      <div class="gauge"><b id="g-v">12.0</b><span>V</span></div>
+      <div class="gauge"><b id="g-a">0.0</b><span>A</span></div>
+    </div>
+    <div id="hint">sleep = draaien · rechts slepen = schuiven · scroll = zoom · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> rijden · <kbd>Q</kbd><kbd>E</kbd> draaien · <kbd>spatie</kbd> stop</div>
+    <div id="loading"><div class="bar"><i id="load-bar"></i></div><span id="load-txt">model laden…</span></div>
+
+    <section id="share" hidden>
+      <div class="card">
+        <div class="kicker">meedoen</div>
+        <h2>Open op je gsm</h2>
+        <p class="muted" id="share-txt"></p>
+        <div id="qr"></div>
+        <div id="share-urls"></div>
+        <div class="setup-foot"><span class="muted small">Iedereen ziet en bestuurt dezelfde virtuele robot.</span><button id="share-close">Sluiten</button></div>
+      </div>
+    </section>
+
+    <!-- first visit: choose the parts -->
+    <section id="setup" hidden>
+      <div class="card">
+        <div class="kicker">stap 1 van 1</div>
+        <h2>Welke onderdelen wil je zien?</h2>
+        <p class="muted">De simulatie rekent met het volledige CAD-model. Verberg wat er op de echte robot nog niet op zit, of kijk dwars door de schaal heen. Je kunt dit later altijd aanpassen bij <b>Onderdelen</b>.</p>
+        <div class="presets" data-target="setup"></div>
+        <div class="partlist" data-target="setup"></div>
+        <label class="check"><input type="checkbox" class="massfollow" checked> <span>massa volgt de onderdelen <small class="muted">(verborgen dek, schaal, batterij… tellen ook niet mee in de fysica)</small></span></label>
+        <div class="setup-foot"><span class="muted" id="setup-mass"></span><button id="setup-go" class="primary">Start simulatie</button></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================ side panel -->
+  <aside id="side">
+    <nav id="tabs">
+      <button data-tab="move" class="on">Bewegen</button><button data-tab="pose">Houding</button><button data-tab="parts">Onderdelen</button><button data-tab="meas">Meten</button><button data-tab="world">Wereld</button>
+    </nav>
+
+    <!-- ---------------- move -->
+    <section class="tab on" id="tab-move">
+      <div class="row">
+        <button class="big" data-do="stand">Opstaan</button><button class="big" data-do="lie">Liggen</button><button class="big danger" data-do="stop">■ Stop</button>
+      </div>
+      <h3>Rijden</h3>
+      <div class="drive">
+        <div id="pad" title="sleep om te rijden (vooruit = naar de kant van poot 1 en 6)"><div class="ring"></div><div id="knob"></div><span class="pl n">vooruit</span><span class="pl s">achteruit</span></div>
+        <div class="drive-side">
+          <div id="turn" title="sleep links/rechts om ter plaatse te draaien"><div id="turn-knob"></div><span><i>⟲</i><i>⟳</i></span></div>
+          <div class="seg wide" id="gait" title="gangpatroon">
+            <button data-gait="tripod" class="on" title="3 poten tegelijk, snelst">tripod</button><button data-gait="ripple" title="2 poten tegelijk">ripple</button><button data-gait="wave" title="1 poot tegelijk, het stabielst">golf</button>
+          </div>
+          <div class="gaitviz" id="gaitviz" title="welke poot wanneer in de lucht is (balk = zwaaifase)"></div>
+        </div>
+      </div>
+      <div class="sliders">
+        <label>snelheid <output data-for="speed"></output><input type="range" data-p="speed" min=".2" max="1.5" step=".05" value="1"></label>
+        <label>staphoogte <output data-for="step_h"></output><input type="range" data-p="step_h" min=".008" max=".05" step=".001" value=".025"></label>
+        <label>cyclustijd <output data-for="cycle"></output><input type="range" data-p="cycle" min=".5" max="2.5" step=".05" value="1.1"></label>
+      </div>
+      <h3>Acties</h3>
+      <div class="grid4">
+        <button data-do="dance">Dansen</button><button data-do="wave">Zwaaien</button><button data-do="pushups">Push-ups</button><button data-do="look">Rondkijken</button><button data-do="bow">Buigen</button><button data-do="twist">Twist</button>
+      </div>
+      <h3>Controller <small class="muted">Xbox/Recon, PlayStation of andere gamepad</small></h3>
+      <div id="gp-status"><i></i><span>Sluit een controller aan (USB of Bluetooth) en druk op een knop</span></div>
+      <div class="gpmap" id="gpmap">
+        <kbd data-gp="ls">L-stick</kbd><span>lopen (vooruit, achteruit, opzij)</span>
+        <kbd data-gp="rs">R-stick</kbd><span>draaien</span>
+        <kbd data-gp="0">A</kbd><span>opstaan</span>
+        <kbd data-gp="1">B</kbd><span>liggen</span>
+        <kbd data-gp="2">X</kbd><span>dansen</span>
+        <kbd data-gp="3">Y</kbd><span>zwaaien</span>
+        <kbd data-gp="10">L3</kbd><span>push-ups</span>
+        <kbd data-gp="11">R3</kbd><span>rondkijken</span>
+        <kbd data-gp="8">View</kbd><span>buigen</span>
+        <kbd data-gp="9">Menu</kbd><span>twist</span>
+        <kbd data-gp="4">LB vasthouden</kbd><span>houding: L-stick kantelt, R-stick draait en schuift het lichaam</span>
+        <kbd data-gp="5">RB</kbd><span>volgende gang (tripod → ripple → golf)</span>
+        <kbd data-gp="6">LT / RT</kbd><span>lichaam lager / hoger</span>
+        <kbd data-gp="12">D-pad ↑↓</kbd><span>snelheid + / −</span>
+        <kbd data-gp="14">D-pad ←→</kbd><span>staphoogte − / +</span>
+        <kbd data-gp="16">Xbox / PS</kbd><span>stop alles</span>
+      </div>
+      <h3>Robotscripts <small class="muted">exact het programma dat op de Pi draait</small></h3>
+      <div class="scripts">
+        <button data-script="stand"><code>stand.py</code></button><button data-script="lie"><code>stand.py --lie</code></button>
+        <button data-script="walk"><code>walk.py</code></button><button data-script="back"><code>walk.py --back</code></button>
+        <button data-script="spin"><code>spin.py</code></button><button data-script="dance"><code>dance.py</code></button>
+      </div>
+      <p class="muted small">De scripts praten met de simulatie via precies dezelfde <code>/state</code> en <code>/cmd</code> als met de echte servo's. Werkt het hier, dan is de logica goed; de echte robot blijft altijd stil.</p>
+    </section>
+
+    <!-- ---------------- pose -->
+    <section class="tab" id="tab-pose">
+      <p class="muted small">Het lichaam beweegt, de voeten blijven staan (ook tijdens het lopen). Werkt als de robot staat.</p>
+      <div class="sliders">
+        <label>rollen <output data-for="roll"></output><input type="range" data-b="roll" min="-.26" max=".26" step=".005" value="0"></label>
+        <label>kantelen <output data-for="pitch"></output><input type="range" data-b="pitch" min="-.26" max=".26" step=".005" value="0"></label>
+        <label>draaien <output data-for="yaw"></output><input type="range" data-b="yaw" min="-.3" max=".3" step=".005" value="0"></label>
+        <label>vooruit/achteruit <output data-for="x"></output><input type="range" data-b="x" min="-.03" max=".03" step=".001" value="0"></label>
+        <label>links/rechts <output data-for="y"></output><input type="range" data-b="y" min="-.03" max=".03" step=".001" value="0"></label>
+        <label>hoogte <output data-for="height"></output><input type="range" data-p="height" min="-.035" max=".025" step=".001" value="0"></label>
+      </div>
+      <div class="row"><button id="pose-reset">houding resetten</button></div>
+      <div class="posepad" id="posepad" title="sleep: rollen + kantelen tegelijk"><div class="ring"></div><div id="poseknob"></div><span>sleep om te kantelen</span></div>
+    </section>
+
+    <!-- ---------------- parts -->
+    <section class="tab" id="tab-parts">
+      <div class="presets" data-target="tab"></div>
+      <div class="partlist" data-target="tab"></div>
+      <label class="check"><input type="checkbox" class="massfollow" checked> <span>massa volgt de onderdelen</span></label>
+      <div class="kv"><span>massa in de fysica</span><b id="mass">–</b></div>
+      <h3>Weergave</h3>
+      <label class="check"><input type="checkbox" id="v-xray"> <span>röntgen: alles doorschijnend behalve de servo's</span></label>
+      <label class="check"><input type="checkbox" id="v-coll"> <span>botsingsvormen tonen (waar de fysica mee rekent)</span></label>
+      <label class="check"><input type="checkbox" id="v-load"> <span>delen rood kleuren bij hoge belasting</span></label>
+    </section>
+
+    <!-- ---------------- measure -->
+    <section class="tab" id="tab-meas">
+      <h3>Voeding <small class="muted" id="sup-name"></small></h3>
+      <div class="seg wide" id="supply"></div>
+      <canvas class="chart" id="ch-power" height="120"></canvas>
+      <div class="legend"><i style="--c:var(--acc)"></i>stroom (A) <i style="--c:var(--warn)"></i>spanning (V) <i class="dash" style="--c:var(--bad)"></i>stroomgrens</div>
+      <div class="kv3"><div><b id="m-peak">–</b><span>piek A</span></div><div><b id="m-brown">0</b><span>brown-outs</span></div><div><b id="m-dist">0</b><span>cm afgelegd</span></div></div>
+      <h3>Servo's <small class="muted">koppel t.o.v. stall · stroom</small></h3>
+      <div id="heat"></div>
+      <h3>Voeten <small class="muted">grondkracht</small></h3>
+      <div id="feet"></div>
+      <h3>Stabiliteit <small class="muted">afstand zwaartepunt tot rand steunvlak</small></h3>
+      <canvas class="chart" id="ch-margin" height="90"></canvas>
+    </section>
+
+    <!-- ---------------- world -->
+    <section class="tab" id="tab-world">
+      <h3>Tijd</h3>
+      <div class="seg wide" id="simspeed">
+        <button data-s=".1">0.1×</button><button data-s=".25">¼×</button><button data-s=".5">½×</button><button data-s="1" class="on">1×</button>
+      </div>
+      <h3>Omgeving</h3>
+      <div class="sliders">
+        <label>helling <output data-for="slope"></output><input type="range" id="w-slope" min="-20" max="20" step="1" value="0"></label>
+        <label>vloerwrijving <output data-for="friction"></output><input type="range" id="w-fric" min=".15" max="1.3" step=".05" value=".8"></label>
+      </div>
+      <div class="row"><button id="b-push">Duw de robot</button><button id="b-reset-stand">Reset staand</button><button id="b-reset-lie">Reset liggend</button></div>
+      <h3>Tonen</h3>
+      <label class="check"><input type="checkbox" id="v-prints" checked> <span>voetafdrukken</span></label>
+      <label class="check"><input type="checkbox" id="v-support" checked> <span>steunvlak + zwaartepunt</span></label>
+      <label class="check"><input type="checkbox" id="v-force"> <span>grondkrachten als pijlen</span></label>
+      <label class="check"><input type="checkbox" id="v-trail" checked> <span>pad van het lichaam</span></label>
+      <label class="check"><input type="checkbox" id="v-shadow" checked> <span>schaduwen</span></label>
+      <p class="muted small">Dit is een gedeelde wereld: iedereen op het wifi die <code>/sim</code> opent, ziet en bestuurt dezelfde virtuele robot. Fysica: MuJoCo, servo's volgens het gefitte STS3215-model (BAM), voeding met interne weerstand en stroomgrens.</p>
+    </section>
+  </aside>
+</div>
+<script type="importmap">
+{"imports":{"three":"/web/vendor/three.module.js","three/addons/":"/web/vendor/"}}
+</script>
+<script src="/web/vendor/qrcode.js"></script>
+<script type="module" src="/web/sim.js"></script>
+</body>
+</html>

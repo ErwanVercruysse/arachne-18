@@ -89,6 +89,34 @@ On Linux and Windows, use `python` for the viewer. On Windows, activate the envi
 
 *Actual floating-base MuJoCo simulation: the body rises and lowers while all six feet keep contact with the ground.*
 
+### In the browser, shared over wifi
+
+`tools/live_twin.py` also serves a physics simulation at `/sim` (on the robot: `http://spin.local:5870/sim`). Everyone on the network sees and drives the same virtual robot: pick which parts to show (hidden parts also leave the physics mass), drive with the pad or WASD/QE in tripod, ripple or wave gait, tilt the body, run the shows, or run the real robot scripts (`stand.py`, `walk.py`, `spin.py`, `dance.py`) unchanged against virtual STS3215 servos. The meter panel shows supply current and voltage sag (5 A lab supply, 10 A, 3S LiPo, with brown-out), torque per servo, foot forces and the stability margin. The real servos are never touched.
+
+```sh
+.venv/bin/python tools/live_twin.py          # http://localhost:5870/sim
+tools/deploy_pi.sh                           # copy to the Pi and restart the arachne-twin service
+```
+
+![Browser simulation: tripod walk with footprints and the support triangle](assets/sim-browser.png)
+
+`/cockpit` puts the camera feed, the 3D view and the controls on one screen for a landscape tablet. It shows a picture-in-picture that you tap to swap. It has touch sticks, every move as a button, and gamepad support (Xbox/Recon or PlayStation, over USB or Bluetooth).
+
+Cameras are found automatically:
+- the Pi camera (`rpicam-vid`);
+- USB webcams (`/dev/v4l/by-id/*usb*`, via ffmpeg);
+- any MJPEG command in `ARACHNE_CAMERA`, `ARACHNE_CAMERA_1`, and so on.
+
+Streams are served at `/camera.mjpg?cam=N`. A Pi 4 has a single CSI connector, so a second camera has to be USB.
+
+An MPU6050 on I2C (SDA GPIO2, SCL GPIO3) is read by `tools/imu.py`. It appears in `/state` and in the cockpit. Its axes still have to be matched to the body by tilting the robot by hand.
+
+The Android app (`~/arachne-app`, Capacitor) works like this:
+- It scans the wifi for the twin.
+- It opens the cockpit with an on-device voice assistant: say "hey spin, dans", "kom naar mij", "draai om" or "hoeveel volt?".
+- Without a key it understands fixed Dutch commands. With a Claude API key it answers free questions and chooses moves through tool calls.
+- Turning and walking distances are closed-loop on the measured pose.
+
 ### Learned walking and a training army
 
 The videos and quoted performance below were recorded before the symmetric-leg CAD revision. The revised MuJoCo model retains the same 18-joint topology; gait, terrain and jump unit tests pass, and the general walking policy completed a five-second BAM smoke run without a fall. The archived performance figures have not yet been remeasured against this revision.
@@ -157,6 +185,7 @@ Start with the [build guide](docs/build-guide.md), [print BOM](print/print_bom.c
 | [`print/stl/`](print/stl) | 14 printable parts in bed-oriented poses |
 | [`simulation/`](simulation) | MJCF, BAM parameters, runtime, tests, joint map and local-frame meshes |
 | [`src/`](src) | CadQuery builder, CAD checks, MuJoCo exporter and rendering source |
+| [`tools/`](tools) | Real-robot tools: servo driver, calibration, live twin + browser simulation (`/sim`), motion scripts, Pi deploy |
 | [`docs/`](docs) | Build, simulation, actuator model, Onshape and development guides |
 | [`validation/`](validation) | CAD and mesh validation reports |
 | [`assets/`](assets) | Studio artwork, CAD renders and simulation media |

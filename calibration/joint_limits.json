@@ -1,0 +1,128 @@
+{
+  "created": "2026-10-04T16:01:46",
+  "note": "Measured by hand. *_raw are servo ticks (0-4095, may wrap past 0). folded_raw = legs folded inward at start.",
+  "joints": {
+    "L4_yaw": {
+      "servo_id": 10,
+      "offset": 1546,
+      "min": 1162,
+      "max": 2935,
+      "note": "works after power cycle (2026-10-11); min end = against leg 5"
+    },
+    "L4_hip": {
+      "servo_id": 11,
+      "offset": 1666,
+      "min": 1031,
+      "max": 3066,
+      "note": "min = leg down, max = leg up"
+    },
+    "L4_knee": {
+      "servo_id": 12,
+      "offset": -1695,
+      "min": 719,
+      "max": 3377
+    },
+    "L5_yaw": {
+      "servo_id": 13,
+      "offset": 2045,
+      "min": 1477,
+      "max": 2620
+    },
+    "L5_hip": {
+      "servo_id": 14,
+      "offset": -1461,
+      "min": 815,
+      "max": 3281,
+      "note": "max = leg up (hand-checked 2026-10-10)"
+    },
+    "L5_knee": {
+      "servo_id": 15,
+      "offset": 1804,
+      "min": 737,
+      "max": 3359
+    },
+    "L6_yaw": {
+      "servo_id": 16,
+      "offset": -1261,
+      "min": 1457,
+      "max": 2639,
+      "note": "2048 = hand-set middle (straight out)"
+    },
+    "L6_hip": {
+      "servo_id": 17,
+      "offset": 1878,
+      "min": 814,
+      "max": 3282
+    },
+    "L6_knee": {
+      "servo_id": 18,
+      "offset": 1944,
+      "min": 737,
+      "max": 3360
+    },
+    "L3_yaw": {
+      "servo_id": 7,
+      "offset": -1704,
+      "min": 1501,
+      "max": 2596,
+      "note": "straight-out pose recorded as twin zero"
+    },
+    "L3_hip": {
+      "servo_id": 8,
+      "offset": -1848,
+      "min": 804,
+      "max": 3293
+    },
+    "L3_knee": {
+      "servo_id": 9,
+      "offset": -591,
+      "min": 763,
+      "max": 3333
+    },
+    "L2_yaw": {
+      "servo_id": 4,
+      "offset": -1509,
+      "min": 1503,
+      "max": 2594
+    },
+    "L2_hip": {
+      "servo_id": 5,
+      "offset": 1754,
+      "min": 819,
+      "max": 3278
+    },
+    "L2_knee": {
+      "servo_id": 6,
+      "offset": -1740,
+      "min": 856,
+      "max": 3240
+    },
+    "L1_yaw": {
+      "servo_id": 1,
+      "offset": 1879,
+      "min": 1500,
+      "max": 2597
+    },
+    "L1_hip": {
+      "servo_id": 2,
+      "offset": -1771,
+      "min": 818,
+      "max": 3279
+    },
+    "L1_knee": {
+      "servo_id": 3,
+      "offset": 1211,
+      "min": 1149,
+      "max": 2948
+    }
+  },
+  "note_offsets": "2026-10-10: servo position offsets (reg 31) written so each hand-measured range is centred on 2048; min/max below are in the NEW (offset) ticks.",
+  "stand_pose": {
+    "L5": {
+      "yaw": 2049,
+      "hip": 1646,
+      "knee": 1283,
+      "note": "hand-placed standing on the ground, 2026-10-10"
+    }
+  }
+}
