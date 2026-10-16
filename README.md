@@ -12,6 +12,19 @@
 
 </div>
 
+> **Deze fork (KVR-CIBER):** het ontwerp, de CAD en de simulatie hieronder zijn van [Tom Michiels](https://github.com/Tom-Michiels/arachne-18). Kobe heeft de robot echt gebouwd en er deze software voor geschreven, samen met [Claude Code](https://claude.com/claude-code).
+>
+> | Wat | Waar |
+> |---|---|
+> | Alle 18 servo's gekalibreerd, gewrichtslimieten gemeten | [`calibration/`](calibration/) |
+> | Bewegingen op de echte robot: opstaan, lopen, draaien, dansen | [`tools/stand.py`](tools/stand.py), [`walk.py`](tools/walk.py), [`spin.py`](tools/spin.py), [`dance.py`](tools/dance.py), [`motion.py`](tools/motion.py) |
+> | Besturen met een Bluetooth-gamepad, veilig via geplande gangen | [`tools/gamepad_robot.py`](tools/gamepad_robot.py), [`plan_gaits.py`](tools/plan_gaits.py) |
+> | Live 3D-tweeling + camera + cockpit in de browser, met login | [`tools/live_twin.py`](tools/live_twin.py), [`tools/web/`](tools/web/), [`auth.py`](tools/auth.py) |
+> | MuJoCo-simulatie in de browser | [`tools/sim_world.py`](tools/sim_world.py), [`tools/web/sim.html`](tools/web/sim.html) |
+> | BAM-metingen (38 / 173 / 263 / 383 g) en identificatie | [`bam_data/`](bam_data/), [`simulation/bam_identify.py`](simulation/bam_identify.py) |
+> | ESP32-C3 one-wire firmware voor de STS3215-bus | [`firmware/`](firmware/) |
+> | Android-app (wifi-scan, cockpit, "hey spin") | [arachne-app](https://github.com/KVR-CIBER/arachne-app) |
+
 ARACHNE 18 is a six-legged robotics prototype built around eighteen Feetech STS3215 12 V bus servos. A scalloped chassis carries six identical three-axis legs, while a removable dorsal shell conceals a battery tray and a universal controller deck. Paired printed brackets support the supplied metal servo horns on both sides of each joint.
 
 The repository contains editable solid geometry, print-ready meshes, the CadQuery source, assembly guidance, and a working MuJoCo model driven by Better Actuator Models (BAM).
