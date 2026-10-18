@@ -19,7 +19,7 @@ LCSC = {'AOD4185': 'C400894', 'BZT52C15': 'C173427', 'SMBJ15CA': 'C78410', '330u
         '74AHCT1G126': 'C163712', '74LVC1G34': 'C840096', '47': 'C23182', 'MPU-6050': 'C24112', '2n2': 'C1604',
         '10n': 'C57112', '4k7': 'C23162', '15k': 'C22809', 'USB-C PI': 'C165948', '5k1': 'C23186',
         'USBLC6-2SC6': 'C2687116', '20k': 'C4184', 'FSUSB42MUX': 'C11355', '470': 'C23179', 'RPIBOOT': 'C2886898',
-        'AAN/UIT': 'C2886898', 'FAN': 'C160404', 'PI LINK': 'C492422', 'GPIO': 'C41430886', 'TPS54560B': 'C1850354',
+        'AAN/UIT': 'C2886898', 'FAN': 'C160404', 'PI LINK': 'C492422', 'GPIO': 'C41430886', 'SENSOR S': 'C27985198', 'SENSOR V': 'C27985198', 'SENSOR G': 'C27985198', 'I2C': 'C160404', 'TPS54560B': 'C1850354',
         'CM5 (wireless)': 'C6782225 x2 (connectors only)', '12V IN': '(solder pads, no part)', '5V PI': '(solder pads, no part)'}
 
 

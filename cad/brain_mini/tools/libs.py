@@ -100,6 +100,13 @@ def build_fp_lib():
         if lib == LIB:
             continue
         shutil.copy(os.path.join(FPDIR, lib + '.pretty', n + '.kicad_mod'), os.path.join(d, n + '.kicad_mod'))
+    # sensor strip: three 1x19 rows 2.54 mm apart -> slim courtyard so the rows do not 'overlap'
+    hp = os.path.join(d, 'PinHeader_1x19_P2.54mm_Vertical.kicad_mod')
+    if os.path.exists(hp):
+        t = open(hp).read()
+        assert '(start -1.77 -1.78)\n\t\t(end 1.77 47.49)' in t
+        t = t.replace('(start -1.77 -1.78)\n\t\t(end 1.77 47.49)', '(start -1.2 -1.5)\n\t\t(end 1.2 47.2)')
+        open(hp, 'w').write(t)
     return d
 
 

@@ -65,7 +65,7 @@ def stitch_gnd(b):
             if (x1 + t * dx - px) ** 2 + (y1 + t * dy - py) ** 2 < margin ** 2:
                 return False
         return c
-    for gx, gy in itertools.product(range(-66, 67, 4), range(-33, 34, 4)):
+    for gx, gy in itertools.product(range(-66, 67, 4), range(-33, 44, 4)):
         x, y = B.MM(B.OX + gx), B.MM(B.OY + gy)
         if not inside(gx, gy):
             continue

@@ -171,7 +171,7 @@ def route():
     from shapely.ops import unary_union
     d = json.load(open(os.path.join(OUT, 'fin_dump.json')))
     G = 0.1
-    xs = np.arange(-70, 70.001, G); ys = np.arange(-35, 35.001, G)
+    xs = np.arange(-70, 70.001, G); ys = np.arange(-35, 45.001, G)
     X, Y = np.meshgrid(xs, ys)
     board = Polygon(d['outline'])
     widths = {'V5': 0.4, 'V12': 0.5, 'GND': 0.3, '3V3': 0.3, 'CM_3V3': 0.3}

@@ -11,7 +11,8 @@ Pins not listed are no-connect.
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BOARD_W, BOARD_H, CORNER_R = 92.0, 60.0, 6.0
+BOARD_W, BOARD_H, CORNER_R = 92.0, 70.0, 6.0
+BOARD_Y = (-30.0, 40.0)       # top (antenna) edge, bottom (sensor strip + USB-C) edge
 MOUNT = (41.5, 25.5)          # M3 holes in the corners (fixed to the acrylic plate v4 with spacers)
 ESP = (19.0, -23.25)          # ESP32-S3 module origin: antenna overhangs the top edge by ~6 mm
 
@@ -122,11 +123,13 @@ C('C16', '100n', '3V3', 'GND', (17.1, 9.2, 0), G)
 GPIO_PINS = {'IO7': 7, 'IO15': 8, 'IO8': 12, 'IO3': 15, 'IO46': 16, 'IO12': 20, 'IO13': 21, 'IO14': 22, 'IO21': 23,
              'IO47': 24, 'IO48': 25, 'IO45': 26, 'IO38': 31, 'IO39': 32, 'IO40': 33, 'IO41': 34, 'IO42': 35,
              'IO44': 36, 'IO43': 37}
-# header pins 1..26 (odd = left column, even = right column)
-GPIO_HDR = ['3V3', 'V5', 'GND', 'GND', 'IMU_SDA', 'IMU_SCL', 'IO7', 'IO15', 'IO8', 'IO3', 'IO46', 'IO12', 'IO13',
-            'IO14', 'IO21', 'IO47', 'IO48', 'IO45', 'IO38', 'IO39', 'IO40', 'IO41', 'IO42', 'IO43', 'IO44', 'GND']
-GPIO_LABEL = {'3V3': '3V3', 'V5': '5V', 'GND': 'GND', 'IMU_SDA': 'SDA4', 'IMU_SCL': 'SCL5', 'IO43': 'TX43', 'IO44': 'RX44'}
-HDR = (1.23, -6.5)            # pin 1 of the 2x13 header
+# sensor strip along the bottom edge: one G-V-S column per GPIO (like an Arduino sensor shield), so a standard
+# 3-wire sensor cable (GND, VCC, signal, 2.54 mm) plugs straight on. V = 3.3 V (ESP32 pins are NOT 5 V tolerant).
+STRIP = ['IO7', 'IO15', 'IO8', 'IO3', 'IO46', 'IO12', 'IO13', 'IO14', 'IO21', 'IO47', 'IO48', 'IO45', 'IO38', 'IO39',
+         'IO40', 'IO41', 'IO42', 'IO43', 'IO44']
+STRIP_LABEL = {'IO43': 'TX43', 'IO44': 'RX44'}
+STRIP_X0, STRIP_P = -24.5, 2.54          # x of the first column, pitch
+STRIP_Y = (32.4, 34.94, 37.48)           # rows S, V, G
 
 # ---------------------------------------------------------------- ESP32-S3
 G = 'ESP32-S3 (servo-bus + IMU + USB naar Pi)'
@@ -186,17 +189,22 @@ G = 'USB-C naar Pi 4'
 P('J8', 'Connector:USB_C_Receptacle_USB2.0_16P', USBC, 'USB-C PI',
   {'A1': 'GND', 'A12': 'GND', 'B1': 'GND', 'B12': 'GND', 'SH': 'GND', 'A4': 'VBUS_ESP', 'A9': 'VBUS_ESP',
    'B4': 'VBUS_ESP', 'B9': 'VBUS_ESP', 'A5': 'CC1_E', 'B5': 'CC2_E', 'A6': 'ESP_DP', 'B6': 'ESP_DP',
-   'A7': 'ESP_DM', 'B7': 'ESP_DM'}, (19.0, 26.2, 0), mpn='HRO TYPE-C-31-M-12', group=G)
-R('R27', '5k1', 'CC1_E', 'GND', (14.8, 18.5, 90), G)
-R('R28', '5k1', 'CC2_E', 'GND', (24.5, 18.5, 90), G)
+   'A7': 'ESP_DM', 'B7': 'ESP_DM'}, (31.5, 36.2, 0), mpn='HRO TYPE-C-31-M-12', group=G)
+R('R27', '5k1', 'CC1_E', 'GND', (27.0, 28.5, 90), G)
+R('R28', '5k1', 'CC2_E', 'GND', (36.0, 28.5, 90), G)
 P('U10', 'Power_Protection:USBLC6-2SC6', 'Package_TO_SOT_SMD:SOT-23-6', 'USBLC6-2SC6',
-  {1: 'ESP_DP', 6: 'ESP_DP', 3: 'ESP_DM', 4: 'ESP_DM', 2: 'GND', 5: 'VBUS_ESP'}, (19.0, 17.5, 0), mpn='USBLC6-2SC6', group=G)
-C('C29', '1u', 'VBUS_ESP', 'GND', (22.8, 13.5, 90), G)
+  {1: 'ESP_DP', 6: 'ESP_DP', 3: 'ESP_DM', 4: 'ESP_DM', 2: 'GND', 5: 'VBUS_ESP'}, (31.5, 27.5, 0), mpn='USBLC6-2SC6', group=G)
+C('C29', '1u', 'VBUS_ESP', 'GND', (27.0, 25.0, 90), G)
 
-# ---------------------------------------------------------------- GPIO header
-P('J14', 'Connector_Generic:Conn_02x13_Odd_Even', 'Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical', 'GPIO',
-  {i + 1: n for i, n in enumerate(GPIO_HDR)}, (HDR[0], HDR[1], 0),
-  mpn='2x13 pin header 2.54 mm: 19 free ESP32-S3 GPIOs + I2C + 3V3/5V/GND', group='GPIO header')
+# ---------------------------------------------------------------- sensor strip (S / V / G rows) + 2x Qwiic I2C
+G = 'Sensor-strook (G V S per GPIO) + I2C'
+for ref, row, nets_ in (('J14', 0, STRIP), ('J15', 1, ['3V3'] * len(STRIP)), ('J16', 2, ['GND'] * len(STRIP))):
+    P(ref, 'Connector_Generic:Conn_01x19', 'Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical',
+      ('SENSOR ' + 'SVG'[row]), {i + 1: n for i, n in enumerate(nets_)}, (STRIP_X0, STRIP_Y[row], 90),
+      mpn='1x19 pin header 2.54 mm (row ' + 'SVG'[row] + ' of the sensor strip)', group=G)
+for ref, x in (('J17', -40.0), ('J18', -31.0)):
+    P(ref, 'Connector_Generic_MountingPin:Conn_01x04_MountingPin', 'Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal',
+      'I2C', {1: 'GND', 2: '3V3', 3: 'IMU_SDA', 4: 'IMU_SCL', 'MP': 'GND'}, (x, 35.5, 180), mpn='JST SM04B-SRSS-TB (Qwiic / STEMMA QT)', group=G)
 
 # ---------------------------------------------------------------- mounting
 for i, (sx, sy) in enumerate(((-1, -1), (1, -1), (1, 1), (-1, 1)), 1):
@@ -223,7 +231,7 @@ def nets():
 def outline(inset=0.0, n=10):
     """rounded rectangle (closed), optionally inset"""
     import math
-    x0, y0, x1, y1 = -BOARD_W / 2 + inset, -BOARD_H / 2 + inset, BOARD_W / 2 - inset, BOARD_H / 2 - inset
+    x0, y0, x1, y1 = -BOARD_W / 2 + inset, BOARD_Y[0] + inset, BOARD_W / 2 - inset, BOARD_Y[1] - inset
     r = CORNER_R - inset; pts = []
     for cx, cy, a0 in ((x1 - r, y0 + r, -90), (x1 - r, y1 - r, 0), (x0 + r, y1 - r, 90), (x0 + r, y0 + r, 180)):
         for i in range(n + 1):

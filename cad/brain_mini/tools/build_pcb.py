@@ -248,16 +248,17 @@ def build():
 
     # ---------------- artwork
     F, B = pcbnew.F_SilkS, pcbnew.B_SilkS
-    text(board, F, 'USB > PI 4', (9.5, 26.5), size=0.7)
+    text(board, F, 'USB > PI 4', (31.5, 31.0), size=0.6)
     text(board, F, 'RST', (24.6, -9.6), size=0.6)
     text(board, F, 'BOOT', (24.6, 1.3), size=0.6)
     text(board, F, 'IMU', (design.IM[0] - 5.6, design.IM[1]), size=0.7)
-    # GPIO header: a label next to every pin, title above
-    text(board, F, 'GPIO', (design.HDR[0] + 1.27, design.HDR[1] - 2.6), size=0.9, th=0.16, bold=True)
-    for i, n in enumerate(design.GPIO_HDR):
-        lab = design.GPIO_LABEL.get(n, n)
-        x = design.HDR[0] - 2.75 if i % 2 == 0 else design.HDR[0] + 2.54 + 2.75
-        text(board, F, lab, (x, design.HDR[1] + 2.54 * (i // 2)), size=0.6, th=0.12)
+    # sensor strip: GPIO name above every column, row letters at the left
+    for i, n in enumerate(design.STRIP):
+        text(board, F, design.STRIP_LABEL.get(n, n), (design.STRIP_X0 + i * design.STRIP_P, design.STRIP_Y[0] - 2.4), size=0.55, th=0.11, rot=90)
+    for r_, t_ in enumerate('SVG'):
+        text(board, F, t_, (design.STRIP_X0 - 2.2, design.STRIP_Y[r_]), size=0.8, th=0.15, bold=True)
+    text(board, F, 'SENSOREN  (G = GND, V = 3.3 V, S = GPIO)', (design.STRIP_X0 + 9 * design.STRIP_P, 39.0), size=0.6)
+    text(board, F, 'I2C', (-37.5, 32.0), size=0.7, bold=True)
     # back side: big name + spider
     back_art(board)
     silk_cleanup(board)
@@ -378,7 +379,7 @@ def silk_cleanup(board):
     old = [t for t in board.Drawings() if t.GetClass() == 'PCB_TEXT' and t.GetText().startswith('BUS ')]
     for fp in board.GetFootprints():
         ref = fp.GetReference()
-        fp.Reference().SetVisible(ref[:1] == 'J' and ref not in legs and ref != 'J14')
+        fp.Reference().SetVisible(ref[:1] == 'J' and ref not in legs and ref not in ('J14', 'J15', 'J16', 'J17', 'J18'))
         if ref in legs:
             x = pcbnew.ToMM(fp.GetPosition().x) - OX; y = pcbnew.ToMM(fp.GetPosition().y) - OY
             sx = 1 if x > 0 else -1
