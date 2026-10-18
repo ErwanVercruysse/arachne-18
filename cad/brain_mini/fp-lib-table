@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "arachne")(type "KiCad")(uri "${KIPRJMOD}/arachne.pretty")(options "")(descr "ARACHNE mini brain board"))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "arachne")(type "KiCad")(uri "${KIPRJMOD}/arachne.kicad_sym")(options "")(descr "ARACHNE mini brain board"))
+)
