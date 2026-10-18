@@ -26,7 +26,7 @@ def rot(r, p, y):
     return np.array([[cy*cp, cy*sp*sr-sy*cr, cy*sp*cr+sy*sr], [sy*cp, sy*sp*sr+cy*cr, sy*sp*cr-cy*sr], [-sp, cp*sr, cp*cr]])
 
 
-DIP = .02           # m: how deep the body bends down on every beat (was 6 mm up/down; L1 knee limits ~2 cm)
+DIP = None          # m: how deep the body bends down on every beat; None = as deep as the joint limits allow
 TILT = 7.           # degrees of body tilt (scaled by --amp)
 
 
@@ -40,10 +40,31 @@ def body_dance(t, L=9., amp=1., e=None, dip=None, tilt=None):
             (math.radians(tilt)*e*math.sin(w), -math.radians(tilt)*e*math.cos(w), 0))
 
 
+def max_dip(J, q, feet, amp, tilt, hi=.06):
+    """Deepest dip (m) for which one full dance circle stays inside every joint's limits (40-tick margin).
+    Checked on the current standing pose, so it adapts to how the robot stands right now."""
+    def fits(d):
+        qq = q.copy()
+        for t in np.arange(0, 1/.45, .08):
+            shift, rpy = body_dance(t, amp=amp, e=1., dip=d, tilt=tilt); R = rot(*rpy)
+            for Lg in LEGS: qq, _ = cw.ik(Lg, R.T @ (feet[Lg] - shift), qq)
+            for j in J:
+                t_ = cw.ticks_of(j, qq[cw.model.joint(j).qposadr[0]])
+                if not cw.LIM[j]['min']+40 <= t_ <= cw.LIM[j]['max']-40: return False
+        return True
+    lo = 0.
+    if not fits(lo): return 0.
+    for _ in range(6):
+        mid = (lo + hi)/2
+        if fits(mid): lo = mid
+        else: hi = mid
+    return lo
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--dry', action='store_true')
     ap.add_argument('--amp', type=float, default=1.); ap.add_argument('--hz', type=float, default=25)
-    ap.add_argument('--dip', type=float, default=DIP, help='how deep the body bends down (m)')
+    ap.add_argument('--dip', type=float, default=DIP, help='how deep the body bends down (m); default: as deep as possible')
     ap.add_argument('--tilt', type=float, default=TILT, help='body tilt (degrees, x amp)')
     ap.add_argument('--loop', help='dance until this file exists (fade in/out 1 s)')
     a = ap.parse_args()
@@ -52,6 +73,9 @@ def main():
     for j, d in J.items(): q[cw.model.joint(j).qposadr[0]] = cw.q_of(j, d['ticks'])
     feet = {L: cw.foot(L, q) for L in LEGS}
     hip = {L: cw.model.body(f'{L}_COXA').id for L in LEGS}
+    if a.dip is None:
+        a.dip = max_dip(J, q, feet, a.amp, a.tilt)
+        print(f'zo diep mogelijk: {a.dip*100:.1f} cm', flush=True)
     if a.loop: return loop(a, J, q, feet)
     frames = []; worst = 0; clip = 0; L_ = 9.
     for k in range(int(L_*a.hz)+1):
