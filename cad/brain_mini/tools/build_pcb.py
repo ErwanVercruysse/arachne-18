@@ -248,13 +248,16 @@ def build():
 
     # ---------------- artwork
     F, B = pcbnew.F_SilkS, pcbnew.B_SilkS
-    text(board, F, 'ARACHNE-18', (2.6, -16.5), size=1.5, th=0.26, bold=True)
-    text(board, F, 'MINI', (2.6, -14.2), size=1.5, th=0.26, bold=True)
-    text(board, F, 'ESP32-S3  v1.0', (2.6, -12.2), size=0.8, th=0.14)
     text(board, F, 'USB > PI 4', (9.5, 26.5), size=0.7)
-    text(board, F, 'RST', (24.6, -9.6), size=0.6, )
+    text(board, F, 'RST', (24.6, -9.6), size=0.6)
     text(board, F, 'BOOT', (24.6, 1.3), size=0.6)
-    text(board, F, 'IMU', (design.IM[0], design.IM[1] + 4.3), size=0.7)
+    text(board, F, 'IMU', (design.IM[0] - 5.6, design.IM[1]), size=0.7)
+    # GPIO header: a label next to every pin, title above
+    text(board, F, 'GPIO', (design.HDR[0] + 1.27, design.HDR[1] - 2.6), size=0.9, th=0.16, bold=True)
+    for i, n in enumerate(design.GPIO_HDR):
+        lab = design.GPIO_LABEL.get(n, n)
+        x = design.HDR[0] - 2.75 if i % 2 == 0 else design.HDR[0] + 2.54 + 2.75
+        text(board, F, lab, (x, design.HDR[1] + 2.54 * (i // 2)), size=0.6, th=0.12)
     # back side: big name + spider
     back_art(board)
     silk_cleanup(board)
@@ -375,7 +378,7 @@ def silk_cleanup(board):
     old = [t for t in board.Drawings() if t.GetClass() == 'PCB_TEXT' and t.GetText().startswith('BUS ')]
     for fp in board.GetFootprints():
         ref = fp.GetReference()
-        fp.Reference().SetVisible(ref[:1] == 'J' and ref not in legs)
+        fp.Reference().SetVisible(ref[:1] == 'J' and ref not in legs and ref != 'J14')
         if ref in legs:
             x = pcbnew.ToMM(fp.GetPosition().x) - OX; y = pcbnew.ToMM(fp.GetPosition().y) - OY
             sx = 1 if x > 0 else -1

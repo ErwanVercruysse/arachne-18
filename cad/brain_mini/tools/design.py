@@ -109,20 +109,32 @@ P('J13', 'Connector_Generic:Conn_01x02', 'arachne:SolderWire_2pad_P5mm_D1.6mm_5V
 
 # ---------------------------------------------------------------- 3.3 V for ESP32 + IMU
 G = '3,3 V (ESP32 + IMU)'
-P('D6', 'Diode:SS14', 'Diode_SMD:D_SMA', 'SS14', {1: 'V5_ESP', 2: 'V5'}, (7.5, 17.5, 0), mpn='SS14', group=G)
-P('D7', 'Diode:SS14', 'Diode_SMD:D_SMA', 'SS14', {1: 'V5_ESP', 2: 'VBUS_ESP'}, (7.5, 21.5, 0), mpn='SS14', group=G)
+P('D6', 'Diode:SS14', 'Diode_SMD:D_SMA', 'SS14', {1: 'V5_ESP', 2: 'V5'}, (10.0, 17.5, 0), mpn='SS14', group=G)
+P('D7', 'Diode:SS14', 'Diode_SMD:D_SMA', 'SS14', {1: 'V5_ESP', 2: 'VBUS_ESP'}, (10.0, 21.5, 0), mpn='SS14', group=G)
 P('U2', 'Regulator_Linear:AMS1117-3.3', 'Package_TO_SOT_SMD:SOT-223-3_TabPin2', 'AMS1117-3.3',
   {1: 'GND', 2: '3V3', 3: 'V5_ESP'}, (19.5, 4.0, 0), mpn='AMS1117-3.3', group=G)
 C('C14', '10u', 'V5_ESP', 'GND', (13.5, 3.5, 90), G, fp=C0805)
 C('C15', '22u', '3V3', 'GND', (20.8, 9.2, 0), G, fp=C0805)
 C('C16', '100n', '3V3', 'GND', (17.1, 9.2, 0), G)
 
+# ---------------------------------------------------------------- free ESP32-S3 GPIOs -> GPIO header J14
+# (IO35-37 are taken by the octal PSRAM of the N16R8; IO3, IO45, IO46 are strapping pins: no pull at boot)
+GPIO_PINS = {'IO7': 7, 'IO15': 8, 'IO8': 12, 'IO3': 15, 'IO46': 16, 'IO12': 20, 'IO13': 21, 'IO14': 22, 'IO21': 23,
+             'IO47': 24, 'IO48': 25, 'IO45': 26, 'IO38': 31, 'IO39': 32, 'IO40': 33, 'IO41': 34, 'IO42': 35,
+             'IO44': 36, 'IO43': 37}
+# header pins 1..26 (odd = left column, even = right column)
+GPIO_HDR = ['3V3', 'V5', 'GND', 'GND', 'IMU_SDA', 'IMU_SCL', 'IO7', 'IO15', 'IO8', 'IO3', 'IO46', 'IO12', 'IO13',
+            'IO14', 'IO21', 'IO47', 'IO48', 'IO45', 'IO38', 'IO39', 'IO40', 'IO41', 'IO42', 'IO43', 'IO44', 'GND']
+GPIO_LABEL = {'3V3': '3V3', 'V5': '5V', 'GND': 'GND', 'IMU_SDA': 'SDA4', 'IMU_SCL': 'SCL5', 'IO43': 'TX43', 'IO44': 'RX44'}
+HDR = (1.23, -6.5)            # pin 1 of the 2x13 header
+
 # ---------------------------------------------------------------- ESP32-S3
 G = 'ESP32-S3 (servo-bus + IMU + USB naar Pi)'
 P('U3', 'RF_Module:ESP32-S3-WROOM-1', 'RF_Module:ESP32-S3-WROOM-1', 'ESP32-S3-WROOM-1-N16R8',
   {1: 'GND', 40: 'GND', 41: 'GND', 2: '3V3', 3: 'ESP_EN', 4: 'IMU_SDA', 5: 'IMU_SCL', 6: 'IMU_INT',
    9: 'DE_A', 10: 'TX_A', 11: 'RX_A', 17: 'DE_B', 18: 'TX_B', 19: 'RX_B',
-   13: 'ESP_DM', 14: 'ESP_DP', 27: 'ESP_IO0', 39: 'VSENSE', 38: 'LED_ESP'},
+   13: 'ESP_DM', 14: 'ESP_DP', 27: 'ESP_IO0', 39: 'VSENSE', 38: 'LED_ESP',
+   **{n: g for g, n in GPIO_PINS.items()}},
   (ESP[0], ESP[1], 0), mpn='ESP32-S3-WROOM-1-N16R8', group=G)
 C('C17', '22u', '3V3', 'GND', (9.6, -6.5, 90), G, fp=C0805)
 C('C18', '100n', '3V3', 'GND', (11.4, -6.5, 90), G)
@@ -159,7 +171,7 @@ for bus, sx, legs, refs in (('A', 1, ('L1', 'L2', 'L3'), (4, 5, 16, 17, 18, 19, 
 
 # ---------------------------------------------------------------- IMU (near the middle of the robot)
 G = 'IMU MPU-6050'
-IM = (2.5, 2.5)
+IM = (0.5, -15.0)
 P('U8', 'Sensor_Motion:MPU-6050', 'Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm', 'MPU-6050',
   {1: 'GND', 8: '3V3', 9: 'GND', 10: 'IMU_REG', 11: 'GND', 12: 'IMU_INT', 13: '3V3', 18: 'GND',
    20: 'IMU_CP', 23: 'IMU_SCL', 24: 'IMU_SDA'}, (IM[0], IM[1], 0), mpn='MPU-6050', group=G)
@@ -175,11 +187,16 @@ P('J8', 'Connector:USB_C_Receptacle_USB2.0_16P', USBC, 'USB-C PI',
   {'A1': 'GND', 'A12': 'GND', 'B1': 'GND', 'B12': 'GND', 'SH': 'GND', 'A4': 'VBUS_ESP', 'A9': 'VBUS_ESP',
    'B4': 'VBUS_ESP', 'B9': 'VBUS_ESP', 'A5': 'CC1_E', 'B5': 'CC2_E', 'A6': 'ESP_DP', 'B6': 'ESP_DP',
    'A7': 'ESP_DM', 'B7': 'ESP_DM'}, (19.0, 26.2, 0), mpn='HRO TYPE-C-31-M-12', group=G)
-R('R27', '5k1', 'CC1_E', 'GND', (13.5, 18.5, 90), G)
+R('R27', '5k1', 'CC1_E', 'GND', (14.8, 18.5, 90), G)
 R('R28', '5k1', 'CC2_E', 'GND', (24.5, 18.5, 90), G)
 P('U10', 'Power_Protection:USBLC6-2SC6', 'Package_TO_SOT_SMD:SOT-23-6', 'USBLC6-2SC6',
   {1: 'ESP_DP', 6: 'ESP_DP', 3: 'ESP_DM', 4: 'ESP_DM', 2: 'GND', 5: 'VBUS_ESP'}, (19.0, 17.5, 0), mpn='USBLC6-2SC6', group=G)
 C('C29', '1u', 'VBUS_ESP', 'GND', (22.8, 13.5, 90), G)
+
+# ---------------------------------------------------------------- GPIO header
+P('J14', 'Connector_Generic:Conn_02x13_Odd_Even', 'Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical', 'GPIO',
+  {i + 1: n for i, n in enumerate(GPIO_HDR)}, (HDR[0], HDR[1], 0),
+  mpn='2x13 pin header 2.54 mm: 19 free ESP32-S3 GPIOs + I2C + 3V3/5V/GND', group='GPIO header')
 
 # ---------------------------------------------------------------- mounting
 for i, (sx, sy) in enumerate(((-1, -1), (1, -1), (1, 1), (-1, 1)), 1):

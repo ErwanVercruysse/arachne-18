@@ -8,6 +8,7 @@ It is the big board (`cad/brain_pcb`) without the CM5 part: same buck, 12 V entr
 |---|---|---|
 | Real-time | **ESP32-S3-WROOM-1-N16R8** | drives both servo buses, reads the IMU, native USB to the Pi (`/dev/ttyACM0`) |
 | IMU | **MPU-6050** (I2C on the ESP32, INT on IO6) | near the middle of the board |
+| GPIO | 2x13 header | 19 free GPIOs + I2C + 3V3/5V/GND |
 | Servo buses | 2x (74AHCT1G126 + 74LVC1G34) | Feetech STS half-duplex, 5 V levels, 1 Mbaud |
 | Legs | 6x Molex 5268-03A (2.50 mm) | bus A = L1 L2 L3 (right), bus B = L4 L5 L6 (left) |
 | Power | 2 big solder pads, P-MOSFET reverse protection, TVS, 2x 330 uF | 12 V straight to the servos |
@@ -34,7 +35,28 @@ R6 corners, 4x M3 (3.2 mm) at (±41.5, ±25.5). Mounts on acrylic plate **v4**
 | 17 / 18 / 16 | bus A TX / RX / DE (UART1, DE = RTS) | 4 / 5 / 6 | IMU SDA / SCL / INT |
 | 10 / 11 / 9 | bus B TX / RX / DE (UART2) | 1 | 12 V sense (100k/15k: V = adc x 7.67) |
 | 19 / 20 | USB D- / D+ (to the Pi) | 2 | blue LED |
-| 0 / EN | BOOT / RESET buttons | 43 44 12 13 14 21 47 48 | free |
+| 0 / EN | BOOT / RESET buttons | | |
+
+**GPIO header J14 (2x13, 2.54 mm, middle of the board, every pin labelled on the silkscreen):** all 19 free
+GPIOs + I2C + power. Odd pins left, even right:
+
+| pin | | pin | |
+|---|---|---|---|
+| 1 | 3V3 | 2 | 5V |
+| 3 | GND | 4 | GND |
+| 5 | SDA (IO4, IMU bus) | 6 | SCL (IO5) |
+| 7 | IO7 | 8 | IO15 |
+| 9 | IO8 | 10 | IO3 * |
+| 11 | IO46 * | 12 | IO12 |
+| 13 | IO13 | 14 | IO14 |
+| 15 | IO21 | 16 | IO47 |
+| 17 | IO48 | 18 | IO45 * |
+| 19 | IO38 | 20 | IO39 |
+| 21 | IO40 | 22 | IO41 |
+| 23 | IO42 | 24 | TX43 (UART0) |
+| 25 | RX44 (UART0) | 26 | GND |
+
+\* strapping pins: don't pull them up/down at boot. IO35-37 are used by the octal PSRAM (N16R8).
 
 ## Files
 
