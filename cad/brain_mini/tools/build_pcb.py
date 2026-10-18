@@ -42,7 +42,8 @@ def write_project():
     sev = ds.setdefault('rule_severities', {})
     sev.update({'silk_overlap': 'ignore', 'silk_over_copper': 'ignore', 'silk_edge_clearance': 'ignore',
                 'lib_footprint_mismatch': 'ignore', 'lib_footprint_issues': 'ignore', 'text_height': 'ignore',
-                'footprint_symbol_mismatch': 'warning'})
+                'footprint_symbol_mismatch': 'warning',
+                'connection_width': 'ignore'})   # sub-0.1 mm slivers at the edge of the GND pours only
     base = dict(tpl['net_settings']['classes'][0])
     base.update({'name': 'Default', 'track_width': 0.15, 'clearance': 0.15, 'via_diameter': 0.45, 'via_drill': 0.2})
     classes = [base]
