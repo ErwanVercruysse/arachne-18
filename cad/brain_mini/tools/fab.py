@@ -24,7 +24,7 @@ LCSC = {'AOD4185': 'C400894', 'BZT52C15': 'C173427', 'SMBJ15CA': 'C78410', '330u
 
 
 def lcsc(value):
-    return 'C225432 (A2505WV-3P)' if value.endswith('servo') else LCSC.get(value, '')
+    return 'C45581067 (Molex 22-03-5035)' if value.endswith('servo') else LCSC.get(value, '')
 
 
 def run(*a):

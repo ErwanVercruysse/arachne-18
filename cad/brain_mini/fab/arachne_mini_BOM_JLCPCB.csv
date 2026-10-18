@@ -37,12 +37,12 @@ BOOT,SW2,SW_Push_1P1T_NO_CK_KMR2,1,CK KMR221G (4.2x2.8 tact),C72443
 74AHCT1G126,"U4,U6",SOT-23-5,2,"74AHCT1G126GW (TX driver, 5 V out)",C163712
 74LVC1G34,"U5,U7",SOT-23-5,2,"74LVC1G34GW (RX buffer, 5 V tolerant)",C840096
 47,"R16,R20",R_0603_1608Metric,2,0603 47 1%,C23182
-L1 servo,J2,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
-L2 servo,J3,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
-L3 servo,J4,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
-L4 servo,J5,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
-L5 servo,J6,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
-L6 servo,J7,Molex_5268-03A_1x03_P2.50mm_Vertical,1,"Molex 5268-03A (5264 mating, Feetech bus)",C225432 (A2505WV-3P)
+L1 servo,J2,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L2 servo,J3,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L3 servo,J4,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L4 servo,J5,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L5 servo,J6,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L6 servo,J7,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
 MPU-6050,U8,InvenSense_QFN-24_4x4mm_P0.5mm,1,MPU-6050,C24112
 2n2,C25,C_0603_1608Metric,1,0603 2n2 X5R ceramic,C1604
 10n,C27,C_0603_1608Metric,1,0603 10n X7R ceramic,C57112

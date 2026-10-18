@@ -168,9 +168,9 @@ for bus, sx, legs, refs in (('A', 1, ('L1', 'L2', 'L3'), (4, 5, 16, 17, 18, 19, 
     C(f'C{c_tx}', '100n', 'V5', 'GND', (bx - sx * 3, -8, 90), G)
     C(f'C{c_rx}', '100n', '3V3', 'GND', (bx - sx * 3, 7, 90), G)
     for j, leg, y in zip(jr, legs, (-13.5, 0, 13.5)):
-        P(f'J{j}', 'Connector_Generic:Conn_01x03', 'arachne:Molex_5268-03A_1x03_P2.50mm_Vertical', f'{leg} servo',
+        P(f'J{j}', 'Connector_Generic:Conn_01x03', 'arachne:Molex_5267-03A_1x03_P2.50mm_Vertical', f'{leg} servo',
           {1: 'GND', 2: 'V12', 3: f'BUS_{bus}'}, (sx * 40.5, y if sx > 0 else -y, 90 if sx > 0 else 270),
-          mpn='Molex 5268-03A (5264 mating, Feetech bus)', group=G)
+          mpn='Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)', group=G)
 
 # ---------------------------------------------------------------- IMU (near the middle of the robot)
 G = 'IMU MPU-6050'

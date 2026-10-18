@@ -34,21 +34,15 @@ def fp_text(name, body, descr, attr='through_hole'):
 '''
 
 
-def molex_5268():
-    b = ''
-    for i, n in enumerate((1, 2, 3)):
-        shape = 'roundrect (roundrect_rratio 0.15)' if n == 1 else 'oval'
-        b += f'\t(pad "{n}" thru_hole {shape} (at {i*2.5} 0) (size 1.7 2.1) (drill 1.0) (layers "*.Cu" "*.Mask"))\n'
-    b += '\t(fp_rect (start -2.45 -2.35) (end 7.45 2.55) (stroke (width 0.12) (type solid)) (fill no) (layer "F.SilkS"))\n'
-    b += '\t(fp_line (start -2.45 1.6) (end 7.45 1.6) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))\n'
-    b += '\t(fp_rect (start -2.7 -2.6) (end 7.7 2.8) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd"))\n'
-    b += '\t(fp_rect (start -2.35 -2.25) (end 7.35 2.45) (stroke (width 0.1) (type solid)) (fill no) (layer "F.Fab"))\n'
-    for i, t in enumerate('GVS'):
-        b += f'\t(fp_text user "{t}" (at {i*2.5} -3.3 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.15))))\n'
-    b += ('\t(model "${KICAD10_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.step"'
-          ' (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))\n')
-    return fp_text('Molex_5268-03A_1x03_P2.50mm_Vertical', b,
-                   'Molex 5268-03A header, mates with 5264 housing used on Feetech STS bus servos (2.50 mm)')
+def molex_5267():
+    # stock KiCad Mini-SPOX 5267 footprint (chamfered body, real 3D model) + G V S labels
+    src = open('/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_Molex.pretty/'
+               'Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical.kicad_mod').read()
+    src = src.replace('(footprint "Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical"', '(footprint "Molex_5267-03A_1x03_P2.50mm_Vertical"', 1)
+    labels = ''.join(f'\t(fp_text user "{t}" (at {i*2.5} -4.3 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.15))))\n'
+                     for i, t in enumerate('GVS'))
+    src = src.replace('(at 2.5 -4.3 0)', '(at 2.5 4.0 0)', 1)      # move the reference text out of the way of the labels
+    return src.rstrip()[:-1].rstrip() + '\n' + labels + ')\n'
 
 
 def solder_pads():
@@ -91,7 +85,7 @@ def build_fp_lib():
     d = os.path.join(PRJ, LIB + '.pretty'); os.makedirs(d, exist_ok=True)
     for f in os.listdir(d):
         os.remove(os.path.join(d, f))
-    custom = {'Molex_5268-03A_1x03_P2.50mm_Vertical': molex_5268(), 'SolderWire_2pad_P7mm_D2.2mm': solder_pads(),
+    custom = {'Molex_5267-03A_1x03_P2.50mm_Vertical': molex_5267(), 'SolderWire_2pad_P7mm_D2.2mm': solder_pads(),
               'MountingHole_3.2mm_M3': mount_hole_m3(), 'SolderWire_2pad_P5mm_D1.6mm_5V': solder_pads_5v()}
     for n, t in custom.items():
         open(os.path.join(d, n + '.kicad_mod'), 'w').write(t)

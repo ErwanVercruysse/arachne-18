@@ -10,7 +10,7 @@ It is the big board (`cad/brain_pcb`) without the CM5 part: same buck, 12 V entr
 | IMU | **MPU-6050** (I2C on the ESP32, INT on IO6) | near the middle of the board |
 | Sensors | G-V-S strip + 2x Qwiic | 19 free GPIOs, each with GND + 3.3 V, plus I2C |
 | Servo buses | 2x (74AHCT1G126 + 74LVC1G34) | Feetech STS half-duplex, 5 V levels, 1 Mbaud |
-| Legs | 6x Molex 5268-03A (2.50 mm) | bus A = L1 L2 L3 (right), bus B = L4 L5 L6 (left) |
+| Legs | 6x Molex Mini-SPOX 5267-03A (22-03-5035, 2.50 mm, chamfered) | bus A = L1 L2 L3 (right), bus B = L4 L5 L6 (left) |
 | Power | 2 big solder pads, P-MOSFET reverse protection, TVS, 2x 330 uF | 12 V straight to the servos |
 | 5 V | TI **TPS54560B** buck, 5 V 5 A | Pi 4 (via the **5V PI** pads) + ESP32 + bus drivers |
 
@@ -46,7 +46,9 @@ shield, so a standard 3-wire sensor cable (GND, VCC, signal) plugs straight on.
 
 \* strapping pins: don't pull them up/down at boot. IO35-37 are used by the octal PSRAM (N16R8).
 
-**Servo connectors:** Molex 5268-type headers for the **5264** plugs (2.5 mm) on the Feetech STS3215 cables.
+**Servo connectors:** Molex Mini-SPOX **5267-03A** vertical headers (22-03-5035), the mating header for the **5264** plugs
+(2.5 mm, with the chamfered corners) on the Feetech STS3215 / Waveshare cables. The chamfered side of the silkscreen
+shows which way the plug goes in.
 
 ## Files
 

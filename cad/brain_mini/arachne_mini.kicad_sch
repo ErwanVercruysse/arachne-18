@@ -3917,7 +3917,7 @@
 					)
 				)
 			)
-			(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+			(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -14445,7 +14445,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 33.02 403.86 0)
 			(effects
 				(font
@@ -14463,7 +14463,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 33.02 403.86 0)
 			(effects
 				(font
@@ -14578,7 +14578,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 53.34 403.86 0)
 			(effects
 				(font
@@ -14596,7 +14596,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 53.34 403.86 0)
 			(effects
 				(font
@@ -14711,7 +14711,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 76.2 403.86 0)
 			(effects
 				(font
@@ -14729,7 +14729,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 76.2 403.86 0)
 			(effects
 				(font
@@ -15868,7 +15868,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 33.02 482.6 0)
 			(effects
 				(font
@@ -15886,7 +15886,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 33.02 482.6 0)
 			(effects
 				(font
@@ -16001,7 +16001,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 53.34 482.6 0)
 			(effects
 				(font
@@ -16019,7 +16019,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 53.34 482.6 0)
 			(effects
 				(font
@@ -16134,7 +16134,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 76.2 482.6 0)
 			(effects
 				(font
@@ -16152,7 +16152,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "Molex 5268-03A (5264 mating, Feetech bus)"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)"
 			(at 76.2 482.6 0)
 			(effects
 				(font

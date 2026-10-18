@@ -3907,7 +3907,7 @@
 				)
 			)
 		)
-		(property "Footprint" "arachne:Molex_5268-03A_1x03_P2.50mm_Vertical"
+		(property "Footprint" "arachne:Molex_5267-03A_1x03_P2.50mm_Vertical"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
