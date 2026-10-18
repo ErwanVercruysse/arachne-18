@@ -26,15 +26,25 @@ def rot(r, p, y):
     return np.array([[cy*cp, cy*sp*sr-sy*cr, cy*sp*cr+sy*sr], [sy*cp, sy*sp*sr+cy*cr, sy*sp*cr-cy*sr], [-sp, cp*sr, cp*cr]])
 
 
-def body_dance(t, L=9., amp=1., e=None):
-    e = (envelope(t, L) if e is None else e)*amp; w = 2*math.pi*.45*t
-    return (np.array([.018*e*math.cos(w), .018*e*math.sin(w), .006*e*math.sin(2*w)]),
-            (math.radians(7)*e*math.sin(w), -math.radians(7)*e*math.cos(w), 0))
+DIP = .02           # m: how deep the body bends down on every beat (was 6 mm up/down; L1 knee limits ~2 cm)
+TILT = 7.           # degrees of body tilt (scaled by --amp)
+
+
+def body_dance(t, L=9., amp=1., e=None, dip=None, tilt=None):
+    env = envelope(t, L) if e is None else e
+    e = env*amp; w = 2*math.pi*.45*t
+    dip = DIP if dip is None else dip; tilt = TILT if tilt is None else tilt
+    # body circles and tilts; twice per circle it bends deep down and comes back up (feet stay put)
+    z = -dip*env*(1 - math.cos(2*w))/2
+    return (np.array([.018*e*math.cos(w), .018*e*math.sin(w), z]),
+            (math.radians(tilt)*e*math.sin(w), -math.radians(tilt)*e*math.cos(w), 0))
 
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--dry', action='store_true')
     ap.add_argument('--amp', type=float, default=1.); ap.add_argument('--hz', type=float, default=25)
+    ap.add_argument('--dip', type=float, default=DIP, help='how deep the body bends down (m)')
+    ap.add_argument('--tilt', type=float, default=TILT, help='body tilt (degrees, x amp)')
     ap.add_argument('--loop', help='dance until this file exists (fade in/out 1 s)')
     a = ap.parse_args()
     J = cw.get('/state')['joints']
@@ -45,7 +55,7 @@ def main():
     if a.loop: return loop(a, J, q, feet)
     frames = []; worst = 0; clip = 0; L_ = 9.
     for k in range(int(L_*a.hz)+1):
-        t = k/a.hz; shift, rpy = body_dance(t, L_, a.amp); R = rot(*rpy)
+        t = k/a.hz; shift, rpy = body_dance(t, L_, a.amp, dip=a.dip, tilt=a.tilt); R = rot(*rpy)
         # body moves by (R, shift) about its origin; feet fixed in the world -> targets in the body frame
         for Lg in LEGS:
             q, e = cw.ik(Lg, R.T @ (feet[Lg] - shift), q); worst = max(worst, e)
@@ -76,8 +86,8 @@ def main():
     print(f'klaar in {time.time()-t0:.1f} s, min spanning {vmin} V, max achterstand {lagmax} ticks')
 
 
-def frame(J, q, feet, t, amp, e):
-    shift, rpy = body_dance(t, amp=amp, e=e); R = rot(*rpy)
+def frame(J, q, feet, t, amp, e, dip=None, tilt=None):
+    shift, rpy = body_dance(t, amp=amp, e=e, dip=dip, tilt=tilt); R = rot(*rpy)
     for Lg in LEGS: q, _ = cw.ik(Lg, R.T @ (feet[Lg] - shift), q)
     tk = {}
     for j in J:
@@ -95,7 +105,7 @@ def loop(a, J, q, feet):
         if stop_at is None and os.path.exists(a.loop): stop_at = t
         e = smooth(t) if stop_at is None else smooth(1-(t-stop_at))
         if stop_at is not None and t-stop_at >= 1: break
-        q, tk = frame(J, q, feet, t, a.amp, e)
+        q, tk = frame(J, q, feet, t, a.amp, e, a.dip, a.tilt)
         for p in ports:
             data = {str(J[j]['sid']): [tk[j] & 0xff, tk[j] >> 8, 0, 0, 0, 0] for j in J if J[j]['port'] == p}
             cw.post('/cmd', {'port': p, 'op': 'sync', 'addr': 42, 'data': data})
