@@ -174,7 +174,7 @@ for bus, sx, legs, refs in (('A', 1, ('L1', 'L2', 'L3'), (4, 5, 16, 17, 18, 19, 
 
 # ---------------------------------------------------------------- IMU (near the middle of the robot)
 G = 'IMU MPU-6050'
-IM = (0.5, -15.0)
+IM = (0.0, 0.0)                     # exact robot centre (mount holes are symmetric around 0,0)
 P('U8', 'Sensor_Motion:MPU-6050', 'Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm', 'MPU-6050',
   {1: 'GND', 8: '3V3', 9: 'GND', 10: 'IMU_REG', 11: 'GND', 12: 'IMU_INT', 13: '3V3', 18: 'GND',
    20: 'IMU_CP', 23: 'IMU_SCL', 24: 'IMU_SDA'}, (IM[0], IM[1], 0), mpn='MPU-6050', group=G)
