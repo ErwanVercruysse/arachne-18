@@ -7161,7 +7161,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "ccc6e16c-b05b-5396-9622-91dffdfd89db")
 		(property "Reference" "D2"
 			(at 86.36 29.25 0)
@@ -7197,7 +7197,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): BZT52C15 gate clamp (optional: AOD4185 Vgs max 20 V)"
+		(property "MPN" "BZT52C15 gate clamp (optional: AOD4185 Vgs max 20 V)"
 			(at 86.36 33.02 0)
 			(effects
 				(font
@@ -7270,7 +7270,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "27ed8d45-88ad-5c08-a9a0-868869a67eb6")
 		(property "Reference" "D1"
 			(at 116.84 29.25 0)
@@ -7306,7 +7306,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): SMBJ15CA TVS (optional)"
+		(property "MPN" "SMBJ15CA TVS (optional)"
 			(at 116.84 33.02 0)
 			(effects
 				(font
@@ -7379,7 +7379,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "94ddc95e-c227-5e3f-9c0a-5184361a710b")
 		(property "Reference" "C1"
 			(at 134.62 36.87 0)
@@ -7415,7 +7415,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): 330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks"
+		(property "MPN" "330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks"
 			(at 134.62 43.18 0)
 			(effects
 				(font
@@ -7488,7 +7488,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "21ccdf18-23bb-5365-ac18-9446dccdc4bb")
 		(property "Reference" "C2"
 			(at 147.32 36.87 0)
@@ -7524,7 +7524,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): 330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks"
+		(property "MPN" "330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks"
 			(at 147.32 43.18 0)
 			(effects
 				(font
@@ -13000,7 +13000,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "9b574876-d549-51b5-aedf-7af1143eaf1d")
 		(property "Reference" "SW1"
 			(at 33.02 324.652 0)
@@ -13036,7 +13036,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it"
+		(property "MPN" "CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it"
 			(at 33.02 330.2 0)
 			(effects
 				(font
@@ -13109,7 +13109,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "75cd3e2e-5be5-5bd4-b3c3-cbdc6512342f")
 		(property "Reference" "SW2"
 			(at 66.04 324.652 0)
@@ -13145,7 +13145,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it"
+		(property "MPN" "CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it"
 			(at 66.04 330.2 0)
 			(effects
 				(font
@@ -14242,7 +14242,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "f49c988a-a96c-55e7-8bea-ea464cf009fd")
 		(property "Reference" "J2"
 			(at 33.02 397.55 0)
@@ -14278,7 +14278,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 33.02 403.86 0)
 			(effects
 				(font
@@ -14375,7 +14375,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "d9ba69c2-0110-5b73-93f8-f49d41d452f8")
 		(property "Reference" "J3"
 			(at 53.34 397.55 0)
@@ -14411,7 +14411,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 53.34 403.86 0)
 			(effects
 				(font
@@ -14508,7 +14508,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "ed4190f0-04d5-57af-a89a-f9b8aa758ab2")
 		(property "Reference" "J4"
 			(at 76.2 397.55 0)
@@ -14544,7 +14544,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 76.2 403.86 0)
 			(effects
 				(font
@@ -15665,7 +15665,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "aaef1159-9f08-522c-9488-76941af7221d")
 		(property "Reference" "J5"
 			(at 33.02 476.29 0)
@@ -15701,7 +15701,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 33.02 482.6 0)
 			(effects
 				(font
@@ -15798,7 +15798,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "5b48dff2-c935-5465-999f-d36c692b8b76")
 		(property "Reference" "J6"
 			(at 53.34 476.29 0)
@@ -15834,7 +15834,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 53.34 482.6 0)
 			(effects
 				(font
@@ -15931,7 +15931,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "dcd976e5-420e-5956-89c2-58dc1724a27a")
 		(property "Reference" "J7"
 			(at 76.2 476.29 0)
@@ -15967,7 +15967,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
+		(property "MPN" "Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067"
 			(at 76.2 482.6 0)
 			(effects
 				(font
@@ -17549,7 +17549,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "85da4e13-c6a3-5e91-bda9-0a9263534692")
 		(property "Reference" "U10"
 			(at 287.02 106.72 0)
@@ -17585,7 +17585,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): USBLC6-2SC6 ESD (optional)"
+		(property "MPN" "USBLC6-2SC6 ESD (optional)"
 			(at 287.02 114.3 0)
 			(effects
 				(font
@@ -17888,7 +17888,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "d040710f-c9a0-594b-931e-b72c287a39c1")
 		(property "Reference" "J14"
 			(at 220.98 184.19 0)
@@ -17924,7 +17924,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): 1x19 pin header 2.54 mm (row S of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row S of the sensor strip)"
 			(at 220.98 210.82 0)
 			(effects
 				(font
@@ -18405,7 +18405,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "4d547a67-2285-5a41-bad5-dc066c545112")
 		(property "Reference" "J15"
 			(at 241.3 184.19 0)
@@ -18441,7 +18441,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): 1x19 pin header 2.54 mm (row V of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row V of the sensor strip)"
 			(at 241.3 210.82 0)
 			(effects
 				(font
@@ -18922,7 +18922,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "c3cdc8b1-e076-5a73-abdc-409249ce2456")
 		(property "Reference" "J16"
 			(at 261.62 184.19 0)
@@ -18958,7 +18958,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): 1x19 pin header 2.54 mm (row G of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row G of the sensor strip)"
 			(at 261.62 210.82 0)
 			(effects
 				(font
@@ -19439,7 +19439,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "cd09a128-69b6-5677-b5c3-9f0ca1abb91f")
 		(property "Reference" "J17"
 			(at 284.48 189.27 0)
@@ -19475,7 +19475,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)"
+		(property "MPN" "JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)"
 			(at 284.48 195.58 0)
 			(effects
 				(font
@@ -19620,7 +19620,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "76f21a7c-b60f-5b34-bfe2-e4636f0c2852")
 		(property "Reference" "J18"
 			(at 309.88 189.27 0)
@@ -19656,7 +19656,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "hand-solder (not placed by JLC): JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)"
+		(property "MPN" "JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)"
 			(at 309.88 195.58 0)
 			(effects
 				(font

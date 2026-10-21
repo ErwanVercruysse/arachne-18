@@ -1,6 +1,8 @@
 """Fabrication outputs for JLCPCB: gerbers + drill (zip), BOM and CPL (pick & place), PDF schematic, renders."""
 import re, math, os, csv, subprocess, zipfile, shutil, collections
-import design
+import design, json
+HERE = os.path.dirname(os.path.abspath(__file__))
+KPY = '/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3'
 
 PRJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KC = '/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli'
@@ -58,16 +60,16 @@ def main():
     ROT = [(r'^SOT-223', 180), (r'^SOT-23', 180), (r'^CP_Elec_', 180), (r'^Texas_R-PDSO-G8', 270), (r'^SOIC-', 270),
            (r'^QFN-', 90), (r'^JST_SH_SM', 180)]
 
-    # JLC centres some parts on the middle of their pads instead of KiCad's origin (footprint-local mm, KiCad axes)
-    OFFS = [(r'^ESP32-S3-WROOM-1', (0.0, 3.62))]          # module: pad field centre is 3.62 mm below the body centre
+    # JLC places every part on the centre of its pads; KiCad's origin is pin 1 for connectors and the body centre for
+    # modules. Use the pad-field centre from the board (tools/padcentres.py) for all parts.
+    subprocess.run([KPY, os.path.join(HERE, 'padcenters.py')], capture_output=True)
+    PC = json.load(open(os.path.join(HERE, '..', 'out', 'pad_centres.json')))
 
     def jlc_xy(ref, x, y, rot):
-        for pat, (dx, dy) in OFFS:
-            if re.match(pat, FP.get(ref, '')):
-                a = math.radians(float(rot))                    # pos file: y up, rotation counter-clockwise
-                lx, ly = dx, -dy
-                return x + lx * math.cos(a) - ly * math.sin(a), y + lx * math.sin(a) + ly * math.cos(a)
-        return x, y
+        if ref not in PC:
+            return x, y
+        cx, cy, ox, oy = PC[ref]
+        return x + (cx - ox), y - (cy - oy)                     # pos file y is up
 
     def jlc_rot(ref, rot):
         for pat, d in ROT:
