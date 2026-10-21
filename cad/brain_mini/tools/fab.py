@@ -1,5 +1,5 @@
 """Fabrication outputs for JLCPCB: gerbers + drill (zip), BOM and CPL (pick & place), PDF schematic, renders."""
-import re, os, csv, subprocess, zipfile, shutil, collections
+import re, math, os, csv, subprocess, zipfile, shutil, collections
 import design
 
 PRJ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,6 +58,17 @@ def main():
     ROT = [(r'^SOT-223', 180), (r'^SOT-23', 180), (r'^CP_Elec_', 180), (r'^Texas_R-PDSO-G8', 270), (r'^SOIC-', 270),
            (r'^QFN-', 90), (r'^JST_SH_SM', 180)]
 
+    # JLC centres some parts on the middle of their pads instead of KiCad's origin (footprint-local mm, KiCad axes)
+    OFFS = [(r'^ESP32-S3-WROOM-1', (0.0, 3.62))]          # module: pad field centre is 3.62 mm below the body centre
+
+    def jlc_xy(ref, x, y, rot):
+        for pat, (dx, dy) in OFFS:
+            if re.match(pat, FP.get(ref, '')):
+                a = math.radians(float(rot))                    # pos file: y up, rotation counter-clockwise
+                lx, ly = dx, -dy
+                return x + lx * math.cos(a) - ly * math.sin(a), y + lx * math.sin(a) + ly * math.cos(a)
+        return x, y
+
     def jlc_rot(ref, rot):
         for pat, d in ROT:
             if re.match(pat, FP.get(ref, '')):
@@ -70,7 +81,8 @@ def main():
         for r in csv.DictReader(f):
             if r['Ref'].startswith('H') or r['Ref'] in design.DNP or not placed(VAL.get(r['Ref'], '')):
                 continue
-            w.writerow([r['Ref'], r['PosX'] + 'mm', r['PosY'] + 'mm', 'Top' if r['Side'] == 'top' else 'Bottom', f"{jlc_rot(r['Ref'], r['Rot']):g}"])
+            x, y = jlc_xy(r['Ref'], float(r['PosX']), float(r['PosY']), r['Rot'])
+            w.writerow([r['Ref'], f'{x:.4f}mm', f'{y:.4f}mm', 'Top' if r['Side'] == 'top' else 'Bottom', f"{jlc_rot(r['Ref'], r['Rot']):g}"])
     os.remove(pos)
     # BOM: one line per LCSC part (JLC warns when two lines match the same part); bare solder pads are left out
     groups = collections.OrderedDict()
