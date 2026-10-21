@@ -24,7 +24,12 @@ LCSC = {'AOD4185': 'C400894', 'BZT52C15': 'C173427', 'SMBJ15CA': 'C78410', '330u
 
 
 def lcsc(value):
-    return 'C45581067 (Molex 22-03-5035)' if value.endswith('servo') else LCSC.get(value, '')
+    return 'C45581067' if value.endswith('servo') else LCSC.get(value, '')
+
+
+def placed(value):
+    """False for footprints JLC does not fit (bare solder pads)"""
+    return lcsc(value).startswith('C')
 
 
 def run(*a):
@@ -44,27 +49,30 @@ def main():
     with zipfile.ZipFile(os.path.join(FAB, 'arachne_mini_gerbers_JLCPCB.zip'), 'w', zipfile.ZIP_DEFLATED) as z:
         for f in sorted(os.listdir(g)):
             z.write(os.path.join(g, f), f)
-    # pick & place
+    # pick & place (only parts that are in the BOM)
+    VAL = {p['ref']: p['value'] for p in design.parts}
     pos = os.path.join(FAB, 'pos_raw.csv')
     run('pcb', 'export', 'pos', '--format', 'csv', '--units', 'mm', '--side', 'both', '--exclude-dnp', '-o', pos, PCB)
     with open(pos) as f, open(os.path.join(FAB, 'arachne_mini_CPL_JLCPCB.csv'), 'w', newline='') as o:
         w = csv.writer(o); w.writerow(['Designator', 'Mid X', 'Mid Y', 'Layer', 'Rotation'])
         for r in csv.DictReader(f):
-            if r['Ref'].startswith('H') or r['Ref'] in design.DNP:
+            if r['Ref'].startswith('H') or r['Ref'] in design.DNP or not placed(VAL.get(r['Ref'], '')):
                 continue
             w.writerow([r['Ref'], r['PosX'] + 'mm', r['PosY'] + 'mm', 'Top' if r['Side'] == 'top' else 'Bottom', r['Rot']])
     os.remove(pos)
-    # BOM grouped by value + footprint + MPN
+    # BOM: one line per LCSC part (JLC warns when two lines match the same part); bare solder pads are left out
     groups = collections.OrderedDict()
     for p in design.parts:
-        if p['ref'].startswith('H') or p['dnp']:
+        if p['ref'].startswith('H') or p['dnp'] or not placed(p['value']):
             continue
-        k = (p['value'], p['fp'].split(':')[1], p['mpn'])
-        groups.setdefault(k, []).append(p['ref'])
+        g = groups.setdefault(lcsc(p['value']), dict(vals=[], refs=[], fp=p['fp'].split(':')[1], mpn=p['mpn']))
+        g['refs'].append(p['ref'])
+        if p['value'] not in g['vals']: g['vals'].append(p['value'])
     with open(os.path.join(FAB, 'arachne_mini_BOM_JLCPCB.csv'), 'w', newline='') as o:
         w = csv.writer(o); w.writerow(['Comment', 'Designator', 'Footprint', 'Quantity', 'MPN / note', 'LCSC Part #'])
-        for (v, fp, mpn), refs in groups.items():
-            w.writerow([v, ','.join(refs), fp, len(refs), mpn, lcsc(v)])
+        for code, g in groups.items():
+            v = g['vals'][0] if len(g['vals']) == 1 else ' / '.join(g['vals'])
+            w.writerow([v, ','.join(g['refs']), g['fp'], len(g['refs']), g['mpn'], code])
     run('sch', 'export', 'pdf', '-o', os.path.join(FAB, 'arachne_mini_schema.pdf'), SCH)
     for side in ('top', 'bottom'):
         run('pcb', 'render', '--side', side, '--width', '2400', '--height', '1400', '--quality', 'high',

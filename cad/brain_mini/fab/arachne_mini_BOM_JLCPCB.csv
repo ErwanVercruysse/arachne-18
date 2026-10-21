@@ -1,5 +1,4 @@
 Comment,Designator,Footprint,Quantity,MPN / note,LCSC Part #
-12V IN,J1,SolderWire_2pad_P7mm_D2.2mm,1,solder pads for 14-16 AWG,"(solder pads, no part)"
 AOD4185,Q1,TO-252-2,1,"AOD4185 (P-MOSFET 40 V 40 A, reverse polarity)",C400894
 10k,"R1,R11,R12,R17,R18,R21,R22",R_0603_1608Metric,7,0603 10k 1%,C25804
 BZT52C15,D2,D_SOD-123,1,BZT52C15 (gate clamp),C173427
@@ -23,7 +22,6 @@ B560C,D4,D_SMC,1,B560C (5 A 60 V Schottky),C85100
 47p,C13,C_0603_1608Metric,1,0603 47p X7R ceramic,C1671
 groen 5V,D5,LED_0603_1608Metric,1,LED 0603 green,C12624
 2k2,R10,R_0603_1608Metric,1,0603 2k2 1%,C4190
-5V PI,J13,SolderWire_2pad_P5mm_D1.6mm_5V,1,"solder pads: 5 V 3 A to the Pi 4 (GPIO pin 2/4 + 6, or a USB-C lead)","(solder pads, no part)"
 SS14,"D6,D7",D_SMA,2,SS14,C2480
 AMS1117-3.3,U2,SOT-223-3_TabPin2,1,AMS1117-3.3,C6186
 10u,C14,C_0805_2012Metric,1,0805 10u X5R ceramic,C15850
@@ -32,17 +30,11 @@ ESP32-S3-WROOM-1-N16R8,U3,ESP32-S3-WROOM-1,1,ESP32-S3-WROOM-1-N16R8,C2913202
 1k,"R15,R19,R23",R_0603_1608Metric,3,0603 1k 1%,C21190
 blauw ESP,D8,LED_0603_1608Metric,1,LED 0603 blue,C2288
 1u,"C19,C29",C_0603_1608Metric,2,0603 1u X5R ceramic,C15849
-RESET,SW1,SW_Push_1P1T_NO_CK_KMR2,1,CK KMR221G (4.2x2.8 tact),C72443
-BOOT,SW2,SW_Push_1P1T_NO_CK_KMR2,1,CK KMR221G (4.2x2.8 tact),C72443
+RESET / BOOT,"SW1,SW2",SW_Push_1P1T_NO_CK_KMR2,2,CK KMR221G (4.2x2.8 tact),C72443
 74AHCT1G126,"U4,U6",SOT-23-5,2,"74AHCT1G126GW (TX driver, 5 V out)",C163712
 74LVC1G34,"U5,U7",SOT-23-5,2,"74LVC1G34GW (RX buffer, 5 V tolerant)",C840096
 47,"R16,R20",R_0603_1608Metric,2,0603 47 1%,C23182
-L1 servo,J2,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
-L2 servo,J3,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
-L3 servo,J4,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
-L4 servo,J5,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
-L5 servo,J6,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
-L6 servo,J7,Molex_5267-03A_1x03_P2.50mm_Vertical,1,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067 (Molex 22-03-5035)
+L1 servo / L2 servo / L3 servo / L4 servo / L5 servo / L6 servo,"J2,J3,J4,J5,J6,J7",Molex_5267-03A_1x03_P2.50mm_Vertical,6,Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables),C45581067
 MPU-6050,U8,InvenSense_QFN-24_4x4mm_P0.5mm,1,MPU-6050,C24112
 2n2,C25,C_0603_1608Metric,1,0603 2n2 X5R ceramic,C1604
 10n,C27,C_0603_1608Metric,1,0603 10n X7R ceramic,C57112
@@ -50,7 +42,5 @@ MPU-6050,U8,InvenSense_QFN-24_4x4mm_P0.5mm,1,MPU-6050,C24112
 USB-C PI,J8,USB_C_Receptacle_HRO_TYPE-C-31-M-12,1,HRO TYPE-C-31-M-12,C165948
 5k1,"R27,R28",R_0603_1608Metric,2,0603 5k1 1%,C23186
 USBLC6-2SC6,U10,SOT-23-6,1,USBLC6-2SC6,C2687116
-SENSOR S,J14,PinHeader_1x19_P2.54mm_Vertical,1,1x19 pin header 2.54 mm (row S of the sensor strip),C27985198
-SENSOR V,J15,PinHeader_1x19_P2.54mm_Vertical,1,1x19 pin header 2.54 mm (row V of the sensor strip),C27985198
-SENSOR G,J16,PinHeader_1x19_P2.54mm_Vertical,1,1x19 pin header 2.54 mm (row G of the sensor strip),C27985198
+SENSOR S / SENSOR V / SENSOR G,"J14,J15,J16",PinHeader_1x19_P2.54mm_Vertical,3,1x19 pin header 2.54 mm (row S of the sensor strip),C27985198
 I2C,"J17,J18",JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,2,JST SM04B-SRSS-TB (Qwiic / STEMMA QT),C160404
