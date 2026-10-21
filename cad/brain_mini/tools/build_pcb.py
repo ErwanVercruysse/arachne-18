@@ -166,6 +166,7 @@ def build():
         x, y, rot = p['at']
         fp.SetPosition(V(x, y)); fp.SetOrientationDegrees(rot)
         fp.SetPath(pcbnew.KIID_PATH('/' + sym_uuid(p['ref'], 1)))
+        fp.SetDNP(bool(p['dnp']))
         fp.SetProperties if False else None
         for prop, val in (('MPN', p['mpn']),):
             if val:

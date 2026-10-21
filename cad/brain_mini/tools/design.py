@@ -17,9 +17,12 @@ MOUNT = (41.5, 25.5)          # M3 holes in the corners (fixed to the acrylic pl
 ESP = (19.0, -23.25)          # ESP32-S3 module origin: antenna overhangs the top edge by ~6 mm
 
 parts = []
+DNP = set()                         # parts JLC does not place (hand-solder / optional)
+HAND = "hand-solder (not placed by JLC): "
 
 
 def P(ref, sym, fp, value, pins, at, mpn='', lcsc='', group='', dnp=False, side='F'):
+    if dnp: DNP.add(ref)
     parts.append(dict(ref=ref, sym=sym, fp=fp, value=value, pins={str(k): v for k, v in pins.items()},
                       at=at, mpn=mpn, lcsc=lcsc, group=group, dnp=dnp, side=side))
 
@@ -67,14 +70,14 @@ P('Q1', 'arachne:Q_PMOS_GDS', 'Package_TO_SOT_SMD:TO-252-2', 'AOD4185',
   {1: 'Q1_G', 2: 'VIN_RAW', 3: 'V12'}, e(-27.5, 29.5, 180), mpn='AOD4185 (P-MOSFET 40 V 40 A, reverse polarity)', group=G)
 R('R1', '10k', 'Q1_G', 'GND', e(-19.8, 25.4, 90), G)
 P('D2', 'Device:D_Zener', 'Diode_SMD:D_SOD-123', 'BZT52C15', {1: 'V12', 2: 'Q1_G'}, e(-19.8, 30.0, 90),
-  mpn='BZT52C15 (gate clamp)', group=G)
+  mpn=HAND + 'BZT52C15 gate clamp (optional: AOD4185 Vgs max 20 V)', dnp=True, group=G)
 P('D1', 'Device:D_TVS', 'Diode_SMD:D_SMB', 'SMBJ15CA', {1: 'V12', 2: 'GND'}, e(-23.5, 15, 270),
-  mpn='SMBJ15CA', group=G)
+  mpn=HAND + 'SMBJ15CA TVS (optional)', dnp=True, group=G)
 P('C1', 'Device:C_Polarized', 'Capacitor_SMD:CP_Elec_8x10.5', '330u 25V', {1: 'V12', 2: 'GND'}, e(-41.5, 15, 270),
-  mpn='330uF 25V 8x10.5 alu', group=G)
+  mpn=HAND + '330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks', dnp=True, group=G)
 P('C2', 'Device:C_Polarized', 'Capacitor_SMD:CP_Elec_8x10.5', '330u 25V', {1: 'V12', 2: 'GND'}, e(-31.5, 15, 270),
-  mpn='330uF 25V 8x10.5 alu', group=G)
-C('C3', '10u 25V', 'V12', 'GND', e(-23.5, 7.5, 90), G, fp=C1206)
+  mpn=HAND + '330uF 25V 8x10.5 alu, STRONGLY recommended for the servo current peaks', dnp=True, group=G)
+C('C3', '10u 25V', 'V12', 'GND', e(-23.5, 7.5, 90), G, fp=C0805)
 R('R2', '100k', 'V12', 'VSENSE', (25.5, 12.5, 90), G)
 R('R3', '15k', 'VSENSE', 'GND', (27.1, 12.5, 90), G)
 C('C4', '100n', 'VSENSE', 'GND', (28.7, 12.5, 90), G)
@@ -84,26 +87,26 @@ G = 'Buck 12 V -> 5 V 5 A'
 P('U1', 'Regulator_Switching:TPS54560BDDA', 'Package_SO:Texas_R-PDSO-G8_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias',
   'TPS54560B', {1: 'BOOT', 2: 'V12', 3: 'BUCK_EN', 4: 'BUCK_RT', 5: 'BUCK_FB', 6: 'BUCK_COMP', 7: 'GND', 8: 'SW', 9: 'GND'},
   b(-33, -13, 0), mpn='TPS54560BDDAR', group=G)
-C('C5', '10u 25V', 'V12', 'GND', b(-40.3, -13.6, 180), G, fp=C1206)
-C('C6', '10u 25V', 'V12', 'GND', b(-40.3, -19.4, 180), G, fp=C1206)
+C('C5', '10u 25V', 'V12', 'GND', b(-40.3, -13.6, 180), G, fp=C0805)
+C('C6', '10u 25V', 'V12', 'GND', b(-40.3, -19.4, 180), G, fp=C0805)
 C('C7', '100n', 'V12', 'GND', b(-39.7, -16.4, 180), G)
-R('R4', '442k', 'V12', 'BUCK_EN', b(-38.6, -6.5, 90), G)
-R('R5', '90.9k', 'BUCK_EN', 'GND', b(-37.0, -6.5, 90), G)
-R('R6', '243k', 'BUCK_RT', 'GND', b(-35.0, -7.5, 90), G)
+R('R4', '470k', 'V12', 'BUCK_EN', b(-38.6, -6.5, 90), G)
+R('R5', '100k', 'BUCK_EN', 'GND', b(-37.0, -6.5, 90), G)
+R('R6', '220k', 'BUCK_RT', 'GND', b(-35.0, -7.5, 90), G)
 C('C8', '100n', 'BOOT', 'SW', b(-33.4, -17.2, 0), G)
 P('L1', 'Device:L', 'Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm', '6.8u', {1: 'SW', 2: 'V5'},
   b(-35, -26.5, 180), mpn='Bourns SRP1038C-6R8M (6.8 uH, >= 8 A)', group=G)
-P('D4', 'Device:D_Schottky', 'Diode_SMD:D_SMC', 'B560C', {1: 'SW', 2: 'GND'}, b(-24, -20, 90),
-  mpn='B560C (5 A 60 V Schottky)', group=G)
-C('C9', '47u 10V', 'V5', 'GND', b(-44.2, -30.5, 180), G, fp=C1210)
-C('C10', '47u 10V', 'V5', 'GND', b(-44.2, -26.8, 180), G, fp=C1210)
-C('C11', '47u 10V', 'V5', 'GND', b(-44.2, -23.1, 180), G, fp=C1210)
-R('R7', '53.6k', 'V5', 'BUCK_FB', b(-27, -11.5, 90), G)
-R('R8', '10.2k', 'BUCK_FB', 'GND', b(-25.4, -11.5, 90), G)
-R('R9', '16.9k', 'BUCK_COMP', 'COMP_RC', b(-27.8, -7.6, 0), G)
+P('D4', 'Device:D_Schottky', 'Diode_SMD:D_SMA', 'SS54', {1: 'SW', 2: 'GND'}, b(-24, -20, 90),
+  mpn='SS54 (5 A 40 V Schottky, JLC basic)', group=G)
+C('C9', '47u 10V', 'V5', 'GND', b(-44.2, -30.5, 180), G, fp=C1206)
+C('C10', '47u 10V', 'V5', 'GND', b(-44.2, -26.8, 180), G, fp=C1206)
+C('C11', '47u 10V', 'V5', 'GND', b(-44.2, -23.1, 180), G, fp=C1206)
+R('R7', '27k', 'V5', 'BUCK_FB', b(-27, -11.5, 90), G)
+R('R8', '5k1', 'BUCK_FB', 'GND', b(-25.4, -11.5, 90), G)
+R('R9', '15k', 'BUCK_COMP', 'COMP_RC', b(-27.8, -7.6, 0), G)
 C('C12', '4n7', 'COMP_RC', 'GND', b(-24.0, -7.6, 0), G)
 C('C13', '47p', 'BUCK_COMP', 'GND', b(-23.8, -11.5, 90), G)
-P('D5', 'Device:LED', LED0603, 'groen 5V', {1: 'GND', 2: 'LED5_A'}, b(-27.8, -4.6, 180), mpn='LED 0603 green', group=G)
+P('D5', 'Device:LED', LED0603, 'LED 5V', {1: 'GND', 2: 'LED5_A'}, b(-27.8, -4.6, 180), mpn='LED 0603 red (JLC basic)', group=G)
 R('R10', '2k2', 'V5', 'LED5_A', b(-24.0, -4.6, 180), G)
 P('J13', 'Connector_Generic:Conn_01x02', 'arachne:SolderWire_2pad_P5mm_D1.6mm_5V', '5V PI',
   {1: 'GND', 2: 'V5'}, (-1.0, -25.5, 0), mpn='solder pads: 5 V 3 A to the Pi 4 (GPIO pin 2/4 + 6, or a USB-C lead)', group=G)
@@ -142,12 +145,12 @@ P('U3', 'RF_Module:ESP32-S3-WROOM-1', 'RF_Module:ESP32-S3-WROOM-1', 'ESP32-S3-WR
 C('C17', '22u', '3V3', 'GND', (9.6, -6.5, 90), G, fp=C0805)
 C('C18', '100n', '3V3', 'GND', (11.4, -6.5, 90), G)
 R('R15', '1k', 'LED_ESP', 'LED_ESP_A', (13.2, -6.5, 90), G)
-P('D8', 'Device:LED', LED0603, 'blauw ESP', {1: 'GND', 2: 'LED_ESP_A'}, (15.0, -6.5, 270), mpn='LED 0603 blue', group=G)
+P('D8', 'Device:LED', LED0603, 'LED ESP', {1: 'GND', 2: 'LED_ESP_A'}, (15.0, -6.5, 270), mpn='LED 0603 red (JLC basic)', group=G)
 R('R11', '10k', '3V3', 'ESP_EN', (18.4, -6.5, 90), G)
 C('C19', '1u', 'ESP_EN', 'GND', (20.2, -6.5, 90), G)
 R('R12', '10k', '3V3', 'ESP_IO0', (22.0, -6.5, 90), G)
-P('SW1', 'Switch:SW_Push', 'Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2', 'RESET', {1: 'ESP_EN', 2: 'GND'}, (26.6, -6.2, 0), mpn='CK KMR221G (4.2x2.8 tact)', group=G)
-P('SW2', 'Switch:SW_Push', 'Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2', 'BOOT', {1: 'ESP_IO0', 2: 'GND'}, (26.6, -2.0, 0), mpn='CK KMR221G (4.2x2.8 tact)', group=G)
+P('SW1', 'Switch:SW_Push', 'Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2', 'RESET', {1: 'ESP_EN', 2: 'GND'}, (26.6, -6.2, 0), mpn=HAND + 'CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it', dnp=True, group=G)
+P('SW2', 'Switch:SW_Push', 'Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2', 'BOOT', {1: 'ESP_IO0', 2: 'GND'}, (26.6, -2.0, 0), mpn=HAND + 'CK KMR221G (4.2x2.8 tact); the S3 flashes over native USB without it', dnp=True, group=G)
 
 # ---------------------------------------------------------------- servo bus A (legs 1-3) and B (legs 4-6)
 for bus, sx, legs, refs in (('A', 1, ('L1', 'L2', 'L3'), (4, 5, 16, 17, 18, 19, 20, 21, 2, 3, 4)),
@@ -170,17 +173,16 @@ for bus, sx, legs, refs in (('A', 1, ('L1', 'L2', 'L3'), (4, 5, 16, 17, 18, 19, 
     for j, leg, y in zip(jr, legs, (-13.5, 0, 13.5)):
         P(f'J{j}', 'Connector_Generic:Conn_01x03', 'arachne:Molex_5267-03A_1x03_P2.50mm_Vertical', f'{leg} servo',
           {1: 'GND', 2: 'V12', 3: f'BUS_{bus}'}, (sx * 40.5, y if sx > 0 else -y, 90 if sx > 0 else 270),
-          mpn='Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables)', group=G)
+          mpn=HAND + 'Molex 22-03-5035 / 5267-03A Mini-SPOX (mates with the 5264 plug on Feetech cables), LCSC C45581067', dnp=True, group=G)
 
 # ---------------------------------------------------------------- IMU (near the middle of the robot)
-G = 'IMU MPU-6050'
+G = 'IMU LSM6DS3TR-C'
 IM = (0.0, 0.0)                     # exact robot centre (mount holes are symmetric around 0,0)
-P('U8', 'Sensor_Motion:MPU-6050', 'Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm', 'MPU-6050',
-  {1: 'GND', 8: '3V3', 9: 'GND', 10: 'IMU_REG', 11: 'GND', 12: 'IMU_INT', 13: '3V3', 18: 'GND',
-   20: 'IMU_CP', 23: 'IMU_SCL', 24: 'IMU_SDA'}, (IM[0], IM[1], 0), mpn='MPU-6050', group=G)
-for ref, val, a, dx, dy in (('C24', '100n', 'IMU_REG', -3.5, 2), ('C25', '2n2', 'IMU_CP', 3.5, 2),
-                            ('C26', '100n', '3V3', 3.5, -2), ('C27', '10n', '3V3', -3.5, -2)):
-    C(ref, val, a, 'GND', (IM[0] + dx, IM[1] + dy, 90), G)
+P('U8', 'Sensor_Motion:LSM6DS3', 'Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y', 'LSM6DS3TR-C',
+  {1: 'GND', 2: 'GND', 3: 'GND', 4: 'IMU_INT', 5: '3V3', 6: 'GND', 7: 'GND', 8: '3V3', 12: '3V3', 13: 'IMU_SCL', 14: 'IMU_SDA'},
+  (IM[0], IM[1], 0), mpn='LSM6DS3TR-C (6-axis IMU, I2C 0x6A)', group=G)
+for ref, val, dx, dy in (('C24', '100n', -2.8, 2.2), ('C26', '100n', 2.8, -2.2)):
+    C(ref, val, '3V3', 'GND', (IM[0] + dx, IM[1] + dy, 90), G)
 R('R24', '4k7', 'IMU_SDA', '3V3', (IM[0] + 5.5, IM[1] - 2, 90), G)
 R('R25', '4k7', 'IMU_SCL', '3V3', (IM[0] + 7.1, IM[1] - 2, 90), G)
 
@@ -193,7 +195,7 @@ P('J8', 'Connector:USB_C_Receptacle_USB2.0_16P', USBC, 'USB-C PI',
 R('R27', '5k1', 'CC1_E', 'GND', (27.0, 28.5, 90), G)
 R('R28', '5k1', 'CC2_E', 'GND', (36.0, 28.5, 90), G)
 P('U10', 'Power_Protection:USBLC6-2SC6', 'Package_TO_SOT_SMD:SOT-23-6', 'USBLC6-2SC6',
-  {1: 'ESP_DP', 6: 'ESP_DP', 3: 'ESP_DM', 4: 'ESP_DM', 2: 'GND', 5: 'VBUS_ESP'}, (31.5, 27.5, 0), mpn='USBLC6-2SC6', group=G)
+  {1: 'ESP_DP', 6: 'ESP_DP', 3: 'ESP_DM', 4: 'ESP_DM', 2: 'GND', 5: 'VBUS_ESP'}, (31.5, 27.5, 0), mpn=HAND + 'USBLC6-2SC6 ESD (optional)', dnp=True, group=G)
 C('C29', '1u', 'VBUS_ESP', 'GND', (27.0, 25.0, 90), G)
 
 # ---------------------------------------------------------------- sensor strip (S / V / G rows) + 2x Qwiic I2C
@@ -201,10 +203,10 @@ G = 'Sensor-strook (G V S per GPIO) + I2C'
 for ref, row, nets_ in (('J14', 0, STRIP), ('J15', 1, ['3V3'] * len(STRIP)), ('J16', 2, ['GND'] * len(STRIP))):
     P(ref, 'Connector_Generic:Conn_01x19', 'Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical',
       ('SENSOR ' + 'SVG'[row]), {i + 1: n for i, n in enumerate(nets_)}, (STRIP_X0, STRIP_Y[row], 90),
-      mpn='1x19 pin header 2.54 mm (row ' + 'SVG'[row] + ' of the sensor strip)', group=G)
+      mpn=HAND + '1x19 pin header 2.54 mm (row ' + 'SVG'[row] + ' of the sensor strip)', dnp=True, group=G)
 for ref, x in (('J17', -40.0), ('J18', -31.0)):
     P(ref, 'Connector_Generic_MountingPin:Conn_01x04_MountingPin', 'Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal',
-      'I2C', {1: 'GND', 2: '3V3', 3: 'IMU_SDA', 4: 'IMU_SCL', 'MP': 'GND'}, (x, 35.5, 180), mpn='JST SM04B-SRSS-TB (Qwiic / STEMMA QT)', group=G)
+      'I2C', {1: 'GND', 2: '3V3', 3: 'IMU_SDA', 4: 'IMU_SCL', 'MP': 'GND'}, (x, 35.5, 180), mpn=HAND + 'JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)', dnp=True, group=G)
 
 # ---------------------------------------------------------------- mounting
 for i, (sx, sy) in enumerate(((-1, -1), (1, -1), (1, 1), (-1, 1)), 1):
@@ -218,7 +220,6 @@ NETCLASS = {
     'USB': (['ESP_DP', 'ESP_DM'], 0.25, 0.15),
 }
 
-DNP = set()
 
 
 def nets():

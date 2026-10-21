@@ -178,6 +178,10 @@ def build_sym_lib():
             out[n] = s
         else:
             out[n] = symlib.get(sid)
+        if sid == 'Sensor_Motion:LSM6DS3':          # SA0 / aux-bus pins are tied to GND on purpose: passive keeps ERC clean
+            for sub in find(out[n], 'symbol'):
+                for pn in find(sub, 'pin'):
+                    if find1(pn, 'number')[1] in ('1', '2', '3'): pn[1] = Sym('passive')
         # point the footprint field to our own lib
         fpid = LIB + ':' + fp_name(p['fp'])
         for e in out[n]:
