@@ -4727,7 +4727,7 @@
 				)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row S of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row S of the sensor strip), hand-soldered"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4740,7 +4740,7 @@
 			)
 		)
 		(path "/d040710f-c9a0-594b-931e-b72c287a39c1")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -12285,7 +12285,7 @@
 				)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row G of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row G of the sensor strip), hand-soldered"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12298,7 +12298,7 @@
 			)
 		)
 		(path "/c3cdc8b1-e076-5a73-abdc-409249ce2456")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -16758,7 +16758,7 @@
 				)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row V of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row V of the sensor strip), hand-soldered"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16771,7 +16771,7 @@
 			)
 		)
 		(path "/4d547a67-2285-5a41-bad5-dc066c545112")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)

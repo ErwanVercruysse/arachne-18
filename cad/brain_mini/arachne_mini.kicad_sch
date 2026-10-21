@@ -17888,7 +17888,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d040710f-c9a0-594b-931e-b72c287a39c1")
 		(property "Reference" "J14"
 			(at 220.98 184.19 0)
@@ -17924,7 +17924,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row S of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row S of the sensor strip), hand-soldered"
 			(at 220.98 210.82 0)
 			(effects
 				(font
@@ -18405,7 +18405,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "4d547a67-2285-5a41-bad5-dc066c545112")
 		(property "Reference" "J15"
 			(at 241.3 184.19 0)
@@ -18441,7 +18441,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row V of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row V of the sensor strip), hand-soldered"
 			(at 241.3 210.82 0)
 			(effects
 				(font
@@ -18922,7 +18922,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c3cdc8b1-e076-5a73-abdc-409249ce2456")
 		(property "Reference" "J16"
 			(at 261.62 184.19 0)
@@ -18958,7 +18958,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1x19 pin header 2.54 mm (row G of the sensor strip)"
+		(property "MPN" "1x19 pin header 2.54 mm (row G of the sensor strip), hand-soldered"
 			(at 261.62 210.82 0)
 			(effects
 				(font

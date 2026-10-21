@@ -58,7 +58,8 @@ def main():
     VAL = {p['ref']: p['value'] for p in design.parts}
     FP = {p['ref']: p['fp'].split(':')[1] for p in design.parts}
     ROT = [(r'^SOT-223', 180), (r'^SOT-23', 180), (r'^CP_Elec_', 180), (r'^Texas_R-PDSO-G8', 270), (r'^SOIC-', 270),
-           (r'^QFN-', 90), (r'^JST_SH_SM', 180)]
+           (r'^QFN-', 90), (r'^JST_SH_SM', 180),
+           (r'^TO-252', 180)]                                 # TO-252: seen 180 deg off in the JLC preview (2026-10-21)
 
     # JLC places every part on the centre of its pads; KiCad's origin is pin 1 for connectors and the body centre for
     # modules. Use the pad-field centre from the board (tools/padcentres.py) for all parts.
