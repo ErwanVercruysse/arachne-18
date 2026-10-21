@@ -431,7 +431,7 @@ def back_art(board):
     B = pcbnew.B_SilkS
     text(board, B, 'ARACHNE-18', (0, 4.5), size=4.0, th=0.6, mirror=True, bold=True)
     text(board, B, 'hexapod brain  ·  CM5 + ESP32-S3 + MPU-6050', (0, 9.0), size=1.3, th=0.2, mirror=True)
-    text(board, B, 'Kobe Van Robaeys  ·  maakleerplek  ·  2026', (0, 12.0), size=1.0, th=0.16, mirror=True)
+    text(board, B, 'Kobe Vanrobaeys  ·  maakleerplek  ·  2026', (0, 12.0), size=1.0, th=0.16, mirror=True)
     spider(board, B, (0, -13.5), 0.8)
 
 

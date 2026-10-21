@@ -873,8 +873,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "tiltbox.kicad_sch",
-        "name": "tiltbox",
+        "filename": "arachne_brain.kicad_sch",
+        "name": "arachne_brain",
         "uuid": "7218f0a4-396b-4b27-b8c4-5f1c1074c06c"
       }
     ],

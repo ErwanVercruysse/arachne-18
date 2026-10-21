@@ -8,7 +8,7 @@
 		(title "ARACHNE-18 brain board")
 		(date "2026-10-17")
 		(rev "1.0")
-		(company "Kobe Van Robaeys - maakleerplek")
+		(company "Kobe Vanrobaeys - maakleerplek")
 		(comment 1 "CM5 + ESP32-S3 + MPU-6050, 6 servo-bus legs")
 	)
 	(lib_symbols

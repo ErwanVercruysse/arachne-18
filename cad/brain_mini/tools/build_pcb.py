@@ -394,7 +394,7 @@ def back_art(board):
     B = pcbnew.B_SilkS
     text(board, B, 'ARACHNE-18', (17.0, 4.0), size=3.0, th=0.45, mirror=True, bold=True)
     text(board, B, 'mini brain  ·  ESP32-S3 + MPU-6050  ·  USB > Pi 4', (17.0, 8.0), size=1.0, th=0.16, mirror=True)
-    text(board, B, 'Kobe Van Robaeys  ·  maakleerplek  ·  2026', (17.0, 10.5), size=0.9, th=0.15, mirror=True)
+    text(board, B, 'Kobe Vanrobaeys  ·  maakleerplek  ·  2026', (17.0, 10.5), size=0.9, th=0.15, mirror=True)
     spider(board, B, (17.0, -10.5), 0.5)
 
 

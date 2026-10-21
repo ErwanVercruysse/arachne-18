@@ -165,7 +165,7 @@
 			)
 		)
 		(path "/77869b7c-9126-5623-af71-c77a620f9219")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -1427,7 +1427,7 @@
 			)
 		)
 		(path "/affa6243-1620-51ce-a167-c715b0f13bd4")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -1929,7 +1929,7 @@
 			)
 		)
 		(path "/d68704c3-310e-5895-aa79-5089ef620e79")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.76 -1.56)
@@ -2309,7 +2309,7 @@
 			)
 		)
 		(path "/cd9e361b-6db3-50dd-ada6-05d9dfc54b9f")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.14058 -0.51)
@@ -5764,7 +5764,7 @@
 			)
 		)
 		(path "/30201bae-bbf2-5eaa-9626-2f1a5f3f231b")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.91 -1.56)
@@ -6691,7 +6691,7 @@
 			)
 		)
 		(path "/fedc6da0-ef87-5158-b8ba-3281976cf90d")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.8 -0.735)
@@ -7414,7 +7414,7 @@
 			)
 		)
 		(path "/da111b83-8859-5d1d-bab1-389fc9143b2a")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.76 -1.56)
@@ -7954,7 +7954,7 @@
 			)
 		)
 		(path "/9eb5139d-86b8-583f-bb8e-d5abe1bd8480")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -9158,7 +9158,7 @@
 			)
 		)
 		(path "/0fe40e41-dfce-5105-9f9d-ff463d66484f")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.76 -1.56)
@@ -10417,7 +10417,7 @@
 			)
 		)
 		(path "/3c9e7a82-0af6-53e4-a1af-39bfbe08468f")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 0.5225)
@@ -10576,7 +10576,7 @@
 			)
 		)
 		(path "/c6f878f9-3c3d-5e58-b542-9b1a036dc2b0")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -3.11 -1.785)
@@ -12298,7 +12298,7 @@
 			)
 		)
 		(path "/638b084d-cd0d-59ca-a917-1a2029477791")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -13165,7 +13165,7 @@
 			)
 		)
 		(path "/188feaf4-9e8d-5a22-954e-c4cbed47c1a8")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -4.7 -1.9)
@@ -14073,7 +14073,7 @@
 			)
 		)
 		(path "/c4607145-1834-55b1-bf47-1276fc40c4fa")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.75 -1)
@@ -19566,7 +19566,7 @@
 			)
 		)
 		(path "/d002f105-3b5b-59a1-af5e-f88bb00c06ae")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.91 -1.56)
@@ -20811,7 +20811,7 @@
 			)
 		)
 		(path "/66f0a0b2-651e-53ae-b112-66bdad74db1e")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -22208,7 +22208,7 @@
 			)
 		)
 		(path "/aaaac9df-aceb-5dc0-99d4-c797b958433c")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -2.75 -1)
@@ -22949,7 +22949,7 @@
 			)
 		)
 		(path "/e8c91b6c-f34a-5e52-ac8f-ad15bad04ebc")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -23109,7 +23109,7 @@
 			)
 		)
 		(path "/d67e3415-e69a-5233-b500-a3aa598a4e83")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -24885,7 +24885,7 @@
 			)
 		)
 		(path "/f1636664-2490-5f08-82df-be692edeaf78")
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 36.5 0)
@@ -30798,7 +30798,7 @@
 			)
 		)
 	)
-	(gr_text "Kobe Van Robaeys  ·  maakleerplek  ·  2026"
+	(gr_text "Kobe Vanrobaeys  ·  maakleerplek  ·  2026"
 		(at 150 112 0)
 		(layer "B.SilkS")
 		(uuid "c3de7d12-4f87-49be-995b-c7fc8b9cd234")
