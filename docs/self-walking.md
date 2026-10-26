@@ -39,26 +39,27 @@ the near-perfect orientation it was validated with. Raw data: [`results/terrain_
 
 | Terrain | Trained policy: passed | speed kept | Adaptive: passed | speed kept | max tilt policy / adaptive |
 |---|---:|---:|---:|---:|---:|
-| Flat (incl. turning on the spot, standing) | 26/26 | 94 % | **26/26** | 94 % | 0.3° / 0.3° |
+| Flat (incl. turning on the spot, standing) | 26/26 | 94 % | **26/26** | 94 % | 0.3° / 0.4° |
 | Bumps 2 mm | 20/20 | 90 % | **20/20** | 91 % | 0.7° / 0.6° |
-| Rolling ground 4 mm | 20/20 | 90 % | **20/20** | 91 % | 0.8° / 0.8° |
-| Slopes 2° | 20/20 | 90 % | **20/20** | 91 % | 1.1° / 1.1° |
+| Rolling ground 4 mm | 20/20 | 89 % | **20/20** | 91 % | 0.8° / 0.8° |
+| Slopes 2° | 20/20 | 90 % | **20/20** | 91 % | 1.0° / 1.1° |
 | Steps 4 mm | 20/20 | 85 % | **20/20** | 90 % | 1.1° / 1.2° |
 | Steps 8 mm (curriculum stage the policy failed) | 3/20 | 69 % | **15/20** | 87 % | 2.4° / 2.7° |
-| Mixed: bumps + steps + 2° slope | 12/20 | 78 % | **20/20** | 89 % | 3.2° / 3.1° |
+| Mixed: bumps + steps + 2° slope | 12/20 | 78 % | **20/20** | 89 % | 3.2° / 3.2° |
 | Steps 12 mm | 0/20 | 52 % | **0/20** | 82 % | 3.8° / 4.2° |
-| Steps 16 mm | still running | | | | |
-| Bumps 8 mm | still running | | | | |
-| Slope 5° | still running | | | | |
-| Slope 8° | still running | | | | |
-| Cobblestones, mild | still running | | | | |
-| Cobblestones (joints 8 mm deep, stones ±4 mm) | still running | | | | |
-| Cobblestones, rough (joints 12 mm, ±7 mm) | still running | | | | |
-| Mixed: 10 mm + 4° slope | still running | | | | |
+| Steps 16 mm | 0/20 | 42 % | **0/20** | 72 % | 4.1° / 5.7° |
+| Bumps 8 mm | 20/20 | 86 % | **20/20** | 90 % | 1.4° / 1.4° |
+| Slope 5° | 20/20 | 86 % | **20/20** | 91 % | 2.4° / 2.1° |
+| Slope 8° | 17/20 | 79 % | **20/20** | 89 % | 3.6° / 3.3° |
+| Cobblestones, mild | 11/20 | 75 % | **20/20** | 89 % | 2.3° / 2.4° |
+| Cobblestones (joints 8 mm deep, stones ±4 mm) | 0/20 | 65 % | **1/20** | 87 % | 3.3° / 3.2° |
+| Cobblestones, rough (joints 12 mm, ±7 mm) | 0/20 | 44 % | **0/20** | 77 % | 4.5° / 5.4° |
+| Mixed: 10 mm + 4° slope | 0/20 | 46 % | **4/20** | 77 % | 7.8° / 5.0° |
 
-No run fell over. On 12-16 mm steps and normal/rough cobblestones it keeps walking (75-87 % of the commanded speed,
-the policy 44-65 %) but bobs more than the gates allow; the clearance-rate gate also measures the ground jumping
-under the body at every cobble joint, so it is strict there.
+No run fell over, with either controller. On 12-16 mm steps, normal/rough cobblestones and the 10 mm + 4° mix the
+adaptive controller keeps walking (72-87 % of the commanded speed, the trained policy 42-65 %) but bobs more than the
+gates allow; the clearance-rate gate also measures the ground jumping under the body at every cobble joint, so it is
+strict there. So: mild cobblestones yes, normal cobblestones slowly and bumpy, rough ones barely.
 
 **Stairs**: no. The lowest point of the chassis is 4.2 cm below the hip axis and the legs can lift the hips at most
 16-18 cm above the feet, with almost straight legs. A 17-19 cm stair riser cannot be cleared; the body would have to be
