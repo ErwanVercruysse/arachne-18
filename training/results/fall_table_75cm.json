@@ -1,0 +1,2252 @@
+{
+ "height_m": 0.75,
+ "rows": [
+  {
+   "scenario": "level",
+   "reaction": "stiff",
+   "trials": [
+    {
+     "gear_max": 1.8647483508298441,
+     "gear_worst": "L1_knee",
+     "shock_g": 40.931504442425556,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.582469113909115,
+     "gear_worst": "L4_knee",
+     "shock_g": 26.580680449437125,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.952865415654834,
+     "gear_worst": "L3_knee",
+     "shock_g": 45.10528417857364,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2314195456585895,
+     "gear_worst": "L1_knee",
+     "shock_g": 51.693992439345,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.3040681208195135,
+     "gear_worst": "L2_knee",
+     "shock_g": 32.02554112080572,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.4089045137851794,
+     "gear_worst": "L1_knee",
+     "shock_g": 29.398886250209554,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.3849855502142194,
+     "gear_worst": "L1_knee",
+     "shock_g": 48.94774913367291,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.714903009125017,
+     "gear_worst": "L1_knee",
+     "shock_g": 42.984466913456096,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.890657933676348,
+     "gear_worst": "L6_knee",
+     "shock_g": 34.61392311694956,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.538913243089665,
+     "gear_worst": "L2_knee",
+     "shock_g": 31.098000927985375,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.597904315097976,
+     "gear_worst": "L6_knee",
+     "shock_g": 40.13499845709974,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.8810475161682696,
+     "gear_worst": "L3_knee",
+     "shock_g": 33.65186372269193,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 3.1960738856690476,
+   "shock_g_mean": 38.09724092938768,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 4.582469113909115,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "limp",
+   "trials": [
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 41.38744170671137,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 26.614527149987257,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 45.98275720504539,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 52.09037354172289,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 32.10918373563691,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 29.186935107176485,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 50.979197306859966,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 44.70695525637138,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 34.070467815718686,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 31.11189302848364,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 39.482227177977535,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 33.753450755486455,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.1999999999999997,
+   "shock_g_mean": 38.456284148931495,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 1.2,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "brace",
+   "trials": [
+    {
+     "gear_max": 1.6517029842773248,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.37406618916193,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517477335259505,
+     "gear_worst": "L4_knee",
+     "shock_g": 34.36523682544314,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517027357362388,
+     "gear_worst": "L1_hip",
+     "shock_g": 43.99674693308974,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517028447443993,
+     "gear_worst": "L1_hip",
+     "shock_g": 53.04963338419886,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517628507305644,
+     "gear_worst": "L2_knee",
+     "shock_g": 34.69169189824115,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6521368562960292,
+     "gear_worst": "L1_knee",
+     "shock_g": 33.768660555878085,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517040005771346,
+     "gear_worst": "L1_knee",
+     "shock_g": 52.18894503884458,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517031138139509,
+     "gear_worst": "L1_hip",
+     "shock_g": 37.10028071489922,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522139494761774,
+     "gear_worst": "L6_knee",
+     "shock_g": 31.230659563428308,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517027828466904,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.28412102231327,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517030250124916,
+     "gear_worst": "L1_hip",
+     "shock_g": 33.99198718338074,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517028774652465,
+     "gear_worst": "L1_hip",
+     "shock_g": 35.02804952097786,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6517904795418499,
+   "shock_g_mean": 38.589173235821406,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 1.6522139494761774,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "brace_firm",
+   "trials": [
+    {
+     "gear_max": 2.789919102732843,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.38344213370348,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.791062860952699,
+     "gear_worst": "L4_knee",
+     "shock_g": 34.40944262789362,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789918296917177,
+     "gear_worst": "L1_hip",
+     "shock_g": 44.04474829215027,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.78991865650936,
+     "gear_worst": "L1_hip",
+     "shock_g": 53.032485305473244,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789919039919496,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.75758439414989,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899198435292862,
+     "gear_worst": "L1_hip",
+     "shock_g": 33.85497230742401,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899186209408,
+     "gear_worst": "L1_hip",
+     "shock_g": 52.20457089003163,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899195228473324,
+     "gear_worst": "L1_hip",
+     "shock_g": 37.087622720707465,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789919703598297,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.83772897161225,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899184682786196,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.24438428849156,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.78991927559681,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.06852141685729,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899187999086026,
+     "gear_worst": "L1_hip",
+     "shock_g": 35.07110072842896,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.7900143493109435,
+   "shock_g_mean": 38.66638367307697,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 2.791062860952699,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "brace_low",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.216039256247754,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 37.166331660092126,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.75535458916571,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 50.2545027014524,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.534333892991874,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 28.400026154400905,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 35.576973883420465,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.328463152292024,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 36.395490908870315,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 43.997894833243485,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 41.046573549760545,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 46.105353389186426,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 40.81477816426033,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 1.6522949268080434,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "brace_low_firm",
+   "trials": [
+    {
+     "gear_max": 2.3363175269708933,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.2222391094429,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.337364572949823,
+     "gear_worst": "L4_knee",
+     "shock_g": 37.16807164467934,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363173653024067,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.76376133292908,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363174470684362,
+     "gear_worst": "L1_knee",
+     "shock_g": 50.23416845148127,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336317493632743,
+     "gear_worst": "L1_knee",
+     "shock_g": 45.54044748555321,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3367204852971026,
+     "gear_worst": "L1_knee",
+     "shock_g": 28.41092933649013,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363174662021557,
+     "gear_worst": "L1_knee",
+     "shock_g": 35.573258847819496,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363176047703758,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.32623852870784,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363177669884023,
+     "gear_worst": "L1_knee",
+     "shock_g": 36.393736514706674,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336317437278633,
+     "gear_worst": "L1_knee",
+     "shock_g": 44.00076869058565,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363176505507166,
+     "gear_worst": "L1_knee",
+     "shock_g": 41.042095813494704,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363175601910062,
+     "gear_worst": "L1_knee",
+     "shock_g": 46.10467491744631,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.336438364766891,
+   "shock_g_mean": 40.81503255611138,
+   "chassis_N_mean": 0.0,
+   "gear_peak": 2.337364572949823,
+   "upright": 12
+  },
+  {
+   "scenario": "level",
+   "reaction": "tuck",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 45.565554292924595,
+     "chassis_N": 55.730373689715705,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 32.27616279631438,
+     "chassis_N": 53.67649126868126,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 51.12906815807869,
+     "chassis_N": 44.538787464464164,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 55.86288291527819,
+     "chassis_N": 6.261330815709939,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 35.671479075091135,
+     "chassis_N": 29.91426092936115,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.979475097856373,
+     "chassis_N": 53.991775983413376,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 44.62351157675465,
+     "chassis_N": 53.48942152955839,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 27.867092681541703,
+     "chassis_N": 66.73482181102497,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 30.922593018376325,
+     "chassis_N": 35.227481178443014,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 38.206098423205724,
+     "chassis_N": 31.88359993649392,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 40.1162883481879,
+     "chassis_N": 59.89577462385242,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.30860103863446,
+     "chassis_N": 51.81260821544345,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 39.460733951853676,
+   "chassis_N_mean": 45.26306062051348,
+   "gear_peak": 1.6522949268080434,
+   "upright": 12
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "stiff",
+   "trials": [
+    {
+     "gear_max": 4.51915150790099,
+     "gear_worst": "L1_knee",
+     "shock_g": 30.15898610365717,
+     "chassis_N": 710.6079114413373,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.542836629909244,
+     "gear_worst": "L6_knee",
+     "shock_g": 27.71114476685994,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 3.9479004515596348,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.830981191442426,
+     "chassis_N": 385.52190660655265,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.46424347861661,
+     "gear_worst": "L6_yaw",
+     "shock_g": 41.29213098639905,
+     "chassis_N": 494.36559132739484,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.586305989948346,
+     "gear_worst": "L1_knee",
+     "shock_g": 27.552086266839733,
+     "chassis_N": 644.8346993958287,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.350694057174195,
+     "gear_worst": "L6_yaw",
+     "shock_g": 33.469454283831126,
+     "chassis_N": 349.9531198300784,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.543110451246854,
+     "gear_worst": "L1_knee",
+     "shock_g": 27.194900822417196,
+     "chassis_N": 358.5719701896879,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.816359131839148,
+     "gear_worst": "L1_hip",
+     "shock_g": 46.04838249927328,
+     "chassis_N": 1621.3963728289832,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.303558285101843,
+     "gear_worst": "L6_yaw",
+     "shock_g": 32.62756053672332,
+     "chassis_N": 495.513472332686,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.596341556414033,
+     "gear_worst": "L1_knee",
+     "shock_g": 24.237628021539333,
+     "chassis_N": 506.6914697579742,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.7959243297620715,
+     "gear_worst": "L6_hip",
+     "shock_g": 65.80914170314166,
+     "chassis_N": 1821.4738360267834,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.595765525161391,
+     "gear_worst": "L1_knee",
+     "shock_g": 27.90082039630792,
+     "chassis_N": 499.73203428182796,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 4.088515949552863,
+   "shock_g_mean": 34.902768131536014,
+   "chassis_N_mean": 657.3885320015946,
+   "gear_peak": 4.596341556414033,
+   "upright": 1
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "limp",
+   "trials": [
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 29.885566940904056,
+     "chassis_N": 560.8823378418568,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 26.4123118234012,
+     "chassis_N": 57.09990867666409,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 34.35652652589941,
+     "chassis_N": 480.9876830862309,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 40.32634008010035,
+     "chassis_N": 1004.0788424489564,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 29.0627816985903,
+     "chassis_N": 376.2719683226299,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 36.94494327593759,
+     "chassis_N": 434.3284978893269,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 25.996499274324837,
+     "chassis_N": 459.6369667484867,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 44.168788802763814,
+     "chassis_N": 1633.7755912613127,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 32.0678867606094,
+     "chassis_N": 299.47517223915645,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 24.236889443800848,
+     "chassis_N": 236.59245204055028,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 66.10371304167428,
+     "chassis_N": 1850.5383945527567,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 27.688056852423177,
+     "chassis_N": 424.01283047657654,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.1999999999999997,
+   "shock_g_mean": 34.770858710035775,
+   "chassis_N_mean": 651.473387132042,
+   "gear_peak": 1.2,
+   "upright": 1
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "brace",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 36.14974557046617,
+     "chassis_N": 337.46317599707015,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6518965023056458,
+     "gear_worst": "L1_yaw",
+     "shock_g": 24.58085593131518,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6521698669245017,
+     "gear_worst": "L1_yaw",
+     "shock_g": 31.198249603738688,
+     "chassis_N": 359.15502882995884,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6520427198783645,
+     "gear_worst": "L1_yaw",
+     "shock_g": 39.374496089241106,
+     "chassis_N": 820.0177656179441,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 40.41093707126437,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_yaw",
+     "shock_g": 42.39346110285412,
+     "chassis_N": 633.0774809610773,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 22.944237729872953,
+     "chassis_N": 475.2006558386899,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 33.37732675040328,
+     "chassis_N": 450.6368273602472,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6521607038977615,
+     "gear_worst": "L1_yaw",
+     "shock_g": 28.55894133795517,
+     "chassis_N": 382.1058298892807,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6520619988663554,
+     "gear_worst": "L1_knee",
+     "shock_g": 30.386848947249288,
+     "chassis_N": 325.86663523199365,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6517030773071517,
+     "gear_worst": "L1_hip",
+     "shock_g": 50.22681608434465,
+     "chassis_N": 1393.3572935442974,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6520556055705158,
+     "gear_worst": "L1_knee",
+     "shock_g": 30.5660975653639,
+     "chassis_N": 134.96311184960385,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6521304257325429,
+   "shock_g_mean": 34.18066781533907,
+   "chassis_N_mean": 442.65365042668026,
+   "gear_peak": 1.6522949268080434,
+   "upright": 2
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "brace_firm",
+   "trials": [
+    {
+     "gear_max": 2.7944245305345157,
+     "gear_worst": "L1_knee",
+     "shock_g": 36.02358575041707,
+     "chassis_N": 707.8719342165946,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.793638679879042,
+     "gear_worst": "L6_knee",
+     "shock_g": 24.58095846481444,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899212400629887,
+     "gear_worst": "L1_hip",
+     "shock_g": 33.67806972012183,
+     "chassis_N": 668.6830521853055,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899213169717454,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.34398857247304,
+     "chassis_N": 475.94078142749174,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789920381358091,
+     "gear_worst": "L1_hip",
+     "shock_g": 40.39083651526463,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7912861290849493,
+     "gear_worst": "L6_yaw",
+     "shock_g": 42.24544528353824,
+     "chassis_N": 339.6664782071052,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7944245305345157,
+     "gear_worst": "L1_knee",
+     "shock_g": 28.496999218782356,
+     "chassis_N": 363.4625813217775,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7944245305345157,
+     "gear_worst": "L1_knee",
+     "shock_g": 33.33426128598357,
+     "chassis_N": 497.4501589883868,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899217215021896,
+     "gear_worst": "L1_hip",
+     "shock_g": 28.93221863737321,
+     "chassis_N": 848.3979791379367,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789919775672376,
+     "gear_worst": "L1_hip",
+     "shock_g": 30.34811466766427,
+     "chassis_N": 468.6822595238612,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789923741024693,
+     "gear_worst": "L1_hip",
+     "shock_g": 50.29234266780592,
+     "chassis_N": 1397.945244687275,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.789919736842634,
+     "gear_worst": "L1_hip",
+     "shock_g": 30.509899781880303,
+     "chassis_N": 643.5621976435074,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.791470526166855,
+   "shock_g_mean": 34.848060047176574,
+   "chassis_N_mean": 534.3052222782701,
+   "gear_peak": 2.7944245305345157,
+   "upright": 2
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "brace_low",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 28.454171084722173,
+     "chassis_N": 385.35796581326747,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 31.728877903781303,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_yaw",
+     "shock_g": 32.849745394614075,
+     "chassis_N": 447.7227818624939,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_yaw",
+     "shock_g": 36.719491077381875,
+     "chassis_N": 688.9192263700764,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 37.548107055504914,
+     "chassis_N": 867.1745672796367,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_yaw",
+     "shock_g": 51.546646719837725,
+     "chassis_N": 884.5825534000433,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 29.98229432479269,
+     "chassis_N": 356.60631689395075,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 38.1640495625202,
+     "chassis_N": 693.8344884605517,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 30.00478259995791,
+     "chassis_N": 688.7340235072852,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 38.30775320124798,
+     "chassis_N": 892.4490007999386,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 75.8319463202749,
+     "chassis_N": 870.3211365122382,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 31.1594414924496,
+     "chassis_N": 470.9929339144289,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 38.52477556142378,
+   "chassis_N_mean": 603.8912495678259,
+   "gear_peak": 1.6522949268080434,
+   "upright": 1
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "brace_low_firm",
+   "trials": [
+    {
+     "gear_max": 2.3374841254722543,
+     "gear_worst": "L1_knee",
+     "shock_g": 28.738912144618034,
+     "chassis_N": 358.47106115200177,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363189027384017,
+     "gear_worst": "L1_knee",
+     "shock_g": 31.726115150820736,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336667309103484,
+     "gear_worst": "L1_yaw",
+     "shock_g": 32.888145959428385,
+     "chassis_N": 696.1030201233594,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3366533318748743,
+     "gear_worst": "L6_yaw",
+     "shock_g": 36.75794529085111,
+     "chassis_N": 490.45538504109703,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363195245936472,
+     "gear_worst": "L1_knee",
+     "shock_g": 37.56228886981697,
+     "chassis_N": 480.35923825676923,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3370218098254965,
+     "gear_worst": "L6_yaw",
+     "shock_g": 51.599656620034274,
+     "chassis_N": 708.1118035571324,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.337572689043926,
+     "gear_worst": "L1_hip",
+     "shock_g": 29.978737790296105,
+     "chassis_N": 938.1786587086933,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.337572689043926,
+     "gear_worst": "L1_hip",
+     "shock_g": 38.13383914569204,
+     "chassis_N": 680.2965944443199,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336420029356685,
+     "gear_worst": "L6_yaw",
+     "shock_g": 30.03031842158994,
+     "chassis_N": 495.27461137978196,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3367932433615786,
+     "gear_worst": "L1_knee",
+     "shock_g": 38.323792854082605,
+     "chassis_N": 674.902823986633,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363246980163117,
+     "gear_worst": "L1_knee",
+     "shock_g": 75.86631635305311,
+     "chassis_N": 840.8721383782956,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3368763132505586,
+     "gear_worst": "L1_knee",
+     "shock_g": 31.169888501750346,
+     "chassis_N": 489.4471210477245,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.3368353888067626,
+   "shock_g_mean": 38.56466309183614,
+   "chassis_N_mean": 571.0393713396506,
+   "gear_peak": 2.337572689043926,
+   "upright": 1
+  },
+  {
+   "scenario": "nose_first",
+   "reaction": "tuck",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 28.757744553099776,
+     "chassis_N": 617.871278739706,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 27.888296591308826,
+     "chassis_N": 80.69574438369216,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.60949228070192,
+     "chassis_N": 765.2551875174736,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 43.58098742281178,
+     "chassis_N": 304.413501142107,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.14171693285239,
+     "chassis_N": 422.2049496903616,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 34.46383147251633,
+     "chassis_N": 358.3771086963293,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 26.712484278516325,
+     "chassis_N": 763.4030250971277,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.946109461705404,
+     "chassis_N": 1583.7743430922528,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.256362513718653,
+     "chassis_N": 430.77747556877586,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 36.40573059154565,
+     "chassis_N": 595.2996066364901,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 49.688917531924,
+     "chassis_N": 933.1738795043698,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 36.796013233957005,
+     "chassis_N": 448.8073083659821,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 35.10397390538817,
+   "chassis_N_mean": 608.6711173695558,
+   "gear_peak": 1.6522949268080434,
+   "upright": 2
+  },
+  {
+   "scenario": "side",
+   "reaction": "stiff",
+   "trials": [
+    {
+     "gear_max": 4.614382252785833,
+     "gear_worst": "L2_hip",
+     "shock_g": 36.37026877596455,
+     "chassis_N": 1145.9081979179186,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.589139498860294,
+     "gear_worst": "L2_knee",
+     "shock_g": 45.034797025767354,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.607903880556943,
+     "gear_worst": "L2_hip",
+     "shock_g": 39.84770007699524,
+     "chassis_N": 1155.1656140426976,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.613046051121594,
+     "gear_worst": "L2_hip",
+     "shock_g": 36.36404312227627,
+     "chassis_N": 965.6178774747295,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.5998028251228,
+     "gear_worst": "L2_hip",
+     "shock_g": 28.752770240602302,
+     "chassis_N": 1146.2077244731418,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.576939143945362,
+     "gear_worst": "L2_hip",
+     "shock_g": 31.920578080087726,
+     "chassis_N": 1095.9205950819216,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.603976908014223,
+     "gear_worst": "L2_hip",
+     "shock_g": 27.907033097594105,
+     "chassis_N": 1117.63913754674,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.04247889669689,
+     "gear_worst": "L2_hip",
+     "shock_g": 70.34618460334657,
+     "chassis_N": 1272.8080196746548,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.592135099086258,
+     "gear_worst": "L2_knee",
+     "shock_g": 29.05606257508301,
+     "chassis_N": 1166.091973867649,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.587421979224872,
+     "gear_worst": "L2_hip",
+     "shock_g": 23.908055706312076,
+     "chassis_N": 868.7713913025198,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.595704395827223,
+     "gear_worst": "L2_hip",
+     "shock_g": 55.42057980815724,
+     "chassis_N": 1053.8631490993682,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 4.60573425657964,
+     "gear_worst": "L2_hip",
+     "shock_g": 29.50348176093651,
+     "chassis_N": 862.4297098025571,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 4.552388765651827,
+   "shock_g_mean": 37.86929623942691,
+   "chassis_N_mean": 987.5352825236581,
+   "gear_peak": 4.614382252785833,
+   "upright": 1
+  },
+  {
+   "scenario": "side",
+   "reaction": "limp",
+   "trials": [
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 35.73184352650888,
+     "chassis_N": 735.6596870395657,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 44.54717351089538,
+     "chassis_N": 244.28802955363142,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 38.92811342873996,
+     "chassis_N": 1165.9477615837075,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 35.60915787963152,
+     "chassis_N": 604.1573542574898,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 27.09413370382283,
+     "chassis_N": 596.1521583537104,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 31.611061396846782,
+     "chassis_N": 424.1717563119512,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 37.48723708542135,
+     "chassis_N": 537.5481359835311,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 70.30265322303126,
+     "chassis_N": 1261.352646273834,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 27.51144748999439,
+     "chassis_N": 254.04083470086275,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 23.87426059903439,
+     "chassis_N": 143.54203066023615,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 53.00463726346036,
+     "chassis_N": 1032.3513751264047,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.2,
+     "gear_worst": "L1_yaw",
+     "shock_g": 34.97945630155513,
+     "chassis_N": 535.5797180898588,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.1999999999999997,
+   "shock_g_mean": 38.390097950745194,
+   "chassis_N_mean": 627.8992906612319,
+   "gear_peak": 1.2,
+   "upright": 5
+  },
+  {
+   "scenario": "side",
+   "reaction": "brace",
+   "trials": [
+    {
+     "gear_max": 1.6520193892180126,
+     "gear_worst": "L2_knee",
+     "shock_g": 34.44828279571844,
+     "chassis_N": 1112.1277493598286,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 42.04983244994953,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 39.61187405820343,
+     "chassis_N": 854.097041932915,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.652056756122795,
+     "gear_worst": "L2_knee",
+     "shock_g": 33.26146917103417,
+     "chassis_N": 1104.4998876844286,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.70785172002509,
+     "chassis_N": 431.14134161559167,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6521519261284228,
+     "gear_worst": "L2_knee",
+     "shock_g": 32.46485917281379,
+     "chassis_N": 563.0292044653535,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.19170747961724,
+     "chassis_N": 830.7263102395221,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 37.36574099352569,
+     "chassis_N": 873.778427991012,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6520542937671585,
+     "gear_worst": "L2_knee",
+     "shock_g": 33.4734877795028,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 37.24081189361721,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_hip",
+     "shock_g": 28.060050753078908,
+     "chassis_N": 1165.0808326919998,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.00880062080631,
+     "chassis_N": 781.6761541201897,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522201483083947,
+   "shock_g_mean": 35.573730740657716,
+   "chassis_N_mean": 643.0130791750701,
+   "gear_peak": 1.6522949268080434,
+   "upright": 3
+  },
+  {
+   "scenario": "side",
+   "reaction": "brace_firm",
+   "trials": [
+    {
+     "gear_max": 2.792433890317866,
+     "gear_worst": "L2_knee",
+     "shock_g": 33.4706696475338,
+     "chassis_N": 595.8097157864781,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.790981457876822,
+     "gear_worst": "L2_knee",
+     "shock_g": 41.50735842725983,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.792633625734975,
+     "gear_worst": "L2_knee",
+     "shock_g": 39.32572777274574,
+     "chassis_N": 624.4359073830153,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7922516924032537,
+     "gear_worst": "L2_knee",
+     "shock_g": 34.69247997815034,
+     "chassis_N": 448.79092625028426,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7932165572106196,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.52700031684026,
+     "chassis_N": 1185.0284154966585,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.792630247066538,
+     "gear_worst": "L2_knee",
+     "shock_g": 32.37408464971254,
+     "chassis_N": 885.6707621131078,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7928146701501353,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.01806725060011,
+     "chassis_N": 1141.6359608844402,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.792693327239851,
+     "gear_worst": "L2_knee",
+     "shock_g": 36.677899808589245,
+     "chassis_N": 1093.8886700963976,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899354888784034,
+     "gear_worst": "L2_knee",
+     "shock_g": 33.37366091358323,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7899299929183026,
+     "gear_worst": "L1_hip",
+     "shock_g": 37.06036561292597,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7925306510044927,
+     "gear_worst": "L2_hip",
+     "shock_g": 31.905978358503944,
+     "chassis_N": 880.2612191163619,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.7928194833833553,
+     "gear_worst": "L2_knee",
+     "shock_g": 35.838527014394124,
+     "chassis_N": 1010.3448099811143,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.792072590348718,
+   "shock_g_mean": 35.7309849792366,
+   "chassis_N_mean": 655.4888655923215,
+   "gear_peak": 2.7932165572106196,
+   "upright": 3
+  },
+  {
+   "scenario": "side",
+   "reaction": "brace_low",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 26.384606583239268,
+     "chassis_N": 814.5410182221651,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 32.10179145901566,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 29.78148175613421,
+     "chassis_N": 861.1741717373352,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 32.37083505059662,
+     "chassis_N": 936.8445885313405,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.375903417518145,
+     "chassis_N": 489.7309776197056,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 23.87117403154207,
+     "chassis_N": 920.4686668811349,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 32.89979710988324,
+     "chassis_N": 422.5088360654871,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 33.399017943565426,
+     "chassis_N": 1421.3959700018972,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.475403006247454,
+     "chassis_N": 676.5705952603679,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 40.31400933940166,
+     "chassis_N": 509.582625272005,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 38.961224566593536,
+     "chassis_N": 535.6259549672683,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_knee",
+     "shock_g": 32.659355443946815,
+     "chassis_N": 484.12307715360055,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 32.632883308973675,
+   "chassis_N_mean": 672.7138734760256,
+   "gear_peak": 1.6522949268080434,
+   "upright": 1
+  },
+  {
+   "scenario": "side",
+   "reaction": "brace_low_firm",
+   "trials": [
+    {
+     "gear_max": 2.336325632685223,
+     "gear_worst": "L1_knee",
+     "shock_g": 33.09559947325921,
+     "chassis_N": 717.5706676816695,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336320396601848,
+     "gear_worst": "L1_knee",
+     "shock_g": 32.086031463424725,
+     "chassis_N": 0.0,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.337572689043926,
+     "gear_worst": "L2_hip",
+     "shock_g": 29.770673954860722,
+     "chassis_N": 707.6115452833022,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363237500606058,
+     "gear_worst": "L1_knee",
+     "shock_g": 31.379913967189985,
+     "chassis_N": 517.5758842029445,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3365050534083824,
+     "gear_worst": "L2_hip",
+     "shock_g": 34.38137720023138,
+     "chassis_N": 741.9119827097453,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3364174729037237,
+     "gear_worst": "L2_hip",
+     "shock_g": 25.822020506431553,
+     "chassis_N": 522.4892012209831,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3364192550579483,
+     "gear_worst": "L2_hip",
+     "shock_g": 32.90819065038361,
+     "chassis_N": 368.95300175098726,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3374470718376448,
+     "gear_worst": "L2_hip",
+     "shock_g": 33.41422000812883,
+     "chassis_N": 1418.5519896285036,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.3363202899738567,
+     "gear_worst": "L1_knee",
+     "shock_g": 34.47794367860438,
+     "chassis_N": 413.5793242578165,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336321057188224,
+     "gear_worst": "L1_knee",
+     "shock_g": 40.31795067380004,
+     "chassis_N": 1024.70657924291,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.337572689043926,
+     "gear_worst": "L2_hip",
+     "shock_g": 38.937130551995466,
+     "chassis_N": 537.4763822710163,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 2.336419610493645,
+     "gear_worst": "L2_hip",
+     "shock_g": 32.66771561678383,
+     "chassis_N": 693.52657079933,
+     "upright": false,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 2.336663747358246,
+   "shock_g_mean": 33.27156397875781,
+   "chassis_N_mean": 638.6627607541008,
+   "gear_peak": 2.337572689043926,
+   "upright": 1
+  },
+  {
+   "scenario": "side",
+   "reaction": "tuck",
+   "trials": [
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 39.086132301469355,
+     "chassis_N": 913.330202632914,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 30.932157830217353,
+     "chassis_N": 83.19049654751804,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.41016067550706,
+     "chassis_N": 1057.4151032841614,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 38.76382332672781,
+     "chassis_N": 623.3004899762246,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 29.338600517283894,
+     "chassis_N": 728.4362439855794,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.920520832972144,
+     "chassis_N": 419.19151995738554,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 31.86281490970958,
+     "chassis_N": 811.9968934318496,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 58.828301869301036,
+     "chassis_N": 854.5372355298231,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 33.45148264607982,
+     "chassis_N": 81.2419541111824,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 29.663353166105427,
+     "chassis_N": 406.30246007463865,
+     "upright": true,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 43.887182268735415,
+     "chassis_N": 998.7162392602376,
+     "upright": false,
+     "brownouts": 0
+    },
+    {
+     "gear_max": 1.6522949268080434,
+     "gear_worst": "L1_hip",
+     "shock_g": 40.06910850266215,
+     "chassis_N": 982.6543900704665,
+     "upright": true,
+     "brownouts": 0
+    }
+   ],
+   "gear_max_mean": 1.6522949268080434,
+   "shock_g_mean": 36.60113657056425,
+   "chassis_N_mean": 663.3594357384983,
+   "gear_peak": 1.6522949268080434,
+   "upright": 8
+  }
+ ]
+}

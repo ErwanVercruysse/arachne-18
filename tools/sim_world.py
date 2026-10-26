@@ -10,7 +10,7 @@ The 12 V supply has an internal resistance and a current limit, so the voltage s
 supply does; below the brown-out voltage every servo resets (torque off), as on the real robot.
 With torque off the gear friction still holds the legs (the real robot keeps standing).
 """
-import json, math, os, subprocess, sys, threading, time
+import json, math, os, socket, subprocess, sys, threading, time
 from pathlib import Path
 
 import mujoco
@@ -33,7 +33,10 @@ SUPPLIES = {                  # open-circuit V, internal resistance, current lim
     'lipo3s': dict(name='3S LiPo (vol)', v=12.6, r=.05, ilim=60.),
 }
 SCRIPTS = {'stand': ['tools/stand.py'], 'lie': ['tools/stand.py', '--lie'], 'walk': ['tools/walk.py', '--loop'],
-           'back': ['tools/walk.py', '--back', '--loop'], 'spin': ['tools/spin.py', '--loop'], 'dance': ['tools/dance.py', '--loop']}
+           'back': ['tools/walk.py', '--back', '--loop'], 'spin': ['tools/spin.py', '--loop'], 'dance': ['tools/dance.py', '--loop'],
+           'policy': ['tools/policy_walk.py', '--udp', '5873', '--loop'], 'grab': ['tools/grab.py', '--loop']}
+TOGGLES = {'zelf': 'policy', 'pakken': 'grab'}       # buttons that start a script and stop it on the second press
+POLICY_UDP = ('127.0.0.1', 5873)          # the simulation's own self-walk port (the robot's is 5872)
 
 # body parts that the real robot does not have yet: they can be hidden and then drop out of the mass
 OPTIONAL = {
@@ -212,6 +215,28 @@ class SimWorld:
 
     def present_ticks(self): return np.round(self._ticks(self.data.qpos[self.qadr])).astype(int)
 
+    def sense(self):
+        """Same JSON as live_twin's GET /sense, with an ideal, already aligned IMU (body frame)."""
+        with self.lock:
+            d = self.data; R = quat_mat(d.qpos[3:7])
+            # like the MPU6050 (44 Hz low-pass): the mean acceleration since the previous reading, not the
+            # contact spikes of one physics step
+            v, t = d.qvel[:3].copy(), float(d.time); pv, pt = getattr(self, '_imu_prev', (v, t - 1.))
+            a = (v - pv)/(t - pt) if 1e-4 < t - pt < .2 else np.zeros(3); self._imu_prev = (v, t)
+            acc = R.T @ (a + [0, 0, 9.81])/9.81
+            imu = dict(ok=True, aligned=True, age=0., gravity=(R.T @ [0, 0, -1.]).tolist(), gyro_body=d.qvel[3:6].tolist(),
+                       acc=acc.tolist(), acc_body=acc.tolist(), g=float(np.linalg.norm(acc)))
+            return dict(t=time.time(), ticks={j: int(t) for j, t in zip(JOINTS, self.present_ticks())}, imu=imu,
+                        volt=round(float(self.v), 2), temp=32, torque=int(self.torque.sum()), servos=18)
+
+    def sync(self, ticks):
+        """Same JSON as live_twin's POST /sync: goal positions at full speed."""
+        with self.lock:
+            if self.proc is None: self.motion.mode = 'idle'; self.motion.queue.clear()
+            for j, t in ticks.items():
+                k = JOINTS.index(j); self.ticks_goal[k] = t; self.goal_q[k] = self.sign[k]*(t - self.zero[k])*TICK; self.speed_reg[k] = 0
+        return dict(self.sense(), sent=len(ticks))
+
     @property
     def tau_stall(self): return P['kt']*12.*MAX_PWM/P['R']
 
@@ -312,6 +337,10 @@ class SimWorld:
     def do(self, what):
         with self.lock:
             if what.startswith('script:'): return self._script(what[7:])
+            if what in TOGGLES:                                  # self-walk / grab: the same scripts as on the robot
+                if self.proc_what == TOGGLES[what]: self._stop_script(); return {'ok': True, 'label': 'staan'}
+                if not self.motion.standing: return {'ok': False, 'label': 'eerst opstaan'}
+                return self._script(TOGGLES[what])
             self._stop_script()
             q_now = {j: float(self.data.qpos[self.qadr[k]]) for k, j in enumerate(JOINTS)}
             if self.motion.mode == 'idle': self.motion.q = None
@@ -320,6 +349,11 @@ class SimWorld:
 
     def drive(self, vx, vy, wz):
         with self.lock:
+            if self.proc_what == 'policy':                       # cockpit scale -> the policy's (see gamepad_robot.py)
+                v = dict(vx=vx/.07*.14, vy=vy/.05*.14, wz=wz/.5*.35)
+                try: socket.socket(socket.AF_INET, socket.SOCK_DGRAM).sendto(json.dumps(v).encode(), POLICY_UDP)
+                except OSError: pass
+                return
             if self.proc is not None: return
             mo = self.motion
             if not mo.standing and any(abs(x) > 1e-3 for x in (vx, vy, wz)):
@@ -370,7 +404,7 @@ class SimWorld:
         if p is None: return
         Path(self.stop_file).touch()
         def finish():
-            try: p.wait(5)
+            try: p.wait(10)                                      # policy_walk.py steps back out first (~4 s)
             except subprocess.TimeoutExpired: p.terminate()
         threading.Thread(target=finish, daemon=True).start()
         self.proc = None; self.proc_what = None; self.event('script gestopt')

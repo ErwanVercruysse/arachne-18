@@ -9,7 +9,9 @@
     R-stick ←/→, d-pad ←/→   turn while held
     RB / d-pad ↑↓            speed: normaal -> snel -> max (max = fastest joint at the servo's speed limit)
     LB           back to normaal
-    L3 / R3      say the status / say hello (Mac)
+    L3           say the status (Mac)
+    R3           self-walk on/off: the trained policy runs live (tools/policy_walk.py), closed loop on the IMU;
+                 then L-stick = walk in any direction, R-stick ←/→ = turn, continuously
     Menu/Xbox    stop everything (the robot keeps standing)
 
 The same actions are available to the web pages through a local command port (127.0.0.1:5871), which the
@@ -24,13 +26,16 @@ at the next moment that all six feet are down (at most one phase, ~0.7 s); pushi
 Stand, lie and dance still run their own scripts, one at a time, after the feet are back home.
 Reads /dev/input/event* directly (no packages).
 """
-import fcntl, glob, json, os, struct, subprocess, sys, threading, time, urllib.request
+import fcntl, glob, json, os, socket, struct, subprocess, sys, threading, time, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PY = str(ROOT/'.venv/bin/python') if (ROOT/'.venv/bin/python').exists() else sys.executable
 URL = os.environ.get('ARACHNE_URL', 'http://localhost:5870')
 STOP = '/tmp/arachne_pad_stop'
+POLICY_UDP = ('127.0.0.1', 5872)                    # tools/policy_walk.py listens here in self-walk mode
+POLICY_STATUS = Path('/tmp/arachne_policy.json')
+POLICY_MAX = (.14, .14, .35)                         # vx, vy (m/s), wz (rad/s): what the policy was validated on
 EV_KEY, EV_ABS = 1, 3
 BTN = {304: 'A', 305: 'B', 307: 'X', 308: 'Y', 310: 'LB', 311: 'RB', 314: 'View', 315: 'Menu', 316: 'Xbox', 317: 'L3', 318: 'R3'}
 ABS_X, ABS_Y, ABS_Z, ABS_RZ = 0, 1, 2, 5
@@ -193,7 +198,8 @@ def absinfo(fd, code):
 
 ABS_GAS, ABS_BRAKE, ABS_HAT0X, ABS_HAT0Y = 9, 10, 16, 17
 LEVELS = ('normaal', 'snel', 'max')
-SAY = {'opstaan': 'Ik sta op', 'liggen': 'Ik ga liggen', 'dansen': 'Dansen!', 'rust': 'Ik ga rusten', 'stop': 'Stop'}
+SAY = {'opstaan': 'Ik sta op', 'liggen': 'Ik ga liggen', 'dansen': 'Dansen!', 'rust': 'Ik ga rusten', 'stop': 'Stop',
+       'zelf': 'Ik loop zelf', 'pakken': 'Ik pak het'}
 
 
 class Robot:
@@ -204,7 +210,10 @@ class Robot:
         self.events = []; self.n = 0; self.ev = threading.Condition()
         self.web_drive = 0.                          # time of the last drive command from a web page (dead-man)
         self.pad = None
+        self.pad_vel = [0., 0., 0.]; self.web_vel = ([0., 0., 0.], 0.)   # self-walk: continuous velocities
+        self.udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         threading.Thread(target=self._deadman, daemon=True).start()
+        threading.Thread(target=self._velocities, daemon=True).start()
 
     def event(self, **e):
         with self.ev:
@@ -223,6 +232,14 @@ class Robot:
         elif what == 'dansen':
             if a.what == 'dansen': a.stop(); what = 'stop'
             elif standing(): g.want = None; a.request('dansen', ['dance.py', '--amp', '.5'], loop=True)   # amp 1 leaves the joint limits
+            else: self.event(say='Ik moet eerst rechtstaan'); return
+        elif what == 'zelf':                                     # self-walk: the policy runs live, toggles
+            if a.what == 'zelf': a.stop(); what = 'stop'
+            elif standing(): g.want = None; a.request('zelf', ['policy_walk.py'], loop=True)
+            else: self.event(say='Ik moet eerst rechtstaan'); return
+        elif what == 'pakken':                                   # four legs, pick up what is in front (tools/grab.py)
+            if a.what == 'pakken': a.stop(); what = 'stop'
+            elif standing(): g.want = None; a.request('pakken', ['grab.py'], loop=True)
             else: self.event(say='Ik moet eerst rechtstaan'); return
         elif what == 'stop': g.want = None; a.stop()
         elif what == 'toeter': self.event(sound='toeter'); return
@@ -253,6 +270,23 @@ class Robot:
         g.level = lvl; log('snelheid:', lvl); self.event(say=f'Snelheid {lvl}')
         if g.want: g.want = f"{lvl}/{g.want.split('/')[1]}"         # switches after this cycle
 
+    def self_walking(self): return self.a.what == 'zelf'
+
+    def web_velocity(self, vx, vy, wz):
+        """Cockpit stick (its own scale: .07 / .05 m/s, .5 rad/s) -> the policy's range."""
+        self.web_vel = ([vx/.07*POLICY_MAX[0], vy/.05*POLICY_MAX[1], wz/.5*POLICY_MAX[2]], time.time())
+
+    def _velocities(self):
+        """Self-walk: send the pad's (else the web page's) velocity to policy_walk.py 10x per second;
+        it stands still by itself when this stops (0.5 s dead-man)."""
+        while True:
+            time.sleep(.1)
+            if not self.self_walking(): continue
+            v, t = self.web_vel
+            if any(self.pad_vel) or time.time() - t > .7: v = self.pad_vel
+            try: self.udp.sendto(json.dumps(dict(zip(('vx', 'vy', 'wz'), v))).encode(), POLICY_UDP)
+            except OSError: pass
+
     def _deadman(self):
         while True:
             time.sleep(.1)
@@ -267,8 +301,12 @@ class Robot:
 
     def status(self):
         g, a = self.g, self.a
+        pol = None
+        if self.self_walking():
+            try: pol = json.loads(POLICY_STATUS.read_text())
+            except (OSError, ValueError): pass
         return dict(level=g.level, walking=(g.cur or g.want or '').split('/')[-1] or None, script=a.what, queued=a.pending[0] if a.pending else None,
-                    planned=bool(g.plan), planning=g.planning, standing=standing(), controller=self.pad, events=self.n)
+                    planned=bool(g.plan), planning=g.planning, standing=standing(), controller=self.pad, events=self.n, policy=pol)
 
 
 def run(path, name, r):
@@ -282,7 +320,7 @@ def run(path, name, r):
     trig = lambda c, v: 0. if rng[c][1] == rng[c][0] else (v - rng[c][0])/(rng[c][1] - rng[c][0])
     ax = {}; last = {}; held = None; r.pad = name; log(f'controller: {name} ({path})'); r.event(sound='verbonden')
     BUTTONS = {'A': 'opstaan', 'B': 'liggen', 'X': 'dansen', 'Y': 'toeter', 'View': 'rust', 'Menu': 'stop', 'Xbox': 'stop',
-               'L3': 'status', 'R3': 'hallo'}
+               'L3': 'status', 'R3': 'zelf'}
     try:
         while True:
             _, _, typ, code, val = EVENT.unpack(os.read(fd, EVENT.size))
@@ -300,12 +338,19 @@ def run(path, name, r):
                 if code == ABS_HAT0Y and val: r.level(step=-val); continue  # d-pad up/down: faster / slower
                 y, rx = ax.get(ABS_Y, 0), ax.get(ABS_Z, 0)
                 rt, lt, hx = ax.get(ABS_GAS, 0), ax.get(ABS_BRAKE, 0), ax.get(ABS_HAT0X, 0)
+                if r.self_walking():                                       # continuous: any direction + turn
+                    dz = lambda v: 0. if abs(v) < .12 else (v - .12*(1 if v > 0 else -1))/.88
+                    x = ax.get(ABS_X, 0)
+                    r.pad_vel = [max(-1., min(1., -dz(y) + rt - lt))*POLICY_MAX[0], -dz(x)*POLICY_MAX[1],
+                                 max(-1., min(1., -dz(rx) - hx))*POLICY_MAX[2]]
+                    held = None; continue
+                r.pad_vel = [0., 0., 0.]
                 want = ('lopen' if y < -.5 or rt > .5 else 'achteruit' if y > .5 or lt > .5 else
                         'links draaien' if rx < -.5 or hx < 0 else 'rechts draaien' if rx > .5 or hx > 0 else None)
                 calm = abs(y) < .35 and abs(rx) < .35 and rt < .3 and lt < .3 and not hx
                 if want and want != held: held = want if r.drive(want) else None
                 elif not want and held and calm: held = None; r.drive(None)
-    finally: os.close(fd); r.pad = None
+    finally: os.close(fd); r.pad = None; r.pad_vel = [0., 0., 0.]
 
 
 def serve(r, port=5871):
@@ -327,6 +372,8 @@ def serve(r, port=5871):
             if self.path == '/do': r.do(d.get('what')); return self.reply({'ok': True, **r.status()})
             if self.path == '/drive':
                 name = d.get('name')
+                if r.self_walking() and any(k in d for k in ('vx', 'vy', 'wz')):
+                    r.web_velocity(float(d.get('vx', 0)), float(d.get('vy', 0)), float(d.get('wz', 0))); return self.reply({'ok': True})
                 if name is None and any(k in d for k in ('vx', 'vy', 'wz')):   # cockpit-style velocities
                     vx, wz = float(d.get('vx', 0)), float(d.get('wz', 0))
                     name = 'lopen' if vx > .02 else 'achteruit' if vx < -.02 else 'links draaien' if wz > .15 else 'rechts draaien' if wz < -.15 else None

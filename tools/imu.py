@@ -4,12 +4,46 @@ Wiring on the Pi 4: VCC -> 3.3 V (pin 1), GND -> pin 6, SDA -> GPIO2 (pin 3), SC
 Enable I2C once: sudo raspi-config nonint do_i2c 0   (then /dev/i2c-1 exists).
 
 No extra Python packages: plain /dev/i2c-1 with the I2C_SLAVE ioctl.
-Angles are in the SENSOR frame. Which sensor axis is the robot's forward/left still has to be measured
-by tilting the robot by hand (never guess directions); until then the twin only shows the numbers.
+Angles are in the SENSOR frame. Which sensor axis is the robot's forward/left is measured once by tilting
+the robot by hand (tools/imu_align.py -> calibration/imu_map.json, never guess directions). With that map the
+IMU also gives gravity and the turn rate in the BODY frame (+x = front = L1/L6, +y = left = L1/L2/L3, +z = up),
+which is what the walking policy (tools/policy_walk.py) uses.
 
     python3 tools/imu.py          # print roll/pitch at 10 Hz to check the wiring
 """
-import fcntl, math, os, struct, threading, time
+import fcntl, json, math, os, struct, threading, time
+from pathlib import Path
+
+MAP_FILE = Path(__file__).resolve().parents[1]/'calibration/imu_map.json'
+
+
+def load_map():
+    """3x3 rows: body axes in sensor coordinates (body = R @ sensor), or None when not measured yet."""
+    try: return json.loads(MAP_FILE.read_text())['sensor_to_body']
+    except (OSError, ValueError, KeyError): return None
+
+
+def mat_vec(R, v): return [sum(R[i][k]*v[k] for k in range(3)) for i in range(3)]
+
+
+class GravityFilter:
+    """Complementary filter on accelerometer (g) + gyro (rad/s), both body frame -> unit gravity vector.
+    The gyro turns the estimate (dg/dt = -w x g), the accelerometer pulls it back over ~0.5 s and is trusted
+    less while it does not read ~1 g (steps, impacts, free fall). Also used by the simulator tests."""
+
+    def __init__(self, k=.98):
+        self.k = k; self.g = None
+
+    def update(self, acc, gyro, dt):
+        n = math.sqrt(sum(a*a for a in acc))
+        g_acc = [-a/n for a in acc] if n > 1e-6 else [0., 0., -1.]   # at rest the sensor reads +1 g upwards
+        if self.g is None: self.g = g_acc; return self.g
+        g, w = self.g, gyro
+        g = [g[0] - dt*(w[1]*g[2] - w[2]*g[1]), g[1] - dt*(w[2]*g[0] - w[0]*g[2]), g[2] - dt*(w[0]*g[1] - w[1]*g[0])]
+        trust = (1 - self.k)*max(0., 1 - abs(n - 1.)/.5)
+        g = [(1 - trust)*a + trust*b for a, b in zip(g, g_acc)]
+        m = math.sqrt(sum(a*a for a in g)); self.g = [a/m for a in g]
+        return self.g
 
 I2C_SLAVE = 0x0703
 WHO_AM_I = {0x68: 'MPU6050', 0x70: 'MPU6500', 0x71: 'MPU9250', 0x72: 'MPU6050 kloon', 0x73: 'MPU9255', 0x98: 'MPU6050 kloon'}
@@ -31,6 +65,7 @@ class IMU:
         self._write(0x1C, 0x00)        # accel +-2 g
         self.roll = self.pitch = 0.; self.rate = [0., 0., 0.]; self.acc = [0., 0., 1.]; self.temp = 0.
         self.bias = [0., 0., 0.]; self.hz = 0.; self.ok = False; self.lock = threading.Lock()
+        self.R = load_map(); self.filt = GravityFilter(); self.gravity = None; self.gyro_body = None; self.acc_body = None; self.t = 0.
 
     def _write(self, reg, val): os.write(self.fd, bytes([reg, val]))
     def _read(self, reg, n): os.write(self.fd, bytes([reg])); return os.read(self.fd, n)
@@ -60,19 +95,29 @@ class IMU:
             g = [x - b for x, b in zip(g, self.bias)]
             ar, ap = math.degrees(math.atan2(a[1], a[2])), math.degrees(math.atan2(-a[0], math.hypot(a[1], a[2])))
             k = .98
+            body = None
+            if self.R:
+                wb = [math.radians(x) for x in mat_vec(self.R, g)]; ab = mat_vec(self.R, a)
+                body = (self.filt.update(ab, wb, min(dt, .05)), wb, ab)
             with self.lock:
                 self.roll = k*(self.roll + g[0]*dt) + (1 - k)*ar
                 self.pitch = k*(self.pitch + g[1]*dt) + (1 - k)*ap
-                self.rate, self.acc, self.temp, self.ok = g, a, temp, True
+                self.rate, self.acc, self.temp, self.ok, self.t = g, a, temp, True, now
+                if body: self.gravity, self.gyro_body, self.acc_body = body
             count += 1
             if now - t0 >= 1: self.hz = count/(now - t0); t0, count = now, 0
             time.sleep(max(0, 1/hz - (time.time() - now)))
 
     def state(self):
         with self.lock:
-            return dict(model=self.model, ok=self.ok, roll=round(self.roll, 2), pitch=round(self.pitch, 2),
-                        rate=[round(v, 1) for v in self.rate], g=round(math.sqrt(sum(v*v for v in self.acc)), 3),
-                        temp=round(self.temp, 1), hz=round(self.hz))
+            s = dict(model=self.model, ok=self.ok, roll=round(self.roll, 2), pitch=round(self.pitch, 2),
+                     rate=[round(v, 1) for v in self.rate], g=round(math.sqrt(sum(v*v for v in self.acc)), 3),
+                     acc=[round(v, 4) for v in self.acc], temp=round(self.temp, 1), hz=round(self.hz), aligned=bool(self.R))
+            if self.gravity:
+                s.update(gravity=[round(v, 5) for v in self.gravity], gyro_body=[round(v, 4) for v in self.gyro_body],
+                         acc_body=[round(v, 4) for v in self.acc_body],
+                         age=round(time.time() - self.t, 3))
+            return s
 
 
 def start():

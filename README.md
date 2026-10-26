@@ -21,6 +21,9 @@
 > | Besturen met een Bluetooth-gamepad, veilig via geplande gangen | [`tools/gamepad_robot.py`](tools/gamepad_robot.py), [`plan_gaits.py`](tools/plan_gaits.py) |
 > | Live 3D-tweeling + camera + cockpit in de browser, met login | [`tools/live_twin.py`](tools/live_twin.py), [`tools/web/`](tools/web/), [`auth.py`](tools/auth.py) |
 > | MuJoCo-simulatie in de browser | [`tools/sim_world.py`](tools/sim_world.py), [`tools/web/sim.html`](tools/web/sim.html) |
+> | Zelf lopen: het getrainde beleid live op de robot, met de IMU; houdt zich vlak op hellingen, tilt de poten hoger op oneffen grond | [`tools/policy_walk.py`](tools/policy_walk.py), [`terrain_gait.py`](tools/terrain_gait.py), [uitleg](docs/self-walking.md) |
+> | Valbeveiliging: vrije val of omkantelen → zacht landen | [`tools/fall_guard.py`](tools/fall_guard.py), [`training/fall_test.py`](training/fall_test.py) |
+> | Pakken: op vier poten iets van 12-15 cm breed oppakken met de voorpoten | [`tools/grab.py`](tools/grab.py), [`training/grab_test.py`](training/grab_test.py) |
 > | BAM-metingen (38 / 173 / 263 / 383 g) en identificatie | [`bam_data/`](bam_data/), [`simulation/bam_identify.py`](simulation/bam_identify.py) |
 > | ESP32-C3 one-wire firmware voor de STS3215-bus | [`firmware/`](firmware/) |
 > | Android-app (wifi-scan, cockpit, "hey spin") | [arachne-app](https://github.com/KVR-CIBER/arachne-app) |

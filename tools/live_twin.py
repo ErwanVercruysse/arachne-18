@@ -18,7 +18,7 @@ import mujoco
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent))
-from sts import Bus, ADDR_POS, ADDR_LOAD, ADDR_VOLT, ADDR_TORQUE
+from sts import Bus, ADDR_POS, ADDR_LOAD, ADDR_VOLT, ADDR_TORQUE, ADDR_GOAL
 
 ROOT = Path(__file__).resolve().parents[1]
 SIM = ROOT/'simulation'
@@ -237,6 +237,74 @@ def _snapshot():
               for b in range(model.nbody)]
     return dict(bodies=bodies, joints=joints, hz=hz['value'], adapters={p[-5:]: v for p, v in status.items()}, ground=float(GROUND), lift=lift, hits=sorted(hits), t=time.time(),
                 imu=IMU.state() if IMU else None)
+
+
+def sense():
+    """Light state for controllers running at 50-100 Hz (tools/policy_walk.py): ticks, IMU, power, no kinematics."""
+    with state_lock: st = {SID2JOINT[sid]: dict(s) for sid, s in state.items()}
+    return dict(t=time.time(), ticks={j: s['ticks'] for j, s in st.items()}, imu=IMU.state() if IMU else None,
+                volt=min([s['volt'] for s in st.values() if s.get('volt')] or [None]),
+                temp=max([s['temp'] for s in st.values() if s.get('temp')] or [None]),
+                torque=sum(1 for s in st.values() if s.get('torque')), servos=len(st),
+                fall=dict(guard_info, state=GUARD.state, locked=GUARD.locked()))
+
+
+JOINT2SID = {j['name']: j['servo_id'] for j in JOINTS}
+
+
+def sync_reg(addr, per_joint):
+    """{joint: [bytes]} -> one SYNC WRITE of register addr per adapter."""
+    per = {}
+    with state_lock: ports = {SID2JOINT[sid]: s['port'] for sid, s in state.items()}
+    for j, b in per_joint.items():
+        if j in ports: per.setdefault(ports[j], {})[JOINT2SID[j]] = b
+    for suffix, data in per.items():
+        port = next(p for p in buses if p.endswith(suffix))
+        if status[port] != 'ok': raise OSError(f'adapter {suffix} niet verbonden')
+        with locks[port]: buses[port].sync_write(addr, data)
+    return sum(len(v) for v in per.values())
+
+
+def sync_goals(ticks):
+    """{joint: goal ticks} -> goal positions at full speed on both adapters."""
+    def goal(t): t = max(0, min(4095, int(t))); return [t & 0xff, t >> 8, 0, 0, 0, 0]
+    return sync_reg(ADDR_GOAL, {j: goal(t) for j, t in ticks.items()})
+
+
+# ---------------------------------------------------------------- fall guard: free fall / tipping -> land softly
+import fall_guard
+GUARD = fall_guard.Detector()
+guard_info = {'event': None, 'reaction': None, 't': 0.}
+
+
+def guard_loop():
+    """100 Hz on the IMU. Only acts while servos have torque (a robot lying limp has nothing to protect)."""
+    reacted = None
+    while True:
+        time.sleep(.01)
+        s = IMU.state()
+        if not s['ok']: continue
+        g = s.get('gravity'); tilt = math.degrees(math.acos(max(-1., min(1., -g[2])))) if g else None
+        was = GUARD.state
+        ev = GUARD.update(s['g'], tilt, .01)
+        if ev in ('free', 'tip'):
+            with state_lock: active = any(v.get('torque') for v in state.values())
+            if not active: continue
+            r = fall_guard.REACT[ev]; reacted = r
+            try: fall_guard.apply_bus(r, sync_reg, sync_goals)
+            except Exception as e: print('val-reactie mislukt:', e, flush=True)
+            guard_info.update(event=ev, reaction=r, t=time.time())
+            print(f"VAL: {'vrije val' if ev == 'free' else f'gekanteld {tilt:.0f}°'} -> {r}", flush=True)
+        elif ev == 'impact': guard_info.update(event='impact', t=time.time()); print('VAL: geland', flush=True)
+        if was != 'ok' and GUARD.state == 'ok' and reacted:
+            # still again: full torque back (the goal stays where it is, so nothing moves), then stand up with A
+            if fall_guard.REACTIONS[reacted][1]:
+                try: sync_reg(48, {j: [1000 & 0xff, 1000 >> 8] for j in JOINT2SID})
+                except Exception: pass
+            reacted = None; print('VAL: ligt stil, klaar om op te staan', flush=True)
+
+
+if IMU: threading.Thread(target=guard_loop, daemon=True).start()
 
 
 # ---------------------------------------------------------------- simulation (separate page, lazy)
@@ -554,6 +622,7 @@ class H(BaseHTTPRequestHandler):
                                                              sid={j['name']: j['servo_id'] for j in JOINTS}))
         if self.path == '/scene.bin': return self.send(SCENE_BIN, 'application/octet-stream')
         if self.path == '/state': return self.send(snapshot())
+        if self.path == '/sense': return self.send(sense())
         if self.path == '/stream':
             self.send_response(200); self.send_header('Content-Type', 'text/event-stream')
             self.send_header('Cache-Control', 'no-cache'); self.end_headers()
@@ -591,6 +660,7 @@ class H(BaseHTTPRequestHandler):
             self.send_header('Content-Length', str(len(body))); self.end_headers(); return self.wfile.write(body)
         if path == '/state': w.last_seen = time.time(); return self.send(w.snapshot_json, 'application/json')
         if path == '/info': return self.send(net_info())
+        if path == '/sense': w.last_seen = time.time(); return self.send(w.sense())
         if path == '/stream':
             self.send_response(200); self.send_header('Content-Type', 'text/event-stream')
             self.send_header('Cache-Control', 'no-cache'); self.end_headers()
@@ -607,6 +677,7 @@ class H(BaseHTTPRequestHandler):
     def sim_post(self, path, d):
         w = sim_world()['world']; w.last_seen = time.time()
         if path == '/cmd': return self.send(w.cmd(d))
+        if path == '/sync': return self.send(w.sync(d.get('ticks', {})))
         if path == '/do': return self.send(w.do(d.get('what', 'stop')))
         if path == '/drive': w.drive(float(d.get('vx', 0)), float(d.get('vy', 0)), float(d.get('wz', 0))); return self.send({'ok': True})
         if path == '/set': return self.send(w.set(d))
@@ -640,8 +711,15 @@ class H(BaseHTTPRequestHandler):
             if not ok: return self.send({'error': why}, code=403)
             return self.robot('POST', self.path[6:], d)
         # Guests may watch the real robot and play with the simulation, but never move the real servos or change the calibration.
-        if (self.path == '/cal' or (self.path == '/cmd' and d.get('op') not in ('read', 'ping'))) and not self.robot_allowed():
+        if (self.path in ('/cal', '/sync') or (self.path == '/cmd' and d.get('op') not in ('read', 'ping'))) and not self.robot_allowed():
             return self.send({'error': 'log in om de echte robot te bewegen'}, code=403)
+        if GUARD.locked() and (self.path == '/sync' or (self.path == '/cmd' and d.get('op') in ('write', 'sync'))):
+            return self.send({'error': 'gevallen: de servo\'s blijven even zacht liggen'}, code=409)
+        if self.path == '/sync':
+            # {"ticks": {"L1_yaw": 2048, ...}} -> goal positions on both adapters, answers with /sense
+            try: n = sync_goals(d.get('ticks', {}))
+            except Exception as e: return self.send({'error': f'bus fout: {e}'}, code=503)
+            return self.send(dict(sense(), sent=n))
         if self.path == '/cal':
             # {"joint": "L5_knee", "sign": -1} or {"joint": ..., "zero_here": true}
             name = d['joint']; c = cal[name]

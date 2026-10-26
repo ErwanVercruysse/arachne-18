@@ -1,0 +1,261 @@
+{
+ "note": "training/grab_test.py: box at 20 cm in front of the body centre, sim_world physics",
+ "runs": [
+  {
+   "box": {
+    "width": 0.12,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.06,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.71,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.46,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.87,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.13,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.06,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.73,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.53,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.87,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.15,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.06,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.66,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.47,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.87,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.11,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.06,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": -0.05,
+     "body_z": 0.154
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": -0.05,
+     "body_z": 0.154
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.79,
+   "body_min_z": 0.154,
+   "held": false,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.13,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.15,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.58,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.2,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.99,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.13,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.25,
+    "friction": 0.8,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.41,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 3.86,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 1.96,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.13,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.06,
+    "friction": 0.4,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.73,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.53,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.87,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  },
+  {
+   "box": {
+    "width": 0.12,
+    "depth": 0.08,
+    "height": 0.06,
+    "mass": 0.1,
+    "friction": 0.5,
+    "at": 0.2,
+    "out": null
+   },
+   "log": [
+    {
+     "phase": "opgepakt",
+     "box_lift_cm": 4.64,
+     "body_z": 0.153
+    },
+    {
+     "phase": "2 s vasthouden",
+     "box_lift_cm": 4.32,
+     "body_z": 0.153
+    },
+    {
+     "phase": "neergezet",
+     "box_lift_cm": -0.05,
+     "body_z": 0.155
+    }
+   ],
+   "tilt_max_deg": 0.92,
+   "body_min_z": 0.153,
+   "held": true,
+   "upright": true
+  }
+ ]
+}

@@ -9,7 +9,10 @@ from gait import ROOT, INITIAL, target, rotate, feet, load, frequency
 
 
 def evaluate(params, command, seconds=10., backend='bam', video=None, width=960, height=640,
-             schedule=None, friction=None, payload=0., imu_noise=0., seed=23, terrain=None, video_label=None):
+             schedule=None, friction=None, payload=0., imu_noise=0., seed=23, terrain=None, video_label=None,
+             controller=None):
+    """controller: optional factory (model, data, rng) -> act(data, command, time) returning the filtered
+    joint targets [18]; it replaces the policy, filter and slew below (e.g. tools/terrain_gait.py)."""
     terrain_info=None
     if terrain is not None and backend!='bam':
         raise ValueError('Terrain requires the original MuJoCo/BAM backend')
@@ -48,6 +51,7 @@ def evaluate(params, command, seconds=10., backend='bam', video=None, width=960,
     rock_steps=grass_steps=0;grass_deflection=0.
     grass_qpos=[m.jnt_qposadr[j] for j in range(m.njnt) if (mujoco.mj_id2name(m,mujoco.mjtObj.mjOBJ_JOINT,j) or '').startswith('obstacle_grass_')]
     cmd_filtered=cmd.copy()
+    act=controller(m,d,rng) if controller else None
     render=None; writer=None
     if video:
         import imageio.v2 as imageio
@@ -89,8 +93,10 @@ def evaluate(params, command, seconds=10., backend='bam', video=None, width=960,
                 axis/=np.linalg.norm(axis); dq=np.r_[np.cos(angle/2),axis*np.sin(angle/2)]
                 perturbed=np.empty(4);mujoco.mju_mulQuat(perturbed,obs_q[0,3:7],dq)
                 obs_q[0,3:7]=perturbed;gyro+=rng.normal(scale=.005,size=(1,3))
-            desired=target(p,phase,cmd,obs_q,i*dt,gyro=gyro)
-            filtered=np.clip(sm+.35*(desired-sm),sm-.047171,sm+.047171)
+            if act:filtered=np.asarray(act(d,cmd[0],i*dt),dtype=float)[None,:]
+            else:
+                desired=target(p,phase,cmd,obs_q,i*dt,gyro=gyro)
+                filtered=np.clip(sm+.35*(desired-sm),sm-.047171,sm+.047171)
             # Same one-control-step delay/filter as training; BAM adds its real delay.
             for _ in range(substeps):
                 if robot:robot.step(sm[0])

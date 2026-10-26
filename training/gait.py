@@ -58,8 +58,10 @@ def feet(qpos, xp=np):
     return xp.stack(world, axis=1)
 
 
-def target(params, phase, command, qpos, elapsed, xp=np, gyro=None):
-    """Batch inputs [N,P], [N], [N,3], [N,25]; returns [N,18]."""
+def plan(params, phase, command, qpos, elapsed, xp=np, gyro=None, gravity=None):
+    """Foot targets of the policy, before IK: x, y, z [N,6] in the body frame (hip-relative z),
+    per-leg phase ph [N,6], swing progress u [N,6] (0 in stance), duty [N,1] and the lift part of z.
+    gravity [N,3] (body frame, unit) replaces the orientation in qpos, e.g. from a real IMU."""
     p = params
     duty = p[:,1:2]
     offsets = xp.stack([p[:,8],p[:,9],p[:,10],p[:,10],p[:,9],p[:,8]], -1)
@@ -83,7 +85,8 @@ def target(params, phase, command, qpos, elapsed, xp=np, gyro=None):
     duration = duty / frequency(p,command,xp)[:,None]
     x = neutral[:,:,0]+travel*duration*vx*ramp
     y = neutral[:,:,1]+travel*duration*vy*ramp
-    gravity = rotate(qpos[:,3:7], xp.array([[0.,0.,-1.]])+xp.zeros((p.shape[0],3)), xp, True)
+    if gravity is None:
+        gravity = rotate(qpos[:,3:7], xp.array([[0.,0.,-1.]])+xp.zeros((p.shape[0],3)), xp, True)
     if gyro is not None:
         # Gravity prediction g_dot = -omega cross g adds gyro damping without
         # observing absolute heading, global position or true linear velocity.
@@ -94,6 +97,12 @@ def target(params, phase, command, qpos, elapsed, xp=np, gyro=None):
     correction = p[:,7:8]*(gravity[:,0:1]*x + gravity[:,1:2]*y)
     activity = xp.clip(speed/.025,0,1)
     z = Z0-p[:,5:6] + lift*ramp*activity + xp.clip(correction,-.012,.012)
+    return dict(x=x, y=y, z=z, ph=ph, u=xp.where(ph < duty, 0., u), duty=duty, lift=lift*ramp*activity)
+
+
+def leg_ik(x, y, z, xp=np, low=None, high=None):
+    """Geometric IK of the six legs: foot targets [N,6] -> joint angles [N,18], clipped to the
+    original policy limits, or to low/high [18] when given."""
     dx, dy = x-xp.array(COXA[:,0])[None,:], y-xp.array(COXA[:,1])[None,:]
     yaw = xp.arctan2(dy,dx)-xp.array(AZIMUTH)[None,:]
     yaw = xp.arctan2(xp.sin(yaw),xp.cos(yaw))
@@ -101,7 +110,14 @@ def target(params, phase, command, qpos, elapsed, xp=np, gyro=None):
     b = -xp.arccos(xp.clip((radial*radial+z*z-L1*L1-L2*L2)/(2*L1*L2),-.999999,.999999))
     a = xp.arctan2(z,radial)-xp.arctan2(L2*xp.sin(b),L1+L2*xp.cos(b))
     q = xp.stack([yaw,a-A0,b-B0],-1).reshape(-1,18)
-    return xp.clip(q,-xp.array(LIMITS)+.004,xp.array(LIMITS)-.004)
+    if low is None: return xp.clip(q,-xp.array(LIMITS)+.004,xp.array(LIMITS)-.004)
+    return xp.clip(q,xp.array(low),xp.array(high))
+
+
+def target(params, phase, command, qpos, elapsed, xp=np, gyro=None, gravity=None):
+    """Batch inputs [N,P], [N], [N,3], [N,25]; returns [N,18]."""
+    f = plan(params, phase, command, qpos, elapsed, xp, gyro, gravity)
+    return leg_ik(f['x'], f['y'], f['z'], xp)
 
 
 def save(path, params, **metadata):
