@@ -10,7 +10,7 @@ The 12 V supply has an internal resistance and a current limit, so the voltage s
 supply does; below the brown-out voltage every servo resets (torque off), as on the real robot.
 With torque off the gear friction still holds the legs (the real robot keeps standing).
 """
-import json, math, os, socket, subprocess, sys, threading, time
+import json, math, os, socket, subprocess, sys, tempfile, threading, time
 from pathlib import Path
 
 import mujoco
@@ -99,7 +99,7 @@ class SimWorld:
         self._setup_actuators()
         self.supply_key = 'lab5'; self.v = SUPPLIES['lab5']['v']; self.i_supply = 0.
         self.speed = 1.; self.paused = False; self.slope = 0.; self.friction = .8
-        self.proc = None; self.proc_what = None; self.stop_file = f'/tmp/arachne_sim_stop_{os.getpid()}'
+        self.proc = None; self.proc_what = None; self.stop_file = os.path.join(tempfile.gettempdir(), f'arachne_sim_stop_{os.getpid()}')
         self.events = []; self.viewers = 0; self.last_seen = time.time()
         self.drive_t = 0.
         self.reset()

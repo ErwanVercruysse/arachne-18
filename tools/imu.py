@@ -11,7 +11,7 @@ which is what the walking policy (tools/policy_walk.py) uses.
 
     python3 tools/imu.py          # print roll/pitch at 10 Hz to check the wiring
 """
-import fcntl, json, math, os, struct, threading, time
+import json, math, os, struct, threading, time
 from pathlib import Path
 
 MAP_FILE = Path(__file__).resolve().parents[1]/'calibration/imu_map.json'
@@ -51,6 +51,7 @@ WHO_AM_I = {0x68: 'MPU6050', 0x70: 'MPU6500', 0x71: 'MPU9250', 0x72: 'MPU6050 kl
 
 class IMU:
     def __init__(self, bus=1, addr=None):
+        import fcntl                   # Linux only (the Pi); importing imu.py also works on Mac/Windows without a sensor
         self.fd = os.open(f'/dev/i2c-{bus}', os.O_RDWR)
         for a in ([addr] if addr else [0x68, 0x69]):
             try:
