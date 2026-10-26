@@ -394,7 +394,7 @@ class SimWorld:
         self.motion.mode = 'idle'; self.motion.queue.clear(); self.motion.cmd[:] = 0
         if os.path.exists(self.stop_file): os.remove(self.stop_file)
         cmd = [sys.executable] + SCRIPTS[name] + ([self.stop_file] if SCRIPTS[name][-1] == '--loop' else [])
-        env = dict(os.environ, ARACHNE_URL=f'http://127.0.0.1:{os.environ.get("ARACHNE_PORT", 5870)}/sim')
+        env = dict(os.environ, ARACHNE_URL=f'http://127.0.0.1:{os.environ.get("ARACHNE_PORT", 5870)}/sim', PYTHONUTF8='1')
         self.proc = subprocess.Popen(cmd, cwd=ROOT, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         self.proc_what = name; self.event(f'script gestart: {" ".join(SCRIPTS[name]).replace("--loop", "").strip()}')
         return {'ok': True}

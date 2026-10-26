@@ -511,7 +511,7 @@ class H(BaseHTTPRequestHandler):
 
     def page(self, path):
         """Serve an HTML page with the login gate: who is logged in, and a redirect to /login for new visitors."""
-        html = path.read_text()
+        html = path.read_text(encoding='utf-8')                       # explicit: Windows would read cp1252
         if auth.has_accounts():
             user = auth.cookie_user(self.headers)
             gate = ('<script>window.ARACHNE_USER=' + json.dumps(user) + ';(function(){'
@@ -588,7 +588,7 @@ class H(BaseHTTPRequestHandler):
         return not auth.has_accounts() and not remote       # no accounts set up yet: old behaviour on the wifi
 
     def do_GET(self):
-        if self.path.startswith('/login'): return self.send((WEB/'login.html').read_text(), 'text/html; charset=utf-8')
+        if self.path.startswith('/login'): return self.send((WEB/'login.html').read_text(encoding='utf-8'), 'text/html; charset=utf-8')
         if self.path.startswith('/logout'):
             self.send_response(302); self.send_header('Set-Cookie', f'{auth.COOKIE}=; Path=/; Max-Age=0; HttpOnly; SameSite=Lax')
             self.send_header('Location', '/login'); self.end_headers(); return
