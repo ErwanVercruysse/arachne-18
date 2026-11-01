@@ -16,7 +16,7 @@ links=json.loads((ROOT/'simulation/mass_properties.json').read_text())['links']
 joints=json.loads((ROOT/'simulation/joint_map.json').read_text())['joints']
 assembly=Client(args.key_file).call('GET')
 instances={x['name'].rsplit(' <',1)[0]:x for x in assembly['rootAssembly']['instances']}
-assert len(instances)==len(meta)==499
+assert len(instances)==len(meta)
 assert {x['name'] for x in meta}==set(instances)
 
 anchors={group:link['parts'][0] for group,link in links.items()}
@@ -33,7 +33,7 @@ plan=dict(documentId=PLAN['documentId'],workspaceId=PLAN['workspaceId'],
           instances={name:dict(id=item['id'],partId=item['partId'])
                      for name,item in instances.items()},
           fastened=fastened,revolute=revolute)
-assert len(fastened)==len(meta)-len(links)==480
+assert len(fastened)==len(meta)-len(links)
 assert len(revolute)==18
 path=OUT/'onshape_mate_plan.json'
 path.write_text(json.dumps(plan,indent=2)+'\n')

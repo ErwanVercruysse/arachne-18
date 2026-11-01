@@ -7,7 +7,7 @@ import vtk
 from vtk.util.numpy_support import numpy_to_vtk
 
 ROOT=Path(__file__).resolve().parent.parent
-CACHE=ROOT/'build/.cad_cache'
+CACHE=ROOT/'build/v4/.cad_cache'
 items=json.loads((CACHE/'placed.json').read_text())
 renderer=vtk.vtkRenderer()
 renderer.SetBackground(.055,.08,.11)
@@ -16,7 +16,7 @@ renderer.GradientBackgroundOn()
 
 for item in items:
     name=item['name']
-    if not name.startswith('L2_') or item['kind'] not in ('printed','servo','hardware'):
+    if not name.startswith('L2_') or item['kind'] not in ('printed','servo','hardware','fastener','factory_fastener','insert'):
         continue
     shape=cq.Shape.importBrep(str(CACHE/item['file']))
     vertices,triangles=shape.tessellate(.16,.13)
@@ -39,7 +39,7 @@ for item in items:
            (.68,.39,.20) if 'femur' in name or 'knee' in name else
            (.20,.44,.61))
     prop=actor.GetProperty()
-    prop.SetColor(*color)
+    prop.SetColor(*item["color"])
     prop.SetAmbient(.28)
     prop.SetDiffuse(.68)
     prop.SetSpecular(.12)
@@ -64,6 +64,7 @@ window.SetOffScreenRendering(1)
 window.AddRenderer(renderer)
 window.SetSize(1800,1000)
 window.SetMultiSamples(8)
+renderer.ResetCameraClippingRange()
 window.Render()
 grab=vtk.vtkWindowToImageFilter();grab.SetInput(window);grab.Update()
 output=ROOT/'assets/cad-leg-top.png'

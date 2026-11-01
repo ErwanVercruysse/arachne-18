@@ -111,7 +111,7 @@ class Installer:
                 parent_mc=self.ensure(connector('J_'+m['name']+'_parent',origin_query(PLAN['instances'][m['parent']]['id']),m['origin_m'],angle))
                 child_mc=mc[m['child']]
             else:
-                distance=[.050,0,0] if kind=='hip' else [.078*math.cos(math.radians(15)),0,.078*math.sin(math.radians(15))]
+                distance=[.062,0,-.00695] if kind=='hip' else [.078*math.cos(math.radians(20)),0,.078*math.sin(math.radians(20))]
                 parent_mc=self.ensure(connector('J_'+m['name']+'_parent',feature_query(mc[m['parent']]),distance,90,'ABOUT_X'))
                 child_mc=self.ensure(connector('J_'+m['name']+'_child',feature_query(mc[m['child']]),[0,0,0],90,'ABOUT_X'))
             self.ensure(mate(m['name'],'REVOLUTE',parent_mc,child_mc,m['range_delta_deg']))
@@ -122,7 +122,7 @@ class Installer:
         mates=[x for x in f['features'] if x['featureType']=='mate']
         types=[next(p['value'] for p in x['parameters'] if p['parameterId']=='mateType') for x in mates]
         errors={fid:s for fid,s in f['featureStates'].items() if s.get('featureStatus')!='OK'}
-        occ=a['rootAssembly']['occurrences'];base_id=PLAN['instances']['01_ROMP']['id']
+        occ=a['rootAssembly']['occurrences'];base_id=PLAN['instances']['01_CHASSIS']['id']
         fixed=[o['path'] for o in occ if o.get('fixed')]
         drift=max(np.max(np.abs(np.array(o['transform']).reshape(4,4)-np.eye(4))) for o in occ)
         report=dict(fastened=types.count('FASTENED'),revolute=types.count('REVOLUTE'),errors=errors,fixed=fixed,

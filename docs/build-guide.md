@@ -1,80 +1,67 @@
-# Printing and assembly
+# Building ARACHNE 18 v4
 
-[Back to the project](../README.md) · [Print BOM](../print/print_bom.csv) · [Hardware BOM](hardware-bom.csv)
+Use the current `print/stl/` files, not earlier revision downloads. Print one leg first. Fit depends on the actual servo, supplied horns, cables, filament shrinkage and printer calibration.
 
-## Design basis
+## Print plan
 
-ARACHNE uses eighteen **12 V STS3215** servos in six yaw–hip–knee chains. The scalloped chassis is approximately 188 × 150 mm; the neutral robot envelope is approximately 375 × 514 × 214 mm. All print and STEP dimensions are millimetres. There are **14 unique printable files**: 63 pieces in the robot and one recommended fit gauge. All fit the Bambu Lab H2D.
+| Part | Quantity | Supplied orientation | Support |
+|---|---:|---|---|
+| 01_chassis | 1 | Flat dorsal deck on bed; cradles grow upward | Local cradle bridges |
+| 02_controller_carrier | 1 | Flat top face on bed; four posts grow upward | Small local recesses |
+| 03_organic_canopy | 1 | Open rim on bed | Internal roof and mounting tabs |
+| 04_coxa | 6 | Continuous flat underside | Local fork bridge |
+| 05_femur | 6 | Continuous flat underside | Local fork bridge |
+| 06_tibia | 6 | Continuous flat underside | Local horn bridge |
+| 07_tpu_shoe | 6 | Flat sole on bed | None in audit |
+| 08_pcb_standoff | 4 | Flat annulus on bed | None in audit |
 
-## Servo and horn interface
+Use PLA for the first fit trial or a suitably calibrated tougher filament for later structural trials. The geometry audit used a 0.4 mm nozzle, 0.2 mm layers, five walls and 35% gyroid for rigid parts; TPU used 20% infill. Inspect bridge/support placement and layer preview on the H2D. Do not fill screw wells or narrow plug clearances with inaccessible support.
 
-The servo reference follows the published 45.23 × 24.73 × 35 mm case dimensions. The owner measured **36.5 mm between the outside faces of the two installed horns**. The driven horn is 2.5 mm thick and the dummy-side horn is 2.0 mm thick. The printed cheeks have a **36.9 mm inside span**, leaving 0.2 mm nominal clearance per side. There are **no separate horn shims**. The supplied metal horns remain on the *inside* of the printed cheeks; only screw heads and the central access opening show outside.
+The canopy intentionally remains one removable piece. Its curved roof and internal tabs require support. The A1 proxy estimated about 87 g of canopy support; this is not a support-free part. The other unique rigid parts needed approximately 2–13 g each. These are rough support estimates; reslice on H2D for material and time estimates. No support/G-code settings are certified for a specific H2D material profile.
 
-The dummy-side shaft protrudes approximately 6.5 mm in diameter, so every horn eye has a **7.2 mm centre opening**. The driven side remains accessible for the manufacturer's central retaining screw. The four attachment holes use a 14 mm pitch circle; the horn is clocked 45° relative to the leg to free space near the dummy-side plugs.
+## Interfaces and screws
 
-The owner-provided servo photograph shows **two adjacent cable sockets on the dummy side**, below the shaft. Both printed cheeks sit at the same distance from the servo centre, with 5.25 mm nominal thickness. Local swept openings in the dummy cheek allow a nominal 20.5 mm-wide, 12.5 mm-deep plug envelope and a straight cable exit through the checked joint sweep. This envelope is inferred from the photograph; measure the supplied plug housings before printing all six legs. Do not trap a cable under a cheek or use it as a joint stop.
+- Horn outer span: **36.5 mm** measured by the owner. Driven horn **2.5 mm**, dummy horn **2.0 mm**.
+- Fork inside span: **36.9 mm**, providing 0.4 mm total fitting allowance. Both cheeks are **5.5 mm** thick.
+- Horns mount **inside** the fork. Eight **DIN 7380 M3×6** screws per joint enter from outside: four per horn.
+- Ø6.3 mm head recesses are 1.5 mm deep, leaving 4 mm beneath the head. A 6 mm screw crosses approximately 4.2 mm of cheek/clearance, leaving approximately 1.8 mm in the horn. Confirm engagement and bottoming on the actual horns before tightening.
+- Ø7.3 mm center openings clear the measured Ø6.5 mm dummy shaft and allow access to the driven horn's original retaining screw. Shallow inner entry tracks let the shaft slide into the fork.
+- Each servo case uses four factory mounting holes, **Ø2.2 mm** through holes and **Ø5.2 mm** head access. Use the supplied PA2 case screws, not M3 machine screws. The CAD assumes a 5 mm under-head length and Ø4 mm head; verify the supplied fasteners.
+- Plastic M3 joints use **Ruthex RX-M3x5.7 inserts**. All pilots are **Ø4.0 × 7.0 mm**, with Ø4.5 entry relief. CAD inserts show the nominal installed envelope; thread/knurl detail is simplified.
 
-Print [the direct-horn fit gauge](../print/stl/14_direct_horn_fit_gauge.stl), one servo clamp and one complete leg first. The gauge checks the horn bolt circle, 7.2 mm shaft opening, 36.9 mm cheek span and 4.0/4.1/4.2 mm insert test bores. Trial-fit *both* plugs with the dummy-side cheek in place, move the unpowered leg through its range, and inspect the cable loop.
+| M3 joint | Screw | Printed stack to insert | Approx. insert engagement |
+|---|---|---:|---:|
+| Carrier → chassis | M3×10 | 4 mm | 6 mm to pilot; insert length 5.7 mm |
+| Canopy → carrier | M3×10 | 4 mm | 6 mm to pilot; insert length 5.7 mm |
+| PCB + standoff → carrier | M3×12 | 1.6 + 6 mm | 4.4 mm |
+| TPU shoe → tibia | M3×8 | 2.6 mm | 5.4 mm |
 
-## H2D print setup
+The 7 mm pilot depth provides screw-tip clearance beyond the 5.7 mm insert. Screws must clamp the part before bottoming. Tighten plastic interfaces gently; load capacity has not been physically measured.
 
-Slice at **100% scale in mm**. STLs sit on Z=0; inspect support and bridging before printing a full batch.
+![V4 knee horn and recessed outside screws](../assets/cad-horn-detail.png)
 
-| Components | Starting setup | Orientation |
-|---|---|---|
-| Chassis, coxa, femur, tibia | PETG or tough nylon; 0.20 mm layers; 5–6 walls; 35–45% infill | Orient joint eyes for strong layer paths; support projecting cradles where needed |
-| Dorsal deck, battery tray, controller plate | PETG; 4 walls; 25–35% infill | Broad base on the bed |
-| Organic shell | PETG; 3–4 walls | Open side down; remove accessible dome supports |
-| Separate side plates and clamp caps | PETG or nylon; 5 walls | Flat on the bed |
-| Foot | TPU 95A; 4 walls | Check the internal slit and retention eye |
+## Assemble one leg
 
-Inspect the thin bridge between the central shaft opening and each M3 head recess in the slicer; keep a continuous wall and remove any plug-window supports. PLA works for the gauge and low-load trial assembly, and [ruthex lists PLA as insert-compatible](https://www.ruthex.de/en/collections/gewindeeinsatze/products/ruthex-gewindeeinsatz-m3-100-stuck-rx-m3x5-7-messing-gewindebuchsen). Loaded legs should use a tougher, less heat-sensitive material; inspect PLA prototypes frequently for cracks at the horn eyes.
+1. Remove support and check the flat surfaces, all four holes at every horn and the center shaft opening. Test the real servo and both horns before installing inserts or printing the remaining legs.
+2. Remove the horns, slide the hip servo into the coxa cradle from the open dummy side and fasten the driven-side factory case holes with four supplied PA2 screws. Install the knee servo in the femur similarly.
+3. Connect/route the bus cables on the **dummy side** while they remain accessible. Leave a service loop at every moving joint. The checked plug/straight-exit envelope is estimated; it is not a model of flexible cable motion.
+4. Fit and center the supplied horns on each servo. Slide the femur fork onto the hip horn pair, and the tibia fork onto the knee horn pair, using the shallow dummy-shaft entry track. Fit the recessed M3×6 horn screws from outside. Access the central horn retainer through the center opening.
+5. Heat-set one M3 insert into the tibia shoe pilot. Fit the TPU shoe and its M3×8 screw.
+6. Sweep the leg slowly by hand/power-limited motion. Check cable bend radii, case screw heads, horn retainers and plugs throughout the intended range. Do not force motion against printed parts or cable tension.
 
-## DIN 7380 screws and inserts
+The three structural moving links are monolithic. No side-plate joining screws or structural shims are needed. The tibia is symmetric; only functional dummy-side entry/connector details make the other links locally asymmetric.
 
-All listed M3 assembly screws use **DIN 7380 / EN ISO 7380-1 button heads**. The modeled M3 head is 5.7 mm diameter × 1.65 mm high, with a 2 mm hex socket ([dimensional reference](https://www.accu.co.uk/api/product-datasheet?id=795623)). The CAD positions 262 screws, 112 simplified ruthex inserts and six foot locknuts individually.
+## Chassis and dorsal compartment
 
-Both cheeks are 5.25 mm thick. The driven side has a 1.5 mm head recess and the dummy side a **1.45 mm head recess**; both use **M3 × 6** screws into the metal horns. At the measured nominal stack, the driven screw stops about 0.45 mm before the inner horn face, while the dummy screw reaches about flush with it. Check the actual metal thread depth, plate thickness and central retaining hardware on one servo; the nominal dummy stack has no spare length. Use the manufacturer's central screws, whose thread is not modeled as generic M3.
+1. Fit four inserts in the chassis at X=±64, Y=±25 mm. Fit six inserts in the carrier: four PCB positions at X=±32, Y=±24, and two cover positions at X=±68, Y=0.
+2. Insert the six yaw servos into the chassis from below with horns removed. Secure each with four supplied case screws. The dummy face and its connectors face down. Attach the coxa forks to the horn pairs using the same M3×6 interfaces as the other joints.
+3. Run two battery straps through the 14×3.5 mm slots at X=±30, Y=±25. The underside route is clear at Z≈20 mm. Fit a protective pad and the battery; allow additional room for leads and connector strain relief.
+4. Lower the carrier onto the four chassis bosses. Install four M3×10 screws through its open access wells using a slim **2 mm hex driver** with at least 50 mm usable reach. The screw heads seat near the bottoms of the wells.
+5. Install the controller using four 6 mm standoffs and M3×12 screws. The reference PCB is 90×60×1.6 mm with 64×48 mm mounting pitch. Adapt `PCB_MOUNTS` in `src/v4_dorsal.py` to the actual board before printing. Extra slots support alternative mounting arrangements; check that they clear components and underside solder joints.
+6. Route leads through the carrier slots and rear canopy opening. Lower the canopy and fasten its two M3×10 screws through the top driver openings. The canopy can be removed without disturbing the legs or carrier.
 
-Structural and cover screws are **M3 × 8**, except the 24 coxa/femur cheek-joint screws, which are **M3 × 10** for 4.75 mm nominal insert engagement. They use [ruthex RX-M3x5.7 heat-set inserts](https://www.ruthex.de/en/collections/gewindeeinsatze/products/ruthex-gewindeeinsatz-m3-100-stuck-rx-m3x5-7-messing-gewindebuchsen). Printed blind bores are **4.0 mm diameter and 6.0 mm deep**, with supporting bosses. The insert envelope is 4.6 mm diameter × 5.7 mm long. Tune hole compensation using the gauge and actual filament. Install inserts squarely with controlled heat, let them cool, then tighten.
+Battery space is 115×40×35 mm and controller space is 90×60×18 mm. These are nominal envelopes, not endorsements of a specific pack/board. The intended source is a 3S battery (11.1 V nominal, 12.6 V full) for the 12 V servo variant. Power distribution, fuse, connector current rating and logic-voltage regulation remain controller/pack-specific electrical design work.
 
-The knee clamp has four straight driver ports through the removable femur cheek. Two small contact bosses seat it against the cheek; two cross-ties meet the side plate directly. The shell's four mounting screws are reached through roof ports. Remove the shell to reach the remaining screws. CAD reports no screw-to-print overlap and no blocked local straight driver paths in this service sequence. Confirm the shaft of your physical hex bit fits.
+## Commissioning
 
-| Item | Quantity | Use |
-|---|---:|---|
-| 12 V STS3215 servo | 18 | Six of each yaw, hip and knee |
-| Supplied driven and dummy-side horns | 18 + 18 | Direct to the printed cheeks |
-| Manufacturer central horn screws | Per servo set | Retain original types |
-| DIN 7380 M3 × 6 | 144 | Four per horn, both sides of 18 servos |
-| DIN 7380 M3 × 8 | 88 | Covers and servo clamps |
-| DIN 7380 M3 × 10 | 24 | Coxa and femur cheek joints |
-| ruthex RX-M3x5.7 inserts | 112 | One per M3 × 8 or M3 × 10 location |
-| DIN 7380 M3 × 25 + M3 locknut | 6 + 6 | Foot retention |
-| M3 × 16 + M3 nuts | 4 + 4 | Controller board as required |
-| Battery straps ≤15 mm | 2 | Battery restraint |
-
-## Battery and electronics
-
-The tray reserves **115 × 40 × 35 mm** for a 3S pack, excluding protruding connectors. A 3S lithium pack supplies 11.1 V nominal and reaches 12.6 V fully charged; it is not a regulated fixed 12 V rail. Secure it with two straps and a thin anti-slip pad, and route its lead toward the aft shell opening. Remove the pack for charging with a suitable charger.
-
-The slotted controller plate is **108 × 75 mm** and reserves a **90 × 60 × 18 mm** generic board envelope on four removable 6 mm standoffs. Fit the actual controller and half-duplex TTL interface before drilling or relocating standoffs. Provide a regulated logic rail if the controller needs it.
-
-The [Feetech 12 V specification](https://www.feetechrc.com/525603.html) lists 2.7 A stall current per servo. Eighteen simultaneously stalled servos would nominally total 48.6 A, a fault/peak scenario rather than normal consumption. Size battery, distribution, wiring and protection from measured duty cycles. Distribute servo power by leg instead of passing the full robot current through one small bus plug.
-
-## Assembly order
-
-1. **Trial fit.** Print the gauge, clamp and one leg set. Fit both metal horns and both dummy-side plugs to a real servo. Check shaft clearance, screw length, unplugging access and cable bend radius.
-2. **Prepare inserts.** Fit 112 inserts to the printed 4.0 mm bores. Check every boss after cooling.
-3. **Build chassis and coxae.** Install six yaw servos, attach the direct-horn coxa cheeks and integrated dummy-side bottom plates, then fit the hip servos and removable caps.
-4. **Build femurs and knees.** Attach femur brackets directly to the hip horns. The widened local knee-cheek sections clear the knee clamp; close each removable side plate against its cross-ties with two M3 × 10 screws.
-5. **Install tibiae and feet.** Attach each fork directly to the two knee horns with recessed M3 × 6 screws. Fit TPU feet, transverse M3 × 25 bolts and locknuts.
-6. **Wire and close.** Route each pair of plugs through dummy-side openings with a free loop at every joint. Secure wiring to the fixed link, not the rotating horn. Fit the deck, strapped 3S pack, controller and shell.
-7. **Calibrate.** Assign IDs 1–18, confirm directions and encoder zeros against the [joint map](../simulation/joint_map.json), and begin with slow unloaded motion.
-
-## Checked movement
-
-The neutral hip is +15° above horizontal; the tibia is 65° below horizontal, giving a −80° knee angle relative to the femur. Front/rear yaw is limited inward to 64° and outward to 35°; middle legs use ±35°. The hip is −20° to +30° absolute, and the knee −95° to 0° relative to the femur. Per-joint limits do not guarantee that arbitrary simultaneous poses are clear.
-
-The checked front toe-contact pose is L1/L6 yaw −58.3°/+58.3°, hip −20°, knee 0°. The rear pair mirrors it. An eight-step coordinated path brings the TPU feet together without hard-part intersection; turning two neutral bent legs inward independently can collide. The nominal connector envelope was checked in **594 plug and straight-exit positions**. Actual flexible cables can bow elsewhere, so repeat the unpowered motion test with the real harness before a fast gait.
-
-The model mass is approximately 2.346 kg including assumed battery, controller and hardware. The manufacturer quotes 10 kg·cm rated and 30 kg·cm stall torque at 12 V. Stall torque is not continuous torque. No physical load or fatigue test has been performed; establish payload and gait speed experimentally.
+Assign IDs 1–18 using `simulation/joint_map.json`, verify each servo's sign and center, and start with one unloaded leg at limited speed/current. CAD joint ranges are geometric limits, not verified hardware travel. Stand tests use much smaller motion. Confirm physical fit, rigidity, insert retention and cable clearance before attempting load-bearing walking.

@@ -1,0 +1,101 @@
+{
+  "revision": "v4",
+  "checks": {
+    "parts": {
+      "01_chassis": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 18503.65415871369
+      },
+      "02_controller_carrier": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 10218.268177890703
+      },
+      "03_organic_canopy": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 1322.1291704499708
+      },
+      "04_coxa": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 2197.765629271957
+      },
+      "05_femur": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 2401.5553443418894
+      },
+      "06_tibia": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 1756.6078023790474
+      },
+      "07_tpu_shoe": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 334.0894982215232
+      },
+      "08_pcb_standoff": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "mesh_components": 1,
+        "bed_area_mm2": 54.51974200619262
+      }
+    },
+    "validated_component_difference_mm3": {
+      "01_chassis": 0.0,
+      "04_coxa": 0.0,
+      "05_femur": 0.0,
+      "06_tibia": 0.0,
+      "07_tpu_shoe": 0.0
+    },
+    "dorsal_intersections": [],
+    "controller_envelope_overlap_mm3": 0.0,
+    "fastener_print_intersections": [],
+    "dorsal_driver_obstructions": [],
+    "dorsal_motion_max_overlap_mm3": 0.0,
+    "dorsal_motion_worst_pose": null,
+    "body_and_tibia_symmetry_mm3": {
+      "01_chassis": 0.0,
+      "06_tibia": 0.0
+    }
+  },
+  "step_sha256": {
+    "01_chassis": "c0aad39a0d46395079e308b011a87f1ea6fb863c25d2bb3a129a69765f1d6deb",
+    "02_controller_carrier": "b067d4680d2af3f48f9a6675dd258959bf8da696e13611eaa854971e457ad8ac",
+    "03_organic_canopy": "d865408a8e88d259bb58547789b84c84a09031467f1d2ce289467e673f34267f",
+    "04_coxa": "0223b12c415e47b088d9a9d67d2f55575afd219306dbfcd932bf706a6e10900e",
+    "05_femur": "d28de9887701de11a3e432f7a74c20dcc2c344dfafb7ac73dbdbc19f59daa803",
+    "06_tibia": "cffa5a38f5b86a961fa32d489de28ce1325337426cbf6c50bfdff91738e7eed8",
+    "07_tpu_shoe": "3b83961c74b9db840e8dcadf5af142c145a0820780c30ba9e66422f4c2636464",
+    "08_pcb_standoff": "b6eb7bfc44b85ceffa1e708ddc0dc0fc9e8d00c163f96e908b7cd92e11bd91a2"
+  },
+  "stl_sha256": {
+    "01_chassis": "041b311c1c6fdb7715d0ea53782a294589e7ab5e91414de0845ca24db41e48f6",
+    "02_controller_carrier": "fe76229cd6004f706df3c949a5361802ead688ad012f22128aef2c4e6f865bcf",
+    "03_organic_canopy": "99ee4e925c71b7fa42614b3575a81fec916c997897790e98a3d4805120374a73",
+    "04_coxa": "e51af64b3ebd87cc33e7b3a18e65b40f1ad6c1b966b393ac0f6200084e43430c",
+    "05_femur": "e6aa9b58bfc53b40ade5713bf4e9ffecdc736295ea9c6741bdde30bd054dc63e",
+    "06_tibia": "abdcf2e1ad7aca86bcc3a1f21087bfc9622892cf5f0bff32193b1f7677914132",
+    "07_tpu_shoe": "88faab543fb3fb8228052b56ce2ef2350819cd611495e23915d8979d08c6615d",
+    "08_pcb_standoff": "f61848c3803939c399eef4b49a98a19885148bfedef4918b1d629c2e69ba3f75"
+  },
+  "passed": true
+}

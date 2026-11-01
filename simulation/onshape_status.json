@@ -1,10 +1,10 @@
 {
-  "status": "NATIVE_MATES_INSTALLED_AND_STATIC_VALIDATION_PASSED",
-  "native_fastened_verified": 136,
-  "native_revolute_verified": 18,
-  "chassis_fixed": true,
-  "solver_errors": 0,
-  "frames_and_limits_verified": 18,
-  "motion_command_verification": "Not verified: matevalues updates did not move the assembly; a nonzero occurrence transform returned HTTP 500.",
-  "mujoco_simulation_validation": "PASS including six continuous floor contacts in the grounded demonstration"
+  "revision": "v4",
+  "assembly_url": "https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/916e6d95108202647e946643",
+  "assembly_source_part_studio_id": "d68fc9f6aee00c72d944de06",
+  "unique_print_part_studio_id": "f85bc8278acffc5ff06239e0",
+  "imported_valid_solid_parts": 336,
+  "unique_print_parts": 8,
+  "native_mates_verified": true,
+  "native_limits_verified": true
 }

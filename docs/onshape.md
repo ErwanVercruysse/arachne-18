@@ -1,33 +1,29 @@
-# Onshape assembly
+# Native Onshape v4 assembly
 
-[Open the native assembly](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/ea6ef29b6f90442d8a9d563b)
+[Open ARACHNE 18 — v4 articulated assembly](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/916e6d95108202647e946643)
 
-The document contains an assembly-source Part Studio with **499 positioned solids**, a separate Part Studio with **14 unique printable solids**, and a native assembly with the 499 corresponding instances. The imported STEP preserves the corrected symmetric geometry, including the complete dummy-side knee eyes, real button-head screw envelopes, metal horns on the inside of the cheeks, and no loose shims. The Onshape Free document and GitHub repository are public.
+[Open its source Part Studio](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/d68fc9f6aee00c72d944de06)
 
-## Native mate structure
+The v4 assembly is a separate named tab in the existing project document. Earlier tabs preserve the preceding design. All 336 imported source parts are solid bodies, including the printed structure, 18 servo exterior references, 36 horns, 160 DIN 7380 M3 screws, 72 factory case screws, 16 inserts and the battery/controller references.
 
-- The chassis is fixed.
-- **480 fastened mates** connect the parts into **19 rigid links**, including every modeled screw, heat-set insert, metal horn and foot locknut.
-- **18 revolute mates** provide yaw, hip and knee motion for six legs.
-- Mate connectors place the joint axes at the same locations as the CAD and MuJoCo neutral geometry.
-- The revolute limits follow [`joint_map.json`](../simulation/joint_map.json): front/rear yaw up to 64° inward and 35° outward, middle yaw ±35°, hip −35°/+15° and knee −15°/+80° relative to the neutral CAD pose.
+[Open the eight unique printable parts](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/f85bc8278acffc5ff06239e0)
 
-The exact graph and instance IDs are in [`onshape_mate_plan.json`](../simulation/onshape_mate_plan.json). Native API readback and feature status are in [`onshape_validation.json`](../simulation/onshape_validation.json); the [limit report](../simulation/onshape_motion_validation.json) records each revolute mate. The mate and limit readbacks check the definitions at neutral, while the separate [CAD motion check](../validation/motion_validation.json) and [MuJoCo checks](../simulation/simulation_validation.json) check sampled motion. Native interactive animation has not been separately verified.
+## Mate graph
 
-For one leg, the rigid structure is:
+The fixed chassis anchors 19 rigid groups. **317 fastened mates** attach each group's printed components, cases, horns, screws and inserts. **18 revolute mates** provide the six yaw–hip–knee chains. Servo cases belong to the upstream group; rotating horns and their screws belong to the downstream group.
 
 ```text
-fixed chassis ── revolute yaw ── coxa ── revolute hip ── femur ── revolute knee ── tibia + foot
+fixed chassis → yaw → coxa → hip → femur → knee → tibia + TPU shoe
 ```
 
-The other five legs repeat this chain. Each servo case belongs to the upstream link; its rotating metal horns and horn screws belong to the downstream link. Within a rigid link, the printed pieces, clamps, screws and inserts are fastened.
+`R_L1_yaw`, `R_L1_hip`, `R_L1_knee` and equivalents for L2–L6 identify the revolute mates. `F_` names are fastened mates; `MC_` and `J_` names are explicit mate connectors. All names are English.
 
-## Inspecting or editing
+Hip neutral is +20°, knee neutral is −85°. Joint values are offsets from that pose. Native limits use front/rear yaw 60° inward/35° outward, middle yaw ±35°, hip −50°/+25° and knee −20°/+100°. [Joint conventions](simulation.md).
 
-Open the assembly and filter the feature tree by `R_L1_yaw`, `R_L1_hip` or `R_L1_knee` to inspect the joint definitions. `F_` features are fastened mates. `MC_` and `J_` features are explicit mate connectors; they do not depend on tessellated edge selection. The neutral hip geometry is +15° above horizontal and the neutral knee is −80° relative to the femur. Mate values are offsets from this neutral pose, not raw servo encoder values.
+The precise instance graph is in [onshape_mate_plan.json](../simulation/onshape_mate_plan.json). The [native readback report](../simulation/onshape_validation.json) checks instance/mate counts, solver feature status, fixed chassis and neutral transforms. The [limit report](../simulation/onshape_motion_validation.json) checks all 18 limit definitions. These API checks do not claim a separate interactive animation test. CAD and MuJoCo motion checks are documented independently.
 
-The imported STEP does not retain CadQuery feature history. Modify [`src/build_cad.py`](../src/build_cad.py) and regenerate the STEP to change geometry. The API assembly uses legacy mate connector names for some original parts; [`onshape_name_map.json`](../cad/onshape_name_map.json) preserves that alias mapping. The direct-horn revision is also captured by the [orthographic leg view](../assets/cad-leg-top.png) and the [four-screw knee view](../assets/cad-horn-detail.png).
+## Editing and export
 
-## Export to MuJoCo
+The STEP import preserves solids and placement, not CadQuery feature history. Change the parametric source in `src/v4_*.py` and regenerate when modifying geometry. The assembled servo references simplify the exterior; the original vendor STEP is retained locally for mechanical fit checks.
 
-The supplied MuJoCo export uses the same 19-link graph and joint frames. It is generated from the positioned CAD solids, not from a screenshot or the print-bed-oriented STL files. Follow the [simulation guide](simulation.md) and [regeneration guide](development.md). A global height adjustment places the floating-base robot's feet on the floor without changing the local link geometry or mate origins.
+The MuJoCo model is generated from the same positioned CAD solids, rigid groups and joint frames. The floating base receives one global height adjustment to place the actual TPU shoes on the floor. See [development.md](development.md) for reproducible build and native mate commands.

@@ -1,18 +1,15 @@
-item,quantity,notes
-STS3215 12 V servo,18,Use the 12 V version
-Original driven horn,18,19.95 mm diameter and 14 mm pitch circle reference
-Original passive disc,18,Check supplied hardware dimensions
-Original central servo screw,36,Use correct manufacturer screw on each side
-DIN 7380 / ISO 7380-1 M3 x 8 button-head screw,88,Covers and servo clamps into heat-set inserts
-DIN 7380 / ISO 7380-1 M3 x 10 button-head screw,24,Coxa and femur cheek joints; 4.75 mm nominal insert engagement
-ruthex RX-M3x5.7 threaded insert,112,Nominal 4.0 mm bore x 6.0 mm deep in supported print bosses
-DIN 7380 / ISO 7380-1 M3 x 6 button-head screw,144,Horn screws with shallow counterbores in symmetric cheeks; no loose shims
-DIN 7380 / ISO 7380-1 M3 x 16 button-head screw,4,Controller mounting
-M3 nut,4,Controller mounting
-DIN 7380 / ISO 7380-1 M3 x 25 button-head screw,6,Foot retention
-M3 locknut,6,Foot retention
-Battery strap maximum 15 mm wide,2,Battery restraint
-3S battery pack,1,Must fit 115 x 40 x 35 mm envelope excluding plugs
-TTL bus controller,1,Must fit 90 x 60 x 18 mm envelope
-Power distribution and protection,1,Size from measured system load
-Two-plug servo bus cables cable ties and anti-slip pads,as needed,Trial-fit the two dummy-side plugs and provide free joint loops
+item,quantity,location,notes
+STS3215 12V servo,18,3 per leg,Use the owner's 12V variant
+Supplied driven metal horn,18,Inside each driven fork face,2.5mm measured thickness
+Supplied dummy metal horn,18,Inside each dummy fork face,2.0mm measured thickness
+DIN7380-1 M3x6,144,Horn attachment,4 screws per horn
+DIN7380-1 M3x8,6,TPU shoe to tibia,One per foot
+DIN7380-1 M3x10,6,4 carrier and 2 canopy screws,2mm hex drive
+DIN7380-1 M3x12,4,PCB and standoff to carrier,Assumes 1.6mm PCB and 6mm standoff
+Supplied PA2 case screw,72,4 per servo factory case mount,Reference assumes 5mm shank and 4mm head
+Ruthex RX-M3x5.7 insert,16,4 chassis 6 carrier 6 tibia,4.0mm diameter x7mm pilot
+Original horn retaining hardware,18 sets,Servo center retainers,Reuse supplied hardware; not individually detailed in CAD
+Battery retaining strap,2,Chassis slots,Choose width up to 14mm and length for actual pack
+3S battery pack,1,Dorsal compartment,Nominal envelope115x40x35mm excluding plugs
+Controller and power distribution,1 set,Controller carrier,Nominal envelope90x60x18mm
+Servo bus cables,As routed,Dummy-side ports,Verify plugs and leave flexible service loops

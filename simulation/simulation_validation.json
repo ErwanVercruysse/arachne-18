@@ -3,9 +3,9 @@
     "rigid_links": 19,
     "hinges": 18,
     "floating_base_dofs": 6,
-    "mesh_assets": 499,
+    "mesh_assets": 336,
     "initial_contacts": 0,
-    "mass_kg": 2.3463978276796578
+    "mass_kg": 2.333328717563237
   },
   "kinematics": {
     "passed": 18,
@@ -66,62 +66,63 @@
       "mode": "stand",
       "voltage": 12.0,
       "duration_s": 10,
-      "max_tracking_error_after_2s_deg": 0.6877242788351211,
-      "peak_motor_torque_before_friction_Nm": 0.33274706349684474,
-      "max_joint_speed_rad_s": 0.0994043441396166,
+      "max_tracking_error_after_2s_deg": 0.5818871659539397,
+      "peak_motor_torque_before_friction_Nm": 0.2816190329985859,
+      "max_joint_speed_rad_s": 0.09541861071541863,
       "final_base_xyz_m": [
-        1.3179559925278004e-07,
-        5.355139727641461e-08,
-        0.09368296411813798
+        1.4198332734548804e-07,
+        -1.9357490255819772e-08,
+        0.09628197987847802
       ],
-      "final_contacts": 6
+      "final_contacts": 12
     },
     {
       "fixed": false,
       "mode": "stand",
       "voltage": 11.1,
       "duration_s": 10,
-      "max_tracking_error_after_2s_deg": 0.737932441581615,
-      "peak_motor_torque_before_friction_Nm": 0.33028813673246915,
-      "max_joint_speed_rad_s": 0.09952419338419104,
+      "max_tracking_error_after_2s_deg": 0.6198440263560441,
+      "peak_motor_torque_before_friction_Nm": 0.2775155075047102,
+      "max_joint_speed_rad_s": 0.09556612550293636,
       "final_base_xyz_m": [
-        1.4455231207940733e-07,
-        5.9364039813657146e-08,
-        0.09357870306561611
+        1.5822253570655863e-07,
+        -2.213277142424756e-08,
+        0.09621367577871946
       ],
-      "final_contacts": 6
+      "final_contacts": 12
     },
     {
       "fixed": false,
       "mode": "stand",
       "voltage": 12.6,
       "duration_s": 10,
-      "max_tracking_error_after_2s_deg": 0.657673886922837,
-      "peak_motor_torque_before_friction_Nm": 0.3341032238899252,
-      "max_joint_speed_rad_s": 0.09932447889107691,
+      "max_tracking_error_after_2s_deg": 0.5590573925150364,
+      "peak_motor_torque_before_friction_Nm": 0.2840832364132567,
+      "max_joint_speed_rad_s": 0.09533877458076884,
       "final_base_xyz_m": [
-        1.2408236452709562e-07,
-        5.029648448584208e-08,
-        0.09374570131631754
+        1.3284271903450662e-07,
+        -1.7307769069851016e-08,
+        0.09632347054368731
       ],
-      "final_contacts": 6
+      "final_contacts": 12
     },
     {
       "fixed": true,
       "mode": "sweep",
       "voltage": 12.0,
       "duration_s": 12,
-      "max_tracking_error_after_2s_deg": 0.7078115276395511,
-      "peak_motor_torque_before_friction_Nm": 0.1970402682775517,
-      "max_joint_speed_rad_s": 0.16545614885103457,
+      "max_tracking_error_after_2s_deg": 0.7249262207437962,
+      "peak_motor_torque_before_friction_Nm": 0.2043097838795023,
+      "max_joint_speed_rad_s": 0.1654971138099752,
       "final_base_xyz_m": [
         0.0,
         0.0,
-        0.2771587397
+        0.2794269501
       ],
       "final_contacts": 0
     }
   ],
   "reset_reproducible": true,
-  "status": "PASS; numerical/model checks only, not hardware validation"
+  "status": "PASS; numerical/model checks only, not hardware validation",
+  "revision": "v4"
 }

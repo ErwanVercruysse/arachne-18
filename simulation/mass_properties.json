@@ -1,6 +1,6 @@
 {
   "assumptions": {
-    "printed_effective_density_kg_m3": 700.0,
+    "printed_effective_density_kg_m3": 850.0,
     "tpu_effective_density_kg_m3": 1000.0,
     "steel_kg_m3": 7800.0,
     "brass_kg_m3": 8500.0,
@@ -13,30 +13,30 @@
     "per_femur_fasteners_kg": 0.0,
     "per_tibia_fasteners_kg": 0.0
   },
-  "total_mass_kg": 2.3463978276796578,
+  "total_mass_kg": 2.3333287175632376,
   "links": {
     "BODY": {
-      "mass_kg": 0.9428310255480361,
+      "mass_kg": 0.9661702469287098,
       "com_m": [
-        -0.00014535898771455294,
-        -1.7357053536642374e-05,
-        0.023741170480116962
+        -0.00013598060824396036,
+        -6.072240062099652e-08,
+        0.0324411419857813
       ],
       "inertia_kg_m2": [
         [
-          0.0027335373385213696,
-          6.741363151651336e-07,
-          1.142454899006991e-05
+          0.0028532354405998114,
+          3.2061025273621126e-09,
+          1.4285026858299831e-05
         ],
         [
-          6.741363151651336e-07,
-          0.002476801166278046,
-          4.0804999117159905e-07
+          3.2061025273621126e-09,
+          0.0027846739346089546,
+          4.968615479240762e-09
         ],
         [
-          1.142454899006991e-05,
-          4.0804999117159905e-07,
-          0.0032250686336684764
+          1.4285026858299831e-05,
+          4.968615479240762e-09,
+          0.0034093560165230877
         ]
       ],
       "parent": null,
@@ -47,133 +47,90 @@
       ],
       "parts": [
         "01_CHASSIS",
-        "02_DORSAL_DECK",
-        "03_BATTERY_TRAY",
-        "04_CONTROLLER_PLATE",
+        "02_CONTROLLER_CARRIER",
         "05_SHELL",
         "REF_3S_BATTERY_115x40x35",
-        "REF_CONTROLLER_90x60x18",
-        "PCB_spacer_-32_-24",
-        "PCB_spacer_-32_24",
-        "PCB_spacer_32_-24",
-        "PCB_spacer_32_24",
-        "BODY_deck_M3x8_-68_-18",
-        "BODY_deck_RXM3x5p7_-68_-18",
-        "BODY_deck_M3x8_-68_18",
-        "BODY_deck_RXM3x5p7_-68_18",
-        "BODY_deck_M3x8_68_-18",
-        "BODY_deck_RXM3x5p7_68_-18",
-        "BODY_deck_M3x8_68_18",
-        "BODY_deck_RXM3x5p7_68_18",
-        "BODY_tray_M3x8_-32_-30",
-        "BODY_tray_RXM3x5p7_-32_-30",
-        "BODY_tray_M3x8_-32_30",
-        "BODY_tray_RXM3x5p7_-32_30",
-        "BODY_tray_M3x8_32_-30",
-        "BODY_tray_RXM3x5p7_32_-30",
-        "BODY_tray_M3x8_32_30",
-        "BODY_tray_RXM3x5p7_32_30",
-        "BODY_controller_M3x8_-48_-31",
-        "BODY_controller_RXM3x5p7_-48_-31",
-        "BODY_controller_M3x8_-48_31",
-        "BODY_controller_RXM3x5p7_-48_31",
-        "BODY_controller_M3x8_48_-31",
-        "BODY_controller_RXM3x5p7_48_-31",
-        "BODY_controller_M3x8_48_31",
-        "BODY_controller_RXM3x5p7_48_31",
-        "BODY_shell_M3x8_-40_-42",
-        "BODY_shell_RXM3x5p7_-40_-42",
-        "BODY_shell_M3x8_-40_42",
-        "BODY_shell_RXM3x5p7_-40_42",
-        "BODY_shell_M3x8_40_-42",
-        "BODY_shell_RXM3x5p7_40_-42",
-        "BODY_shell_M3x8_40_42",
-        "BODY_shell_RXM3x5p7_40_42",
-        "L1_S01_YAW_STS3215",
-        "L1_yaw_clamp",
-        "L1_yaw_clamp_M3x8_-31_-18.3",
-        "L1_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L1_yaw_clamp_M3x8_-31_18.3",
-        "L1_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L1_yaw_clamp_M3x8_-20_-18.3",
-        "L1_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L1_yaw_clamp_M3x8_-20_18.3",
-        "L1_yaw_clamp_RXM3x5p7_-20_18.3",
-        "L2_S04_YAW_STS3215",
-        "L2_yaw_clamp",
-        "L2_yaw_clamp_M3x8_-31_-18.3",
-        "L2_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L2_yaw_clamp_M3x8_-31_18.3",
-        "L2_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L2_yaw_clamp_M3x8_-20_-18.3",
-        "L2_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L2_yaw_clamp_M3x8_-20_18.3",
-        "L2_yaw_clamp_RXM3x5p7_-20_18.3",
-        "L3_S07_YAW_STS3215",
-        "L3_yaw_clamp",
-        "L3_yaw_clamp_M3x8_-31_-18.3",
-        "L3_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L3_yaw_clamp_M3x8_-31_18.3",
-        "L3_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L3_yaw_clamp_M3x8_-20_-18.3",
-        "L3_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L3_yaw_clamp_M3x8_-20_18.3",
-        "L3_yaw_clamp_RXM3x5p7_-20_18.3",
-        "L4_S10_YAW_STS3215",
-        "L4_yaw_clamp",
-        "L4_yaw_clamp_M3x8_-31_-18.3",
-        "L4_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L4_yaw_clamp_M3x8_-31_18.3",
-        "L4_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L4_yaw_clamp_M3x8_-20_-18.3",
-        "L4_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L4_yaw_clamp_M3x8_-20_18.3",
-        "L4_yaw_clamp_RXM3x5p7_-20_18.3",
-        "L5_S13_YAW_STS3215",
-        "L5_yaw_clamp",
-        "L5_yaw_clamp_M3x8_-31_-18.3",
-        "L5_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L5_yaw_clamp_M3x8_-31_18.3",
-        "L5_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L5_yaw_clamp_M3x8_-20_-18.3",
-        "L5_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L5_yaw_clamp_M3x8_-20_18.3",
-        "L5_yaw_clamp_RXM3x5p7_-20_18.3",
-        "L6_S16_YAW_STS3215",
-        "L6_yaw_clamp",
-        "L6_yaw_clamp_M3x8_-31_-18.3",
-        "L6_yaw_clamp_RXM3x5p7_-31_-18.3",
-        "L6_yaw_clamp_M3x8_-31_18.3",
-        "L6_yaw_clamp_RXM3x5p7_-31_18.3",
-        "L6_yaw_clamp_M3x8_-20_-18.3",
-        "L6_yaw_clamp_RXM3x5p7_-20_-18.3",
-        "L6_yaw_clamp_M3x8_-20_18.3",
-        "L6_yaw_clamp_RXM3x5p7_-20_18.3",
+        "REF_CONTROLLER_PCB_90x60",
+        "REF_CONTROLLER_COMPONENTS",
+        "BODY_carrier_insert_-64_-25",
+        "BODY_carrier_M3x10_-64_-25",
+        "BODY_carrier_insert_-64_25",
+        "BODY_carrier_M3x10_-64_25",
+        "BODY_carrier_insert_64_-25",
+        "BODY_carrier_M3x10_64_-25",
+        "BODY_carrier_insert_64_25",
+        "BODY_carrier_M3x10_64_25",
+        "BODY_cover_insert_-68_0",
+        "BODY_cover_M3x10_-68_0",
+        "BODY_cover_insert_68_0",
+        "BODY_cover_M3x10_68_0",
+        "BODY_PCB_standoff_-32_-24",
+        "BODY_PCB_insert_-32_-24",
+        "BODY_PCB_M3x12_-32_-24",
+        "BODY_PCB_standoff_-32_24",
+        "BODY_PCB_insert_-32_24",
+        "BODY_PCB_M3x12_-32_24",
+        "BODY_PCB_standoff_32_-24",
+        "BODY_PCB_insert_32_-24",
+        "BODY_PCB_M3x12_32_-24",
+        "BODY_PCB_standoff_32_24",
+        "BODY_PCB_insert_32_24",
+        "BODY_PCB_M3x12_32_24",
+        "L1_YAW_STS3215",
+        "L1_yaw_factory_PA2_-29_-10.25",
+        "L1_yaw_factory_PA2_-29_10.25",
+        "L1_yaw_factory_PA2_-8.3_-10.25",
+        "L1_yaw_factory_PA2_-8.3_10.25",
+        "L2_YAW_STS3215",
+        "L2_yaw_factory_PA2_-29_-10.25",
+        "L2_yaw_factory_PA2_-29_10.25",
+        "L2_yaw_factory_PA2_-8.3_-10.25",
+        "L2_yaw_factory_PA2_-8.3_10.25",
+        "L3_YAW_STS3215",
+        "L3_yaw_factory_PA2_-29_-10.25",
+        "L3_yaw_factory_PA2_-29_10.25",
+        "L3_yaw_factory_PA2_-8.3_-10.25",
+        "L3_yaw_factory_PA2_-8.3_10.25",
+        "L4_YAW_STS3215",
+        "L4_yaw_factory_PA2_-29_-10.25",
+        "L4_yaw_factory_PA2_-29_10.25",
+        "L4_yaw_factory_PA2_-8.3_-10.25",
+        "L4_yaw_factory_PA2_-8.3_10.25",
+        "L5_YAW_STS3215",
+        "L5_yaw_factory_PA2_-29_-10.25",
+        "L5_yaw_factory_PA2_-29_10.25",
+        "L5_yaw_factory_PA2_-8.3_-10.25",
+        "L5_yaw_factory_PA2_-8.3_10.25",
+        "L6_YAW_STS3215",
+        "L6_yaw_factory_PA2_-29_-10.25",
+        "L6_yaw_factory_PA2_-29_10.25",
+        "L6_yaw_factory_PA2_-8.3_-10.25",
+        "L6_yaw_factory_PA2_-8.3_10.25",
         "BODY_unmodelled_fasteners"
       ]
     },
     "L1_COXA": {
-      "mass_kg": 0.09754347086124546,
+      "mass_kg": 0.08897141017027013,
       "com_m": [
-        0.02847260299112041,
-        0.02951494724326297,
-        -0.012047451492984852
+        0.02655403720966116,
+        0.027303057157392494,
+        -0.0054446236143695665
       ],
       "inertia_kg_m2": [
         [
-          5.026518942772679e-05,
-          -1.3641089209227035e-05,
-          6.988807103839315e-06
+          3.6585072258362653e-05,
+          -1.4044473964173792e-05,
+          3.3314233643925863e-06
         ],
         [
-          -1.3641089209227035e-05,
-          4.897279710128391e-05,
-          8.430478195913967e-06
+          -1.4044473964173792e-05,
+          3.683547376888272e-05,
+          3.4311615903451613e-06
         ],
         [
-          6.988807103839315e-06,
-          8.430478195913967e-06,
-          4.646731055371079e-05
+          3.3314233643925863e-06,
+          3.4311615903451613e-06,
+          4.687266478252625e-05
         ]
       ],
       "parent": "BODY",
@@ -184,164 +141,144 @@
       ],
       "parts": [
         "L1_coxa",
-        "L1_coxa_bottom",
-        "L1_S02_HIP_STS3215",
-        "L1_hip_clamp",
-        "L1_yaw_disc_plus",
-        "L1_yaw_disc_min",
-        "L1_yaw_plus_horn_M3x6_1",
-        "L1_yaw_plus_horn_M3x6_2",
-        "L1_yaw_plus_horn_M3x6_3",
-        "L1_yaw_plus_horn_M3x6_4",
-        "L1_yaw_min_horn_M3x6_1",
-        "L1_yaw_min_horn_M3x6_2",
-        "L1_yaw_min_horn_M3x6_3",
-        "L1_yaw_min_horn_M3x6_4",
-        "L1_hip_clamp_M3x8_-31_-18.3",
-        "L1_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L1_hip_clamp_M3x8_-31_18.3",
-        "L1_hip_clamp_RXM3x5p7_-31_18.3",
-        "L1_hip_clamp_M3x8_-20_-18.3",
-        "L1_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L1_hip_clamp_M3x8_-20_18.3",
-        "L1_hip_clamp_RXM3x5p7_-20_18.3",
-        "L1_coxa_join_M3x10_-7",
-        "L1_coxa_join_RXM3x5p7_-7",
-        "L1_coxa_join_M3x10_7",
-        "L1_coxa_join_RXM3x5p7_7",
+        "L1_HIP_STS3215",
+        "L1_yaw_horn_-1",
+        "L1_yaw_M3x6_-1_1",
+        "L1_yaw_M3x6_-1_2",
+        "L1_yaw_M3x6_-1_3",
+        "L1_yaw_M3x6_-1_4",
+        "L1_yaw_horn_1",
+        "L1_yaw_M3x6_1_1",
+        "L1_yaw_M3x6_1_2",
+        "L1_yaw_M3x6_1_3",
+        "L1_yaw_M3x6_1_4",
+        "L1_hip_factory_PA2_-29_-10.25",
+        "L1_hip_factory_PA2_-29_10.25",
+        "L1_hip_factory_PA2_-8.3_-10.25",
+        "L1_hip_factory_PA2_-8.3_10.25",
         "L1_COXA_unmodelled_fasteners"
       ]
     },
     "L1_FEMUR": {
-      "mass_kg": 0.10082045894265886,
+      "mass_kg": 0.09043082366940378,
       "com_m": [
-        0.033485488726164386,
-        0.03510356495314935,
-        0.013111719426949444
+        0.03356126078450767,
+        0.03429075375138909,
+        0.016410276036811455
       ],
       "inertia_kg_m2": [
         [
-          4.911537185710783e-05,
-          -1.806354956551034e-05,
-          -8.55820962023286e-06
+          4.6917619363914016e-05,
+          -1.8148478100641718e-05,
+          -1.2319033184395126e-05
         ],
         [
-          -1.806354956551034e-05,
-          5.1241073687636626e-05,
-          -8.199463122590059e-06
+          -1.8148478100641718e-05,
+          4.6836718991694934e-05,
+          -1.2409363387473898e-05
         ],
         [
-          -8.55820962023286e-06,
-          -8.199463122590059e-06,
-          7.552160273033424e-05
+          -1.2319033184395126e-05,
+          -1.2409363387473898e-05,
+          6.771081465336504e-05
         ]
       ],
       "parent": "L1_COXA",
       "origin_neutral_m": [
-        0.09616652224137047,
-        0.09616652224137046,
-        0.0
+        0.10465180361560904,
+        0.10465180361560902,
+        -0.0069500000000000004
       ],
       "parts": [
         "L1_femur",
-        "L1_femur_side_plate",
-        "L1_S03_KNEE_STS3215",
-        "L1_knee_clamp",
-        "L1_hip_disc_plus",
-        "L1_hip_disc_min",
-        "L1_hip_plus_horn_M3x6_1",
-        "L1_hip_plus_horn_M3x6_2",
-        "L1_hip_plus_horn_M3x6_3",
-        "L1_hip_plus_horn_M3x6_4",
-        "L1_hip_min_horn_M3x6_1",
-        "L1_hip_min_horn_M3x6_2",
-        "L1_hip_min_horn_M3x6_3",
-        "L1_hip_min_horn_M3x6_4",
-        "L1_knee_clamp_M3x8_-31_-18.3",
-        "L1_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L1_knee_clamp_M3x8_-31_18.3",
-        "L1_knee_clamp_RXM3x5p7_-31_18.3",
-        "L1_knee_clamp_M3x8_-20_-18.3",
-        "L1_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L1_knee_clamp_M3x8_-20_18.3",
-        "L1_knee_clamp_RXM3x5p7_-20_18.3",
-        "L1_femur_join_M3x10_10",
-        "L1_femur_join_RXM3x5p7_10",
-        "L1_femur_join_M3x10_-8",
-        "L1_femur_join_RXM3x5p7_-8",
+        "L1_KNEE_STS3215",
+        "L1_hip_horn_-1",
+        "L1_hip_M3x6_-1_1",
+        "L1_hip_M3x6_-1_2",
+        "L1_hip_M3x6_-1_3",
+        "L1_hip_M3x6_-1_4",
+        "L1_hip_horn_1",
+        "L1_hip_M3x6_1_1",
+        "L1_hip_M3x6_1_2",
+        "L1_hip_M3x6_1_3",
+        "L1_hip_M3x6_1_4",
+        "L1_knee_factory_PA2_-29_-10.25",
+        "L1_knee_factory_PA2_-29_10.25",
+        "L1_knee_factory_PA2_-8.3_-10.25",
+        "L1_knee_factory_PA2_-8.3_10.25",
         "L1_FEMUR_unmodelled_fasteners"
       ]
     },
     "L1_TIBIA": {
-      "mass_kg": 0.03556387055136585,
+      "mass_kg": 0.04845751126608069,
       "com_m": [
-        0.011669359589401589,
-        0.01224024768540149,
-        -0.04158085781720149
+        0.011626016055206133,
+        0.011609185407849339,
+        -0.047093584441382355
       ],
       "inertia_kg_m2": [
         [
-          6.462804386876877e-05,
-          5.0187363459662094e-08,
-          1.3375380365766368e-05
+          6.880872962467189e-05,
+          8.47515222304331e-07,
+          1.2849771906984155e-05
         ],
         [
-          5.0187363459662094e-08,
-          6.49077995587573e-05,
-          1.3233051836206534e-05
+          8.47515222304331e-07,
+          6.879032429144874e-05,
+          1.288428433172119e-05
         ],
         [
-          1.3375380365766368e-05,
-          1.3233051836206534e-05,
-          1.5631048363294225e-05
+          1.2849771906984155e-05,
+          1.288428433172119e-05,
+          1.6624821798378536e-05
         ]
       ],
       "parent": "L1_FEMUR",
       "origin_neutral_m": [
-        0.14944151298896358,
-        0.14944151298896355,
-        0.020187885517996617
+        0.15647991951792567,
+        0.15647991951792564,
+        0.01972757117940216
       ],
       "parts": [
         "L1_tibia",
         "L1_foot",
-        "L1_knee_disc_plus",
-        "L1_knee_disc_min",
-        "L1_knee_plus_horn_M3x6_1",
-        "L1_knee_plus_horn_M3x6_2",
-        "L1_knee_plus_horn_M3x6_3",
-        "L1_knee_plus_horn_M3x6_4",
-        "L1_knee_min_horn_M3x6_1",
-        "L1_knee_min_horn_M3x6_2",
-        "L1_knee_min_horn_M3x6_3",
-        "L1_knee_min_horn_M3x6_4",
-        "L1_foot_M3x25",
-        "L1_foot_M3_locknut",
+        "L1_knee_horn_-1",
+        "L1_knee_M3x6_-1_1",
+        "L1_knee_M3x6_-1_2",
+        "L1_knee_M3x6_-1_3",
+        "L1_knee_M3x6_-1_4",
+        "L1_knee_horn_1",
+        "L1_knee_M3x6_1_1",
+        "L1_knee_M3x6_1_2",
+        "L1_knee_M3x6_1_3",
+        "L1_knee_M3x6_1_4",
+        "L1_shoe_insert",
+        "L1_shoe_M3x8",
         "L1_TIBIA_unmodelled_fasteners"
       ]
     },
     "L2_COXA": {
-      "mass_kg": 0.09754347086124546,
+      "mass_kg": 0.08897141017027013,
       "com_m": [
-        -0.0007370486890208321,
-        0.041003389995128085,
-        -0.012047451492984852
+        -0.000529637084284837,
+        0.03808271664194738,
+        -0.005444623614369567
       ],
       "inertia_kg_m2": [
         [
-          6.326008247373276e-05,
-          6.461961632212197e-07,
-          -1.0194154054465956e-06
+          5.075474697779831e-05,
+          -1.2520075526030082e-07,
+          -7.052557591457922e-08
         ],
         [
-          6.461961632212197e-07,
-          3.597790405527846e-05,
-          1.0903081196505578e-05
+          -1.2520075526030082e-07,
+          2.2665799049448587e-05,
+          4.781869679845228e-06
         ],
         [
-          -1.0194154054465956e-06,
-          1.0903081196505578e-05,
-          4.646731055371067e-05
+          -7.052557591457922e-08,
+          4.781869679845228e-06,
+          4.687266478252789e-05
         ]
       ],
       "parent": "BODY",
@@ -352,164 +289,144 @@
       ],
       "parts": [
         "L2_coxa",
-        "L2_coxa_bottom",
-        "L2_S05_HIP_STS3215",
-        "L2_hip_clamp",
-        "L2_yaw_disc_plus",
-        "L2_yaw_disc_min",
-        "L2_yaw_plus_horn_M3x6_1",
-        "L2_yaw_plus_horn_M3x6_2",
-        "L2_yaw_plus_horn_M3x6_3",
-        "L2_yaw_plus_horn_M3x6_4",
-        "L2_yaw_min_horn_M3x6_1",
-        "L2_yaw_min_horn_M3x6_2",
-        "L2_yaw_min_horn_M3x6_3",
-        "L2_yaw_min_horn_M3x6_4",
-        "L2_hip_clamp_M3x8_-31_-18.3",
-        "L2_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L2_hip_clamp_M3x8_-31_18.3",
-        "L2_hip_clamp_RXM3x5p7_-31_18.3",
-        "L2_hip_clamp_M3x8_-20_-18.3",
-        "L2_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L2_hip_clamp_M3x8_-20_18.3",
-        "L2_hip_clamp_RXM3x5p7_-20_18.3",
-        "L2_coxa_join_M3x10_-7",
-        "L2_coxa_join_RXM3x5p7_-7",
-        "L2_coxa_join_M3x10_7",
-        "L2_coxa_join_RXM3x5p7_7",
+        "L2_HIP_STS3215",
+        "L2_yaw_horn_-1",
+        "L2_yaw_M3x6_-1_1",
+        "L2_yaw_M3x6_-1_2",
+        "L2_yaw_M3x6_-1_3",
+        "L2_yaw_M3x6_-1_4",
+        "L2_yaw_horn_1",
+        "L2_yaw_M3x6_1_1",
+        "L2_yaw_M3x6_1_2",
+        "L2_yaw_M3x6_1_3",
+        "L2_yaw_M3x6_1_4",
+        "L2_hip_factory_PA2_-29_-10.25",
+        "L2_hip_factory_PA2_-29_10.25",
+        "L2_hip_factory_PA2_-8.3_-10.25",
+        "L2_hip_factory_PA2_-8.3_10.25",
         "L2_COXA_unmodelled_fasteners"
       ]
     },
     "L2_FEMUR": {
-      "mass_kg": 0.10082045894265887,
+      "mass_kg": 0.09043082366940386,
       "com_m": [
-        -0.0011441526725778062,
-        0.0484997849718108,
-        0.013111719426949445
+        -0.0005158294237097151,
+        0.04797861959550059,
+        0.016410276036811434
       ],
       "inertia_kg_m2": [
         [
-          6.824177233788252e-05,
-          -1.0628509152641199e-06,
-          -2.536720812101466e-07
+          6.50256472784505e-05,
+          4.045018611003998e-08,
+          6.387309914303898e-08
         ],
         [
-          -1.0628509152641199e-06,
-          3.2114673206861965e-05,
-          -1.1849464033354987e-05
+          4.045018611003998e-08,
+          2.872869107716321e-05,
+          -1.7485616903838908e-05
         ],
         [
-          -2.536720812101466e-07,
-          -1.1849464033354987e-05,
-          7.552160273033343e-05
+          6.387309914303898e-08,
+          -1.7485616903838908e-05,
+          6.77108146533691e-05
         ]
       ],
       "parent": "L2_COXA",
       "origin_neutral_m": [
-        8.327598234202002e-18,
-        0.136,
-        0.0
+        9.062386313690414e-18,
+        0.14800000000000002,
+        -0.0069500000000000004
       ],
       "parts": [
         "L2_femur",
-        "L2_femur_side_plate",
-        "L2_S06_KNEE_STS3215",
-        "L2_knee_clamp",
-        "L2_hip_disc_plus",
-        "L2_hip_disc_min",
-        "L2_hip_plus_horn_M3x6_1",
-        "L2_hip_plus_horn_M3x6_2",
-        "L2_hip_plus_horn_M3x6_3",
-        "L2_hip_plus_horn_M3x6_4",
-        "L2_hip_min_horn_M3x6_1",
-        "L2_hip_min_horn_M3x6_2",
-        "L2_hip_min_horn_M3x6_3",
-        "L2_hip_min_horn_M3x6_4",
-        "L2_knee_clamp_M3x8_-31_-18.3",
-        "L2_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L2_knee_clamp_M3x8_-31_18.3",
-        "L2_knee_clamp_RXM3x5p7_-31_18.3",
-        "L2_knee_clamp_M3x8_-20_-18.3",
-        "L2_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L2_knee_clamp_M3x8_-20_18.3",
-        "L2_knee_clamp_RXM3x5p7_-20_18.3",
-        "L2_femur_join_M3x10_10",
-        "L2_femur_join_RXM3x5p7_10",
-        "L2_femur_join_M3x10_-8",
-        "L2_femur_join_RXM3x5p7_-8",
+        "L2_KNEE_STS3215",
+        "L2_hip_horn_-1",
+        "L2_hip_M3x6_-1_1",
+        "L2_hip_M3x6_-1_2",
+        "L2_hip_M3x6_-1_3",
+        "L2_hip_M3x6_-1_4",
+        "L2_hip_horn_1",
+        "L2_hip_M3x6_1_1",
+        "L2_hip_M3x6_1_2",
+        "L2_hip_M3x6_1_3",
+        "L2_hip_M3x6_1_4",
+        "L2_knee_factory_PA2_-29_-10.25",
+        "L2_knee_factory_PA2_-29_10.25",
+        "L2_knee_factory_PA2_-8.3_-10.25",
+        "L2_knee_factory_PA2_-8.3_10.25",
         "L2_FEMUR_unmodelled_fasteners"
       ]
     },
     "L2_TIBIA": {
-      "mass_kg": 0.035563870551365825,
+      "mass_kg": 0.0484575112660807,
       "com_m": [
-        -0.000403678843980182,
-        0.016906645439520442,
-        -0.041580857817201486
+        1.1901064877782742e-05,
+        0.01642976851676214,
+        -0.047093584441382313
       ],
       "inertia_kg_m2": [
         [
-          6.47177343503038e-05,
-          -1.398778449942905e-07,
-          1.0064146840804628e-07
+          6.79520117357554e-05,
+          9.202666611589984e-09,
+          -2.440396956677242e-08
         ],
         [
-          -1.398778449942905e-07,
-          6.481810907722223e-05,
-          1.881500284675763e-05
+          9.202666611589984e-09,
+          6.964704218036434e-05,
+          1.819672567382461e-05
         ],
         [
-          1.0064146840804628e-07,
-          1.881500284675763e-05,
-          1.563104836329437e-05
+          -2.440396956677242e-08,
+          1.819672567382461e-05,
+          1.6624821798378082e-05
         ]
       ],
       "parent": "L2_FEMUR",
       "origin_neutral_m": [
-        1.2940978322578814e-17,
-        0.21134221445054735,
-        0.020187885517996617
+        1.355047339857903e-17,
+        0.22129602442130086,
+        0.01972757117940216
       ],
       "parts": [
         "L2_tibia",
         "L2_foot",
-        "L2_knee_disc_plus",
-        "L2_knee_disc_min",
-        "L2_knee_plus_horn_M3x6_1",
-        "L2_knee_plus_horn_M3x6_2",
-        "L2_knee_plus_horn_M3x6_3",
-        "L2_knee_plus_horn_M3x6_4",
-        "L2_knee_min_horn_M3x6_1",
-        "L2_knee_min_horn_M3x6_2",
-        "L2_knee_min_horn_M3x6_3",
-        "L2_knee_min_horn_M3x6_4",
-        "L2_foot_M3x25",
-        "L2_foot_M3_locknut",
+        "L2_knee_horn_-1",
+        "L2_knee_M3x6_-1_1",
+        "L2_knee_M3x6_-1_2",
+        "L2_knee_M3x6_-1_3",
+        "L2_knee_M3x6_-1_4",
+        "L2_knee_horn_1",
+        "L2_knee_M3x6_1_1",
+        "L2_knee_M3x6_1_2",
+        "L2_knee_M3x6_1_3",
+        "L2_knee_M3x6_1_4",
+        "L2_shoe_insert",
+        "L2_shoe_M3x8",
         "L2_TIBIA_unmodelled_fasteners"
       ]
     },
     "L3_COXA": {
-      "mass_kg": 0.09754347086124546,
+      "mass_kg": 0.08897141017027013,
       "com_m": [
-        -0.029514947243262975,
-        0.02847260299112041,
-        -0.012047451492984855
+        -0.027303057157392504,
+        0.02655403720966115,
+        -0.005444623614369569
       ],
       "inertia_kg_m2": [
         [
-          4.897279710128399e-05,
-          1.3641089209227177e-05,
-          -8.430478195913957e-06
+          3.6835473768882987e-05,
+          1.4044473964173816e-05,
+          -3.4311615903451563e-06
         ],
         [
-          1.3641089209227177e-05,
-          5.026518942772673e-05,
-          6.988807103839334e-06
+          1.4044473964173816e-05,
+          3.658507225836233e-05,
+          3.331423364392585e-06
         ],
         [
-          -8.430478195913957e-06,
-          6.988807103839334e-06,
-          4.6467310553710874e-05
+          -3.4311615903451563e-06,
+          3.331423364392585e-06,
+          4.6872664782526304e-05
         ]
       ],
       "parent": "BODY",
@@ -520,164 +437,144 @@
       ],
       "parts": [
         "L3_coxa",
-        "L3_coxa_bottom",
-        "L3_S08_HIP_STS3215",
-        "L3_hip_clamp",
-        "L3_yaw_disc_plus",
-        "L3_yaw_disc_min",
-        "L3_yaw_plus_horn_M3x6_1",
-        "L3_yaw_plus_horn_M3x6_2",
-        "L3_yaw_plus_horn_M3x6_3",
-        "L3_yaw_plus_horn_M3x6_4",
-        "L3_yaw_min_horn_M3x6_1",
-        "L3_yaw_min_horn_M3x6_2",
-        "L3_yaw_min_horn_M3x6_3",
-        "L3_yaw_min_horn_M3x6_4",
-        "L3_hip_clamp_M3x8_-31_-18.3",
-        "L3_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L3_hip_clamp_M3x8_-31_18.3",
-        "L3_hip_clamp_RXM3x5p7_-31_18.3",
-        "L3_hip_clamp_M3x8_-20_-18.3",
-        "L3_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L3_hip_clamp_M3x8_-20_18.3",
-        "L3_hip_clamp_RXM3x5p7_-20_18.3",
-        "L3_coxa_join_M3x10_-7",
-        "L3_coxa_join_RXM3x5p7_-7",
-        "L3_coxa_join_M3x10_7",
-        "L3_coxa_join_RXM3x5p7_7",
+        "L3_HIP_STS3215",
+        "L3_yaw_horn_-1",
+        "L3_yaw_M3x6_-1_1",
+        "L3_yaw_M3x6_-1_2",
+        "L3_yaw_M3x6_-1_3",
+        "L3_yaw_M3x6_-1_4",
+        "L3_yaw_horn_1",
+        "L3_yaw_M3x6_1_1",
+        "L3_yaw_M3x6_1_2",
+        "L3_yaw_M3x6_1_3",
+        "L3_yaw_M3x6_1_4",
+        "L3_hip_factory_PA2_-29_-10.25",
+        "L3_hip_factory_PA2_-29_10.25",
+        "L3_hip_factory_PA2_-8.3_-10.25",
+        "L3_hip_factory_PA2_-8.3_10.25",
         "L3_COXA_unmodelled_fasteners"
       ]
     },
     "L3_FEMUR": {
-      "mass_kg": 0.10082045894265886,
+      "mass_kg": 0.09043082366940378,
       "com_m": [
-        -0.03510356495314935,
-        0.03348548872616441,
-        0.013111719426949445
+        -0.03429075375138909,
+        0.03356126078450768,
+        0.01641027603681145
       ],
       "inertia_kg_m2": [
         [
-          5.1241073687636274e-05,
-          1.8063549565510205e-05,
-          8.199463122590018e-06
+          4.68367189916948e-05,
+          1.8148478100641555e-05,
+          1.2409363387473889e-05
         ],
         [
-          1.8063549565510205e-05,
-          4.9115371857107274e-05,
-          -8.558209620232811e-06
+          1.8148478100641555e-05,
+          4.6917619363913806e-05,
+          -1.2319033184395156e-05
         ],
         [
-          8.199463122590018e-06,
-          -8.558209620232811e-06,
-          7.552160273033297e-05
+          1.2409363387473889e-05,
+          -1.2319033184395156e-05,
+          6.77108146533651e-05
         ]
       ],
       "parent": "L3_COXA",
       "origin_neutral_m": [
-        -0.09616652224137046,
-        0.09616652224137047,
-        0.0
+        -0.10465180361560902,
+        0.10465180361560904,
+        -0.0069500000000000004
       ],
       "parts": [
         "L3_femur",
-        "L3_femur_side_plate",
-        "L3_S09_KNEE_STS3215",
-        "L3_knee_clamp",
-        "L3_hip_disc_plus",
-        "L3_hip_disc_min",
-        "L3_hip_plus_horn_M3x6_1",
-        "L3_hip_plus_horn_M3x6_2",
-        "L3_hip_plus_horn_M3x6_3",
-        "L3_hip_plus_horn_M3x6_4",
-        "L3_hip_min_horn_M3x6_1",
-        "L3_hip_min_horn_M3x6_2",
-        "L3_hip_min_horn_M3x6_3",
-        "L3_hip_min_horn_M3x6_4",
-        "L3_knee_clamp_M3x8_-31_-18.3",
-        "L3_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L3_knee_clamp_M3x8_-31_18.3",
-        "L3_knee_clamp_RXM3x5p7_-31_18.3",
-        "L3_knee_clamp_M3x8_-20_-18.3",
-        "L3_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L3_knee_clamp_M3x8_-20_18.3",
-        "L3_knee_clamp_RXM3x5p7_-20_18.3",
-        "L3_femur_join_M3x10_10",
-        "L3_femur_join_RXM3x5p7_10",
-        "L3_femur_join_M3x10_-8",
-        "L3_femur_join_RXM3x5p7_-8",
+        "L3_KNEE_STS3215",
+        "L3_hip_horn_-1",
+        "L3_hip_M3x6_-1_1",
+        "L3_hip_M3x6_-1_2",
+        "L3_hip_M3x6_-1_3",
+        "L3_hip_M3x6_-1_4",
+        "L3_hip_horn_1",
+        "L3_hip_M3x6_1_1",
+        "L3_hip_M3x6_1_2",
+        "L3_hip_M3x6_1_3",
+        "L3_hip_M3x6_1_4",
+        "L3_knee_factory_PA2_-29_-10.25",
+        "L3_knee_factory_PA2_-29_10.25",
+        "L3_knee_factory_PA2_-8.3_-10.25",
+        "L3_knee_factory_PA2_-8.3_10.25",
         "L3_FEMUR_unmodelled_fasteners"
       ]
     },
     "L3_TIBIA": {
-      "mass_kg": 0.03556387055136585,
+      "mass_kg": 0.04845751126608069,
       "com_m": [
-        -0.0122402476854015,
-        0.011669359589401587,
-        -0.04158085781720149
+        -0.011609185407849344,
+        0.011626016055206138,
+        -0.047093584441382334
       ],
       "inertia_kg_m2": [
         [
-          6.490779955875722e-05,
-          -5.018736345971331e-08,
-          -1.3233051836206536e-05
+          6.879032429144864e-05,
+          -8.475152223043744e-07,
+          -1.2884284331721203e-05
         ],
         [
-          -5.018736345971331e-08,
-          6.462804386876861e-05,
-          1.3375380365766373e-05
+          -8.475152223043744e-07,
+          6.88087296246716e-05,
+          1.2849771906984204e-05
         ],
         [
-          -1.3233051836206536e-05,
-          1.3375380365766373e-05,
-          1.563104836329399e-05
+          -1.2884284331721203e-05,
+          1.2849771906984204e-05,
+          1.6624821798377604e-05
         ]
       ],
       "parent": "L3_FEMUR",
       "origin_neutral_m": [
-        -0.14944151298896355,
-        0.14944151298896358,
-        0.020187885517996617
+        -0.15647991951792564,
+        0.15647991951792567,
+        0.01972757117940216
       ],
       "parts": [
         "L3_tibia",
         "L3_foot",
-        "L3_knee_disc_plus",
-        "L3_knee_disc_min",
-        "L3_knee_plus_horn_M3x6_1",
-        "L3_knee_plus_horn_M3x6_2",
-        "L3_knee_plus_horn_M3x6_3",
-        "L3_knee_plus_horn_M3x6_4",
-        "L3_knee_min_horn_M3x6_1",
-        "L3_knee_min_horn_M3x6_2",
-        "L3_knee_min_horn_M3x6_3",
-        "L3_knee_min_horn_M3x6_4",
-        "L3_foot_M3x25",
-        "L3_foot_M3_locknut",
+        "L3_knee_horn_-1",
+        "L3_knee_M3x6_-1_1",
+        "L3_knee_M3x6_-1_2",
+        "L3_knee_M3x6_-1_3",
+        "L3_knee_M3x6_-1_4",
+        "L3_knee_horn_1",
+        "L3_knee_M3x6_1_1",
+        "L3_knee_M3x6_1_2",
+        "L3_knee_M3x6_1_3",
+        "L3_knee_M3x6_1_4",
+        "L3_shoe_insert",
+        "L3_shoe_M3x8",
         "L3_TIBIA_unmodelled_fasteners"
       ]
     },
     "L4_COXA": {
-      "mass_kg": 0.09754347086124548,
+      "mass_kg": 0.08897141017027015,
       "com_m": [
-        -0.028472602991120404,
-        -0.029514947243262982,
-        -0.012047451492984852
+        -0.026554037209661145,
+        -0.02730305715739249,
+        -0.005444623614369568
       ],
       "inertia_kg_m2": [
         [
-          5.026518942772645e-05,
-          -1.3641089209227013e-05,
-          -6.988807103839291e-06
+          3.658507225836259e-05,
+          -1.4044473964174121e-05,
+          -3.3314233643925896e-06
         ],
         [
-          -1.3641089209227013e-05,
-          4.8972797101284065e-05,
-          -8.430478195913913e-06
+          -1.4044473964174121e-05,
+          3.683547376888312e-05,
+          -3.4311615903451626e-06
         ],
         [
-          -6.988807103839291e-06,
-          -8.430478195913913e-06,
-          4.646731055371066e-05
+          -3.3314233643925896e-06,
+          -3.4311615903451626e-06,
+          4.687266478252671e-05
         ]
       ],
       "parent": "BODY",
@@ -688,164 +585,144 @@
       ],
       "parts": [
         "L4_coxa",
-        "L4_coxa_bottom",
-        "L4_S11_HIP_STS3215",
-        "L4_hip_clamp",
-        "L4_yaw_disc_plus",
-        "L4_yaw_disc_min",
-        "L4_yaw_plus_horn_M3x6_1",
-        "L4_yaw_plus_horn_M3x6_2",
-        "L4_yaw_plus_horn_M3x6_3",
-        "L4_yaw_plus_horn_M3x6_4",
-        "L4_yaw_min_horn_M3x6_1",
-        "L4_yaw_min_horn_M3x6_2",
-        "L4_yaw_min_horn_M3x6_3",
-        "L4_yaw_min_horn_M3x6_4",
-        "L4_hip_clamp_M3x8_-31_-18.3",
-        "L4_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L4_hip_clamp_M3x8_-31_18.3",
-        "L4_hip_clamp_RXM3x5p7_-31_18.3",
-        "L4_hip_clamp_M3x8_-20_-18.3",
-        "L4_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L4_hip_clamp_M3x8_-20_18.3",
-        "L4_hip_clamp_RXM3x5p7_-20_18.3",
-        "L4_coxa_join_M3x10_-7",
-        "L4_coxa_join_RXM3x5p7_-7",
-        "L4_coxa_join_M3x10_7",
-        "L4_coxa_join_RXM3x5p7_7",
+        "L4_HIP_STS3215",
+        "L4_yaw_horn_-1",
+        "L4_yaw_M3x6_-1_1",
+        "L4_yaw_M3x6_-1_2",
+        "L4_yaw_M3x6_-1_3",
+        "L4_yaw_M3x6_-1_4",
+        "L4_yaw_horn_1",
+        "L4_yaw_M3x6_1_1",
+        "L4_yaw_M3x6_1_2",
+        "L4_yaw_M3x6_1_3",
+        "L4_yaw_M3x6_1_4",
+        "L4_hip_factory_PA2_-29_-10.25",
+        "L4_hip_factory_PA2_-29_10.25",
+        "L4_hip_factory_PA2_-8.3_-10.25",
+        "L4_hip_factory_PA2_-8.3_10.25",
         "L4_COXA_unmodelled_fasteners"
       ]
     },
     "L4_FEMUR": {
-      "mass_kg": 0.10082045894265887,
+      "mass_kg": 0.09043082366940376,
       "com_m": [
-        -0.03348548872616435,
-        -0.03510356495314933,
-        0.013111719426949442
+        -0.03356126078450776,
+        -0.034290753751389076,
+        0.016410276036811455
       ],
       "inertia_kg_m2": [
         [
-          4.911537185710821e-05,
-          -1.806354956551058e-05,
-          8.558209620232896e-06
+          4.691761936391482e-05,
+          -1.8148478100641e-05,
+          1.2319033184395055e-05
         ],
         [
-          -1.806354956551058e-05,
-          5.1241073687637656e-05,
-          8.1994631225901e-06
+          -1.8148478100641e-05,
+          4.683671899169267e-05,
+          1.2409363387473911e-05
         ],
         [
-          8.558209620232896e-06,
-          8.1994631225901e-06,
-          7.552160273033507e-05
+          1.2319033184395055e-05,
+          1.2409363387473911e-05,
+          6.771081465336418e-05
         ]
       ],
       "parent": "L4_COXA",
       "origin_neutral_m": [
-        -0.09616652224137048,
-        -0.09616652224137046,
-        0.0
+        -0.10465180361560905,
+        -0.10465180361560902,
+        -0.0069500000000000004
       ],
       "parts": [
         "L4_femur",
-        "L4_femur_side_plate",
-        "L4_S12_KNEE_STS3215",
-        "L4_knee_clamp",
-        "L4_hip_disc_plus",
-        "L4_hip_disc_min",
-        "L4_hip_plus_horn_M3x6_1",
-        "L4_hip_plus_horn_M3x6_2",
-        "L4_hip_plus_horn_M3x6_3",
-        "L4_hip_plus_horn_M3x6_4",
-        "L4_hip_min_horn_M3x6_1",
-        "L4_hip_min_horn_M3x6_2",
-        "L4_hip_min_horn_M3x6_3",
-        "L4_hip_min_horn_M3x6_4",
-        "L4_knee_clamp_M3x8_-31_-18.3",
-        "L4_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L4_knee_clamp_M3x8_-31_18.3",
-        "L4_knee_clamp_RXM3x5p7_-31_18.3",
-        "L4_knee_clamp_M3x8_-20_-18.3",
-        "L4_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L4_knee_clamp_M3x8_-20_18.3",
-        "L4_knee_clamp_RXM3x5p7_-20_18.3",
-        "L4_femur_join_M3x10_10",
-        "L4_femur_join_RXM3x5p7_10",
-        "L4_femur_join_M3x10_-8",
-        "L4_femur_join_RXM3x5p7_-8",
+        "L4_KNEE_STS3215",
+        "L4_hip_horn_-1",
+        "L4_hip_M3x6_-1_1",
+        "L4_hip_M3x6_-1_2",
+        "L4_hip_M3x6_-1_3",
+        "L4_hip_M3x6_-1_4",
+        "L4_hip_horn_1",
+        "L4_hip_M3x6_1_1",
+        "L4_hip_M3x6_1_2",
+        "L4_hip_M3x6_1_3",
+        "L4_hip_M3x6_1_4",
+        "L4_knee_factory_PA2_-29_-10.25",
+        "L4_knee_factory_PA2_-29_10.25",
+        "L4_knee_factory_PA2_-8.3_-10.25",
+        "L4_knee_factory_PA2_-8.3_10.25",
         "L4_FEMUR_unmodelled_fasteners"
       ]
     },
     "L4_TIBIA": {
-      "mass_kg": 0.035563870551365846,
+      "mass_kg": 0.0484575112660807,
       "com_m": [
-        -0.011669359589401634,
-        -0.012240247685401467,
-        -0.04158085781720151
+        -0.01162601605520616,
+        -0.011609185407849318,
+        -0.04709358444138234
       ],
       "inertia_kg_m2": [
         [
-          6.46280438687689e-05,
-          5.018736345969198e-08,
-          -1.3375380365766358e-05
+          6.880872962467206e-05,
+          8.475152223041861e-07,
+          -1.2849771906984151e-05
         ],
         [
-          5.018736345969198e-08,
-          6.490779955875684e-05,
-          -1.3233051836206583e-05
+          8.475152223041861e-07,
+          6.879032429144844e-05,
+          -1.2884284331721197e-05
         ],
         [
-          -1.3375380365766358e-05,
-          -1.3233051836206583e-05,
-          1.5631048363294455e-05
+          -1.2849771906984151e-05,
+          -1.2884284331721197e-05,
+          1.6624821798378793e-05
         ]
       ],
       "parent": "L4_FEMUR",
       "origin_neutral_m": [
-        -0.1494415129889636,
-        -0.14944151298896355,
-        0.020187885517996617
+        -0.1564799195179257,
+        -0.15647991951792564,
+        0.01972757117940216
       ],
       "parts": [
         "L4_tibia",
         "L4_foot",
-        "L4_knee_disc_plus",
-        "L4_knee_disc_min",
-        "L4_knee_plus_horn_M3x6_1",
-        "L4_knee_plus_horn_M3x6_2",
-        "L4_knee_plus_horn_M3x6_3",
-        "L4_knee_plus_horn_M3x6_4",
-        "L4_knee_min_horn_M3x6_1",
-        "L4_knee_min_horn_M3x6_2",
-        "L4_knee_min_horn_M3x6_3",
-        "L4_knee_min_horn_M3x6_4",
-        "L4_foot_M3x25",
-        "L4_foot_M3_locknut",
+        "L4_knee_horn_-1",
+        "L4_knee_M3x6_-1_1",
+        "L4_knee_M3x6_-1_2",
+        "L4_knee_M3x6_-1_3",
+        "L4_knee_M3x6_-1_4",
+        "L4_knee_horn_1",
+        "L4_knee_M3x6_1_1",
+        "L4_knee_M3x6_1_2",
+        "L4_knee_M3x6_1_3",
+        "L4_knee_M3x6_1_4",
+        "L4_shoe_insert",
+        "L4_shoe_M3x8",
         "L4_TIBIA_unmodelled_fasteners"
       ]
     },
     "L5_COXA": {
-      "mass_kg": 0.09754347086124546,
+      "mass_kg": 0.08897141017027013,
       "com_m": [
-        0.0007370486890208272,
-        -0.04100338999512811,
-        -0.012047451492984858
+        0.0005296370842848336,
+        -0.038082716641947366,
+        -0.005444623614369568
       ],
       "inertia_kg_m2": [
         [
-          6.326008247373207e-05,
-          6.461961632212102e-07,
-          1.0194154054465945e-06
+          5.075474697779836e-05,
+          -1.2520075526030751e-07,
+          7.052557591457832e-08
         ],
         [
-          6.461961632212102e-07,
-          3.597790405527845e-05,
-          -1.090308119650553e-05
+          -1.2520075526030751e-07,
+          2.2665799049448587e-05,
+          -4.7818696798452285e-06
         ],
         [
-          1.0194154054465945e-06,
-          -1.090308119650553e-05,
-          4.6467310553709946e-05
+          7.052557591457832e-08,
+          -4.7818696798452285e-06,
+          4.687266478252822e-05
         ]
       ],
       "parent": "BODY",
@@ -856,164 +733,144 @@
       ],
       "parts": [
         "L5_coxa",
-        "L5_coxa_bottom",
-        "L5_S14_HIP_STS3215",
-        "L5_hip_clamp",
-        "L5_yaw_disc_plus",
-        "L5_yaw_disc_min",
-        "L5_yaw_plus_horn_M3x6_1",
-        "L5_yaw_plus_horn_M3x6_2",
-        "L5_yaw_plus_horn_M3x6_3",
-        "L5_yaw_plus_horn_M3x6_4",
-        "L5_yaw_min_horn_M3x6_1",
-        "L5_yaw_min_horn_M3x6_2",
-        "L5_yaw_min_horn_M3x6_3",
-        "L5_yaw_min_horn_M3x6_4",
-        "L5_hip_clamp_M3x8_-31_-18.3",
-        "L5_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L5_hip_clamp_M3x8_-31_18.3",
-        "L5_hip_clamp_RXM3x5p7_-31_18.3",
-        "L5_hip_clamp_M3x8_-20_-18.3",
-        "L5_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L5_hip_clamp_M3x8_-20_18.3",
-        "L5_hip_clamp_RXM3x5p7_-20_18.3",
-        "L5_coxa_join_M3x10_-7",
-        "L5_coxa_join_RXM3x5p7_-7",
-        "L5_coxa_join_M3x10_7",
-        "L5_coxa_join_RXM3x5p7_7",
+        "L5_HIP_STS3215",
+        "L5_yaw_horn_-1",
+        "L5_yaw_M3x6_-1_1",
+        "L5_yaw_M3x6_-1_2",
+        "L5_yaw_M3x6_-1_3",
+        "L5_yaw_M3x6_-1_4",
+        "L5_yaw_horn_1",
+        "L5_yaw_M3x6_1_1",
+        "L5_yaw_M3x6_1_2",
+        "L5_yaw_M3x6_1_3",
+        "L5_yaw_M3x6_1_4",
+        "L5_hip_factory_PA2_-29_-10.25",
+        "L5_hip_factory_PA2_-29_10.25",
+        "L5_hip_factory_PA2_-8.3_-10.25",
+        "L5_hip_factory_PA2_-8.3_10.25",
         "L5_COXA_unmodelled_fasteners"
       ]
     },
     "L5_FEMUR": {
-      "mass_kg": 0.10082045894265887,
+      "mass_kg": 0.09043082366940385,
       "com_m": [
-        0.0011441526725778004,
-        -0.048499784971810816,
-        0.013111719426949445
+        0.0005158294237097094,
+        -0.04797861959550065,
+        0.016410276036811437
       ],
       "inertia_kg_m2": [
         [
-          6.824177233788128e-05,
-          -1.062850915264086e-06,
-          2.536720812101465e-07
+          6.502564727845003e-05,
+          4.045018611002555e-08,
+          -6.387309914303663e-08
         ],
         [
-          -1.062850915264086e-06,
-          3.211467320686198e-05,
-          1.1849464033354962e-05
+          4.045018611002555e-08,
+          2.8728691077163214e-05,
+          1.7485616903838878e-05
         ],
         [
-          2.536720812101465e-07,
-          1.1849464033354962e-05,
-          7.55216027303339e-05
+          -6.387309914303663e-08,
+          1.7485616903838878e-05,
+          6.771081465336811e-05
         ]
       ],
       "parent": "L5_COXA",
       "origin_neutral_m": [
-        -2.4982794702606006e-17,
-        -0.136,
-        0.0
+        -2.718715894107124e-17,
+        -0.14800000000000002,
+        -0.0069500000000000004
       ],
       "parts": [
         "L5_femur",
-        "L5_femur_side_plate",
-        "L5_S15_KNEE_STS3215",
-        "L5_knee_clamp",
-        "L5_hip_disc_plus",
-        "L5_hip_disc_min",
-        "L5_hip_plus_horn_M3x6_1",
-        "L5_hip_plus_horn_M3x6_2",
-        "L5_hip_plus_horn_M3x6_3",
-        "L5_hip_plus_horn_M3x6_4",
-        "L5_hip_min_horn_M3x6_1",
-        "L5_hip_min_horn_M3x6_2",
-        "L5_hip_min_horn_M3x6_3",
-        "L5_hip_min_horn_M3x6_4",
-        "L5_knee_clamp_M3x8_-31_-18.3",
-        "L5_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L5_knee_clamp_M3x8_-31_18.3",
-        "L5_knee_clamp_RXM3x5p7_-31_18.3",
-        "L5_knee_clamp_M3x8_-20_-18.3",
-        "L5_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L5_knee_clamp_M3x8_-20_18.3",
-        "L5_knee_clamp_RXM3x5p7_-20_18.3",
-        "L5_femur_join_M3x10_10",
-        "L5_femur_join_RXM3x5p7_10",
-        "L5_femur_join_M3x10_-8",
-        "L5_femur_join_RXM3x5p7_-8",
+        "L5_KNEE_STS3215",
+        "L5_hip_horn_-1",
+        "L5_hip_M3x6_-1_1",
+        "L5_hip_M3x6_-1_2",
+        "L5_hip_M3x6_-1_3",
+        "L5_hip_M3x6_-1_4",
+        "L5_hip_horn_1",
+        "L5_hip_M3x6_1_1",
+        "L5_hip_M3x6_1_2",
+        "L5_hip_M3x6_1_3",
+        "L5_hip_M3x6_1_4",
+        "L5_knee_factory_PA2_-29_-10.25",
+        "L5_knee_factory_PA2_-29_10.25",
+        "L5_knee_factory_PA2_-8.3_-10.25",
+        "L5_knee_factory_PA2_-8.3_10.25",
         "L5_FEMUR_unmodelled_fasteners"
       ]
     },
     "L5_TIBIA": {
-      "mass_kg": 0.035563870551365825,
+      "mass_kg": 0.04845751126608069,
       "com_m": [
-        0.0004036788439801824,
-        -0.016906645439520435,
-        -0.0415808578172015
+        -1.1901064877784333e-05,
+        -0.016429768516762117,
+        -0.04709358444138232
       ],
       "inertia_kg_m2": [
         [
-          6.471773435030386e-05,
-          -1.3987784499430696e-07,
-          -1.0064146840804892e-07
+          6.795201173575538e-05,
+          9.202666611579438e-09,
+          2.440396956677091e-08
         ],
         [
-          -1.3987784499430696e-07,
-          6.481810907722222e-05,
-          -1.8815002846757618e-05
+          9.202666611579438e-09,
+          6.964704218036435e-05,
+          -1.819672567382461e-05
         ],
         [
-          -1.0064146840804892e-07,
-          -1.8815002846757618e-05,
-          1.563104836329418e-05
+          2.440396956677091e-08,
+          -1.819672567382461e-05,
+          1.662482179837807e-05
         ]
       ],
       "parent": "L5_FEMUR",
       "origin_neutral_m": [
-        -3.882293496773644e-17,
-        -0.21134221445054735,
-        0.020187885517996617
+        -4.065142019573709e-17,
+        -0.22129602442130086,
+        0.01972757117940216
       ],
       "parts": [
         "L5_tibia",
         "L5_foot",
-        "L5_knee_disc_plus",
-        "L5_knee_disc_min",
-        "L5_knee_plus_horn_M3x6_1",
-        "L5_knee_plus_horn_M3x6_2",
-        "L5_knee_plus_horn_M3x6_3",
-        "L5_knee_plus_horn_M3x6_4",
-        "L5_knee_min_horn_M3x6_1",
-        "L5_knee_min_horn_M3x6_2",
-        "L5_knee_min_horn_M3x6_3",
-        "L5_knee_min_horn_M3x6_4",
-        "L5_foot_M3x25",
-        "L5_foot_M3_locknut",
+        "L5_knee_horn_-1",
+        "L5_knee_M3x6_-1_1",
+        "L5_knee_M3x6_-1_2",
+        "L5_knee_M3x6_-1_3",
+        "L5_knee_M3x6_-1_4",
+        "L5_knee_horn_1",
+        "L5_knee_M3x6_1_1",
+        "L5_knee_M3x6_1_2",
+        "L5_knee_M3x6_1_3",
+        "L5_knee_M3x6_1_4",
+        "L5_shoe_insert",
+        "L5_shoe_M3x8",
         "L5_TIBIA_unmodelled_fasteners"
       ]
     },
     "L6_COXA": {
-      "mass_kg": 0.09754347086124553,
+      "mass_kg": 0.08897141017027012,
       "com_m": [
-        0.029514947243262993,
-        -0.028472602991120394,
-        -0.012047451492984846
+        0.027303057157392507,
+        -0.026554037209661173,
+        -0.005444623614369569
       ],
       "inertia_kg_m2": [
         [
-          4.897279710128391e-05,
-          1.3641089209226849e-05,
-          8.430478195913867e-06
+          3.6835473768882844e-05,
+          1.4044473964173784e-05,
+          3.4311615903451567e-06
         ],
         [
-          1.3641089209226849e-05,
-          5.026518942772606e-05,
-          -6.988807103839306e-06
+          1.4044473964173784e-05,
+          3.6585072258362294e-05,
+          -3.331423364392583e-06
         ],
         [
-          8.430478195913867e-06,
-          -6.988807103839306e-06,
-          4.646731055370985e-05
+          3.4311615903451567e-06,
+          -3.331423364392583e-06,
+          4.687266478252619e-05
         ]
       ],
       "parent": "BODY",
@@ -1024,139 +881,119 @@
       ],
       "parts": [
         "L6_coxa",
-        "L6_coxa_bottom",
-        "L6_S17_HIP_STS3215",
-        "L6_hip_clamp",
-        "L6_yaw_disc_plus",
-        "L6_yaw_disc_min",
-        "L6_yaw_plus_horn_M3x6_1",
-        "L6_yaw_plus_horn_M3x6_2",
-        "L6_yaw_plus_horn_M3x6_3",
-        "L6_yaw_plus_horn_M3x6_4",
-        "L6_yaw_min_horn_M3x6_1",
-        "L6_yaw_min_horn_M3x6_2",
-        "L6_yaw_min_horn_M3x6_3",
-        "L6_yaw_min_horn_M3x6_4",
-        "L6_hip_clamp_M3x8_-31_-18.3",
-        "L6_hip_clamp_RXM3x5p7_-31_-18.3",
-        "L6_hip_clamp_M3x8_-31_18.3",
-        "L6_hip_clamp_RXM3x5p7_-31_18.3",
-        "L6_hip_clamp_M3x8_-20_-18.3",
-        "L6_hip_clamp_RXM3x5p7_-20_-18.3",
-        "L6_hip_clamp_M3x8_-20_18.3",
-        "L6_hip_clamp_RXM3x5p7_-20_18.3",
-        "L6_coxa_join_M3x10_-7",
-        "L6_coxa_join_RXM3x5p7_-7",
-        "L6_coxa_join_M3x10_7",
-        "L6_coxa_join_RXM3x5p7_7",
+        "L6_HIP_STS3215",
+        "L6_yaw_horn_-1",
+        "L6_yaw_M3x6_-1_1",
+        "L6_yaw_M3x6_-1_2",
+        "L6_yaw_M3x6_-1_3",
+        "L6_yaw_M3x6_-1_4",
+        "L6_yaw_horn_1",
+        "L6_yaw_M3x6_1_1",
+        "L6_yaw_M3x6_1_2",
+        "L6_yaw_M3x6_1_3",
+        "L6_yaw_M3x6_1_4",
+        "L6_hip_factory_PA2_-29_-10.25",
+        "L6_hip_factory_PA2_-29_10.25",
+        "L6_hip_factory_PA2_-8.3_-10.25",
+        "L6_hip_factory_PA2_-8.3_10.25",
         "L6_COXA_unmodelled_fasteners"
       ]
     },
     "L6_FEMUR": {
-      "mass_kg": 0.10082045894265892,
+      "mass_kg": 0.09043082366940378,
       "com_m": [
-        0.03510356495314932,
-        -0.03348548872616441,
-        0.013111719426949444
+        0.034290753751389104,
+        -0.03356126078450771,
+        0.01641027603681145
       ],
       "inertia_kg_m2": [
         [
-          5.124107368763646e-05,
-          1.8063549565510012e-05,
-          -8.19946312259002e-06
+          4.683671899169383e-05,
+          1.8148478100641128e-05,
+          -1.2409363387473904e-05
         ],
         [
-          1.8063549565510012e-05,
-          4.911537185710713e-05,
-          8.558209620232791e-06
+          1.8148478100641128e-05,
+          4.6917619363914057e-05,
+          1.2319033184395156e-05
         ],
         [
-          -8.19946312259002e-06,
-          8.558209620232791e-06,
-          7.552160273033322e-05
+          -1.2409363387473904e-05,
+          1.2319033184395156e-05,
+          6.771081465336433e-05
         ]
       ],
       "parent": "L6_COXA",
       "origin_neutral_m": [
-        0.09616652224137044,
-        -0.09616652224137048,
-        0.0
+        0.10465180361560901,
+        -0.10465180361560905,
+        -0.0069500000000000004
       ],
       "parts": [
         "L6_femur",
-        "L6_femur_side_plate",
-        "L6_S18_KNEE_STS3215",
-        "L6_knee_clamp",
-        "L6_hip_disc_plus",
-        "L6_hip_disc_min",
-        "L6_hip_plus_horn_M3x6_1",
-        "L6_hip_plus_horn_M3x6_2",
-        "L6_hip_plus_horn_M3x6_3",
-        "L6_hip_plus_horn_M3x6_4",
-        "L6_hip_min_horn_M3x6_1",
-        "L6_hip_min_horn_M3x6_2",
-        "L6_hip_min_horn_M3x6_3",
-        "L6_hip_min_horn_M3x6_4",
-        "L6_knee_clamp_M3x8_-31_-18.3",
-        "L6_knee_clamp_RXM3x5p7_-31_-18.3",
-        "L6_knee_clamp_M3x8_-31_18.3",
-        "L6_knee_clamp_RXM3x5p7_-31_18.3",
-        "L6_knee_clamp_M3x8_-20_-18.3",
-        "L6_knee_clamp_RXM3x5p7_-20_-18.3",
-        "L6_knee_clamp_M3x8_-20_18.3",
-        "L6_knee_clamp_RXM3x5p7_-20_18.3",
-        "L6_femur_join_M3x10_10",
-        "L6_femur_join_RXM3x5p7_10",
-        "L6_femur_join_M3x10_-8",
-        "L6_femur_join_RXM3x5p7_-8",
+        "L6_KNEE_STS3215",
+        "L6_hip_horn_-1",
+        "L6_hip_M3x6_-1_1",
+        "L6_hip_M3x6_-1_2",
+        "L6_hip_M3x6_-1_3",
+        "L6_hip_M3x6_-1_4",
+        "L6_hip_horn_1",
+        "L6_hip_M3x6_1_1",
+        "L6_hip_M3x6_1_2",
+        "L6_hip_M3x6_1_3",
+        "L6_hip_M3x6_1_4",
+        "L6_knee_factory_PA2_-29_-10.25",
+        "L6_knee_factory_PA2_-29_10.25",
+        "L6_knee_factory_PA2_-8.3_-10.25",
+        "L6_knee_factory_PA2_-8.3_10.25",
         "L6_FEMUR_unmodelled_fasteners"
       ]
     },
     "L6_TIBIA": {
-      "mass_kg": 0.03556387055136583,
+      "mass_kg": 0.04845751126608068,
       "com_m": [
-        0.0122402476854015,
-        -0.011669359589401634,
-        -0.04158085781720149
+        0.011609185407849356,
+        -0.011626016055206164,
+        -0.047093584441382334
       ],
       "inertia_kg_m2": [
         [
-          6.490779955875692e-05,
-          -5.018736345994173e-08,
-          1.323305183620652e-05
+          6.879032429144824e-05,
+          -8.475152223043796e-07,
+          1.2884284331721173e-05
         ],
         [
-          -5.018736345994173e-08,
-          6.462804386876849e-05,
-          -1.3375380365766375e-05
+          -8.475152223043796e-07,
+          6.880872962467139e-05,
+          -1.2849771906984214e-05
         ],
         [
-          1.323305183620652e-05,
-          -1.3375380365766375e-05,
-          1.563104836329409e-05
+          1.2884284331721173e-05,
+          -1.2849771906984214e-05,
+          1.6624821798378058e-05
         ]
       ],
       "parent": "L6_FEMUR",
       "origin_neutral_m": [
-        0.14944151298896352,
-        -0.1494415129889636,
-        0.020187885517996617
+        0.15647991951792561,
+        -0.1564799195179257,
+        0.01972757117940216
       ],
       "parts": [
         "L6_tibia",
         "L6_foot",
-        "L6_knee_disc_plus",
-        "L6_knee_disc_min",
-        "L6_knee_plus_horn_M3x6_1",
-        "L6_knee_plus_horn_M3x6_2",
-        "L6_knee_plus_horn_M3x6_3",
-        "L6_knee_plus_horn_M3x6_4",
-        "L6_knee_min_horn_M3x6_1",
-        "L6_knee_min_horn_M3x6_2",
-        "L6_knee_min_horn_M3x6_3",
-        "L6_knee_min_horn_M3x6_4",
-        "L6_foot_M3x25",
-        "L6_foot_M3_locknut",
+        "L6_knee_horn_-1",
+        "L6_knee_M3x6_-1_1",
+        "L6_knee_M3x6_-1_2",
+        "L6_knee_M3x6_-1_3",
+        "L6_knee_M3x6_-1_4",
+        "L6_knee_horn_1",
+        "L6_knee_M3x6_1_1",
+        "L6_knee_M3x6_1_2",
+        "L6_knee_M3x6_1_3",
+        "L6_knee_M3x6_1_4",
+        "L6_shoe_insert",
+        "L6_shoe_M3x8",
         "L6_TIBIA_unmodelled_fasteners"
       ]
     }

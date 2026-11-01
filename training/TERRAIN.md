@@ -1,5 +1,8 @@
 # Uneven-ground curriculum
 
+> **Mechanical revision v4:** checkpoints, recorded metrics and videos below are historical pre-v4 results. No RL retraining was performed. Current model/IK adapters use v4 geometry; prior performance is not established for v4. See [revision notes](../docs/revision-v4.md).
+
+
 Watch the [terrain films](https://tom-michiels.github.io/arachne-18/#terrain):
 rolling ground up to 4 mm, slopes up to 2°, and 4 mm plateaus. Each is a
 continuous 12-second original MuJoCo/BAM run, at real-time playback and true

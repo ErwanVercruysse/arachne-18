@@ -35,7 +35,14 @@ def geometry_floor(m,d,ids):
     box=types==mujoco.mjtGeom.mjGEOM_BOX;extent[box]=(np.abs(rot[box])*size[box]).sum(1)
     capsule=types==mujoco.mjtGeom.mjGEOM_CAPSULE;extent[capsule]=size[capsule,0]+size[capsule,1]*np.abs(rot[capsule,2])
     ellipsoid=types==mujoco.mjtGeom.mjGEOM_ELLIPSOID;extent[ellipsoid]=np.linalg.norm(size[ellipsoid]*rot[ellipsoid],axis=1)
-    if not np.all(sphere|box|capsule|ellipsoid):raise ValueError('Unsupported collision proxy')
+    mesh=types==mujoco.mjtGeom.mjGEOM_MESH
+    for index in np.flatnonzero(mesh):
+        mesh_id=m.geom_dataid[ids[index]]
+        start=m.mesh_vertadr[mesh_id];count=m.mesh_vertnum[mesh_id]
+        # MuJoCo's compiled mesh vertices include principal-axis recentering;
+        # geom_xmat/geom_xpos carry the corresponding compiled transform.
+        extent[index]=-np.min(m.mesh_vert[start:start+count]@rot[index])
+    if not np.all(sphere|box|capsule|ellipsoid|mesh):raise ValueError('Unsupported collision proxy')
     return d.geom_xpos[ids,2]-extent
 
 

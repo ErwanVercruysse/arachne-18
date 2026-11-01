@@ -4,9 +4,10 @@ import json, math
 import numpy as np
 import mujoco
 from simulate import Robot, target_at
+from contact_utils import supporting_feet
 
 HERE=Path(__file__).resolve().parent
-results={}
+results={"revision":"v4"}
 robot=Robot()
 m,d=robot.model,robot.data
 assert (m.nq,m.nv,m.nu)==(25,24,18)
@@ -47,7 +48,7 @@ for fixed,mode,voltage,seconds in [(False,'stand',12.,10),(False,'stand',11.1,10
         assert d.body('BODY').xpos[2]>.07
         assert np.linalg.norm(d.body('BODY').xpos[:2])<.015
         assert d.body('BODY').xmat.reshape(3,3)[2,2]>.98
-        assert d.ncon==6
+        assert len(supporting_feet(m,d))==6
         pairs=[(m.geom(c.geom1).name,m.geom(c.geom2).name) for c in d.contact]
         assert all('ground' in p and any('_foot_contact' in n for n in p) for p in pairs)
     assert max_error<math.radians(8)

@@ -10,5 +10,6 @@
     "command delay and firmware slew (applied by controller)"
   ],
   "timestep": 0.002,
-  "contact": "26-vertex inscribed foot hull, pyramidal condim 3"
+  "revision": "v4",
+  "contact": "8-vertex rotated v4 shoe boxes; pyramidal condim 3"
 }

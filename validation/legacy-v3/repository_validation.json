@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "python_source_syntax": "checked",
+  "markdown_local_links": "checked",
+  "print_stls": 17,
+  "print_mesh_checks": "watertight, one component, Z=0",
+  "rebuilt_cad": "all dimensions, volumes, quantities and 155 instance metadata match release",
+  "fresh_mujoco_export": "joint map, mass properties, metadata and free model match; fixed model differs only by 2e-11 m numeric formatting",
+  "simulation": "full validation passed; grounded animation has six contacts in all 100 frames",
+  "native_onshape": "136 fastened, 18 revolute, 19 components; axes, limits and neutral verified; API-driven motion unverified"
+}

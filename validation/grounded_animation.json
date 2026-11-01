@@ -1,11 +1,13 @@
 {
   "frames": 100,
   "duration_s": 4,
-  "min_contacts": 6,
-  "max_contacts": 6,
+  "min_contacts": 12,
+  "max_contacts": 12,
+  "min_supporting_feet": 6,
+  "revision": "v4",
   "body_height_range_m": [
-    0.08570615403749582,
-    0.10076582214896987
+    0.08832017666748392,
+    0.10364801595145308
   ],
   "base_fixed": false,
   "solver_warnings": [

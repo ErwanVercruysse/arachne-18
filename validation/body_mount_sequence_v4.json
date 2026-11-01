@@ -1,0 +1,8 @@
+{
+  "step_sha256": "c0aad39a0d46395079e308b011a87f1ea6fb863c25d2bb3a129a69765f1d6deb",
+  "fixed_heads_to_moving_coxa_max_overlap_mm3": 0.0,
+  "fork_insertion_to_body_max_overlap_mm3": 0.0,
+  "case_screw_access_through_coxa_mm3": 0.0,
+  "strap_corridor_overlap_mm3": 0.0,
+  "passed": true
+}

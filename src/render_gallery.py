@@ -23,7 +23,7 @@ def render(filename,hide=(),camera=(440,-620,470),scale=285,exploded=False):
  for pos,color,intensity in [((250,-450,650),(1,.97,.9),1.0),((-450,-200,100),(.55,.8,1),.65),((200,480,350),(1,.64,.3),.85)]:
   light=vtk.vtkLight();light.SetLightTypeToSceneLight();light.SetPosition(*pos);light.SetFocalPoint(0,0,20);light.SetColor(*color);light.SetIntensity(intensity);ren.AddLight(light)
  cam=ren.GetActiveCamera();cam.SetPosition(*camera);cam.SetFocalPoint(0,0,30 if exploded else 5);cam.SetViewUp(0,0,1);cam.ParallelProjectionOn();cam.SetParallelScale(scale)
- win=vtk.vtkRenderWindow();win.SetOffScreenRendering(1);win.AddRenderer(ren);win.SetSize(1800,1200);win.SetMultiSamples(8);win.Render()
+ win=vtk.vtkRenderWindow();win.SetOffScreenRendering(1);win.AddRenderer(ren);win.SetSize(1800,1200);win.SetMultiSamples(8);ren.ResetCameraClippingRange();win.Render()
  grab=vtk.vtkWindowToImageFilter();grab.SetInput(win);grab.SetScale(1);grab.Update()
  writer=vtk.vtkPNGWriter();writer.SetFileName(str(OUT/filename));writer.SetInputConnection(grab.GetOutputPort());writer.Write();win.Finalize();print(filename,flush=True)
 render('cad-overview.png')

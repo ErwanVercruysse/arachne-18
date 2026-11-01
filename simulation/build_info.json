@@ -8,6 +8,7 @@
   },
   "bam_source": "https://github.com/Rhoban/bam",
   "bam_params_commit": "e9a619d56da5236206f4de6ceec2c1ee1b497b5c",
-  "cad_source": "ARACHNE 18 original STEP/CadQuery model",
-  "units": "m, kg, s, rad, N, Nm"
+  "cad_source": "Parametric CadQuery v4 assembly; src/build_v4.py",
+  "units": "m, kg, s, rad, N, Nm",
+  "revision": "v4"
 }

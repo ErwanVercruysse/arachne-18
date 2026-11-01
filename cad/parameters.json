@@ -1,37 +1,63 @@
 {
-  "body_rx": 94,
-  "body_ry": 92,
+  "revision": "v4",
+  "body_rx": 97,
+  "body_ry": 91,
   "anchor_rx": 86,
   "anchor_ry": 86,
-  "coxa": 50,
-  "femur": 78,
+  "coxa": 62.0,
+  "hip_z": -6.95,
+  "femur": 78.0,
   "tibia": 110,
-  "horn_pcd": 14,
-  "horn_d": 19.95,
-  "horn_thickness_driven": 2.5,
-  "horn_thickness_dummy": 2.0,
-  "horn_outer_span": 36.5,
-  "cheek_gap": 36.9,
-  "assembly_clearance_per_side": 0.2,
-  "cheek_t": 5.25,
-  "servo_L": 45.23,
-  "servo_W": 24.73,
-  "shaft_clearance_d": 7.2,
-  "servo_H": 35,
-  "servo_axis_offset": 12.5,
-  "battery_L": 115,
-  "battery_W": 40,
-  "battery_H": 35,
-  "femur_up_deg": 15,
+  "femur_up_deg": 20,
+  "knee_relative_deg": -85,
   "tibia_down_deg": 65,
-  "yaw_inward_limit_deg": 64,
+  "yaw_inward_limit_deg": 60,
   "yaw_outward_limit_deg": 35,
   "yaw_middle_limit_deg": 35,
+  "hip_absolute_limits_deg": [
+    -30,
+    45
+  ],
+  "knee_absolute_limits_deg": [
+    -105,
+    15
+  ],
+  "horn_outer_span": 36.5,
+  "horn_thickness_driven": 2.5,
+  "horn_thickness_dummy": 2.0,
+  "cheek_gap": 36.9,
+  "cheek_t": 5.5,
+  "shaft_clearance_d": 7.3,
+  "dummy_shaft_d": 6.5,
   "insert_hole_d": 4.0,
+  "insert_depth": 7.0,
   "insert_length": 5.7,
   "button_head_d": 5.7,
   "button_head_h": 1.65,
-  "horn_recess_d": 6.2,
+  "horn_recess_d": 6.3,
   "horn_recess_depth": 1.5,
-  "dummy_recess_depth": 1.45
+  "battery_L": 115,
+  "battery_W": 40,
+  "battery_H": 35,
+  "battery_bottom_z": 32,
+  "controller_envelope_mm": [
+    90,
+    60,
+    18
+  ],
+  "controller_bottom_z": 86,
+  "controller_mount_spacing_mm": [
+    64,
+    48
+  ],
+  "shell_mounts_mm": [
+    [
+      -68,
+      0
+    ],
+    [
+      68,
+      0
+    ]
+  ]
 }

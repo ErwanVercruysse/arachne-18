@@ -1,5 +1,8 @@
 # Maximum whole-robot jump clearance
 
+> **Mechanical revision v4:** checkpoints, recorded metrics and videos below are historical pre-v4 results. No RL retraining was performed. Current model/IK adapters use v4 geometry; prior performance is not established for v4. See [revision notes](../docs/revision-v4.md).
+
+
 [Watch the jump](https://tom-michiels.github.io/arachne-18/#jump).
 
 Two separate single-jump policies are available:

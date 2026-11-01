@@ -1,5 +1,8 @@
 # Smooth, IMU-aware locomotion
 
+> **Mechanical revision v4:** checkpoints, recorded metrics and videos below are historical pre-v4 results. No RL retraining was performed. Current model/IK adapters use v4 geometry; prior performance is not established for v4. See [revision notes](../docs/revision-v4.md).
+
+
 **Latest:** [faster walking with longer strides](LONG_STRIDE.md), including
 a 44-second video and 26/26 reference checks. The new forward gait reaches
 22.4 cm/s with 43% greater foot excursion than the original solo gait.

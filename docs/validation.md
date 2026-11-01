@@ -1,31 +1,33 @@
-# Validation record
+# V4 validation record
 
-These checks establish internal consistency of this prototype's digital model. They do not substitute for a physical fit or load test.
+These checks establish consistency of the digital prototype. They do not certify physical fit, load capacity or hardware performance.
 
-| Check | Result | Evidence |
+| Check | Result / scope | Evidence |
 |---|---|---|
-| Printable CAD validity | 14/14 valid, one solid each | [CAD report](../validation/cad_validation.json) |
-| Print mesh validity | 14/14 watertight, one connected component each | [STL report](../validation/stl_validation.json) |
-| Horn screw bearing support | 1,152 material samples below the 24 unique horn screw positions; all supported | [Horn report](../validation/horn_support_validation.json) |
-| Assembly composition | 499 solids, including 18 servo references, 262 screws and 112 inserts | [CAD report](../validation/cad_validation.json) |
-| Neutral interference | No overlap above 0.05 mm³ | [CAD report](../validation/cad_validation.json) |
-| Sampled leg motion | 99 configurations without overlap above 0.2 mm³ | [Motion report](../validation/motion_validation.json) |
-| Paired toe reach | 18 coordinated poses; TPU toes touch without hard-part interference | [Reach report](../validation/pair_contact_validation.json) |
-| Dummy-side plugs | 594 sampled nominal plug and straight-exit positions without print overlap | [Cable report](../validation/cable_validation.json) |
-| Screw accessibility | 262 positioned screws; no screw/print intersections or blocked local driver paths | [Fastener report](../validation/fastener_validation.json) |
-| Native Onshape assembly | 499 instances; 480 fastened and 18 revolute mates; no feature errors | [Onshape report](../simulation/onshape_validation.json) |
-| Native joint limits | 18 limits match the MuJoCo joint map | [Limit report](../simulation/onshape_motion_validation.json) |
-| MuJoCo topology | 19 links, 18 hinges, 18 motors; 25 qpos / 24 qvel for free base | [Simulation report](../simulation/simulation_validation.json) |
-| Inertia | Positive masses and inertias | [Simulation report](../simulation/simulation_validation.json) |
-| Joint axes | All 18 perturbations affect the intended subtree | [Simulation report](../simulation/simulation_validation.json) |
-| Standing | 10 s at 11.1, 12.0 and 12.6 V; six foot contacts each | [Simulation report](../simulation/simulation_validation.json) |
-| Fixed-base sweep | 12 s; maximum tracking error after 2 s about 0.75° | [Simulation report](../simulation/simulation_validation.json) |
-| Grounded body motion | 10 s, six continuous foot contacts after settling, no solver warnings | [Grounded report](../simulation/grounded_validation.json) |
-| Animation | 100 frames, six contacts throughout, floating base | [Animation report](../validation/grounded_animation.json) |
-| Reset | Reproducible MuJoCo and BAM state | [Simulation report](../simulation/simulation_validation.json) |
+| Print solids | 8/8 valid, one solid each | [CAD report](../validation/cad_validation.json) |
+| Print meshes | 8/8 watertight, one component; flat bed contact | [Integration report](../validation/integration_v4.json) |
+| Baseline geometry | Chassis and four leg parts match the checked v4 prototypes | [Integration report](../validation/integration_v4.json) |
+| Packaging | Battery, PCB, controller envelope, carrier and canopy clearance | [Integration report](../validation/integration_v4.json) |
+| Screw/print fit | 160 M3 and 72 factory screws; no print overlap above 0.05 mm³ | [Integration report](../validation/integration_v4.json) |
+| Dorsal tool access | Carrier, PCB and cover driver paths clear in assembly order | [Integration report](../validation/integration_v4.json) |
+| Leg interfaces | Case insertion, horns, screw bearing, head access, dummy plugs and sampled joint sweeps | [Leg report](../validation/leg_v4.json) |
+| Chassis interfaces | Six case insertion paths and plug service columns; factory and horn tool access | [Body report](../validation/body_fit_v4.json) |
+| Chassis motion | 90 combined representative poses, yaw sweep, neutral leg pairs | [Body report](../validation/body_fit_v4.json) |
+| Paired toe reach | Front and rear, 13 coordinated samples per path; shoes meet | [Body report](../validation/body_fit_v4.json) |
+| Dorsal motion | 162 sampled leg poses against carrier and canopy | [Integration report](../validation/integration_v4.json) |
+| Installation | Fork insertion, case-head clearance and battery-strap corridors | [Installation report](../validation/body_mount_sequence_v4.json) |
+| Slicing | 8 parts sliced without reported warnings; A1 geometry proxy, not H2D G-code | [Slicer report](../validation/slicer_v4.json) |
+| Onshape native graph | 336 instances, 317 fastened, 18 revolute; fixed chassis | [Native report](../simulation/onshape_validation.json) |
+| Onshape limits | All 18 native limits match joint map | [Limit report](../simulation/onshape_motion_validation.json) |
+| MuJoCo | 19 links, 18 hinges; positive inertias, correct subtrees, reproducible reset | [Simulation report](../simulation/simulation_validation.json) |
+| Standing | 10 seconds each at 11.1/12.0/12.6 V; all six feet support the body | [Simulation report](../simulation/simulation_validation.json) |
+| Fixed sweep | 12 seconds; tracking error below 0.73° after settling | [Simulation report](../simulation/simulation_validation.json) |
+| Grounded exercise | 8 seconds; six supporting feet, 12 contact points; no warnings | [Grounded report](../simulation/grounded_validation.json) |
+| Animation | 100 frames / 4 seconds; six feet support the free base | [Animation report](../validation/grounded_animation.json) |
+| Training compatibility | 17 existing unit tests pass; no training performed | [Compatibility report](../validation/training_compatibility_v4.json) |
 
-The 99 CAD poses sample the revised leg limits, hip 0/15/30° above horizontal and relative knee −95/−80/−65° on three representative legs. Other legs remain neutral. The cable check uses a nominal plug envelope estimated from the owner's servo photograph; actual plug dimensions, wire flex, full simultaneous gaits and continuous paths require physical checking.
+The leg horn-bearing test samples material under all four screws on both faces of every joint type. The chassis and leg source tests use the vendor case reference plus the owner's measured Ø6.5 mm dummy shaft. Connector checks use an estimated two-plug and straight-exit envelope on the dummy side. Flexible wire movement and real plug dimensions still need a physical trial.
 
-The horn-bearing test checks two depths and two bearing radii around every hole on both faces of all three joint types. It was added after a visual inspection found unsupported knee horn screws in an earlier revision. The [corrected knee view](../assets/cad-horn-detail.png) shows the full dummy-side tibia eye.
+Motion checks are discrete samples and selected installation paths. They are not exhaustive continuous collision proofs across all 18 joint combinations. The current simulation uses approximate collision shapes and nominal mass distributions; standing does not validate walking, jumping, thermal limits or structural strength.
 
-The simulation uses collision proxies and estimated masses. Its quiet standing results do not validate a walking controller, payload or actuator thermal capacity. No physical assembly, FEA, fatigue or impact test has been completed.
+No physical print, pull-out test, FEA, fatigue or impact test has been completed. Existing RL metrics and videos belong to earlier geometry. Historical v3 evidence is isolated under `validation/legacy-v3/` and is not used to claim current performance.

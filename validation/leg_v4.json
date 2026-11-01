@@ -1,0 +1,523 @@
+{
+  "prototype": "v4",
+  "units": "mm",
+  "dummy_shaft_checked_diameter_mm": 6.5,
+  "reference_sha256": "58e38e4dc49f97df738c5f229f9aa8a7dce64a0a1d01335486a52d53e6017e8a",
+  "step_sha256": {
+    "01_coxa": "0223b12c415e47b088d9a9d67d2f55575afd219306dbfcd932bf706a6e10900e",
+    "02_femur": "d28de9887701de11a3e432f7a74c20dcc2c344dfafb7ac73dbdbc19f59daa803",
+    "03_tibia": "cffa5a38f5b86a961fa32d489de28ce1325337426cbf6c50bfdff91738e7eed8",
+    "04_tpu_shoe": "3b83961c74b9db840e8dcadf5af142c145a0820780c30ba9e66422f4c2636464"
+  },
+  "checks": {
+    "fixed_case_overlap_mm3": {
+      "yaw": 0,
+      "hip": 0,
+      "knee": 0
+    },
+    "case_insertion_overlap_mm3": {
+      "hip": [
+        -60,
+        0
+      ],
+      "knee": [
+        -60,
+        0
+      ]
+    },
+    "yaw_sweep": {
+      "-60": {
+        "case": 0,
+        "plug": 0
+      },
+      "-55": {
+        "case": 0,
+        "plug": 0
+      },
+      "-50": {
+        "case": 0,
+        "plug": 0
+      },
+      "-45": {
+        "case": 0,
+        "plug": 0
+      },
+      "-40": {
+        "case": 0,
+        "plug": 0
+      },
+      "-35": {
+        "case": 0,
+        "plug": 0
+      },
+      "-30": {
+        "case": 0,
+        "plug": 0
+      },
+      "-25": {
+        "case": 0,
+        "plug": 0
+      },
+      "-20": {
+        "case": 0,
+        "plug": 0
+      },
+      "-15": {
+        "case": 0,
+        "plug": 0
+      },
+      "-10": {
+        "case": 0,
+        "plug": 0
+      },
+      "-5": {
+        "case": 0,
+        "plug": 0
+      },
+      "0": {
+        "case": 0,
+        "plug": 0
+      },
+      "5": {
+        "case": 0,
+        "plug": 0
+      },
+      "10": {
+        "case": 0,
+        "plug": 0
+      },
+      "15": {
+        "case": 0,
+        "plug": 0
+      },
+      "20": {
+        "case": 0,
+        "plug": 0
+      },
+      "25": {
+        "case": 0,
+        "plug": 0
+      },
+      "30": {
+        "case": 0,
+        "plug": 0
+      },
+      "35": {
+        "case": 0,
+        "plug": 0
+      },
+      "40": {
+        "case": 0,
+        "plug": 0
+      },
+      "45": {
+        "case": 0,
+        "plug": 0
+      },
+      "50": {
+        "case": 0,
+        "plug": 0
+      },
+      "55": {
+        "case": 0,
+        "plug": 0
+      },
+      "60": {
+        "case": 0,
+        "plug": 0
+      }
+    },
+    "hip_sweep": {
+      "-30": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-25": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-20": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-15": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-10": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-5": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "0": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "5": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "10": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "15": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "20": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "25": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "30": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "35": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "40": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "45": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      }
+    },
+    "knee_sweep": {
+      "-105": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-100": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-95": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-90": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-85": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-80": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-75": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-70": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-65": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-60": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-55": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-50": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-45": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-40": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-35": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-30": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-25": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-20": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-15": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-10": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "-5": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "0": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "5": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "10": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      },
+      "15": {
+        "case": 0,
+        "plug": 0,
+        "parent": 0,
+        "case_screw_heads": 0
+      }
+    },
+    "tibia_mirror_difference_mm3": 0.0,
+    "horn_bearing_missing_samples": {
+      "coxa": 0,
+      "femur": 0,
+      "tibia": 0
+    },
+    "parts": {
+      "01_coxa": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "bed_area_mm2": 2197.765629271957
+      },
+      "02_femur": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "bed_area_mm2": 2401.5553443418894
+      },
+      "03_tibia": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "bed_area_mm2": 1756.6078023790474
+      },
+      "04_tpu_shoe": {
+        "valid": true,
+        "solids": 1,
+        "watertight": true,
+        "bed_area_mm2": 334.0894982215232
+      }
+    },
+    "hardware_clearance_mm3": {
+      "coxa_horn_screws": 0,
+      "femur_horn_screws": 0,
+      "tibia_horn_screws": 0,
+      "hip_factory_screw_access": 0,
+      "knee_factory_screw_access": 0,
+      "foot_screw": 0
+    },
+    "shoe_to_tibia_overlap_mm3": 0,
+    "fork_insertion_overlap_mm3": {
+      "yaw": 0,
+      "hip": 0,
+      "knee": 0
+    },
+    "nonadjacent_combined_pose_overlap_mm3": 0
+  },
+  "solid_section_geometry_not_FEA": [
+    {
+      "part": "02_femur",
+      "x_mm": 10,
+      "area_mm2": 232.48,
+      "Iyy_mm4": 15348.51,
+      "Zyy_mm3": 999.66
+    },
+    {
+      "part": "02_femur",
+      "x_mm": 15,
+      "area_mm2": 190.13,
+      "Iyy_mm4": 13149.52,
+      "Zyy_mm3": 911.21
+    },
+    {
+      "part": "02_femur",
+      "x_mm": 20,
+      "area_mm2": 196.24,
+      "Iyy_mm4": 13699.56,
+      "Zyy_mm3": 930.49
+    },
+    {
+      "part": "02_femur",
+      "x_mm": 25,
+      "area_mm2": 465.56,
+      "Iyy_mm4": 33104.06,
+      "Zyy_mm3": 1865.5
+    },
+    {
+      "part": "02_femur",
+      "x_mm": 35,
+      "area_mm2": 490.6,
+      "Iyy_mm4": 41578.07,
+      "Zyy_mm3": 2176.47
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 10,
+      "area_mm2": 157.71,
+      "Iyy_mm4": 4415.63,
+      "Zyy_mm3": 423.61
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 15,
+      "area_mm2": 135.55,
+      "Iyy_mm4": 4765.36,
+      "Zyy_mm3": 461.93
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 20,
+      "area_mm2": 157.2,
+      "Iyy_mm4": 6478.04,
+      "Zyy_mm3": 580.19
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 25,
+      "area_mm2": 327.63,
+      "Iyy_mm4": 15634.01,
+      "Zyy_mm3": 910.04
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 35,
+      "area_mm2": 468.56,
+      "Iyy_mm4": 29253.55,
+      "Zyy_mm3": 2095.68
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 60,
+      "area_mm2": 617.45,
+      "Iyy_mm4": 25598.61,
+      "Zyy_mm3": 2290.03
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 85,
+      "area_mm2": 336.58,
+      "Iyy_mm4": 6992.14,
+      "Zyy_mm3": 883.24
+    },
+    {
+      "part": "03_tibia",
+      "x_mm": 100,
+      "area_mm2": 264.3,
+      "Iyy_mm4": 3788.79,
+      "Zyy_mm3": 576.77
+    }
+  ],
+  "passed": true,
+  "failures": []
+}

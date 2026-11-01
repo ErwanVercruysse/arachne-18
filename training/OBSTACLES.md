@@ -1,5 +1,8 @@
 # Stones, rocks and bending grass
 
+> **Mechanical revision v4:** checkpoints, recorded metrics and videos below are historical pre-v4 results. No RL retraining was performed. Current model/IK adapters use v4 geometry; prior performance is not established for v4. See [revision notes](../docs/revision-v4.md).
+
+
 Uneven terrain includes discrete obstacles as well as height variations. The
 reference simulator now includes individual collision stones and passive,
 bending grass tufts. [Watch the obstacle films](https://tom-michiels.github.io/arachne-18/#terrain-pebbles).

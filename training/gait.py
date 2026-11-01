@@ -18,14 +18,16 @@ INITIAL = np.array([2.1,.60,.013,1.05,1.1,0.,0.,.2,0.,0.,0.,1.05])
 AZIMUTH = np.deg2rad([45,90,135,225,270,315])
 RADIAL = np.stack([np.cos(AZIMUTH), np.sin(AZIMUTH)], -1)
 COXA = .086 * RADIAL
-L1 = .078
-V = np.array([.02394328259+.02394310446, -.1078466252])
-V[0] /= np.sqrt(2)
-L2 = float(np.linalg.norm(V))
-A0 = float(np.deg2rad(15.))
-B0 = float(np.arctan2(V[1], V[0])-A0)
-R0 = float(.05 + L1*np.cos(A0) + L2*np.cos(A0+B0))
-Z0 = float(L1*np.sin(A0) + L2*np.sin(A0+B0))
+KINEMATICS=json.loads((ROOT/'simulation/joint_map.json').read_text())['kinematics']
+COXA_LENGTH=KINEMATICS['coxa_m']
+HIP_Z=KINEMATICS['hip_z_m']
+L1=KINEMATICS['femur_m']
+V=np.array(KINEMATICS['foot_site_tibia_local_m'])[[0,2]]
+L2=float(np.linalg.norm(V))
+A0=float(np.deg2rad(KINEMATICS['hip_neutral_deg']))
+B0=float(np.deg2rad(KINEMATICS['knee_neutral_deg'])+np.arctan2(V[1],V[0]))
+R0=float(COXA_LENGTH+L1*np.cos(A0)+L2*np.cos(A0+B0))
+Z0=float(HIP_Z+L1*np.sin(A0)+L2*np.sin(A0+B0))
 LIMITS = np.tile([np.deg2rad(20), np.deg2rad(15), np.deg2rad(15)], 6)
 
 
@@ -50,8 +52,8 @@ def feet(qpos, xp=np):
     q = qpos[:, 7:].reshape(-1,6,3)
     az = xp.array(AZIMUTH)[None,:]+q[:,:,0]
     a, b = A0+q[:,:,1], B0+q[:,:,2]
-    r = .05+L1*xp.cos(a)+L2*xp.cos(a+b)
-    z = L1*xp.sin(a)+L2*xp.sin(a+b)
+    r = COXA_LENGTH+L1*xp.cos(a)+L2*xp.cos(a+b)
+    z = HIP_Z+L1*xp.sin(a)+L2*xp.sin(a+b)
     local = xp.stack([xp.array(COXA[:,0])[None,:]+r*xp.cos(az),
                       xp.array(COXA[:,1])[None,:]+r*xp.sin(az), z], -1)
     world = [rotate(qpos[:,3:7], local[:,i,:], xp)+qpos[:,:3] for i in range(6)]
@@ -106,7 +108,8 @@ def leg_ik(x, y, z, xp=np, low=None, high=None):
     dx, dy = x-xp.array(COXA[:,0])[None,:], y-xp.array(COXA[:,1])[None,:]
     yaw = xp.arctan2(dy,dx)-xp.array(AZIMUTH)[None,:]
     yaw = xp.arctan2(xp.sin(yaw),xp.cos(yaw))
-    radial = xp.sqrt(dx*dx+dy*dy)-.05
+    radial = xp.sqrt(dx*dx+dy*dy)-COXA_LENGTH
+    z = z-HIP_Z
     b = -xp.arccos(xp.clip((radial*radial+z*z-L1*L1-L2*L2)/(2*L1*L2),-.999999,.999999))
     a = xp.arctan2(z,radial)-xp.arctan2(L2*xp.sin(b),L1+L2*xp.cos(b))
     q = xp.stack([yaw,a-A0,b-B0],-1).reshape(-1,18)

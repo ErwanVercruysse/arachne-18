@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse,json,math,time
 import numpy as np
 from simulate import Robot
+from contact_utils import supporting_feet
 
 class GroundedMotion:
     def __init__(self,robot,amplitude=.008,frequency=.25):
@@ -26,11 +27,11 @@ def main():
     p.add_argument('--headless',action='store_true');p.add_argument('--seconds',type=float,default=20)
     p.add_argument('--report',type=Path)
     args=p.parse_args();robot=Robot();motion=GroundedMotion(robot)
-    contacts=[];heights=[]
+    contacts=[];feet=[];heights=[]
     def step():
         robot.step(motion.target(robot.data.time))
         if robot.data.time>2:
-            contacts.append(int(robot.data.ncon));heights.append(float(robot.data.body('BODY').xpos[2]))
+            contacts.append(int(robot.data.ncon));feet.append(len(supporting_feet(robot.model,robot.data)));heights.append(float(robot.data.body('BODY').xpos[2]))
     if args.headless:
         while robot.data.time<args.seconds:step()
     else:
@@ -44,9 +45,10 @@ def main():
                 viewer.sync();time.sleep(max(0,robot.data.time-(time.monotonic()-start)))
     result=dict(mode='grounded_body_height_exercise',duration_s=float(robot.data.time),amplitude_m=.008,frequency_hz=.25,
                 min_contacts_after_2s=min(contacts) if contacts else None,max_contacts_after_2s=max(contacts) if contacts else None,
+                min_supporting_feet=min(feet) if feet else None,
                 body_height_range_m=[min(heights),max(heights)] if heights else None,solver_warnings=robot.data.warning.number.tolist())
     if contacts:
-        assert min(contacts)==max(contacts)==6,'Expected six continuous foot contacts after settling'
+        assert min(feet)==max(feet)==6,'Expected all six feet to support the body after settling'
         assert not any(robot.data.warning.number),'Unexpected MuJoCo warning'
     if args.report:args.report.write_text(json.dumps(result,indent=2))
     print(json.dumps(result,indent=2))

@@ -1,5 +1,8 @@
 # Faster forward walking with larger steps
 
+> **Mechanical revision v4:** checkpoints, recorded metrics and videos below are historical pre-v4 results. No RL retraining was performed. Current model/IK adapters use v4 geometry; prior performance is not established for v4. See [revision notes](../docs/revision-v4.md).
+
+
 [Watch the first video](https://tom-michiels.github.io/arachne-18/#fast).
 
 The new forward gait reaches **29.9 cm/s**, compared with **22.4 cm/s** in the

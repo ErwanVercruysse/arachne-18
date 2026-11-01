@@ -1,13 +1,13 @@
 {
-  "fastened": 480,
+  "fastened": 317,
   "revolute": 18,
   "errors": {},
   "fixed": [
     [
-      "Mt4JlnnUfgMfnowOF"
+      "MDJ6jmrxg3REbHVL1"
     ]
   ],
-  "max_neutral_transform_deviation": 4.999889391399392e-13,
-  "instances": 499,
-  "document_url": "https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/ea6ef29b6f90442d8a9d563b"
+  "max_neutral_transform_deviation": 4.3405556926501276e-13,
+  "instances": 336,
+  "document_url": "https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/916e6d95108202647e946643"
 }

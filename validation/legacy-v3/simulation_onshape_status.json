@@ -1,0 +1,10 @@
+{
+  "status": "NATIVE_MATES_INSTALLED_AND_STATIC_VALIDATION_PASSED",
+  "native_fastened_verified": 136,
+  "native_revolute_verified": 18,
+  "chassis_fixed": true,
+  "solver_errors": 0,
+  "frames_and_limits_verified": 18,
+  "motion_command_verification": "Not verified: matevalues updates did not move the assembly; a nonzero occurrence transform returned HTTP 500.",
+  "mujoco_simulation_validation": "PASS including six continuous floor contacts in the grounded demonstration"
+}

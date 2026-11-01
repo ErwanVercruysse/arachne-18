@@ -33,9 +33,16 @@ def build():
     vertices = np.array([(x,y,z) for x in (-1,0,1) for y in (-1,0,1)
                           for z in (-1,0,1) if (x,y,z)!=(0,0,0)], float)
     vertices /= np.linalg.norm(vertices, axis=1, keepdims=True)
-    for name, scale in [('foot_hull', [.0075]*3), ('torso_hull', [.078,.049,.067])]:
-        ET.SubElement(asset, 'mesh', name=name,
-                      vertex=' '.join(f'{v:.9g}' for v in (vertices*scale).ravel()))
+    ET.SubElement(asset,'mesh',name='torso_hull',
+                  vertex=' '.join(f'{v:.9g}' for v in (vertices*[.091,.057,.045]).ravel()))
+    foot_proxies=json.loads((ROOT/'simulation/collision_description.json').read_text())['foot_training_proxies']
+    foot_meshes={}
+    for foot in foot_proxies:
+        meshname=foot['group']+'_training_foot'
+        corners=np.array([(x,y,z) for x in (-1,1) for y in (-1,1) for z in (-1,1)])*foot['half_sizes_m']
+        corners=corners@np.array(foot['rotation']).T+foot['pos']
+        ET.SubElement(asset,'mesh',name=meshname,vertex=' '.join(f'{v:.9g}' for v in corners.ravel()))
+        foot_meshes[foot['name']]=meshname
     # Strip purely visual meshes from training for quick load/compile.
     for body in root.iter('body'):
         for geom in list(body.findall('geom')):
@@ -43,20 +50,21 @@ def build():
             if name.endswith('_foot_contact') or name == 'body_collision':
                 geom.attrib.pop('size', None)
                 geom.set('type', 'mesh')
-                geom.set('mesh', 'torso_hull' if name == 'body_collision' else 'foot_hull')
+                geom.set('mesh', 'torso_hull' if name == 'body_collision' else foot_meshes[name])
                 geom.set('contype', '2'); geom.set('conaffinity', '1')
             else:
                 body.remove(geom)
     ground = root.find("worldbody/geom[@name='ground']")
     ground.set('contype', '1'); ground.set('conaffinity', '2')
     for mesh in list(asset.findall('mesh')):
-        if mesh.get('name') not in ('foot_hull', 'torso_hull'):
+        if mesh.get('name') not in {*foot_meshes.values(),'torso_hull'}:
             asset.remove(mesh)
     actuators = root.find('actuator')
+    ranges={j.get('name'):j.get('range') for j in root.iter('joint') if j.get('name')}
     for motor in actuators:
         motor.tag = 'position'
         motor.attrib.update(kp=str(kp), ctrllimited='true',
-                            ctrlrange='-.3490658504 .3490658504',
+                            ctrlrange=ranges[motor.get('joint')],
                             forcelimited='true', forcerange=f'{-torque} {torque}')
     ET.indent(tree)
     tree.write(OUT, encoding='unicode')
@@ -64,7 +72,7 @@ def build():
                 frictionloss=p['friction_base'], max_motor_torque_Nm=torque,
                 omissions=['load-dependent and Stribeck friction', 'self collision',
                            'command delay and firmware slew (applied by controller)'],
-                timestep=.002, contact='26-vertex inscribed foot hull, pyramidal condim 3')
+                timestep=.002, revision='v4', contact='8-vertex rotated v4 shoe boxes; pyramidal condim 3')
     (OUT.parent/'model_approximation.json').write_text(json.dumps(meta, indent=2)+'\n')
     print(OUT)
 

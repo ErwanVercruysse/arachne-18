@@ -2,76 +2,76 @@
   "revolute_count": 18,
   "native_limits_deg": {
     "R_L1_yaw": [
-      "-64 deg",
+      "-60 deg",
       "35 deg"
     ],
     "R_L1_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L1_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ],
     "R_L2_yaw": [
       "-35 deg",
       "35 deg"
     ],
     "R_L2_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L2_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ],
     "R_L3_yaw": [
       "-35 deg",
-      "64 deg"
+      "60 deg"
     ],
     "R_L3_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L3_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ],
     "R_L4_yaw": [
-      "-64 deg",
+      "-60 deg",
       "35 deg"
     ],
     "R_L4_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L4_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ],
     "R_L5_yaw": [
       "-35 deg",
       "35 deg"
     ],
     "R_L5_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L5_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ],
     "R_L6_yaw": [
       "-35 deg",
-      "64 deg"
+      "60 deg"
     ],
     "R_L6_hip": [
-      "-35 deg",
-      "15 deg"
+      "-50 deg",
+      "25 deg"
     ],
     "R_L6_knee": [
-      "-15 deg",
-      "80 deg"
+      "-20 deg",
+      "100 deg"
     ]
   },
   "feature_errors": {}

@@ -1,9 +1,9 @@
-name: Publish locomotion videos
+name: Publish robot and locomotion archive
 
 on:
   push:
     branches: [main]
-    paths: ["site/**", "assets/arachne-*.mp4", "assets/arachne-*.jpg", ".github/workflows/pages.yml"]
+    paths: ["site/**", "assets/arachne-*.mp4", "assets/arachne-*.jpg", "assets/cad-overview.png", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p _site/assets
           cp -R site/. _site/
+          cp assets/cad-overview.png _site/assets/
           cp assets/arachne-learned-omni.mp4 assets/arachne-learned-omni.jpg _site/assets/
           cp assets/arachne-training-army.mp4 assets/arachne-training-army.jpg _site/assets/
           cp assets/arachne-jump.mp4 assets/arachne-jump.jpg _site/assets/

@@ -1,14 +1,14 @@
 <div align="center">
 
-# ARACHNE / 18
+# ARACHNE / 18 — v4
 
-**Six legs. Eighteen actuators. A compact, printable robot with an organic shell.**
+**Six legs. Eighteen servos. Three monolithic moving links per leg.**
 
-![ARACHNE 18 — workbench presentation artwork based on the CAD design](assets/hero-workbench.png)
+![The complete v4 robot, rendered from its actual CAD](assets/cad-overview.png)
 
-**18 × STS3215 12 V** · **3 DoF per leg** · **3S battery bay** · **Onshape + MuJoCo + BAM**
+**18 × STS3215 12 V** · **3D printable** · **Onshape** · **MuJoCo + BAM**
 
-[Explore the Onshape assembly](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/ea6ef29b6f90442d8a9d563b) · [Print & build](docs/build-guide.md) · [Run the simulation](docs/simulation.md) · [Browse the CAD](cad)
+[Onshape assembly](https://cad.onshape.com/documents/88edbeda4232642329938c14/w/19f5435855c2974f02fa7c68/e/916e6d95108202647e946643) · [Download print pack](print/ARACHNE_18_v4_print_pack.zip) · [Build guide](docs/build-guide.md) · [Simulation setup](docs/another-computer.md)
 
 </div>
 
@@ -21,6 +21,7 @@
 > | Besturen met een Bluetooth-gamepad, veilig via geplande gangen | [`tools/gamepad_robot.py`](tools/gamepad_robot.py), [`plan_gaits.py`](tools/plan_gaits.py) |
 > | Live 3D-tweeling + camera + cockpit in de browser, met login | [`tools/live_twin.py`](tools/live_twin.py), [`tools/web/`](tools/web/), [`auth.py`](tools/auth.py) |
 > | MuJoCo-simulatie in de browser | [`tools/sim_world.py`](tools/sim_world.py), [`tools/web/sim.html`](tools/web/sim.html) |
+> | v4-robot van Tom Michiels samengevoegd (eendelige poten, 62 mm coxa, TPU-schoen): simulatie en beleid gebruiken de v4-maten | [`docs/revision-v4.md`](docs/revision-v4.md) |
 > | Zelf lopen: het getrainde beleid live op de robot, met de IMU; houdt zich vlak op hellingen, tilt de poten hoger op oneffen grond | [`tools/policy_walk.py`](tools/policy_walk.py), [`terrain_gait.py`](tools/terrain_gait.py), [uitleg](docs/self-walking.md) |
 > | Valbeveiliging: vrije val of omkantelen → zacht landen | [`tools/fall_guard.py`](tools/fall_guard.py), [`training/fall_test.py`](training/fall_test.py) |
 > | Pakken: op vier poten iets van 12-15 cm breed oppakken met de voorpoten | [`tools/grab.py`](tools/grab.py), [`training/grab_test.py`](training/grab_test.py) |
@@ -28,84 +29,76 @@
 > | ESP32-C3 one-wire firmware voor de STS3215-bus | [`firmware/`](firmware/) |
 > | Android-app (wifi-scan, cockpit, "hey spin") | [arachne-app](https://github.com/KVR-CIBER/arachne-app) |
 
-ARACHNE 18 is a six-legged robotics prototype built around eighteen Feetech STS3215 12 V bus servos. A scalloped chassis carries six identical three-axis legs, while a removable dorsal shell conceals a battery tray and a universal controller deck. Paired printed brackets support the supplied metal servo horns on both sides of each joint.
+ARACHNE 18 is a compact six-legged prototype built around the owner's eighteen Feetech STS3215 12 V servos. This revision integrates the v4 leg and chassis into the complete robot: a single printed chassis, six identical leg modules, a removable controller carrier, and an organic ventilated canopy.
 
-The repository contains editable solid geometry, print-ready meshes, the CadQuery source, assembly guidance, and a working MuJoCo model driven by Better Actuator Models (BAM).
+Each moving link is one printed piece. The tibia is symmetric, the horn cheeks have equal spacing, and the case cradles use the servo's factory mounting points. Local openings on the dummy side provide connector access. Horns sit inside the forks; recessed DIN 7380 button-head screws sit outside. There are no loose structural shims.
 
-*The hero is AI-assisted presentation artwork. The CAD views and MuJoCo capture below are generated directly from the model. See [image provenance](docs/media.md).*
-
-## At a glance
-
-| | Specification |
+| Specification | v4 |
 |---|---|
-| Actuators | 18 × Feetech STS3215 **12 V**, three per leg |
 | Mechanism | Six yaw–hip–knee chains; 18 revolute joints |
-| Chassis footprint | Approximately 188 × 150 mm, with swept leg-root reliefs |
-| Neutral overall envelope | Approximately 374 × 514 × 214 mm |
-| Link dimensions | Coxa 50 mm; femur 78 mm; tibia approximately 110 mm |
-| Battery space | **115 × 40 × 35 mm**, excluding protruding plugs |
-| Power | 3S pack: 11.1 V nominal, 12.6 V fully charged |
-| Controller space | **90 × 60 × 18 mm**, on a slotted 108 × 75 mm plate |
-| Printed components | 14 unique files; 63 robot pieces, plus a direct-horn fit gauge |
-| Hardware in CAD | 262 DIN 7380 M3 screws, 112 ruthex-style inserts, 6 foot locknuts |
-| Simulation | 19 rigid links, 18 motors, 499 visual meshes |
-| Estimated model mass | 2.346 kg, including assumed battery and hardware |
+| Chassis | 194 × 173.5 × 56 mm; six mounts on an 86 mm radius |
+| Link geometry | Coxa 62 mm; hip offset −6.95 mm; femur 78 mm |
+| Measured horn span | 36.5 mm; driven horn 2.5 mm, dummy horn 2.0 mm |
+| Forks | 36.9 mm internal span; 5.5 mm cheeks; Ø7.3 mm center access |
+| Battery envelope | 115 × 40 × 35 mm, excluding protruding plugs |
+| Controller envelope | 90 × 60 × 18 mm; configurable 64 × 48 mm hole pattern |
+| Printed parts | 8 unique files; 31 pieces including 6 TPU shoes and 4 PCB standoffs |
+| Modelled hardware | 160 DIN 7380 M3 screws, 72 supplied PA2 case screws, 16 M3 inserts, 36 horns |
+| Simulation | 19 rigid links, 18 actuators, 336 visual parts; estimated mass 2.333 kg |
 
-## Studio portrait
+## Inside the robot
 
-![ARACHNE with internal horns and outside button-head screws](assets/hero-studio.png)
-
-## Look inside
-
-| Serviceable dorsal compartment | Six identical leg modules |
+| Removable electronics carrier | Symmetric six-leg layout |
 |---|---|
-| ![CAD view with the removable shell hidden](assets/cad-internals.png) | ![Top view of the actual CAD geometry](assets/cad-top.png) |
+| ![Actual v4 CAD with canopy removed](assets/cad-internals.png) | ![Actual v4 CAD, top view](assets/cad-top.png) |
 
-The battery is restrained with two straps. The controller has its own removable deck above it. The shell lifts off after removing four accessible screws. The horns seat directly against equally spaced 5.25 mm printed cheeks; no loose shims or one-sided spacer webs are used. Swept local openings on the dummy side clear the two servo plugs without shifting the leg off the servo centerline.
+The battery rests on the chassis and is retained by two straps. Four integrated posts support the controller carrier. Its mounting screws are reached through deep open wells. Two recessed M3 screws hold the canopy; straight tool openings make them accessible from above. Four small standoffs provide a 6 mm PCB air gap.
 
-The mechanical revision uses the owner's **36.5 mm measured outside-to-outside horn span**, with a 36.9 mm inside cheek span, a 7.2 mm shaft-access opening, and 4.0 mm insert bores for ruthex RX-M3x5.7. The outside horn screws are recessed DIN 7380 **M3 × 6**; the other assembly screws and inserts are individual CAD parts. Print the [fit gauge](print/stl/14_direct_horn_fit_gauge.stl) and trial-fit one real servo and both plugs before producing all six legs.
+The front and rear pairs can touch their toes through a checked coordinated pose: inward yaw approximately 57.51°, hip −20°, knee 0°. This is a reach pose, not a walking command. Independent joint limits do not guarantee arbitrary combinations are collision-free.
 
-![Orthographic top view of one leg from the actual CAD, showing equally spaced coxa, femur and tibia cheeks](assets/cad-leg-top.png)
+![V4 service view](assets/cad-service.png)
 
-*One-leg orthographic CAD view. The joint cheeks share the same ±23.7 mm outside planes; only the cable relief on the dummy side differs. The paired femur cheeks flare equally at the knee.*
+![Top view of one v4 leg, with equal fork spacing](assets/cad-leg-top.png)
 
-**Horn placement:** the metal horn sits on the **inside** of the printed cheek, against the servo. The outside has four screw heads and a central access hole. Do not mount a metal disc on the outside of the bracket.
+## Print and assemble
 
-![Knee detail from CAD showing all four horn screws supported by the printed tibia eye](assets/cad-horn-detail.png)
+Download the [STL bundle](print/ARACHNE_18_v4_print_pack.zip), [assembled STEP](cad/ARACHNE_18_assembly.step), or [individual STEP parts](cad/parts). STL units are millimetres; use 100% scale and the supplied orientations. All parts fit the H2D.
 
-The knee detail is generated from the corrected CAD. A bearing-support check samples material beneath all four horn screw heads on each side of the coxa, femur and tibia.
+Start with one complete leg and a real servo. The [build guide](docs/build-guide.md) explains mounting order, screw lengths, insert positions, connector clearance and support removal. M3 plastic-thread joints use **Ruthex RX-M3x5.7**, with **Ø4.0 × 7 mm pilots**. Horn screws thread into metal horns; supplied case screws thread into the servo's factory mounting points.
 
-The front and rear pairs can bring their TPU toes together with a **coordinated** yaw, hip and knee motion. Turning two bent legs inward independently can make their knee forks collide; the [joint guide](docs/simulation.md) gives the checked reach pose and its limits.
+The structural pieces have continuous flat bed faces. The curved canopy needs internal support; support is also needed locally beneath some fork bridges. All eight parts were sliced successfully with an A1 geometry proxy profile. **Reslice for your H2D**; no machine-ready G-code is supplied.
 
-## Simulate it
+## Run MuJoCo
 
-Moving to a training computer? Start with the [clone and setup guide](docs/another-computer.md).
-
-Use Python 3.12. From the repository root:
+From a fresh clone, with Python 3.12:
 
 ```sh
+git clone https://github.com/Tom-Michiels/arachne-18.git
+cd arachne-18
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r simulation/requirements.txt
 python simulation/simulate.py --headless --seconds 10 --voltage 11.1
+python simulation/validate.py
 ```
 
-Interactive viewer on macOS:
+For an interactive viewer on macOS:
 
 ```sh
-mjpython simulation/simulate.py --seconds 300
 mjpython simulation/grounded_demo.py --seconds 300
 ```
 
-On Linux and Windows, use `python` for the viewer. On Windows, activate the environment with `.venv\Scripts\activate`. See the [full simulation guide](docs/simulation.md) for controls, joint frames, custom commands, model regeneration, and troubleshooting.
+Use `python` for the viewer on Linux/Windows. On Windows activate with `.venv\Scripts\activate`. See [setup on another computer](docs/another-computer.md) and the [simulation guide](docs/simulation.md).
 
-![Actual MuJoCo model after settling into a six-foot stance](assets/mujoco-preview.png)
+![Actual v4 floating-base MuJoCo body-height exercise](assets/mujoco-grounded.gif)
 
-![Actual BAM-driven motion with all six feet on the floor](assets/mujoco-grounded.gif)
+The animation is a BAM-driven body-height exercise. All six feet remain in contact; the base is free. The 12 V actuator parameters are an explicitly labelled approximation derived from BAM's identified 7.4 V model and manufacturer operating points. [BAM assumptions](docs/bam-model.md).
 
-*Actual floating-base MuJoCo simulation: the body rises and lowers while all six feet keep contact with the ground.*
+## Existing RL work
 
-### In the browser, shared over wifi
+**No RL retraining was performed for v4.** Existing checkpoints, measurements and walking/jump/terrain videos are preserved. They were produced with earlier geometry and do not establish v4 performance. The training model and inverse kinematics now use v4 dimensions; controller and geometry compatibility tests are included.
+
+### Browser simulation and cockpit (this fork)
 
 `tools/live_twin.py` also serves a physics simulation at `/sim` (on the robot: `http://spin.local:5870/sim`). Everyone on the network sees and drives the same virtual robot: pick which parts to show (hidden parts also leave the physics mass), drive with the pad or WASD/QE in tripod, ripple or wave gait, tilt the body, run the shows, or run the real robot scripts (`stand.py`, `walk.py`, `spin.py`, `dance.py`) unchanged against virtual STS3215 servos. The meter panel shows supply current and voltage sag (5 A lab supply, 10 A, 3S LiPo, with brown-out), torque per servo, foot forces and the stability margin. The real servos are never touched.
 
@@ -133,86 +126,24 @@ The Android app (`~/arachne-app`, Capacitor) works like this:
 - Without a key it understands fixed Dutch commands. With a Claude API key it answers free questions and chooses moves through tool calls.
 - Turning and walking distances are closed-loop on the measured pose.
 
-### Learned walking and a training army
+[Training documentation](training/README.md) · [Archived locomotion videos](https://tom-michiels.github.io/arachne-18/) · [Revision notes](docs/revision-v4.md)
 
-The videos and quoted performance below were recorded before the symmetric-leg CAD revision. The revised MuJoCo model retains the same 18-joint topology; gait, terrain and jump unit tests pass, and the general walking policy completed a five-second BAM smoke run without a fall. The archived performance figures have not yet been remeasured against this revision.
+## Validation and limitations
 
-A separate [jump policy and video](https://tom-michiels.github.io/arachne-18/#jump)
-maximize clearance beneath every leg and the body, with no upright reward.
-The highest recorded jump clears all CAD parts by **2.40 cm**; a second policy
-prioritizes consistency across physics timesteps. [Policies and measurements](training/JUMP.md).
+Eight valid single-solid print parts and eight watertight single-component STLs pass the current checks. The release includes screw/print clearance checks, driver access checks, the isolated leg's factory-hole and connector tests, chassis installation tests, sampled dorsal motion and paired-toe reach evidence. MuJoCo passes topology, joint axes, standing at three voltages, reset reproducibility and grounded motion checks. [Scope and reports](docs/validation.md).
 
+This is a digitally checked prototype. Real servo/horn/plug fit, print tolerances, insert pull-out strength, fatigue and payload capacity need a physical one-leg trial. The controller and battery are envelopes because exact models have not been specified. Servo visuals are simplified exterior references; the original vendor STEP is retained for mechanical checks.
 
-The [obstacle videos](https://tom-michiels.github.io/arachne-18/#terrain-pebbles)
-now include individual collision stones and passive grass tufts that bend on
-contact. Small-stone and short-grass forward examples pass; larger rocks remain
-curriculum targets. [Models, curriculum and measured limits](training/OBSTACLES.md).
+## Files and sources
 
-
-**[Open the video page — faster walking, all directions and the training army](https://tom-michiels.github.io/arachne-18/)**
-
-The first [walking video](https://tom-michiels.github.io/arachne-18/#fast)
-now reaches **29.9 cm/s**, up from 22.4 cm/s: **34% faster**, with **32% greater
-foot travel** (6.45 cm versus 4.90 cm) and slightly lower cadence. A broader
-smooth foot arc makes the larger steps possible within the original joint limits.
-The checkpoint passes **26/26 reference checks**: directions and perturbations
-at a 0.24 m/s command, plus fast forward motion at 0.34 m/s. The 20-second
-recording includes acceleration and a gentle stop at real simulation time.
-[Measurements, operating limits and reproduction](training/SPRINT.md).
-
-A new IMU-aware CEM policy walks in every horizontal direction, turns, follows
-curves and stops smoothly. It was trained with the fast local MuJoCo/Metal
-simulator and independently checked in the original MuJoCo + BAM model:
-**26/26 validation cases pass**, with about **13.3 cm/s** at the normal command
-and **19.3 cm/s** at a faster command. The 40-second direction-change demo has
-0.084° RMS body tilt and no falls or non-foot ground contacts.
-
-[![128 independent spiders during actual training](assets/arachne-training-army.jpg)](assets/arachne-training-army.mp4)
-
-**[Watch the 128-spider training army](assets/arachne-training-army.mp4)** ·
-**[Watch walking, direction changes and turning](assets/arachne-learned-omni.mp4)** ·
-[Controller, objective, measured results and reproduction](training/README.md)
-
-The army uses real recorded states from distinct training candidates, arranged
-for display in independent cells. The solo demonstration uses full BAM physics.
-These are simulated gaits; hardware walking has not been validated.
-
-The [uneven-ground curriculum](training/TERRAIN.md) has passed 318 admission
-episodes through 4 mm obstacles. It keeps strict body-stability and smoothness
-gates, retains flat-ground walking, and stops before unmastered 8 mm obstacles.
-
-**BAM is activated by `simulate.py`. Loading the XML alone does not activate the servo model.** The supplied 12 V M6 parameter set is an approximation fitted to manufacturer torque and speed points, with friction and controller behavior inherited from BAM's identified 7.4 V STS3215 model. It is clearly versioned separately from the original. Read the [model assumptions](docs/bam-model.md) before using it for actuator studies.
-
-## Build it
-
-1. Print the **fit gauge** and one servo clamp. Check a real servo and both supplied horns.
-2. Check the measured 36.5 mm horn span, the 2.5/2.0 mm horn thicknesses, the dummy-side plugs, and the shaft clearance against the gauge.
-3. Print the structural parts, fit inserts, and build one complete leg.
-4. Assemble the six legs, dorsal compartment, electronics, and cable loops.
-5. Calibrate servo IDs, encoder offsets, and directions before applying motion.
-
-Start with the [build guide](docs/build-guide.md), [print BOM](print/print_bom.csv), and [hardware BOM](docs/hardware-bom.csv). All individual parts fit the Bambu Lab H2D. STLs use **millimetres** and must be sliced at **100% scale**.
-
-## Repository map
-
-| Path | Contents |
+| Folder | Contents |
 |---|---|
-| [`cad/`](cad) | Complete assembly STEP, unique-part STEP layout, individual STEP parts, dimensions and native-name mapping |
-| [`print/stl/`](print/stl) | 14 printable parts in bed-oriented poses |
-| [`simulation/`](simulation) | MJCF, BAM parameters, runtime, tests, joint map and local-frame meshes |
-| [`src/`](src) | CadQuery builder, CAD checks, MuJoCo exporter and rendering source |
-| [`tools/`](tools) | Real-robot tools: servo driver, calibration, live twin + browser simulation (`/sim`), motion scripts, Pi deploy |
-| [`docs/`](docs) | Build, simulation, actuator model, Onshape and development guides |
-| [`validation/`](validation) | CAD and mesh validation reports |
-| [`assets/`](assets) | Studio artwork, CAD renders and simulation media |
-| [`licenses/`](licenses) | Third-party license material |
+| [cad](cad) | Assembly, unique-part layout, individual STEP solids, dimensions and reference geometry |
+| [print](print) | Oriented STLs, print quantities and downloadable print pack |
+| [simulation](simulation) | MJCF, local-frame meshes, BAM parameters, runtime and validation |
+| [src](src) | Parametric CadQuery source, exporters, CAD checks and Onshape mate tooling |
+| [docs](docs) | English build, simulation, validation and development guides |
+| [training](training) | Updated model adapter and preserved historical RL work |
+| [tools](tools) | Real-robot tools: servo driver, calibration, live twin + browser simulation (`/sim`), motion scripts, Pi deploy |
 
-## Validation and project status
-
-The supplied geometry has **14/14 valid single-solid print parts**, **14/14 watertight single-component STLs**, a 1,152-point horn-bearing support check and a CAD check of 262 screw placements and screwdriver routes. Ninety-nine representative leg poses, an 18-pose paired-toe reach path, and 594 nominal connector/straight-exit positions were checked for hard-part interference. MuJoCo tests cover topology, all 18 joint axes, inertia, reset reproducibility, standing at three voltages, and a raised-base joint sweep. See [validation details](docs/validation.md) and the machine-readable reports.
-
-This is a **digitally checked prototype**. The cable sweep uses an estimated plug envelope based on the owner's servo photograph; physical plug fit, flexible cable routing, fatigue, loads and payload still require a one-leg prototype. The runtime includes standing, a grounded body-height exercise and a bench joint sweep; a walking controller is a next development step. The Onshape mating state is recorded separately in [the Onshape guide](docs/onshape.md).
-
-## Sources and attribution
-
-Mechanical dimensions and 12 V operating points come from Feetech documentation. The actuator model builds on [Rhoban/BAM](https://github.com/Rhoban/bam); the simulator uses [MuJoCo](https://github.com/google-deepmind/mujoco). See [sources and third-party notices](THIRD_PARTY_NOTICES.md). No project-wide open-source license has been selected; the included BAM material retains its Apache-2.0 license.
+Actuator modelling uses [Rhoban/BAM](https://github.com/Rhoban/bam); simulation uses [MuJoCo](https://github.com/google-deepmind/mujoco). See [third-party notices](THIRD_PARTY_NOTICES.md). No project-wide open-source license has been selected; bundled BAM material retains its Apache-2.0 license.

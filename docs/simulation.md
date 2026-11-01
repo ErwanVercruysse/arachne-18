@@ -1,135 +1,53 @@
-# Simulating ARACHNE in MuJoCo
+# Simulating v4
 
-[Back to the project](../README.md) · [BAM model](bam-model.md) · [Validation](validation.md)
+The canonical model is `simulation/arachne.xml`. It is a floating-base, 19-link robot with 18 hinges. The fixed-base model `arachne_fixed.xml` suspends the robot for joint sweeps; it is not used for the grounded animation.
 
-## Installation
+## Setup and checks
 
-Use **Python 3.12** and the pinned packages in `simulation/requirements.txt`. Run these commands from the repository root:
-
-```sh
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r simulation/requirements.txt
-python simulation/simulate.py --headless --seconds 10
-```
-
-On Windows, activate with `.venv\Scripts\activate` instead. A headless run prints the final joint positions, pre-friction motor torques, body position and contact count. The default command holds the CAD-neutral joint targets at 12 V.
-
-For an interactive viewer on macOS:
+Install Python 3.12 and `simulation/requirements.txt` in a virtual environment. No CAD software, Onshape access, API keys or Git LFS are needed to simulate the committed files.
 
 ```sh
-mjpython simulation/simulate.py --seconds 300
-```
-
-On Linux/Windows, use `python simulation/simulate.py --seconds 300`. MuJoCo's passive viewer requires `mjpython` on macOS because its GUI must run on the main thread.
-
-## Standing, bench motion and logs
-
-```sh
-# Floating robot with a nominal 3S supply
-python simulation/simulate.py --headless --voltage 11.1 --seconds 10 --log stand_run.json
-
-# Raised, fixed base for an 18-joint exercise
-mjpython simulation/simulate.py --fixed --mode sweep --seconds 300
-
-# Numerical regression checks
+python simulation/simulate.py --headless --seconds 10 --voltage 11.1
 python simulation/validate.py
+python simulation/grounded_demo.py --headless --seconds 10
 ```
 
-`stand` commands all 18 joints to zero. `sweep` uses a 6° amplitude, 0.25 Hz sinusoid with a two-second ramp. The fixed model raises the chassis by 180 mm so the feet are clear of the floor. Use the fixed model for this exercise; a fixed chassis at standing height would force the feet through the ground. Neither mode is a walking gait controller.
+For an interactive viewer use `mjpython simulation/grounded_demo.py --seconds 300` on macOS, or `python` on Linux/Windows. Run `python simulation/simulate.py --help` for standing and fixed-base sweep options. A window may need a working graphics driver; headless physics does not need a renderer.
 
-The optional log records state every 20 simulation steps. Time is in seconds, angles in radians, distances in metres, and torques in Nm. The torque field is named `torque_before_friction_Nm`: it is the motor torque sent to MuJoCo before the modeled joint friction acts.
+## Joint convention
 
-## Grounded body motion
+`joint_map.json` is authoritative. Servo IDs 1–18 follow `L1_yaw, L1_hip, L1_knee, L2_yaw, … L6_knee`. Coordinates use metres, kilograms, seconds and radians. +X is forward, +Z is up; the six leg roots lie at 45°, 90°, 135°, 225°, 270°, 315° around the body.
 
-The README animation uses the floating-base robot, not the raised test fixture. An inverse-kinematics target gently changes body height by ±8 mm at 0.25 Hz while preserving the nominal horizontal foot positions. BAM and MuJoCo solve the actual motion and floor contact. The recorded 10-second test maintains six foot contacts after settling and has no solver warnings. This is a body-height exercise, not a walking gait.
+All joint positions are **offsets from the assembled neutral pose**, not absolute servo encoder values. Neutral hip angle is +20° and knee angle is −85°. Coxa length is 62 mm, hip vertical offset −6.95 mm, and femur length 78 mm. In `q=0`, all CAD and MuJoCo link frames coincide; link axes are aligned with the world axes. Pitch axes are the local negative Y direction, expressed in world coordinates.
+
+| Joint | MuJoCo offset limits | Absolute mechanical angle |
+|---|---|---|
+| Front/rear yaw | 60° inward, 35° outward | Same as offset |
+| Middle yaw | ±35° | Same as offset |
+| Hip | −50° to +25° | −30° to +45° |
+| Knee | −20° to +100° | −105° to +15° |
+
+The front-pair toe-touch example has L1 yaw −57.50946°, L6 yaw +57.50946°, hip offset −40° and knee offset +85°. Rear uses L3 positive yaw and L4 negative yaw. The checked path linearly interpolates all three angles together from neutral over 13 samples. Keep the other legs neutral. Individual axis limits do not imply that every multi-leg combination is collision-free.
+
+## Actuation and contacts
+
+`simulate.Robot` runs BAM at a 1 ms timestep. `robot.step(target)` accepts 18 joint targets in radians, applies the approximate 12 V STS3215 firmware/motor/friction model and advances one physics tick. For a 50 Hz policy, hold the target for 20 ticks. Reset with `robot.reset()` so the firmware target and delay history reset too.
+
+The `arachne.xml` actuators accept **torque**, not position. Loading the XML in MuJoCo without the Python controller bypasses BAM; sending joint angles straight to those actuators is incorrect.
+
+Foot contacts use the convex hull of the actual TPU shoe meshes. A foot can generate multiple simultaneous contact points, so support checks count distinct feet rather than demanding exactly six points. The v4 grounded exercise produces 12 points on six feet in the tested run. The base is free and settles from 2 mm above the CAD sole plane.
+
+Servo cases have box collision proxies, the canopy an ellipsoid proxy, and lower links simplified capsules. Printed visual meshes are not all used for self-collision. These approximations cannot certify CAD clearance; use the CAD reports for that. Cables, TPU compliance, backlash and structural flex are not modelled. Total estimated mass is 2.333 kg; substitute actual sliced/measured part and payload masses before hardware transfer.
+
+The 12 V BAM approximation is retained unchanged from the prior release. See [actuator assumptions](bam-model.md).
+
+## Training compatibility
+
+`training/gait.py` now reads the v4 geometry from `joint_map.json`. `training/build_model.py` rebuilds the fast approximate training model with v4 inertias, limits and rotated shoe contact boxes. That model uses static BAM-derived coefficients and omits several effects of the full controller. Final policy evaluation should use `simulation/simulate.py`.
 
 ```sh
-# macOS viewer; use python instead on Linux/Windows
-mjpython simulation/grounded_demo.py --seconds 300
-python simulation/grounded_demo.py --headless --seconds 10 --report grounded_run.json
+python training/build_model.py
+python -m unittest discover -s training -p 'test_*.py'
 ```
 
-See [grounded validation](../simulation/grounded_validation.json) and [animation contact checks](../validation/grounded_animation.json).
-
-## Files
-
-| File | Purpose |
-|---|---|
-| `arachne.xml` | Floating base, ground plane, foot contacts |
-| `arachne_fixed.xml` | Raised static base for joint tests |
-| `meshes/` | 499 visual CAD meshes, including positioned hardware, in metres and link-local frames |
-| `joint_map.json` | Servo IDs, names, parent/child links, axes and limits |
-| `mass_properties.json` | Link mass, centre of mass, inertia and assumptions |
-| `simulate.py` | BAM initialization, target delay, integration, reset and viewer |
-| `validate.py` | Topology, kinematics, dynamics and repeatability checks |
-| `bam_sts3215_12v_approx_m6.json` | Provisional 12 V M6 model |
-| `bam_sts3215_7p4v_m6_original.json` | Unmodified upstream identification snapshot |
-| `fit_bam_12v.py` | Reproduces the 12 V parameter fit |
-| `simulation_validation.json` | Recorded validation results |
-
-These meshes are **not the print STLs**. Print meshes were rotated onto the bed and use mm; simulation meshes use SI and the correct link frames. Substituting one for the other will misplace or resize the robot.
-
-## Coordinates and joint targets
-
-The MJCF uses **m, kg, s, rad, N and Nm**. Nineteen rigid links collect the 499 positioned solids into one body and three moving links per leg. Screws, inserts and horns are assigned to their rigid link; they add no degrees of freedom.
-
-`q = 0` is the CAD neutral pose: the hip geometry is already inclined +15° and the knee is −80° relative to the femur. Joint values are offsets from that pose.
-
-| Joint | Servo IDs | Range relative to neutral | Neutral geometry |
-|---|---|---|---|
-| `L1_yaw`, `L4_yaw` | 1, 10 | −64° to +35° | Radial coxa |
-| `L2_yaw`, `L5_yaw` | 4, 13 | −35° to +35° | Radial coxa |
-| `L3_yaw`, `L6_yaw` | 7, 16 | −35° to +64° | Radial coxa |
-| `L1_hip` … `L6_hip` | 2, 5, 8, 11, 14, 17 | −35° to +15° | +15° above horizontal; absolute range −20° to +30° |
-| `L1_knee` … `L6_knee` | 3, 6, 9, 12, 15, 18 | −15° to +80° | −80° relative to femur; absolute range −95° to 0° |
-
-Leg azimuths are 45°, 90°, 135°, 225°, 270° and 315°. Yaw axes are +Z. Hip and knee axes are `[sin(azimuth), -cos(azimuth), 0]` in the neutral world frame; positive hip motion lifts the leg. See the JSON map for exact origins. Real servo encoder centres and directions still require hardware calibration.
-
-The wider numeric joint ranges allow a *coordinated* front/rear reach. From the neutral pose, smoothly interpolate L1/L6 yaw to −58.3°/+58.3°, both hip offsets to −35°, and both knee offsets to +80°. L3/L4 mirror the yaw signs. In the CAD, the TPU toes touch at the end of a nine-pose interpolated path while the hard parts stay separate. This is a reach test, not a walking gait or a proof that arbitrary target combinations inside the numeric limits are safe. At neutral hip/knee angles, turning both front legs inward to 64° causes knee-fork collisions.
-
-## Write a controller
-
-Save a controller beside `simulation/simulate.py`, or add that directory to your Python import path:
-
-```python
-import numpy as np
-from simulate import Robot
-
-robot = Robot(fixed=True, voltage=12.0)
-target = np.zeros(18)
-target[1] = np.deg2rad(5)  # L1 hip: 5 degrees above CAD neutral
-for _ in range(10000):
-    robot.step(target)
-
-q = robot.data.qpos[robot.controller.qpos_indexes]
-print(np.rad2deg(q))
-robot.reset()
-```
-
-Each `step()` checks the target shape, clamps joint limits, applies the inherited command delay, updates BAM and advances MuJoCo by **1 ms**. `reset()` resets both the MuJoCo state and BAM's firmware target smoothing.
-
-**Do not write target angles into `data.ctrl`.** The XML actuators are torque motors. BAM fills `data.ctrl` with motor torques; it is not a MuJoCo position-actuator interface. Opening the XML in a generic viewer gives the mechanism and geometry but does not load the BAM controller.
-
-A gait controller can generate the 18 target angles passed to `Robot.step()`. Use the joint map for inverse kinematics and a coordinated self-collision constraint in addition to the per-axis limits. Full multi-leg collision and stability studies remain future work.
-
-## Mass and contact assumptions
-
-The estimated total mass is **2.3934 kg**. Servo mass is 55 g each. Printed parts use an effective density of 700 kg/m³ and TPU 1000 kg/m³; the battery is assumed to weigh 190 g and the controller 45 g. Modeled steel screws and brass inserts use 7800 and 8500 kg/m³; 50 g of body wiring remains lumped. Replace those values with slicer estimates and measurements for load studies.
-
-CAD volume integrals supply centres of mass and inertia, scaled to these masses and combined with the parallel-axis theorem. Servo, battery and controller mass distributions are approximate.
-
-Detailed meshes are visual only. Contact uses 18 servo boxes, a chassis ellipsoid, tibia capsules and six foot spheres. These proxy shapes do not prove the detailed CAD is collision-free. Collision geoms are in group 3 and hidden by the supplied viewer; enable that group in MuJoCo to inspect them.
-
-## Rebuild and troubleshoot
-
-See [development](development.md) for CAD regeneration and export. After changing dimensions, update link origins, inertial assumptions, joint limits and collision proxies together, then rerun validation.
-
-| Symptom | Action |
-|---|---|
-| macOS viewer complains about the main thread | Launch with `mjpython` from the activated environment |
-| Robot falls after opening XML directly | Start `simulate.py`; plain XML loading does not activate BAM |
-| Meshes are huge, rotated or misplaced | Use the supplied simulation meshes, not the print STLs |
-| BAM API or smoothing attribute errors | Install the exact pinned requirements; upstream development API differs |
-| Headless graphics fails on a server | The normal headless physics test needs no renderer; image capture needs a supported GL backend |
-| New hardware differs from the prediction | Load a measured 12 V parameter file with `--parameters path/to/model.json` and update mass assumptions |
+These commands build and test; they do not train. All 17 geometry/controller/terrain tests passed for this release. Existing policy files and recorded results remain historical; no v4 locomotion performance has been established and no RL retraining was requested or performed. See [training history](../training/README.md).

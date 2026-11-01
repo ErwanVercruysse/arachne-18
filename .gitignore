@@ -18,3 +18,5 @@ simulation/*_run.json
 /assets/*.npz
 /training/results/*_frame.png
 /training/results/army_preview*
+
+/prototype/

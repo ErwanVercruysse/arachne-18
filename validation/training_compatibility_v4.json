@@ -1,0 +1,27 @@
+{
+  "revision": "v4",
+  "command": "python -m unittest discover -s training -p 'test_*.py'",
+  "tests": 17,
+  "passed": true,
+  "retrained": false,
+  "scope": "Kinematics, command bounds, jump clearance, terrain and obstacle unit tests; no locomotion performance claim",
+  "fast_model_stand_smoke": {
+    "duration_s": 4.999999999999671,
+    "final_base_xyz_m": [
+      1.3646622097084114e-07,
+      2.4455191098770827e-10,
+      0.0963712269269002
+    ],
+    "warnings": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "contacts": 12,
+    "backend": "standard MuJoCo; Metal execution not retested"
+  }
+}

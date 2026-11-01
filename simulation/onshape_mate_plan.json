@@ -1,2024 +1,1362 @@
 {
+  "revision": "v4",
   "documentId": "88edbeda4232642329938c14",
   "workspaceId": "19f5435855c2974f02fa7c68",
-  "elementId": "ea6ef29b6f90442d8a9d563b",
+  "elementId": "916e6d95108202647e946643",
+  "partStudioId": "d68fc9f6aee00c72d944de06",
   "fix": "01_CHASSIS",
   "instances": {
     "01_CHASSIS": {
-      "id": "Mt4JlnnUfgMfnowOF",
+      "id": "MDJ6jmrxg3REbHVL1",
       "partId": "JFD"
     },
-    "02_DORSAL_DECK": {
-      "id": "MECc353ump6DT7fJ2",
+    "02_CONTROLLER_CARRIER": {
+      "id": "M1RN0BakJUYKsHwjU",
       "partId": "JFH"
     },
-    "03_BATTERY_TRAY": {
-      "id": "Mek4cTkrv/omG1wZY",
+    "05_SHELL": {
+      "id": "M3XCaRm7KpIiC8jRW",
       "partId": "JFL"
     },
-    "04_CONTROLLER_PLATE": {
-      "id": "MNymH3pd+kTy9Du5X",
+    "REF_3S_BATTERY_115x40x35": {
+      "id": "MQYty/kR6CkGQBNRB",
       "partId": "JFP"
     },
-    "05_SHELL": {
-      "id": "M6fHHBqN0vpTwpvQn",
+    "REF_CONTROLLER_PCB_90x60": {
+      "id": "MwkT6LCtSZx4lWjbG",
       "partId": "JFT"
     },
-    "L1_coxa": {
-      "id": "Mb/Z4sXam3OqOQaxO",
-      "partId": "KF3C"
-    },
-    "L1_coxa_bottom": {
-      "id": "Mu4OqLbbOuComECot",
-      "partId": "KF7C"
-    },
-    "L1_femur": {
-      "id": "MQoOqeVKFibc0zOSc",
-      "partId": "KFHD"
-    },
-    "L1_femur_side_plate": {
-      "id": "MfDOkRYyCvzs0DTZ9",
-      "partId": "KFLD"
-    },
-    "L1_hip_clamp": {
-      "id": "MGxVWyNcLU9mbA8i6",
-      "partId": "KFDD"
-    },
-    "L1_hip_disc_min": {
-      "id": "Mo7a//jb5vOMwDP2g",
-      "partId": "KFLE"
-    },
-    "L1_hip_disc_plus": {
-      "id": "ML29K4lG7oYih2R7W",
-      "partId": "KFHE"
-    },
-    "L1_knee_clamp": {
-      "id": "MBUiQzhsYKCFXOv3y",
-      "partId": "KFTD"
-    },
-    "L1_knee_disc_min": {
-      "id": "MJT6FcCVrCt7u1Dsl",
-      "partId": "KFzE"
-    },
-    "L1_knee_disc_plus": {
-      "id": "MPoyR6zAXohvMritH",
-      "partId": "KFvE"
-    },
-    "L1_S01_YAW_STS3215": {
-      "id": "M5XJBX/E6sJH/Qiy+",
-      "partId": "KFvC"
-    },
-    "L1_S02_HIP_STS3215": {
-      "id": "M6EuT3YiAUBgiq1rD",
-      "partId": "KF/C"
-    },
-    "L1_S03_KNEE_STS3215": {
-      "id": "M816TFwaBCmLROeaS",
-      "partId": "KFPD"
-    },
-    "L1_tibia": {
-      "id": "MGjzba43duOSIP2rs",
-      "partId": "KFXD"
-    },
-    "L1_foot": {
-      "id": "MYTZ1XteXz9q35W9N",
-      "partId": "KFbD"
-    },
-    "L1_yaw_clamp": {
-      "id": "MJW2HyowYI1pfAC+t",
-      "partId": "KFzC"
-    },
-    "L2_coxa": {
-      "id": "Mqr/bRnHJJ1eq5B4g",
-      "partId": "KFnH"
-    },
-    "L2_coxa_bottom": {
-      "id": "MUVMEzcaHbprCO90i",
-      "partId": "KFrH"
-    },
-    "L2_femur": {
-      "id": "MuYxCoGIgFkmuvgSz",
-      "partId": "KF3H"
-    },
-    "L2_femur_side_plate": {
-      "id": "MUGr6fcXYDymn0NG0",
-      "partId": "KF7H"
-    },
-    "L2_hip_clamp": {
-      "id": "M9WOLHiIL43ccuBpN",
-      "partId": "KFzH"
-    },
-    "L2_knee_clamp": {
-      "id": "M5crg7NO3b09jCOwy",
-      "partId": "KFDI"
-    },
-    "L2_S04_YAW_STS3215": {
-      "id": "MXA9cng9jjwU5KcOv",
-      "partId": "KFfH"
-    },
-    "L2_S05_HIP_STS3215": {
-      "id": "MYugAL186IacW7cMT",
-      "partId": "KFvH"
-    },
-    "L2_S06_KNEE_STS3215": {
-      "id": "MLSYIf3c0Cmc3Yijm",
-      "partId": "KF/H"
-    },
-    "L2_tibia": {
-      "id": "MtEmMJadJWPuZIQ4S",
-      "partId": "KFHI"
-    },
-    "L2_foot": {
-      "id": "MHqmxhIYeVoNE6OUU",
-      "partId": "KFLI"
-    },
-    "L2_yaw_clamp": {
-      "id": "M7ySF3EH/Wz//be0O",
-      "partId": "KFjH"
-    },
-    "L6_yaw_disc_plus": {
-      "id": "M4ZTYEYGwlSlQAjuW",
-      "partId": "KFPb"
-    },
-    "L1_yaw_disc_plus": {
-      "id": "MyXLH/z49mn7MmiYC",
-      "partId": "KFfD"
-    },
-    "L3_coxa": {
-      "id": "MOZhXg/mVM5WCf4E3",
-      "partId": "KFXM"
-    },
-    "L3_coxa_bottom": {
-      "id": "MIQBGFkbatA41U3tL",
-      "partId": "KFbM"
-    },
-    "L3_femur": {
-      "id": "Meo2uBmYnUzC/dzmh",
-      "partId": "KFnM"
-    },
-    "L3_femur_side_plate": {
-      "id": "MH59ye0tvRuRWOnq4",
-      "partId": "KFrM"
-    },
-    "L3_hip_clamp": {
-      "id": "MghPkwQQ+x+fJlTLA",
-      "partId": "KFjM"
-    },
-    "L3_hip_disc_min": {
-      "id": "M7WDXQM3xYNyRF/Dh",
-      "partId": "KFrN"
-    },
-    "L3_hip_disc_plus": {
-      "id": "MKRl11b2VEutyBylS",
-      "partId": "KFnN"
-    },
-    "L3_knee_clamp": {
-      "id": "MzJGFVbxro+aCbzf3",
-      "partId": "KFzM"
-    },
-    "L3_knee_disc_min": {
-      "id": "M2Nr2836GJ/P6h1r0",
-      "partId": "KFTO"
-    },
-    "L3_knee_disc_plus": {
-      "id": "M8eMJDJlsX/WrblKP",
-      "partId": "KFPO"
-    },
-    "L3_S07_YAW_STS3215": {
-      "id": "M4Q+1vyhzXGinAWjX",
-      "partId": "KFPM"
-    },
-    "L3_S08_HIP_STS3215": {
-      "id": "MjF05XGd2THVQDUU8",
-      "partId": "KFfM"
-    },
-    "L3_S09_KNEE_STS3215": {
-      "id": "MYsTzfeMdcYBXukA7",
-      "partId": "KFvM"
-    },
-    "L3_tibia": {
-      "id": "MIu2pKbXS5Mt08ilU",
-      "partId": "KF3M"
-    },
-    "L3_foot": {
-      "id": "MVA1VHHL8OwZhzbZl",
-      "partId": "KF7M"
-    },
-    "L3_yaw_clamp": {
-      "id": "Mn/EH5pDtiXDSIExY",
-      "partId": "KFTM"
-    },
-    "L5_yaw_disc_plus": {
-      "id": "MoXpeKCVHrUbMK37o",
-      "partId": "KFfW"
-    },
-    "L2_yaw_disc_plus": {
-      "id": "MOZo1fBD4b36I+oxL",
-      "partId": "KFPI"
-    },
-    "L4_coxa": {
-      "id": "MitnodB6Kwb0Y85Lp",
-      "partId": "KFHR"
-    },
-    "L4_coxa_bottom": {
-      "id": "MF6q1Qi6TnxApgHQV",
-      "partId": "KFLR"
-    },
-    "L4_femur": {
-      "id": "M2KCqbex9qIGW1ZFV",
-      "partId": "KFXR"
-    },
-    "L4_femur_side_plate": {
-      "id": "MSMfEMUD/qHuf6p7F",
-      "partId": "KFbR"
-    },
-    "L4_hip_clamp": {
-      "id": "Mpy5UuIt7F/PFudvl",
-      "partId": "KFTR"
-    },
-    "L4_hip_disc_min": {
-      "id": "MlkJjfL4v9y18jz18",
-      "partId": "KFbS"
-    },
-    "L4_hip_disc_plus": {
-      "id": "MBF/Fqd8szbfWh81g",
-      "partId": "KFXS"
-    },
-    "L4_knee_clamp": {
-      "id": "MydNvDYrFxKR7rWxB",
-      "partId": "KFjR"
-    },
-    "L4_knee_disc_min": {
-      "id": "MQvBOlekMVwmECllw",
-      "partId": "KFDT"
-    },
-    "L4_knee_disc_plus": {
-      "id": "MJYryjJzXJcC4FKmj",
-      "partId": "KF/S"
-    },
-    "L4_S10_YAW_STS3215": {
-      "id": "M6YxP4sCSRERPdedx",
-      "partId": "KF/Q"
-    },
-    "L4_S11_HIP_STS3215": {
-      "id": "MVeHFKMZe/YjkjfHy",
-      "partId": "KFPR"
-    },
-    "L4_S12_KNEE_STS3215": {
-      "id": "MELQ6HRvb7ma+kt0T",
-      "partId": "KFfR"
-    },
-    "L4_tibia": {
-      "id": "MaNBaXeSPCvOuugNs",
-      "partId": "KFnR"
-    },
-    "L4_foot": {
-      "id": "M+pNmObOTRrDI1yLK",
-      "partId": "KFrR"
-    },
-    "L4_yaw_clamp": {
-      "id": "MPvaSIQXd8NVCBaXu",
-      "partId": "KFDR"
-    },
-    "L5_coxa": {
-      "id": "MVG3/D2irNVw2xMms",
-      "partId": "KF3V"
-    },
-    "L5_coxa_bottom": {
-      "id": "MV/txkxBCiTta+vtu",
-      "partId": "KF7V"
-    },
-    "L5_femur": {
-      "id": "MNTKDb3xTzUCrqbdW",
-      "partId": "KFHW"
-    },
-    "L5_femur_side_plate": {
-      "id": "MPyGAGnhUuK7agJ39",
-      "partId": "KFLW"
-    },
-    "L5_hip_clamp": {
-      "id": "MhhxJd9B9oLc8v8pN",
-      "partId": "KFDW"
-    },
-    "L5_knee_clamp": {
-      "id": "MKiinQcyJ14M07R4P",
-      "partId": "KFTW"
-    },
-    "L5_S13_YAW_STS3215": {
-      "id": "M27475hrV51pK/m4P",
-      "partId": "KFvV"
-    },
-    "L5_S14_HIP_STS3215": {
-      "id": "M4xvwIUWvdlyfJil8",
-      "partId": "KF/V"
-    },
-    "L5_S15_KNEE_STS3215": {
-      "id": "ME7glskZ15DTUUFW3",
-      "partId": "KFPW"
-    },
-    "L5_tibia": {
-      "id": "M72ucmpUWOiuhuRs6",
-      "partId": "KFXW"
-    },
-    "L5_foot": {
-      "id": "M5gVNgSCJc2ocXdFx",
-      "partId": "KFbW"
-    },
-    "L5_yaw_clamp": {
-      "id": "Mt6qauacvOQCCvPgQ",
-      "partId": "KFzV"
-    },
-    "L3_yaw_disc_plus": {
-      "id": "MZs4uFwpdRvetK7o4",
-      "partId": "KF/M"
-    },
-    "L4_yaw_disc_plus": {
-      "id": "MllgXxuUOilHuAqr8",
-      "partId": "KFvR"
-    },
-    "L6_coxa": {
-      "id": "MYduqzDiUKFYpQ5Cg",
-      "partId": "KFna"
-    },
-    "L6_coxa_bottom": {
-      "id": "MY/k1b1MyaRiUHUp8",
-      "partId": "KFra"
-    },
-    "L6_femur": {
-      "id": "MS+ER5ibK7elazKSR",
-      "partId": "KF3a"
-    },
-    "L6_femur_side_plate": {
-      "id": "Mrq3uYML0w9qe+7Xa",
-      "partId": "KF7a"
-    },
-    "L6_hip_clamp": {
-      "id": "MQ+eOTP5RKAIqD8aF",
-      "partId": "KFza"
-    },
-    "L6_hip_disc_min": {
-      "id": "McoURA50xeWu7GMoO",
-      "partId": "KF7b"
-    },
-    "L6_hip_disc_plus": {
-      "id": "MdD8P5lxhMmwtaQQK",
-      "partId": "KF3b"
-    },
-    "L6_knee_clamp": {
-      "id": "MQI4g7Iq7PhMZ5cuy",
-      "partId": "KFDb"
-    },
-    "L6_knee_disc_min": {
-      "id": "M57VHeuVr7J564TJn",
-      "partId": "KFjc"
-    },
-    "L6_knee_disc_plus": {
-      "id": "MhWguOxDat5nSqHj7",
-      "partId": "KFfc"
-    },
-    "L6_S16_YAW_STS3215": {
-      "id": "MZRINPsrhdAvt67RA",
-      "partId": "KFfa"
-    },
-    "L6_S17_HIP_STS3215": {
-      "id": "MJ3+fURHQpnwi7WES",
-      "partId": "KFva"
-    },
-    "L6_S18_KNEE_STS3215": {
-      "id": "MxKPd3PK85pFUk5Op",
-      "partId": "KF/a"
-    },
-    "L6_tibia": {
-      "id": "MH8eWmxxxHUCgcQfS",
-      "partId": "KFHb"
-    },
-    "L6_foot": {
-      "id": "M0rP40g1hsihvgDEL",
-      "partId": "KFLb"
-    },
-    "L6_yaw_clamp": {
-      "id": "Myc0NPlc1vUFVzNgd",
-      "partId": "KFja"
-    },
-    "PCB_spacer_-32_-24": {
-      "id": "MgFU1L9TANwzz3kgV",
-      "partId": "JFf"
-    },
-    "PCB_spacer_-32_24": {
-      "id": "Mv5VFIMCpBRJqrEpb",
-      "partId": "JFj"
-    },
-    "PCB_spacer_32_-24": {
-      "id": "MaPVw3kmCO0zXya4y",
-      "partId": "JFn"
-    },
-    "PCB_spacer_32_24": {
-      "id": "MCycCygFLb+OG9gUd",
-      "partId": "JFr"
-    },
-    "REF_3S_BATTERY_115x40x35": {
-      "id": "MCLfCgvDHjPXwDkvV",
+    "REF_CONTROLLER_COMPONENTS": {
+      "id": "MqVaRN1kLLGFsfA6P",
       "partId": "JFX"
     },
-    "REF_CONTROLLER_90x60x18": {
-      "id": "MrIjiZ11AVMIRRaho",
+    "BODY_carrier_insert_-64_-25": {
+      "id": "MA+zU+yqkX4B2XZi6",
       "partId": "JFb"
     },
-    "BODY_deck_M3x8_-68_-18": {
-      "id": "MofPZ9uBUznGB7DAU",
+    "BODY_carrier_M3x10_-64_-25": {
+      "id": "MLjM3n7+LUTOdoiFP",
+      "partId": "JFf"
+    },
+    "BODY_carrier_insert_-64_25": {
+      "id": "MdsytWiLoJQrqNPiy",
+      "partId": "JFj"
+    },
+    "BODY_carrier_M3x10_-64_25": {
+      "id": "MrORC/LP3XIRAURjU",
+      "partId": "JFn"
+    },
+    "BODY_carrier_insert_64_-25": {
+      "id": "MQh2lwQKtuivzA4R8",
+      "partId": "JFr"
+    },
+    "BODY_carrier_M3x10_64_-25": {
+      "id": "MC4qd79g+LEKGRX7C",
       "partId": "JFv"
     },
-    "BODY_deck_RXM3x5p7_-68_-18": {
-      "id": "MoJM9r5bptWCrpFS7",
+    "BODY_carrier_insert_64_25": {
+      "id": "MnVxmqOVzvaQuUjuj",
       "partId": "JFz"
     },
-    "BODY_deck_M3x8_-68_18": {
-      "id": "MU704Yn6FVtg6xhv5",
+    "BODY_carrier_M3x10_64_25": {
+      "id": "MYYBpfslFmX12vxJh",
       "partId": "JF3"
     },
-    "BODY_deck_RXM3x5p7_-68_18": {
-      "id": "Mn4ezwojCZSwEmqJf",
+    "BODY_cover_insert_-68_0": {
+      "id": "MjaKXP3BFXdX8LT1h",
       "partId": "JF7"
     },
-    "BODY_deck_M3x8_68_-18": {
-      "id": "M8WR264xMoX+ebmVV",
+    "BODY_cover_M3x10_-68_0": {
+      "id": "MZKQjACKmBn8a9Gq9",
       "partId": "JF/"
     },
-    "BODY_deck_RXM3x5p7_68_-18": {
-      "id": "MMi+t/RNq/b8mN30u",
+    "BODY_cover_insert_68_0": {
+      "id": "MwV/+CuG2gD7/MkpA",
       "partId": "KFDB"
     },
-    "BODY_deck_M3x8_68_18": {
-      "id": "MoniI/S48uJVge0Pn",
+    "BODY_cover_M3x10_68_0": {
+      "id": "MPHKJPOjPXmTA4bKz",
       "partId": "KFHB"
     },
-    "BODY_deck_RXM3x5p7_68_18": {
-      "id": "MFN+K5wW453bmfAwc",
+    "BODY_PCB_standoff_-32_-24": {
+      "id": "M9yu4d0dLmrOYsfs4",
       "partId": "KFLB"
     },
-    "BODY_tray_M3x8_-32_-30": {
-      "id": "M3t4BeNEJ75d8HUpk",
+    "BODY_PCB_insert_-32_-24": {
+      "id": "MkrZ/kafbhKtHt0av",
       "partId": "KFPB"
     },
-    "BODY_tray_RXM3x5p7_-32_-30": {
-      "id": "Mb7oYEoyTdzW4UCpt",
+    "BODY_PCB_M3x12_-32_-24": {
+      "id": "MWxPXZ9Zs1XEcwvGN",
       "partId": "KFTB"
     },
-    "BODY_tray_M3x8_-32_30": {
-      "id": "MwbYw6jiXA6p5U3oD",
+    "BODY_PCB_standoff_-32_24": {
+      "id": "MQx2hXA5gBfj/5CC1",
       "partId": "KFXB"
     },
-    "BODY_tray_RXM3x5p7_-32_30": {
-      "id": "MSbeqWWlNgrgA5DnD",
+    "BODY_PCB_insert_-32_24": {
+      "id": "M8h+Lg3CUGTIUy9br",
       "partId": "KFbB"
     },
-    "BODY_tray_M3x8_32_-30": {
-      "id": "M+afFlSyg2YOlly0W",
+    "BODY_PCB_M3x12_-32_24": {
+      "id": "MFYO0Jb9s2xwlzw1I",
       "partId": "KFfB"
     },
-    "BODY_tray_RXM3x5p7_32_-30": {
-      "id": "MekhyHfo4YKaVJoCy",
+    "BODY_PCB_standoff_32_-24": {
+      "id": "MgmpUT3k9EPEPUUvb",
       "partId": "KFjB"
     },
-    "BODY_tray_M3x8_32_30": {
-      "id": "MhzX8YZp3cBi5QLky",
+    "BODY_PCB_insert_32_-24": {
+      "id": "MI7H9KE9WkgCUE2Cc",
       "partId": "KFnB"
     },
-    "BODY_tray_RXM3x5p7_32_30": {
-      "id": "MA5XseYDMKVXOrp87",
+    "BODY_PCB_M3x12_32_-24": {
+      "id": "MPeuQtJErr4peRyhR",
       "partId": "KFrB"
     },
-    "BODY_controller_M3x8_-48_-31": {
-      "id": "M0u52KsbhsV6EYtlH",
+    "BODY_PCB_standoff_32_24": {
+      "id": "Mikb+/fJqz5MSAC7U",
       "partId": "KFvB"
     },
-    "BODY_controller_RXM3x5p7_-48_-31": {
-      "id": "MLPmPg+99Ls4IzT3N",
+    "BODY_PCB_insert_32_24": {
+      "id": "MK8s9Ql2W6LCuvjaA",
       "partId": "KFzB"
     },
-    "BODY_controller_M3x8_-48_31": {
-      "id": "MaoYuFbuy0HgusUTw",
+    "BODY_PCB_M3x12_32_24": {
+      "id": "MYXSPXibSRh13MiIe",
       "partId": "KF3B"
     },
-    "BODY_controller_RXM3x5p7_-48_31": {
-      "id": "MPn8sGdZjPlHaR2Es",
+    "L1_coxa": {
+      "id": "M7CBUCgaeKxioA6MV",
       "partId": "KF7B"
     },
-    "BODY_controller_M3x8_48_-31": {
-      "id": "MpdnMNG+PsIfILb5n",
+    "L1_femur": {
+      "id": "MBNZlQlZPHYewiSOL",
       "partId": "KF/B"
     },
-    "BODY_controller_RXM3x5p7_48_-31": {
-      "id": "MCn3h2Ux5RX4RcBMP",
+    "L1_tibia": {
+      "id": "MoHBH2MZIZ2bxa3ir",
       "partId": "KFDC"
     },
-    "BODY_controller_M3x8_48_31": {
-      "id": "MhHHODbdpHyy3z/sG",
+    "L1_foot": {
+      "id": "MAf8IVALCwodcmiVg",
       "partId": "KFHC"
     },
-    "BODY_controller_RXM3x5p7_48_31": {
-      "id": "MuP5leIQMy4he2JtC",
+    "L1_YAW_STS3215": {
+      "id": "MMUlbcoTQzhAtPZFP",
       "partId": "KFLC"
     },
-    "BODY_shell_M3x8_-40_-42": {
-      "id": "Mj9Xnh68lHsWiNnx5",
+    "L1_HIP_STS3215": {
+      "id": "Mu3dA0++OmIUmRlU/",
       "partId": "KFPC"
     },
-    "BODY_shell_RXM3x5p7_-40_-42": {
-      "id": "MoDrSgZJ8G6FIuk+r",
+    "L1_KNEE_STS3215": {
+      "id": "MuPCsvguFU5pcY0jf",
       "partId": "KFTC"
     },
-    "BODY_shell_M3x8_-40_42": {
-      "id": "M4q6OGItV4djluhRm",
+    "L1_yaw_horn_-1": {
+      "id": "MXPCdxcBKS+QjWPvA",
       "partId": "KFXC"
     },
-    "BODY_shell_RXM3x5p7_-40_42": {
-      "id": "MBEGXqHeItMGaAoZB",
+    "L1_yaw_M3x6_-1_1": {
+      "id": "Mfm34Fcpc39TffpkF",
       "partId": "KFbC"
     },
-    "BODY_shell_M3x8_40_-42": {
-      "id": "MXnQEKDGQglOJ0zpC",
+    "L1_yaw_M3x6_-1_2": {
+      "id": "MJM9ILEdw5GobG8ou",
       "partId": "KFfC"
     },
-    "BODY_shell_RXM3x5p7_40_-42": {
-      "id": "Mw83YsLGEXyX1W2PP",
+    "L1_yaw_M3x6_-1_3": {
+      "id": "MmtxzgZRUJJ2mtLvN",
       "partId": "KFjC"
     },
-    "BODY_shell_M3x8_40_42": {
-      "id": "Mdw4FPbUbXM79vSoc",
+    "L1_yaw_M3x6_-1_4": {
+      "id": "MucBMnvlkE3dCfSTC",
       "partId": "KFnC"
     },
-    "BODY_shell_RXM3x5p7_40_42": {
-      "id": "MS65IAO/fIo+3S+54",
+    "L1_yaw_horn_1": {
+      "id": "MuGlSPueSKuqmR3Au",
       "partId": "KFrC"
     },
-    "L1_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MzdMVw6xOLdDxNK6s",
-      "partId": "KFXF"
-    },
-    "L1_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "Md4jBBfE/sdbLA/5Y",
-      "partId": "KFbF"
-    },
-    "L1_yaw_clamp_M3x8_-31_18.3": {
-      "id": "M1FvbqnzQAdpyQcde",
-      "partId": "KFfF"
-    },
-    "L1_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MEJl9LISj39Ssedum",
-      "partId": "KFjF"
-    },
-    "L1_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "MdKKR8vvQ5oLgzr66",
-      "partId": "KFnF"
-    },
-    "L1_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MfFJnkvnRqSXQuwJD",
-      "partId": "KFrF"
-    },
-    "L1_yaw_clamp_M3x8_-20_18.3": {
-      "id": "Ms5CsZ2AIWyuy8TUm",
-      "partId": "KFvF"
-    },
-    "L1_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MEwaI6S6J9Ew7yvy1",
-      "partId": "KFzF"
-    },
-    "L1_hip_clamp_M3x8_-31_-18.3": {
-      "id": "M4deN2bLr10dr1ezG",
-      "partId": "KF3F"
-    },
-    "L1_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "Mh87xrfzvLE88etHt",
-      "partId": "KF7F"
-    },
-    "L1_hip_clamp_M3x8_-31_18.3": {
-      "id": "MEWHCy+9PaPGwn2go",
-      "partId": "KF/F"
-    },
-    "L1_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MvFH1Pjur/iXiEpJk",
-      "partId": "KFDG"
-    },
-    "L1_hip_clamp_M3x8_-20_-18.3": {
-      "id": "MseS0HZtjvWYM99NX",
-      "partId": "KFHG"
-    },
-    "L1_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MSYOQTZZmBwGbcAVv",
-      "partId": "KFLG"
-    },
-    "L1_hip_clamp_M3x8_-20_18.3": {
-      "id": "MXG/X8+Vu+A2SZ3AA",
-      "partId": "KFPG"
-    },
-    "L1_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M/zLesOmHCsVNE79W",
-      "partId": "KFTG"
-    },
-    "L1_knee_clamp_M3x8_-31_-18.3": {
-      "id": "Mg5Hjl2RVkqF5KmS5",
-      "partId": "KFXG"
-    },
-    "L1_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MrhkvZGva8scaAkAC",
-      "partId": "KFbG"
-    },
-    "L1_knee_clamp_M3x8_-31_18.3": {
-      "id": "M0BDuhUPG1hOHYrAH",
-      "partId": "KFfG"
-    },
-    "L1_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MPfC4GHsGJYdytcA7",
-      "partId": "KFjG"
-    },
-    "L1_knee_clamp_M3x8_-20_-18.3": {
-      "id": "MYPzb6OhZEIFXYvCM",
-      "partId": "KFnG"
-    },
-    "L1_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MfABLiGg531YVw883",
-      "partId": "KFrG"
-    },
-    "L1_knee_clamp_M3x8_-20_18.3": {
-      "id": "MB9Q9Xg/icp5b4KxW",
-      "partId": "KFvG"
-    },
-    "L1_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MCwvjiu5CXksV1+Cv",
-      "partId": "KFzG"
-    },
-    "L1_coxa_join_M3x10_-7": {
-      "id": "MXygVYjuePPgw6dRl",
-      "partId": "KF3G"
-    },
-    "L1_coxa_join_RXM3x5p7_-7": {
-      "id": "MgH3wXpGzroZWyZAK",
-      "partId": "KF7G"
-    },
-    "L1_coxa_join_M3x10_7": {
-      "id": "MXPSKHo/5trN+cOjd",
-      "partId": "KF/G"
-    },
-    "L1_coxa_join_RXM3x5p7_7": {
-      "id": "MAMH39Xk++Y2XCJ+2",
-      "partId": "KFDH"
-    },
-    "L1_femur_join_M3x10_10": {
-      "id": "Mz8VE7OEWbFhcAdGl",
-      "partId": "KFHH"
-    },
-    "L1_femur_join_RXM3x5p7_10": {
-      "id": "Mp6ZvhIMBGouzox0Q",
-      "partId": "KFLH"
-    },
-    "L1_femur_join_M3x10_-8": {
-      "id": "Mtvd5T7/hnLOOgOuA",
-      "partId": "KFPH"
-    },
-    "L1_femur_join_RXM3x5p7_-8": {
-      "id": "M56tqITL10O1vLcyX",
-      "partId": "KFTH"
-    },
-    "L1_foot_M3x25": {
-      "id": "MVopKp1kC0+mr1nBr",
-      "partId": "KFXH"
-    },
-    "L1_foot_M3_locknut": {
-      "id": "MkP1Zou6A1LS2R6ED",
-      "partId": "KFbH"
-    },
-    "L2_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MyMLkYsYvsPmABAM4",
-      "partId": "KFHK"
-    },
-    "L2_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MZEiuxhJAmb2ayAEY",
-      "partId": "KFLK"
-    },
-    "L2_yaw_clamp_M3x8_-31_18.3": {
-      "id": "MtPKCZgtY0Pjg7SUN",
-      "partId": "KFPK"
-    },
-    "L2_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "M7wCa4dz2OskIl1wI",
-      "partId": "KFTK"
-    },
-    "L2_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "Mzf/nwDG7tXujObrO",
-      "partId": "KFXK"
-    },
-    "L2_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MxKPjtpjquaQRAjdM",
-      "partId": "KFbK"
-    },
-    "L2_yaw_clamp_M3x8_-20_18.3": {
-      "id": "MfUKJ6YCG2nsbYHOn",
-      "partId": "KFfK"
-    },
-    "L2_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M740gmpw9UnPu3iqz",
-      "partId": "KFjK"
-    },
-    "L2_hip_clamp_M3x8_-31_-18.3": {
-      "id": "MOzktXDhxZS+QVJuR",
-      "partId": "KFnK"
-    },
-    "L2_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MzoqvUbpBwOMQofNX",
-      "partId": "KFrK"
-    },
-    "L2_hip_clamp_M3x8_-31_18.3": {
-      "id": "MWJvcMBhhWyCVt/ty",
-      "partId": "KFvK"
-    },
-    "L2_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "Mw6M9flE5J8b/UvnD",
-      "partId": "KFzK"
-    },
-    "L2_hip_clamp_M3x8_-20_-18.3": {
-      "id": "MuIONI8gUUFKvTpoQ",
-      "partId": "KF3K"
-    },
-    "L2_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "M7xG8Cxh2grwnfHup",
-      "partId": "KF7K"
-    },
-    "L2_hip_clamp_M3x8_-20_18.3": {
-      "id": "MVqNcVoa4IwDCHFS8",
-      "partId": "KF/K"
-    },
-    "L2_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "McLYl2B8TBFTdHjvC",
-      "partId": "KFDL"
-    },
-    "L2_knee_clamp_M3x8_-31_-18.3": {
-      "id": "M1aDPTomBWwmELiEl",
-      "partId": "KFHL"
-    },
-    "L2_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MSwPOhyYmAr73a9zz",
-      "partId": "KFLL"
-    },
-    "L2_knee_clamp_M3x8_-31_18.3": {
-      "id": "MCg5dYd9wq4MhI3kA",
-      "partId": "KFPL"
-    },
-    "L2_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "Mr1SWFoAx51hqZjoj",
-      "partId": "KFTL"
-    },
-    "L2_knee_clamp_M3x8_-20_-18.3": {
-      "id": "MyUGll3zIMA8ot2lN",
-      "partId": "KFXL"
-    },
-    "L2_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MEDfvZK0JvOsEuebo",
-      "partId": "KFbL"
-    },
-    "L2_knee_clamp_M3x8_-20_18.3": {
-      "id": "MFsqmQlNvztnwhTlx",
-      "partId": "KFfL"
-    },
-    "L2_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MSQjINxPQ1JMkHti0",
-      "partId": "KFjL"
-    },
-    "L2_coxa_join_M3x10_-7": {
-      "id": "MjO6ypar7gJLvqsR2",
-      "partId": "KFnL"
-    },
-    "L2_coxa_join_RXM3x5p7_-7": {
-      "id": "MfCDBTFSOm92mC43f",
-      "partId": "KFrL"
-    },
-    "L2_coxa_join_M3x10_7": {
-      "id": "M3LRdFnRwWESlJ3bj",
-      "partId": "KFvL"
-    },
-    "L2_coxa_join_RXM3x5p7_7": {
-      "id": "METGlkUO5+KUWm1Wi",
-      "partId": "KFzL"
-    },
-    "L2_femur_join_M3x10_10": {
-      "id": "MEV4u3RrTseXwDmOg",
-      "partId": "KF3L"
-    },
-    "L2_femur_join_RXM3x5p7_10": {
-      "id": "MM5PO58xS7/MztfFQ",
-      "partId": "KF7L"
-    },
-    "L2_femur_join_M3x10_-8": {
-      "id": "MgVNUokxvSueTXgIa",
-      "partId": "KF/L"
-    },
-    "L2_femur_join_RXM3x5p7_-8": {
-      "id": "MAN7GwYnC/eDnm0C2",
-      "partId": "KFDM"
-    },
-    "L2_foot_M3x25": {
-      "id": "MKgzRdyfyj1YweYmS",
-      "partId": "KFHM"
-    },
-    "L2_foot_M3_locknut": {
-      "id": "Mf7gStJGTeI0oXDqS",
-      "partId": "KFLM"
-    },
-    "L3_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MiO9MSgGpGAoWnAul",
-      "partId": "KF3O"
-    },
-    "L3_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MSRwQ/u8Qk1/frjLM",
-      "partId": "KF7O"
-    },
-    "L3_yaw_clamp_M3x8_-31_18.3": {
-      "id": "MbUSYciB20RXsNTpj",
-      "partId": "KF/O"
-    },
-    "L3_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MkC9eLjaj9eiYLcq3",
-      "partId": "KFDP"
-    },
-    "L3_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "M7ppeSawtQtCRNdyc",
-      "partId": "KFHP"
-    },
-    "L3_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "Me2jm2fK0CXloDN4E",
-      "partId": "KFLP"
-    },
-    "L3_yaw_clamp_M3x8_-20_18.3": {
-      "id": "MfhOyI8Cs9fPihn/r",
-      "partId": "KFPP"
-    },
-    "L3_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MMnLn7ozb8MuWXMzB",
-      "partId": "KFTP"
-    },
-    "L3_hip_clamp_M3x8_-31_-18.3": {
-      "id": "McIcWhymLfFuAYCL4",
-      "partId": "KFXP"
-    },
-    "L3_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MO6oMcYIXkDplfv6Y",
-      "partId": "KFbP"
-    },
-    "L3_hip_clamp_M3x8_-31_18.3": {
-      "id": "Mrl6jx8zYx9VUfte0",
-      "partId": "KFfP"
-    },
-    "L3_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MAqm1416+q+0r0glH",
-      "partId": "KFjP"
-    },
-    "L3_hip_clamp_M3x8_-20_-18.3": {
-      "id": "McIs6fgcVp7fwCOFF",
-      "partId": "KFnP"
-    },
-    "L3_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MfEwa+s4id4nYNguB",
-      "partId": "KFrP"
-    },
-    "L3_hip_clamp_M3x8_-20_18.3": {
-      "id": "MONCMr8C+0olJZkZl",
-      "partId": "KFvP"
-    },
-    "L3_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M4yJMiHkt9LUDSap6",
-      "partId": "KFzP"
-    },
-    "L3_knee_clamp_M3x8_-31_-18.3": {
-      "id": "MxP9HaWjEp/dpun41",
-      "partId": "KF3P"
-    },
-    "L3_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MQ8Ny4jA9KEL4AFRV",
-      "partId": "KF7P"
-    },
-    "L3_knee_clamp_M3x8_-31_18.3": {
-      "id": "MxOXDrV+TcWQq2qCO",
-      "partId": "KF/P"
-    },
-    "L3_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MBBrN7mq34pO8gH27",
-      "partId": "KFDQ"
-    },
-    "L3_knee_clamp_M3x8_-20_-18.3": {
-      "id": "MZy2fhLeao2rs/pws",
-      "partId": "KFHQ"
-    },
-    "L3_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MOSExww6LWKcrJyVx",
-      "partId": "KFLQ"
-    },
-    "L3_knee_clamp_M3x8_-20_18.3": {
-      "id": "MUGKSX8TrjXz7ObTM",
-      "partId": "KFPQ"
-    },
-    "L3_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MUYmHfKyj+C1iAuor",
-      "partId": "KFTQ"
-    },
-    "L3_coxa_join_M3x10_-7": {
-      "id": "M7IHlT0OEqOvWlnKn",
-      "partId": "KFXQ"
-    },
-    "L3_coxa_join_RXM3x5p7_-7": {
-      "id": "MOoU3Y6bynl6oY8am",
-      "partId": "KFbQ"
-    },
-    "L3_coxa_join_M3x10_7": {
-      "id": "MiGCQ6DVjDk22/ZEr",
-      "partId": "KFfQ"
-    },
-    "L3_coxa_join_RXM3x5p7_7": {
-      "id": "MZW3TUSQfDA5QE3HJ",
-      "partId": "KFjQ"
-    },
-    "L3_femur_join_M3x10_10": {
-      "id": "MagbUrJixf2G9byG2",
-      "partId": "KFnQ"
-    },
-    "L3_femur_join_RXM3x5p7_10": {
-      "id": "M33uhUa+iwwtQUfsy",
-      "partId": "KFrQ"
-    },
-    "L3_femur_join_M3x10_-8": {
-      "id": "MCfG+ceAlTxpvu7lT",
-      "partId": "KFvQ"
-    },
-    "L3_femur_join_RXM3x5p7_-8": {
-      "id": "MOILPCqSg/ZABFn0e",
-      "partId": "KFzQ"
-    },
-    "L3_foot_M3x25": {
-      "id": "MCcx/Hb/Vi3FgECUU",
-      "partId": "KF3Q"
-    },
-    "L3_foot_M3_locknut": {
-      "id": "MI+EXwGXMfeh+Xf1o",
-      "partId": "KF7Q"
-    },
-    "L4_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MAYm3H1YA78eLjq8B",
-      "partId": "KFnT"
-    },
-    "L4_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MwtBUFCwzfUr/nb2y",
-      "partId": "KFrT"
-    },
-    "L4_yaw_clamp_M3x8_-31_18.3": {
-      "id": "MwVsAg4axsa7JKxV+",
-      "partId": "KFvT"
-    },
-    "L4_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MyDK+yjYbbsvkFqN0",
-      "partId": "KFzT"
-    },
-    "L4_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "MQo7zG7op0A6C5xvh",
-      "partId": "KF3T"
-    },
-    "L4_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MmZ+HP1jTR2YNDrKB",
-      "partId": "KF7T"
-    },
-    "L4_yaw_clamp_M3x8_-20_18.3": {
-      "id": "MeVXSh8OhdlaAcIcG",
-      "partId": "KF/T"
-    },
-    "L4_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MQGuVYN8tGN11ZhxK",
-      "partId": "KFDU"
-    },
-    "L4_hip_clamp_M3x8_-31_-18.3": {
-      "id": "M6+Qr+n0gQOQOCLON",
-      "partId": "KFHU"
-    },
-    "L4_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MdpHP0kUZQRer1yqM",
-      "partId": "KFLU"
-    },
-    "L4_hip_clamp_M3x8_-31_18.3": {
-      "id": "M5xJis+uMTPWyO7MU",
-      "partId": "KFPU"
-    },
-    "L4_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "M4amE5GJR645Dv//v",
-      "partId": "KFTU"
-    },
-    "L4_hip_clamp_M3x8_-20_-18.3": {
-      "id": "M6BsSeS1FeN8Rhs8s",
-      "partId": "KFXU"
-    },
-    "L4_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MNJoHQTk9M1FHU8e4",
-      "partId": "KFbU"
-    },
-    "L4_hip_clamp_M3x8_-20_18.3": {
-      "id": "MkkyQKCShbMvtoAbm",
-      "partId": "KFfU"
-    },
-    "L4_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MGXHPqHuPisPzyn4G",
-      "partId": "KFjU"
-    },
-    "L4_knee_clamp_M3x8_-31_-18.3": {
-      "id": "MmBsGrbTatzi7AlH3",
-      "partId": "KFnU"
-    },
-    "L4_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MqfQ4iD5xJC1OSUJQ",
-      "partId": "KFrU"
-    },
-    "L4_knee_clamp_M3x8_-31_18.3": {
-      "id": "Mkx2uzwgznPl7kZc3",
-      "partId": "KFvU"
-    },
-    "L4_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "Mc1FSKi1Pof6pS7t9",
-      "partId": "KFzU"
-    },
-    "L4_knee_clamp_M3x8_-20_-18.3": {
-      "id": "M6EOa8SkFOEoE2qMF",
-      "partId": "KF3U"
-    },
-    "L4_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MdLhEgcOBh3MBAdTD",
-      "partId": "KF7U"
-    },
-    "L4_knee_clamp_M3x8_-20_18.3": {
-      "id": "MXgJFaQGf24C80dBe",
-      "partId": "KF/U"
-    },
-    "L4_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M6d7Q8zXQk0dz6CC5",
-      "partId": "KFDV"
-    },
-    "L4_coxa_join_M3x10_-7": {
-      "id": "MVmGjbMJkgzEMbSPv",
-      "partId": "KFHV"
-    },
-    "L4_coxa_join_RXM3x5p7_-7": {
-      "id": "Mh4JXmWeBy+P/Fu8y",
-      "partId": "KFLV"
-    },
-    "L4_coxa_join_M3x10_7": {
-      "id": "M8cwBApDasWyf6HLN",
-      "partId": "KFPV"
-    },
-    "L4_coxa_join_RXM3x5p7_7": {
-      "id": "MRo15IBfacP7yq81b",
-      "partId": "KFTV"
-    },
-    "L4_femur_join_M3x10_10": {
-      "id": "MQ1BAjxlJ6r0QkpKr",
-      "partId": "KFXV"
-    },
-    "L4_femur_join_RXM3x5p7_10": {
-      "id": "MNTMNfDEoIOQrRu9J",
-      "partId": "KFbV"
-    },
-    "L4_femur_join_M3x10_-8": {
-      "id": "MqhBJDhWfwihI14d8",
-      "partId": "KFfV"
-    },
-    "L4_femur_join_RXM3x5p7_-8": {
-      "id": "MqRXMNT64QFjWcc9/",
-      "partId": "KFjV"
-    },
-    "L4_foot_M3x25": {
-      "id": "MTw0331xwSLPAP/G0",
-      "partId": "KFnV"
-    },
-    "L4_foot_M3_locknut": {
-      "id": "MJnQcwkxw51QogNfj",
-      "partId": "KFrV"
-    },
-    "L5_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MKUJGa7OmNUEfY+IC",
-      "partId": "KFXY"
-    },
-    "L5_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "My6qxTCe7rtNyi8NH",
-      "partId": "KFbY"
-    },
-    "L5_yaw_clamp_M3x8_-31_18.3": {
-      "id": "MaizthucDtdpeDrQC",
-      "partId": "KFfY"
-    },
-    "L5_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "M6f/Q9PF/4Gg09UGD",
-      "partId": "KFjY"
-    },
-    "L5_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "M4I9G3sqovYDVz+9i",
-      "partId": "KFnY"
-    },
-    "L5_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MX03eAGsi7n8xuIEu",
-      "partId": "KFrY"
-    },
-    "L5_yaw_clamp_M3x8_-20_18.3": {
-      "id": "MFbdg3YDxfjnm1QAy",
-      "partId": "KFvY"
-    },
-    "L5_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M5cD7Y3qyfMr2IlHj",
-      "partId": "KFzY"
-    },
-    "L5_hip_clamp_M3x8_-31_-18.3": {
-      "id": "M9BQYHfQHXUpGcTKW",
-      "partId": "KF3Y"
-    },
-    "L5_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MSemHPIXyYz2ucLHN",
-      "partId": "KF7Y"
-    },
-    "L5_hip_clamp_M3x8_-31_18.3": {
-      "id": "M4AR6xvXFF9pctTeZ",
-      "partId": "KF/Y"
-    },
-    "L5_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MNU8gB7f64vKsm6yH",
-      "partId": "KFDZ"
-    },
-    "L5_hip_clamp_M3x8_-20_-18.3": {
-      "id": "MDw2XesyICz3gxto4",
-      "partId": "KFHZ"
-    },
-    "L5_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MgrM+Z6H/KUl+aPDV",
-      "partId": "KFLZ"
-    },
-    "L5_hip_clamp_M3x8_-20_18.3": {
-      "id": "M2ub60sgJnXN/cEFx",
-      "partId": "KFPZ"
-    },
-    "L5_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M9tfpRPG05sB16N9p",
-      "partId": "KFTZ"
-    },
-    "L5_knee_clamp_M3x8_-31_-18.3": {
-      "id": "MxM6F3Eb89XaJcPqE",
-      "partId": "KFXZ"
-    },
-    "L5_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MxbuyCuY/+fp0WADy",
-      "partId": "KFbZ"
-    },
-    "L5_knee_clamp_M3x8_-31_18.3": {
-      "id": "MzQ/5k78lQ+YViSo9",
-      "partId": "KFfZ"
-    },
-    "L5_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MIuCyQgkd9OX7qfA0",
-      "partId": "KFjZ"
-    },
-    "L5_knee_clamp_M3x8_-20_-18.3": {
-      "id": "Mmv1cLM22l6ZDXkdx",
-      "partId": "KFnZ"
-    },
-    "L5_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MmWUXbvQXGc+QHF9X",
-      "partId": "KFrZ"
-    },
-    "L5_knee_clamp_M3x8_-20_18.3": {
-      "id": "MJgTyOWhBoWtqwfwX",
-      "partId": "KFvZ"
-    },
-    "L5_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MQnuibYwq//EoHdHJ",
-      "partId": "KFzZ"
-    },
-    "L5_coxa_join_M3x10_-7": {
-      "id": "MS5ME3+HxXQN8GfL9",
-      "partId": "KF3Z"
-    },
-    "L5_coxa_join_RXM3x5p7_-7": {
-      "id": "MtR3j/BUUcXA0zFVM",
-      "partId": "KF7Z"
-    },
-    "L5_coxa_join_M3x10_7": {
-      "id": "M68hF3v906R8vRpXE",
-      "partId": "KF/Z"
-    },
-    "L5_coxa_join_RXM3x5p7_7": {
-      "id": "MC3JpSNofTD346LRB",
-      "partId": "KFDa"
-    },
-    "L5_femur_join_M3x10_10": {
-      "id": "MLUfavuJ2IkQ2Asoy",
-      "partId": "KFHa"
-    },
-    "L5_femur_join_RXM3x5p7_10": {
-      "id": "MMCy7GXu/umvZcyVH",
-      "partId": "KFLa"
-    },
-    "L5_femur_join_M3x10_-8": {
-      "id": "MwHlmnhxFGrClI/BM",
-      "partId": "KFPa"
-    },
-    "L5_femur_join_RXM3x5p7_-8": {
-      "id": "MSl+hn94iaHK6bAvo",
-      "partId": "KFTa"
-    },
-    "L5_foot_M3x25": {
-      "id": "M+Q3VvGTu2Th6xTkI",
-      "partId": "KFXa"
-    },
-    "L5_foot_M3_locknut": {
-      "id": "M2/PFmd+QIepH6GwB",
-      "partId": "KFba"
-    },
-    "L6_yaw_clamp_M3x8_-31_-18.3": {
-      "id": "MDtttZZY3Y8p7aupz",
-      "partId": "KFHd"
-    },
-    "L6_yaw_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MsCIAZtYi/R8W+1lN",
-      "partId": "KFLd"
-    },
-    "L6_yaw_clamp_M3x8_-31_18.3": {
-      "id": "MkUEMl6USNu0ydFJ4",
-      "partId": "KFPd"
-    },
-    "L6_yaw_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MZA1UEqr2KrivkPPY",
-      "partId": "KFTd"
-    },
-    "L6_yaw_clamp_M3x8_-20_-18.3": {
-      "id": "MPh43FHUmrssOWM9o",
-      "partId": "KFXd"
-    },
-    "L6_yaw_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "Meb0PLBSlon5uQcSu",
-      "partId": "KFbd"
-    },
-    "L6_yaw_clamp_M3x8_-20_18.3": {
-      "id": "Md8XP/N7NRBgJQ4nG",
-      "partId": "KFfd"
-    },
-    "L6_yaw_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M3OmKLoPiNGIjKx2q",
-      "partId": "KFjd"
-    },
-    "L6_hip_clamp_M3x8_-31_-18.3": {
-      "id": "M9xMjfxM9sZPlXuv5",
-      "partId": "KFnd"
-    },
-    "L6_hip_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MnSHnfqmm1ykAt1aJ",
-      "partId": "KFrd"
-    },
-    "L6_hip_clamp_M3x8_-31_18.3": {
-      "id": "MhnlChUgnBLCh6oSg",
-      "partId": "KFvd"
-    },
-    "L6_hip_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MqvtFA8YqTJzwju2y",
-      "partId": "KFzd"
-    },
-    "L6_hip_clamp_M3x8_-20_-18.3": {
-      "id": "Md9y7lMJiiLJAdqZb",
-      "partId": "KF3d"
-    },
-    "L6_hip_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "MqFyPcrd82kljFT9v",
-      "partId": "KF7d"
-    },
-    "L6_hip_clamp_M3x8_-20_18.3": {
-      "id": "Mi0g+7GLi8+n+rp53",
-      "partId": "KF/d"
-    },
-    "L6_hip_clamp_RXM3x5p7_-20_18.3": {
-      "id": "MXaUPOHFuZBfr0U/h",
-      "partId": "KFDe"
-    },
-    "L6_knee_clamp_M3x8_-31_-18.3": {
-      "id": "MvgpGXzBek3sW5P9U",
-      "partId": "KFHe"
-    },
-    "L6_knee_clamp_RXM3x5p7_-31_-18.3": {
-      "id": "MmqAX6okrXc/qOeds",
-      "partId": "KFLe"
-    },
-    "L6_knee_clamp_M3x8_-31_18.3": {
-      "id": "MNVw4yjCgcPrC/G8i",
-      "partId": "KFPe"
-    },
-    "L6_knee_clamp_RXM3x5p7_-31_18.3": {
-      "id": "MlR93alQNwqHdL9se",
-      "partId": "KFTe"
-    },
-    "L6_knee_clamp_M3x8_-20_-18.3": {
-      "id": "MkgWlDkepEtHsrdGy",
-      "partId": "KFXe"
-    },
-    "L6_knee_clamp_RXM3x5p7_-20_-18.3": {
-      "id": "Mdyv4jFHf1JL1uDvz",
-      "partId": "KFbe"
-    },
-    "L6_knee_clamp_M3x8_-20_18.3": {
-      "id": "MDFG7lzqSdi7vzEMp",
-      "partId": "KFfe"
-    },
-    "L6_knee_clamp_RXM3x5p7_-20_18.3": {
-      "id": "M5nCUm8kswhd1bsje",
-      "partId": "KFje"
-    },
-    "L6_coxa_join_M3x10_-7": {
-      "id": "MzsqakTilhk1Q3iPr",
-      "partId": "KFne"
-    },
-    "L6_coxa_join_RXM3x5p7_-7": {
-      "id": "MDSlUYbS6wwMql45t",
-      "partId": "KFre"
-    },
-    "L6_coxa_join_M3x10_7": {
-      "id": "Mds/9AUCy5yptvOo0",
-      "partId": "KFve"
-    },
-    "L6_coxa_join_RXM3x5p7_7": {
-      "id": "M73LhmQolEEdyyRB9",
-      "partId": "KFze"
-    },
-    "L6_femur_join_M3x10_10": {
-      "id": "Mg9W4moKAcc38XvRN",
-      "partId": "KF3e"
-    },
-    "L6_femur_join_RXM3x5p7_10": {
-      "id": "MHhU2fHeBB17k/0VO",
-      "partId": "KF7e"
-    },
-    "L6_femur_join_M3x10_-8": {
-      "id": "MOlDVD5sC6m4x/p4t",
-      "partId": "KF/e"
-    },
-    "L6_femur_join_RXM3x5p7_-8": {
-      "id": "MMScx7M6Jd5fS3zVg",
-      "partId": "KFDf"
-    },
-    "L6_foot_M3x25": {
-      "id": "MrpyDBX6CHs068aTX",
-      "partId": "KFHf"
-    },
-    "L6_foot_M3_locknut": {
-      "id": "MsUjmRKWk0fZ9xrdm",
-      "partId": "KFLf"
-    },
-    "L1_yaw_disc_min": {
-      "id": "MGa42gVEXH/1ZIrgQ",
+    "L1_yaw_M3x6_1_1": {
+      "id": "MI9Hle56Pj/ZWDhOf",
+      "partId": "KFvC"
+    },
+    "L1_yaw_M3x6_1_2": {
+      "id": "MYKGJy4aCJ6gx2FSk",
+      "partId": "KFzC"
+    },
+    "L1_yaw_M3x6_1_3": {
+      "id": "Mb5z6szEnVnhXu0wQ",
+      "partId": "KF3C"
+    },
+    "L1_yaw_M3x6_1_4": {
+      "id": "MtwWwAal4RYyVYoqF",
+      "partId": "KF7C"
+    },
+    "L1_hip_horn_-1": {
+      "id": "MymSewWRVKRiuZRAw",
+      "partId": "KF/C"
+    },
+    "L1_hip_M3x6_-1_1": {
+      "id": "MI9WfyVWtfaEAb93v",
+      "partId": "KFDD"
+    },
+    "L1_hip_M3x6_-1_2": {
+      "id": "MtNrqEVhwAxLHu0XP",
+      "partId": "KFHD"
+    },
+    "L1_hip_M3x6_-1_3": {
+      "id": "MO88zrt364zbYu8zf",
+      "partId": "KFLD"
+    },
+    "L1_hip_M3x6_-1_4": {
+      "id": "M2FAyx/aMGRE+draq",
+      "partId": "KFPD"
+    },
+    "L1_hip_horn_1": {
+      "id": "MrgJMNEVYI/ZIxV0y",
+      "partId": "KFTD"
+    },
+    "L1_hip_M3x6_1_1": {
+      "id": "MOHy6WtjS7jOMyaxr",
+      "partId": "KFXD"
+    },
+    "L1_hip_M3x6_1_2": {
+      "id": "Mw4BqiLcc9Lp8A3ym",
+      "partId": "KFbD"
+    },
+    "L1_hip_M3x6_1_3": {
+      "id": "MRtg9bmBzjXyzG/Q7",
+      "partId": "KFfD"
+    },
+    "L1_hip_M3x6_1_4": {
+      "id": "MlP5lFIHigQMzQfkb",
       "partId": "KFjD"
     },
-    "L1_yaw_plus_horn_M3x6_1": {
-      "id": "MCcbRzlK6SFNMUj+f",
+    "L1_knee_horn_-1": {
+      "id": "MArCP4Xc9vLyXDO/l",
       "partId": "KFnD"
     },
-    "L1_yaw_plus_horn_M3x6_2": {
-      "id": "MALIidxIiRSyBwdWF",
+    "L1_knee_M3x6_-1_1": {
+      "id": "MRm1AGDlPkC0n6ur8",
       "partId": "KFrD"
     },
-    "L1_yaw_plus_horn_M3x6_3": {
-      "id": "Min855PyCl5a1XNQr",
+    "L1_knee_M3x6_-1_2": {
+      "id": "MLDAdqQ+rMPwEwJo2",
       "partId": "KFvD"
     },
-    "L1_yaw_plus_horn_M3x6_4": {
-      "id": "MnFEqlGdfr4ytdiKg",
+    "L1_knee_M3x6_-1_3": {
+      "id": "MqgQxkXEkzQJrQCjP",
       "partId": "KFzD"
     },
-    "L1_yaw_min_horn_M3x6_1": {
-      "id": "MR/DWFztCwAFRa3Sa",
+    "L1_knee_M3x6_-1_4": {
+      "id": "M957Yy3a+bhzZiicn",
       "partId": "KF3D"
     },
-    "L1_yaw_min_horn_M3x6_2": {
-      "id": "M8pGilQ23C7+wAJXS",
+    "L1_knee_horn_1": {
+      "id": "MqUEvCXx4UgWh26Up",
       "partId": "KF7D"
     },
-    "L1_yaw_min_horn_M3x6_3": {
-      "id": "MOJmmfQItPhd+Qrjk",
+    "L1_knee_M3x6_1_1": {
+      "id": "MNAGq6BL1ZU9a9JHE",
       "partId": "KF/D"
     },
-    "L1_yaw_min_horn_M3x6_4": {
-      "id": "MNoThsJf9C6ze+/T8",
+    "L1_knee_M3x6_1_2": {
+      "id": "M7ezc6NcC10MbbkhE",
       "partId": "KFDE"
     },
-    "L1_hip_plus_horn_M3x6_1": {
-      "id": "MXq9DBWRMnqDbEo1h",
+    "L1_knee_M3x6_1_3": {
+      "id": "M4mpoonKBepojJ2Jr",
+      "partId": "KFHE"
+    },
+    "L1_knee_M3x6_1_4": {
+      "id": "M308EhV5gY2/TLlJH",
+      "partId": "KFLE"
+    },
+    "L1_yaw_factory_PA2_-29_-10.25": {
+      "id": "M9XUA5E1bruO5JLay",
       "partId": "KFPE"
     },
-    "L1_hip_plus_horn_M3x6_2": {
-      "id": "Md21nzeEd5ajrFvRW",
+    "L1_yaw_factory_PA2_-29_10.25": {
+      "id": "Mo8KjAu6MUdXpQ+oa",
       "partId": "KFTE"
     },
-    "L1_hip_plus_horn_M3x6_3": {
-      "id": "M3+Ysl8LYJJj/du49",
+    "L1_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "MiF+9/XRmovIvAjqZ",
       "partId": "KFXE"
     },
-    "L1_hip_plus_horn_M3x6_4": {
-      "id": "M+mHMj1762HPSSMBX",
+    "L1_yaw_factory_PA2_-8.3_10.25": {
+      "id": "MDKBU6TuEjYoY9YDk",
       "partId": "KFbE"
     },
-    "L1_hip_min_horn_M3x6_1": {
-      "id": "Mmt81Wylcnx+z941H",
+    "L1_hip_factory_PA2_-29_-10.25": {
+      "id": "ML0FzHyjTjlhG0aCP",
       "partId": "KFfE"
     },
-    "L1_hip_min_horn_M3x6_2": {
-      "id": "Ms5g106QhbEVm1VM7",
+    "L1_hip_factory_PA2_-29_10.25": {
+      "id": "MTyYotzc3hleV7rus",
       "partId": "KFjE"
     },
-    "L1_hip_min_horn_M3x6_3": {
-      "id": "MwOr2f9oDbaxWNion",
+    "L1_hip_factory_PA2_-8.3_-10.25": {
+      "id": "MWwbN7ysKlRK5NZG1",
       "partId": "KFnE"
     },
-    "L1_hip_min_horn_M3x6_4": {
-      "id": "Mu8s7PmF0ZRAtlUTO",
+    "L1_hip_factory_PA2_-8.3_10.25": {
+      "id": "MboSNk/ro6F84hhS2",
       "partId": "KFrE"
     },
-    "L1_knee_plus_horn_M3x6_1": {
-      "id": "M7TJ6dhIhXtoW7dYK",
+    "L1_knee_factory_PA2_-29_-10.25": {
+      "id": "MV4iTiKW8rF/vckQb",
+      "partId": "KFvE"
+    },
+    "L1_knee_factory_PA2_-29_10.25": {
+      "id": "MBwIEiRckWfO5LF8V",
+      "partId": "KFzE"
+    },
+    "L1_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MDzmD7aqIkER5uYdg",
       "partId": "KF3E"
     },
-    "L1_knee_plus_horn_M3x6_2": {
-      "id": "MFZyiUA0u6VpJEyz0",
+    "L1_knee_factory_PA2_-8.3_10.25": {
+      "id": "MLrk36pcROwNOrF4m",
       "partId": "KF7E"
     },
-    "L1_knee_plus_horn_M3x6_3": {
-      "id": "Mi3TQzMto/ieyXNHB",
+    "L1_shoe_insert": {
+      "id": "MiPncO9tVl30l79yR",
       "partId": "KF/E"
     },
-    "L1_knee_plus_horn_M3x6_4": {
-      "id": "M2EWB2rToe/20aCKm",
+    "L1_shoe_M3x8": {
+      "id": "MRtMCBvAJDdgXPynF",
       "partId": "KFDF"
     },
-    "L1_knee_min_horn_M3x6_1": {
-      "id": "MFxzZ0b650KBRIpJE",
+    "L2_coxa": {
+      "id": "MPI5UXdRtV8aSgf9U",
       "partId": "KFHF"
     },
-    "L1_knee_min_horn_M3x6_2": {
-      "id": "MUs1aZuDeUyWYg96k",
+    "L2_femur": {
+      "id": "MPa9fbfu0PZ6Tl931",
       "partId": "KFLF"
     },
-    "L1_knee_min_horn_M3x6_3": {
-      "id": "MaqQWPMc0Pf/OzXR/",
+    "L2_tibia": {
+      "id": "MFKA3c2H4NuLeUcoJ",
       "partId": "KFPF"
     },
-    "L1_knee_min_horn_M3x6_4": {
-      "id": "MZLBXjCm36qQsSNal",
+    "L2_foot": {
+      "id": "MflEpbn8yjDLK4FtD",
       "partId": "KFTF"
     },
-    "L2_yaw_disc_min": {
-      "id": "M6pkn1Q/8Rw6O4rsh",
+    "L2_YAW_STS3215": {
+      "id": "MoIfzq0YzLWQyMEXP",
+      "partId": "KFXF"
+    },
+    "L2_HIP_STS3215": {
+      "id": "MpiSLIu0TYP52uCub",
+      "partId": "KFbF"
+    },
+    "L2_KNEE_STS3215": {
+      "id": "MH8WBZ5ZyhqkvGQgu",
+      "partId": "KFfF"
+    },
+    "L2_yaw_horn_-1": {
+      "id": "MAOcLKHd80LRB552K",
+      "partId": "KFjF"
+    },
+    "L2_yaw_M3x6_-1_1": {
+      "id": "MYGmr3r9pN9ZlFr7X",
+      "partId": "KFnF"
+    },
+    "L2_yaw_M3x6_-1_2": {
+      "id": "M6n5rrxr0P7TKKspB",
+      "partId": "KFrF"
+    },
+    "L2_yaw_M3x6_-1_3": {
+      "id": "MeYAYhy2lS+cA0tG9",
+      "partId": "KFvF"
+    },
+    "L2_yaw_M3x6_-1_4": {
+      "id": "M+xlWxwgJh9n34mcl",
+      "partId": "KFzF"
+    },
+    "L2_yaw_horn_1": {
+      "id": "MrnPy584VHnNSovua",
+      "partId": "KF3F"
+    },
+    "L2_yaw_M3x6_1_1": {
+      "id": "M+MC3xewBH7C9yKL1",
+      "partId": "KF7F"
+    },
+    "L2_yaw_M3x6_1_2": {
+      "id": "MPLwXFRqDRmDi6yau",
+      "partId": "KF/F"
+    },
+    "L2_yaw_M3x6_1_3": {
+      "id": "MXqKalwnIFrD/VFCZ",
+      "partId": "KFDG"
+    },
+    "L2_yaw_M3x6_1_4": {
+      "id": "MrlTtpj+ai9EvazjP",
+      "partId": "KFHG"
+    },
+    "L2_hip_horn_-1": {
+      "id": "MdkDmbqxnl2sgwbbo",
+      "partId": "KFLG"
+    },
+    "L2_hip_M3x6_-1_1": {
+      "id": "MK5IEpFYM/jUyRMZZ",
+      "partId": "KFPG"
+    },
+    "L2_hip_M3x6_-1_2": {
+      "id": "Mg2GPdH//BIRsHsSP",
+      "partId": "KFTG"
+    },
+    "L2_hip_M3x6_-1_3": {
+      "id": "MS0zcDK6wy1K8RnnQ",
+      "partId": "KFXG"
+    },
+    "L2_hip_M3x6_-1_4": {
+      "id": "MLuA+pfMQ6f+vdnHs",
+      "partId": "KFbG"
+    },
+    "L2_hip_horn_1": {
+      "id": "MMKn6smiGrv/Sj97E",
+      "partId": "KFfG"
+    },
+    "L2_hip_M3x6_1_1": {
+      "id": "MgDchj0OGOrCJMhqV",
+      "partId": "KFjG"
+    },
+    "L2_hip_M3x6_1_2": {
+      "id": "M0MzGuyDIxxVoJOAM",
+      "partId": "KFnG"
+    },
+    "L2_hip_M3x6_1_3": {
+      "id": "Mt/urIGM9Oj/B2+11",
+      "partId": "KFrG"
+    },
+    "L2_hip_M3x6_1_4": {
+      "id": "M9Sls3bO+wB8Xa2TB",
+      "partId": "KFvG"
+    },
+    "L2_knee_horn_-1": {
+      "id": "M6WQeX3eOH289bGYx",
+      "partId": "KFzG"
+    },
+    "L2_knee_M3x6_-1_1": {
+      "id": "M7oxJkyELtct2AEyW",
+      "partId": "KF3G"
+    },
+    "L2_knee_M3x6_-1_2": {
+      "id": "MSsKAvX/v7VJRw8y5",
+      "partId": "KF7G"
+    },
+    "L2_knee_M3x6_-1_3": {
+      "id": "McsKiahTEMxQStSDl",
+      "partId": "KF/G"
+    },
+    "L2_knee_M3x6_-1_4": {
+      "id": "MGZmv9CBrtfb+gHsG",
+      "partId": "KFDH"
+    },
+    "L2_knee_horn_1": {
+      "id": "M2hnqvtt55jh4LCqU",
+      "partId": "KFHH"
+    },
+    "L2_knee_M3x6_1_1": {
+      "id": "Mh4OdUVd3zHhpzAlC",
+      "partId": "KFLH"
+    },
+    "L2_knee_M3x6_1_2": {
+      "id": "MewfTmxEZvm6xh8sg",
+      "partId": "KFPH"
+    },
+    "L2_knee_M3x6_1_3": {
+      "id": "MnuUw6aM9lt/xLHVz",
+      "partId": "KFTH"
+    },
+    "L2_knee_M3x6_1_4": {
+      "id": "M34Ij+nnqpq6khfd9",
+      "partId": "KFXH"
+    },
+    "L2_yaw_factory_PA2_-29_-10.25": {
+      "id": "MRnW4yOxZh8xvIGfX",
+      "partId": "KFbH"
+    },
+    "L2_yaw_factory_PA2_-29_10.25": {
+      "id": "MIRE7xuwVdMvFxdv4",
+      "partId": "KFfH"
+    },
+    "L2_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "Mc/DOfb7GNSTRyMcp",
+      "partId": "KFjH"
+    },
+    "L2_yaw_factory_PA2_-8.3_10.25": {
+      "id": "MD0h0twCgjWD0cAWQ",
+      "partId": "KFnH"
+    },
+    "L2_hip_factory_PA2_-29_-10.25": {
+      "id": "MXSCDkAUhkDp+OrNy",
+      "partId": "KFrH"
+    },
+    "L2_hip_factory_PA2_-29_10.25": {
+      "id": "M1kukHdTWCPBFx3ut",
+      "partId": "KFvH"
+    },
+    "L2_hip_factory_PA2_-8.3_-10.25": {
+      "id": "MrBQtDuqjdd8ONmU9",
+      "partId": "KFzH"
+    },
+    "L2_hip_factory_PA2_-8.3_10.25": {
+      "id": "My6NrCjk8pTZ57bS5",
+      "partId": "KF3H"
+    },
+    "L2_knee_factory_PA2_-29_-10.25": {
+      "id": "Mgi8UwSLc8RlvS4QP",
+      "partId": "KF7H"
+    },
+    "L2_knee_factory_PA2_-29_10.25": {
+      "id": "Mbkh7enwkbRAKOHX0",
+      "partId": "KF/H"
+    },
+    "L2_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MlXV/7WnE0iUbxrPr",
+      "partId": "KFDI"
+    },
+    "L2_knee_factory_PA2_-8.3_10.25": {
+      "id": "MsQIY5+aaXnz1kV9N",
+      "partId": "KFHI"
+    },
+    "L2_shoe_insert": {
+      "id": "MBcMIdgGs2RISHalN",
+      "partId": "KFLI"
+    },
+    "L2_shoe_M3x8": {
+      "id": "MUNpMOV6YLBFWPAr/",
+      "partId": "KFPI"
+    },
+    "L3_coxa": {
+      "id": "Mo4UlX+7G4RPxu9YC",
       "partId": "KFTI"
     },
-    "L2_yaw_plus_horn_M3x6_1": {
-      "id": "MoJROhUbZMgqlQybP",
+    "L3_femur": {
+      "id": "M/0QWfAz2QKfaWFpt",
       "partId": "KFXI"
     },
-    "L2_yaw_plus_horn_M3x6_2": {
-      "id": "MFzCTFT0wUo/ivNQg",
+    "L3_tibia": {
+      "id": "MaOIzlSYDRYQYjMO7",
       "partId": "KFbI"
     },
-    "L2_yaw_plus_horn_M3x6_3": {
-      "id": "M57wO/iCakjM9c6Rg",
+    "L3_foot": {
+      "id": "MGBoWy+R++3pmUSGh",
       "partId": "KFfI"
     },
-    "L2_yaw_plus_horn_M3x6_4": {
-      "id": "M6Or9JB4Knrt2n4VY",
+    "L3_YAW_STS3215": {
+      "id": "MswhoGSc6gjStoJMy",
       "partId": "KFjI"
     },
-    "L2_yaw_min_horn_M3x6_1": {
-      "id": "M0F3Fz5GTiWKP50hA",
+    "L3_HIP_STS3215": {
+      "id": "M3WD86n+iW2iEZT70",
       "partId": "KFnI"
     },
-    "L2_yaw_min_horn_M3x6_2": {
-      "id": "MScjJYtVGxUvSRd1t",
+    "L3_KNEE_STS3215": {
+      "id": "MBgBzD5JsTV47a8wW",
       "partId": "KFrI"
     },
-    "L2_yaw_min_horn_M3x6_3": {
-      "id": "M3t0JizBtR0kBHYHI",
+    "L3_yaw_horn_-1": {
+      "id": "MQm/r1BOsrQt+tE9D",
       "partId": "KFvI"
     },
-    "L2_yaw_min_horn_M3x6_4": {
-      "id": "MF83sFR9xhWQobDr2",
+    "L3_yaw_M3x6_-1_1": {
+      "id": "M9uK+5hgK3MxOXZpI",
       "partId": "KFzI"
     },
-    "L2_hip_disc_plus": {
-      "id": "MpjKlBxvWuEcLmGWT",
+    "L3_yaw_M3x6_-1_2": {
+      "id": "Mc00cxrw9U0DrJ0pQ",
       "partId": "KF3I"
     },
-    "L2_hip_disc_min": {
-      "id": "M9hnIXUWSK11MiPkm",
+    "L3_yaw_M3x6_-1_3": {
+      "id": "MPbVLWwtPpBK3qieA",
       "partId": "KF7I"
     },
-    "L2_hip_plus_horn_M3x6_1": {
-      "id": "MFbQhFx8EsfHvzqAU",
+    "L3_yaw_M3x6_-1_4": {
+      "id": "MZ9o0CNoonGj0zp1p",
       "partId": "KF/I"
     },
-    "L2_hip_plus_horn_M3x6_2": {
-      "id": "MoGV85M0CkgwJjVbx",
+    "L3_yaw_horn_1": {
+      "id": "MLdoQ5XP9Jps0qFfc",
       "partId": "KFDJ"
     },
-    "L2_hip_plus_horn_M3x6_3": {
-      "id": "MvmVNxfiB5z6vCn9y",
+    "L3_yaw_M3x6_1_1": {
+      "id": "M6tNt34inOJuxmbwF",
       "partId": "KFHJ"
     },
-    "L2_hip_plus_horn_M3x6_4": {
-      "id": "Mof1bONu0U/zeQHUQ",
+    "L3_yaw_M3x6_1_2": {
+      "id": "M+8gl3BO9PdcqJI/x",
       "partId": "KFLJ"
     },
-    "L2_hip_min_horn_M3x6_1": {
-      "id": "MD4pFz4ehQXIT4t0A",
+    "L3_yaw_M3x6_1_3": {
+      "id": "Mxmysu+pUQFR32NWv",
       "partId": "KFPJ"
     },
-    "L2_hip_min_horn_M3x6_2": {
-      "id": "MOQWWcvCracqsr7kG",
+    "L3_yaw_M3x6_1_4": {
+      "id": "M72U69xG/J79zu2nM",
       "partId": "KFTJ"
     },
-    "L2_hip_min_horn_M3x6_3": {
-      "id": "MUntP6RYb/vLy3dJD",
+    "L3_hip_horn_-1": {
+      "id": "MP4gTNIJEZeSsInYf",
       "partId": "KFXJ"
     },
-    "L2_hip_min_horn_M3x6_4": {
-      "id": "Mc2LgF6V0o9lhLfD+",
+    "L3_hip_M3x6_-1_1": {
+      "id": "MFGfOt40du4wdfQNo",
       "partId": "KFbJ"
     },
-    "L2_knee_disc_plus": {
-      "id": "MGUhD6/KiKady8YkL",
+    "L3_hip_M3x6_-1_2": {
+      "id": "M6IbcuMk9ub37TSet",
       "partId": "KFfJ"
     },
-    "L2_knee_disc_min": {
-      "id": "M1grdSSZb6LNts+H7",
+    "L3_hip_M3x6_-1_3": {
+      "id": "MWJYq3uXyeZV/wxL1",
       "partId": "KFjJ"
     },
-    "L2_knee_plus_horn_M3x6_1": {
-      "id": "MlDc8fZsERRTgApib",
+    "L3_hip_M3x6_-1_4": {
+      "id": "Me1GauH56NMaF0O5C",
       "partId": "KFnJ"
     },
-    "L2_knee_plus_horn_M3x6_2": {
-      "id": "M5Ct0ecMdc7PmXI6n",
+    "L3_hip_horn_1": {
+      "id": "MnIl749XFAX88O1DB",
       "partId": "KFrJ"
     },
-    "L2_knee_plus_horn_M3x6_3": {
-      "id": "MOkiM5HG5yv2O/gw+",
+    "L3_hip_M3x6_1_1": {
+      "id": "MrG8fXPuJVw3e4Goc",
       "partId": "KFvJ"
     },
-    "L2_knee_plus_horn_M3x6_4": {
-      "id": "Mj5fg3oN8nOvxHqSt",
+    "L3_hip_M3x6_1_2": {
+      "id": "MwY8B64ZNDOKwr8TX",
       "partId": "KFzJ"
     },
-    "L2_knee_min_horn_M3x6_1": {
-      "id": "Mkfta0DtkNGjkKjZ2",
+    "L3_hip_M3x6_1_3": {
+      "id": "My5WzkHdKu0Mw4cCL",
       "partId": "KF3J"
     },
-    "L2_knee_min_horn_M3x6_2": {
-      "id": "MLDLfDf4tj+XHyIDZ",
+    "L3_hip_M3x6_1_4": {
+      "id": "MZ9EqTh9xd9Xd/sNG",
       "partId": "KF7J"
     },
-    "L2_knee_min_horn_M3x6_3": {
-      "id": "Mx714OLRR5PFqfRWx",
+    "L3_knee_horn_-1": {
+      "id": "MajksSeA6TrIxvgic",
       "partId": "KF/J"
     },
-    "L2_knee_min_horn_M3x6_4": {
-      "id": "MUK54Fspc7s1pwTNB",
+    "L3_knee_M3x6_-1_1": {
+      "id": "Mpgxk0iYd1v9nkehf",
       "partId": "KFDK"
     },
-    "L3_yaw_disc_min": {
-      "id": "Mvp7roCfffmLcQXfm",
+    "L3_knee_M3x6_-1_2": {
+      "id": "MW6BzERkY4OdzKY6N",
+      "partId": "KFHK"
+    },
+    "L3_knee_M3x6_-1_3": {
+      "id": "MLsdOaV71dr9AzgWn",
+      "partId": "KFLK"
+    },
+    "L3_knee_M3x6_-1_4": {
+      "id": "MABWokRx5H44KaQXg",
+      "partId": "KFPK"
+    },
+    "L3_knee_horn_1": {
+      "id": "MwpiDMe8DEpHj7uUT",
+      "partId": "KFTK"
+    },
+    "L3_knee_M3x6_1_1": {
+      "id": "MLo9A1Iugme2psp6f",
+      "partId": "KFXK"
+    },
+    "L3_knee_M3x6_1_2": {
+      "id": "M+Yr1GNjfjEst0T5C",
+      "partId": "KFbK"
+    },
+    "L3_knee_M3x6_1_3": {
+      "id": "MWdwM+2upxTQsQXwg",
+      "partId": "KFfK"
+    },
+    "L3_knee_M3x6_1_4": {
+      "id": "MGfzPNKIdtUzeidjT",
+      "partId": "KFjK"
+    },
+    "L3_yaw_factory_PA2_-29_-10.25": {
+      "id": "McYfiqxF1JXCXgGOt",
+      "partId": "KFnK"
+    },
+    "L3_yaw_factory_PA2_-29_10.25": {
+      "id": "MRfuQ3hMwtS6lYLm3",
+      "partId": "KFrK"
+    },
+    "L3_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "MU3zwg6bpUA5Ns1Wo",
+      "partId": "KFvK"
+    },
+    "L3_yaw_factory_PA2_-8.3_10.25": {
+      "id": "MqGKpsEGbONCvJHrE",
+      "partId": "KFzK"
+    },
+    "L3_hip_factory_PA2_-29_-10.25": {
+      "id": "MJzKz3XV3RozngdXm",
+      "partId": "KF3K"
+    },
+    "L3_hip_factory_PA2_-29_10.25": {
+      "id": "Msz71SjT05Fu76YHR",
+      "partId": "KF7K"
+    },
+    "L3_hip_factory_PA2_-8.3_-10.25": {
+      "id": "M0JESCutH1WHoxhHE",
+      "partId": "KF/K"
+    },
+    "L3_hip_factory_PA2_-8.3_10.25": {
+      "id": "M8WGxx4ZQofU3kKPN",
+      "partId": "KFDL"
+    },
+    "L3_knee_factory_PA2_-29_-10.25": {
+      "id": "MuQ3CcJ7f9wPV2iEI",
+      "partId": "KFHL"
+    },
+    "L3_knee_factory_PA2_-29_10.25": {
+      "id": "MEVwWzIWzmu64Sp2L",
+      "partId": "KFLL"
+    },
+    "L3_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MzKl133Q0PilwooY+",
+      "partId": "KFPL"
+    },
+    "L3_knee_factory_PA2_-8.3_10.25": {
+      "id": "MrE3Hd54t45pViokI",
+      "partId": "KFTL"
+    },
+    "L3_shoe_insert": {
+      "id": "MjYgpLI6bMgmjGWmt",
+      "partId": "KFXL"
+    },
+    "L3_shoe_M3x8": {
+      "id": "MrSKgTTr0qXfv1dEg",
+      "partId": "KFbL"
+    },
+    "L4_coxa": {
+      "id": "M/T/ntlx8LCNWVVTK",
+      "partId": "KFfL"
+    },
+    "L4_femur": {
+      "id": "Mrx3Xvps1+f+HVC2L",
+      "partId": "KFjL"
+    },
+    "L4_tibia": {
+      "id": "MLMaRQAp08W9wopOv",
+      "partId": "KFnL"
+    },
+    "L4_foot": {
+      "id": "MSsHhBdtr7EuyGUYC",
+      "partId": "KFrL"
+    },
+    "L4_YAW_STS3215": {
+      "id": "M8Z+zobE1pG0HK8+h",
+      "partId": "KFvL"
+    },
+    "L4_HIP_STS3215": {
+      "id": "MPW38Jqb95TO1g/FZ",
+      "partId": "KFzL"
+    },
+    "L4_KNEE_STS3215": {
+      "id": "MVUE8EOV/X+FfLU00",
+      "partId": "KF3L"
+    },
+    "L4_yaw_horn_-1": {
+      "id": "MWdpjEdP77mg21e0d",
+      "partId": "KF7L"
+    },
+    "L4_yaw_M3x6_-1_1": {
+      "id": "M7A0k+zYgW1f+fUN9",
+      "partId": "KF/L"
+    },
+    "L4_yaw_M3x6_-1_2": {
+      "id": "M5ZeKUTnOhsp8++y+",
+      "partId": "KFDM"
+    },
+    "L4_yaw_M3x6_-1_3": {
+      "id": "MzPWfYYkHFP1oLDqA",
+      "partId": "KFHM"
+    },
+    "L4_yaw_M3x6_-1_4": {
+      "id": "Mx5kNtcMqBku5NhYi",
+      "partId": "KFLM"
+    },
+    "L4_yaw_horn_1": {
+      "id": "M/7wHx8e8S1khGu2L",
+      "partId": "KFPM"
+    },
+    "L4_yaw_M3x6_1_1": {
+      "id": "MUJt2Duw457FlLK/4",
+      "partId": "KFTM"
+    },
+    "L4_yaw_M3x6_1_2": {
+      "id": "Mq+Do+MB52rEQdOQ7",
+      "partId": "KFXM"
+    },
+    "L4_yaw_M3x6_1_3": {
+      "id": "MGRqTnP67AwzhU4hQ",
+      "partId": "KFbM"
+    },
+    "L4_yaw_M3x6_1_4": {
+      "id": "MJttogqycYCNhgP11",
+      "partId": "KFfM"
+    },
+    "L4_hip_horn_-1": {
+      "id": "MQ+i/qYItMHwtW/0E",
+      "partId": "KFjM"
+    },
+    "L4_hip_M3x6_-1_1": {
+      "id": "MYKdXQ3n0cVHrn5cQ",
+      "partId": "KFnM"
+    },
+    "L4_hip_M3x6_-1_2": {
+      "id": "MtOlbNZd4tCVGPWGA",
+      "partId": "KFrM"
+    },
+    "L4_hip_M3x6_-1_3": {
+      "id": "MZz+08AfMVh1p9NIN",
+      "partId": "KFvM"
+    },
+    "L4_hip_M3x6_-1_4": {
+      "id": "MPcNfLSMj9kH7n/eP",
+      "partId": "KFzM"
+    },
+    "L4_hip_horn_1": {
+      "id": "Muj8wW0baeyJG7RRQ",
+      "partId": "KF3M"
+    },
+    "L4_hip_M3x6_1_1": {
+      "id": "MXLtDY8k1wrDthnGE",
+      "partId": "KF7M"
+    },
+    "L4_hip_M3x6_1_2": {
+      "id": "MjT84e5BtAJAqcd3Q",
+      "partId": "KF/M"
+    },
+    "L4_hip_M3x6_1_3": {
+      "id": "MHmWqFW5pJ7M8hEu5",
       "partId": "KFDN"
     },
-    "L3_yaw_plus_horn_M3x6_1": {
-      "id": "Mjm4AwUsyqJR8RZLX",
+    "L4_hip_M3x6_1_4": {
+      "id": "Ms9mCrU9e9yCOmplT",
       "partId": "KFHN"
     },
-    "L3_yaw_plus_horn_M3x6_2": {
-      "id": "M6BQZyt+smGzOYWZz",
+    "L4_knee_horn_-1": {
+      "id": "MyO8U4mAp8NZE8wWn",
       "partId": "KFLN"
     },
-    "L3_yaw_plus_horn_M3x6_3": {
-      "id": "MoB8fzRNuhgKH46j5",
+    "L4_knee_M3x6_-1_1": {
+      "id": "Mc6N0iTwfaUo62JlX",
       "partId": "KFPN"
     },
-    "L3_yaw_plus_horn_M3x6_4": {
-      "id": "M0ve6L7AzG3AUi5ug",
+    "L4_knee_M3x6_-1_2": {
+      "id": "MiaD6mQrF6ReOu52t",
       "partId": "KFTN"
     },
-    "L3_yaw_min_horn_M3x6_1": {
-      "id": "MHbt5nJG/p25+bP5G",
+    "L4_knee_M3x6_-1_3": {
+      "id": "MeqnD+I7HitcxFGR6",
       "partId": "KFXN"
     },
-    "L3_yaw_min_horn_M3x6_2": {
-      "id": "Mr9kcYv37HU4QWkZp",
+    "L4_knee_M3x6_-1_4": {
+      "id": "MLVbcM5wKDUGQU8cA",
       "partId": "KFbN"
     },
-    "L3_yaw_min_horn_M3x6_3": {
-      "id": "MRrhmrMFJvv/tgt1L",
+    "L4_knee_horn_1": {
+      "id": "MnqJJUhDhn3KK7bTv",
       "partId": "KFfN"
     },
-    "L3_yaw_min_horn_M3x6_4": {
-      "id": "M2K1Zcy6hykG89wZ+",
+    "L4_knee_M3x6_1_1": {
+      "id": "Mkhv0AxYZ22H1hgT/",
       "partId": "KFjN"
     },
-    "L3_hip_plus_horn_M3x6_1": {
-      "id": "MKqQPTOu1QsVlYFcn",
+    "L4_knee_M3x6_1_2": {
+      "id": "MUIGCJTwvy4kqDs1F",
+      "partId": "KFnN"
+    },
+    "L4_knee_M3x6_1_3": {
+      "id": "MTYlsKYspV2E+qsmz",
+      "partId": "KFrN"
+    },
+    "L4_knee_M3x6_1_4": {
+      "id": "MMWU6nxZqA0hLdDqG",
       "partId": "KFvN"
     },
-    "L3_hip_plus_horn_M3x6_2": {
-      "id": "Ms/O+906k2GmyNPO4",
+    "L4_yaw_factory_PA2_-29_-10.25": {
+      "id": "Mu5ubdnFjwli7AYnd",
       "partId": "KFzN"
     },
-    "L3_hip_plus_horn_M3x6_3": {
-      "id": "MleS6CC6pAMefBGEe",
+    "L4_yaw_factory_PA2_-29_10.25": {
+      "id": "MbJkagqepiXxePOWR",
       "partId": "KF3N"
     },
-    "L3_hip_plus_horn_M3x6_4": {
-      "id": "MTaVunrpMlues10Pm",
+    "L4_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "MU+GeMUnpYM1st/V6",
       "partId": "KF7N"
     },
-    "L3_hip_min_horn_M3x6_1": {
-      "id": "M6J5qZTaKCupacd2P",
+    "L4_yaw_factory_PA2_-8.3_10.25": {
+      "id": "Mw0FMuUdcmlxHInDK",
       "partId": "KF/N"
     },
-    "L3_hip_min_horn_M3x6_2": {
-      "id": "MQpm+cEcN7FUEE/KT",
+    "L4_hip_factory_PA2_-29_-10.25": {
+      "id": "MXjygxz1/Z9/4wpks",
       "partId": "KFDO"
     },
-    "L3_hip_min_horn_M3x6_3": {
-      "id": "M5jG5Um/amp1Q6rER",
+    "L4_hip_factory_PA2_-29_10.25": {
+      "id": "MWLcOs709PdPE0u9s",
       "partId": "KFHO"
     },
-    "L3_hip_min_horn_M3x6_4": {
-      "id": "M5HZf6EockkCD+sOH",
+    "L4_hip_factory_PA2_-8.3_-10.25": {
+      "id": "MdWAuAhBgCYLMbTv+",
       "partId": "KFLO"
     },
-    "L3_knee_plus_horn_M3x6_1": {
-      "id": "MQrUfYI+iP54jG4Zg",
+    "L4_hip_factory_PA2_-8.3_10.25": {
+      "id": "MN9Lw5c8UHXlA1F48",
+      "partId": "KFPO"
+    },
+    "L4_knee_factory_PA2_-29_-10.25": {
+      "id": "MAk6IIi7+YWpiRM+G",
+      "partId": "KFTO"
+    },
+    "L4_knee_factory_PA2_-29_10.25": {
+      "id": "Mbxgb3X3An7xZwSVR",
       "partId": "KFXO"
     },
-    "L3_knee_plus_horn_M3x6_2": {
-      "id": "MDplmXAN8P2WwVu+6",
+    "L4_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MfDwq/Uf/VeR0N5VJ",
       "partId": "KFbO"
     },
-    "L3_knee_plus_horn_M3x6_3": {
-      "id": "MAx15Ao/Mk+ExE80R",
+    "L4_knee_factory_PA2_-8.3_10.25": {
+      "id": "MRQS7Zu1gJS7mAlMf",
       "partId": "KFfO"
     },
-    "L3_knee_plus_horn_M3x6_4": {
-      "id": "MssbuzYBs5Wm/82f5",
+    "L4_shoe_insert": {
+      "id": "MvqIDqJjkNdjeLVx2",
       "partId": "KFjO"
     },
-    "L3_knee_min_horn_M3x6_1": {
-      "id": "M3qBjz271oXH8Mdan",
+    "L4_shoe_M3x8": {
+      "id": "MnW/CYZcwMus6VE0z",
       "partId": "KFnO"
     },
-    "L3_knee_min_horn_M3x6_2": {
-      "id": "M1u3rL82wm0kLt7WS",
+    "L5_coxa": {
+      "id": "McHxyQtowNv/f6vHV",
       "partId": "KFrO"
     },
-    "L3_knee_min_horn_M3x6_3": {
-      "id": "Ml1fCZWDEv8w25gC7",
+    "L5_femur": {
+      "id": "M1G0gWMr+NBddpDXx",
       "partId": "KFvO"
     },
-    "L3_knee_min_horn_M3x6_4": {
-      "id": "M3atQeejkB5DWZjIv",
+    "L5_tibia": {
+      "id": "MolpiNFcruYAnsmnd",
       "partId": "KFzO"
     },
-    "L4_yaw_disc_min": {
-      "id": "MpLtbW+I7OKGmNeNC",
+    "L5_foot": {
+      "id": "MGkG0KmezNI+4yFge",
+      "partId": "KF3O"
+    },
+    "L5_YAW_STS3215": {
+      "id": "M4WmZxm9SVsIU/i5B",
+      "partId": "KF7O"
+    },
+    "L5_HIP_STS3215": {
+      "id": "MCWQrkVQQbL80IdRT",
+      "partId": "KF/O"
+    },
+    "L5_KNEE_STS3215": {
+      "id": "MaeptJi2nETgGKI64",
+      "partId": "KFDP"
+    },
+    "L5_yaw_horn_-1": {
+      "id": "M2yqOmbyhZhnKavN4",
+      "partId": "KFHP"
+    },
+    "L5_yaw_M3x6_-1_1": {
+      "id": "MGO0Wg3uDVMy0AdOk",
+      "partId": "KFLP"
+    },
+    "L5_yaw_M3x6_-1_2": {
+      "id": "MSADHNmbaM7cVP6k8",
+      "partId": "KFPP"
+    },
+    "L5_yaw_M3x6_-1_3": {
+      "id": "MlpxfYzVZhUPOuzQp",
+      "partId": "KFTP"
+    },
+    "L5_yaw_M3x6_-1_4": {
+      "id": "MKZhmqLv7sTOGmw9l",
+      "partId": "KFXP"
+    },
+    "L5_yaw_horn_1": {
+      "id": "MCdV1LWae6heBPROw",
+      "partId": "KFbP"
+    },
+    "L5_yaw_M3x6_1_1": {
+      "id": "M/ZUsm8YyQJA+9EgL",
+      "partId": "KFfP"
+    },
+    "L5_yaw_M3x6_1_2": {
+      "id": "M2oTrg+Lxycw9oI9W",
+      "partId": "KFjP"
+    },
+    "L5_yaw_M3x6_1_3": {
+      "id": "MLxReOG+55nfa5kHp",
+      "partId": "KFnP"
+    },
+    "L5_yaw_M3x6_1_4": {
+      "id": "MH7uNyRPpyPdxzlHt",
+      "partId": "KFrP"
+    },
+    "L5_hip_horn_-1": {
+      "id": "M3OwExPsvZnwoUHgH",
+      "partId": "KFvP"
+    },
+    "L5_hip_M3x6_-1_1": {
+      "id": "M28X3ZX0THXLwdnf/",
+      "partId": "KFzP"
+    },
+    "L5_hip_M3x6_-1_2": {
+      "id": "MpU3vWXBBdrnmprop",
+      "partId": "KF3P"
+    },
+    "L5_hip_M3x6_-1_3": {
+      "id": "MaYhalVBnzUktBsZZ",
+      "partId": "KF7P"
+    },
+    "L5_hip_M3x6_-1_4": {
+      "id": "MuHpBeQFfkYf8twv0",
+      "partId": "KF/P"
+    },
+    "L5_hip_horn_1": {
+      "id": "MTSr+01TaO9uoWy3S",
+      "partId": "KFDQ"
+    },
+    "L5_hip_M3x6_1_1": {
+      "id": "MBlFP/X3FwyX+m4gZ",
+      "partId": "KFHQ"
+    },
+    "L5_hip_M3x6_1_2": {
+      "id": "Ma3NeUYnjikjCE56N",
+      "partId": "KFLQ"
+    },
+    "L5_hip_M3x6_1_3": {
+      "id": "MwQEGo2S35Te96JBc",
+      "partId": "KFPQ"
+    },
+    "L5_hip_M3x6_1_4": {
+      "id": "MhVvDOVA4cUhjN2No",
+      "partId": "KFTQ"
+    },
+    "L5_knee_horn_-1": {
+      "id": "M9ZO76+8/iB5nTt3G",
+      "partId": "KFXQ"
+    },
+    "L5_knee_M3x6_-1_1": {
+      "id": "MKCPCbzHXRB9qizqX",
+      "partId": "KFbQ"
+    },
+    "L5_knee_M3x6_-1_2": {
+      "id": "M55tYCLsb5Cd5Nbi0",
+      "partId": "KFfQ"
+    },
+    "L5_knee_M3x6_-1_3": {
+      "id": "MwPM6KV3g/nNeGn5Y",
+      "partId": "KFjQ"
+    },
+    "L5_knee_M3x6_-1_4": {
+      "id": "MAOkQCvAEYtxdQuvI",
+      "partId": "KFnQ"
+    },
+    "L5_knee_horn_1": {
+      "id": "MaL1ZKkjswfR36lZ/",
+      "partId": "KFrQ"
+    },
+    "L5_knee_M3x6_1_1": {
+      "id": "MkFyWZwiTwu2HlKrN",
+      "partId": "KFvQ"
+    },
+    "L5_knee_M3x6_1_2": {
+      "id": "MG4K/jbJmAalBbUv5",
+      "partId": "KFzQ"
+    },
+    "L5_knee_M3x6_1_3": {
+      "id": "MOEoGhAGor64Kcwq2",
+      "partId": "KF3Q"
+    },
+    "L5_knee_M3x6_1_4": {
+      "id": "MvNsiG5TjM/9EZwKu",
+      "partId": "KF7Q"
+    },
+    "L5_yaw_factory_PA2_-29_-10.25": {
+      "id": "MjZne/P3ZAZZ3ncqe",
+      "partId": "KF/Q"
+    },
+    "L5_yaw_factory_PA2_-29_10.25": {
+      "id": "MIUIeHVrytYOlaeuT",
+      "partId": "KFDR"
+    },
+    "L5_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "MOw5h4eTeoUMRGWIR",
+      "partId": "KFHR"
+    },
+    "L5_yaw_factory_PA2_-8.3_10.25": {
+      "id": "MLCfm5LBfUkmbY6Ry",
+      "partId": "KFLR"
+    },
+    "L5_hip_factory_PA2_-29_-10.25": {
+      "id": "Mx4Numrulp2IK5uDD",
+      "partId": "KFPR"
+    },
+    "L5_hip_factory_PA2_-29_10.25": {
+      "id": "MoLCwBsONGlxPal6d",
+      "partId": "KFTR"
+    },
+    "L5_hip_factory_PA2_-8.3_-10.25": {
+      "id": "MIPM+GTI5ZRz8ykR0",
+      "partId": "KFXR"
+    },
+    "L5_hip_factory_PA2_-8.3_10.25": {
+      "id": "M7bR33voCwYDOA+OH",
+      "partId": "KFbR"
+    },
+    "L5_knee_factory_PA2_-29_-10.25": {
+      "id": "MtMbrLXwf9LyK3o9W",
+      "partId": "KFfR"
+    },
+    "L5_knee_factory_PA2_-29_10.25": {
+      "id": "MhDtVTcpDnpbt3bY1",
+      "partId": "KFjR"
+    },
+    "L5_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MRxGYZN7UAounUgRU",
+      "partId": "KFnR"
+    },
+    "L5_knee_factory_PA2_-8.3_10.25": {
+      "id": "Mtdrt+UhfW670oVY2",
+      "partId": "KFrR"
+    },
+    "L5_shoe_insert": {
+      "id": "MrOP4hT1YaqOI349z",
+      "partId": "KFvR"
+    },
+    "L5_shoe_M3x8": {
+      "id": "MNlyiIZX7Mmenv98e",
       "partId": "KFzR"
     },
-    "L4_yaw_plus_horn_M3x6_1": {
-      "id": "Mz+Iagxl//pzZLv/r",
+    "L6_coxa": {
+      "id": "MgNrZEm2Zk9Az3oUD",
       "partId": "KF3R"
     },
-    "L4_yaw_plus_horn_M3x6_2": {
-      "id": "Mz0jwlsj1Y+51pP56",
+    "L6_femur": {
+      "id": "MLCzffTZ2XQJRSY1T",
       "partId": "KF7R"
     },
-    "L4_yaw_plus_horn_M3x6_3": {
-      "id": "MOPWkIFJFQ7oTlBzy",
+    "L6_tibia": {
+      "id": "MZ8Ua6hTIxy4u4DAP",
       "partId": "KF/R"
     },
-    "L4_yaw_plus_horn_M3x6_4": {
-      "id": "M3voG4VkWlcjSwsYr",
+    "L6_foot": {
+      "id": "M7ov4pB7/+M4m3wIE",
       "partId": "KFDS"
     },
-    "L4_yaw_min_horn_M3x6_1": {
-      "id": "MUgzkJVxZzVGplF1O",
+    "L6_YAW_STS3215": {
+      "id": "MtsVb1lVuutd9OGx9",
       "partId": "KFHS"
     },
-    "L4_yaw_min_horn_M3x6_2": {
-      "id": "MVR3vidYI8Y5lkLf9",
+    "L6_HIP_STS3215": {
+      "id": "MF1ZkYAZivY6IsMPh",
       "partId": "KFLS"
     },
-    "L4_yaw_min_horn_M3x6_3": {
-      "id": "MxX1NXfiJiwbtft26",
+    "L6_KNEE_STS3215": {
+      "id": "M4r4mE7GeVz9EYExJ",
       "partId": "KFPS"
     },
-    "L4_yaw_min_horn_M3x6_4": {
-      "id": "M+wBOcFx4rPRRFD92",
+    "L6_yaw_horn_-1": {
+      "id": "MQsddfb90o6GMLZ1r",
       "partId": "KFTS"
     },
-    "L4_hip_plus_horn_M3x6_1": {
-      "id": "MgBzHUtpE4t45PgfW",
+    "L6_yaw_M3x6_-1_1": {
+      "id": "M9MOAVJUgM8LXgv3v",
+      "partId": "KFXS"
+    },
+    "L6_yaw_M3x6_-1_2": {
+      "id": "MpEH9sotcOsdWxyQq",
+      "partId": "KFbS"
+    },
+    "L6_yaw_M3x6_-1_3": {
+      "id": "MqbsH3Lq9kGO1jbNZ",
       "partId": "KFfS"
     },
-    "L4_hip_plus_horn_M3x6_2": {
-      "id": "MWGtSlyr9oib1cCJ1",
+    "L6_yaw_M3x6_-1_4": {
+      "id": "MykVrgkH9Lv1GXR/x",
       "partId": "KFjS"
     },
-    "L4_hip_plus_horn_M3x6_3": {
-      "id": "MYQ2SkdmqZJWYlDnf",
+    "L6_yaw_horn_1": {
+      "id": "Mo88KTeh/u6U+ue1h",
       "partId": "KFnS"
     },
-    "L4_hip_plus_horn_M3x6_4": {
-      "id": "MxQ8qrUyhC+toYgzJ",
+    "L6_yaw_M3x6_1_1": {
+      "id": "MtcYJJAvAEZZXmCtq",
       "partId": "KFrS"
     },
-    "L4_hip_min_horn_M3x6_1": {
-      "id": "MrvszezIEu5rD872T",
+    "L6_yaw_M3x6_1_2": {
+      "id": "MLo+LPkpPML/i0g3K",
       "partId": "KFvS"
     },
-    "L4_hip_min_horn_M3x6_2": {
-      "id": "MZZm2ZP1JnTTJnien",
+    "L6_yaw_M3x6_1_3": {
+      "id": "MM+C0oe9Z60H8R22d",
       "partId": "KFzS"
     },
-    "L4_hip_min_horn_M3x6_3": {
-      "id": "M8Kg603v3dXH/lM7u",
+    "L6_yaw_M3x6_1_4": {
+      "id": "MgOj14sj/EGYuzNYL",
       "partId": "KF3S"
     },
-    "L4_hip_min_horn_M3x6_4": {
-      "id": "MorUZEPUy2t+Dnom/",
+    "L6_hip_horn_-1": {
+      "id": "Mh7PzxYrMNxhD9UrL",
       "partId": "KF7S"
     },
-    "L4_knee_plus_horn_M3x6_1": {
-      "id": "MHD19Iie74K3Inv/A",
+    "L6_hip_M3x6_-1_1": {
+      "id": "MSd0/iEsqZgxSczxw",
+      "partId": "KF/S"
+    },
+    "L6_hip_M3x6_-1_2": {
+      "id": "MdIawUG+cCoKCTn1e",
+      "partId": "KFDT"
+    },
+    "L6_hip_M3x6_-1_3": {
+      "id": "McoYC1jFGMPlCAjAm",
       "partId": "KFHT"
     },
-    "L4_knee_plus_horn_M3x6_2": {
-      "id": "MTandNJpM4M3yRIiJ",
+    "L6_hip_M3x6_-1_4": {
+      "id": "M//sOAc+ghKOKkT+Y",
       "partId": "KFLT"
     },
-    "L4_knee_plus_horn_M3x6_3": {
-      "id": "M33MwBy6XSj1VMFc4",
+    "L6_hip_horn_1": {
+      "id": "M0T95oa5APYxPEE+w",
       "partId": "KFPT"
     },
-    "L4_knee_plus_horn_M3x6_4": {
-      "id": "M1JZSiOlKBviBbuoZ",
+    "L6_hip_M3x6_1_1": {
+      "id": "Mv5AaQBlodL8fXcld",
       "partId": "KFTT"
     },
-    "L4_knee_min_horn_M3x6_1": {
-      "id": "M4kwXfIoFbLNPcQmQ",
+    "L6_hip_M3x6_1_2": {
+      "id": "MPdh6V/2X/ueoJroN",
       "partId": "KFXT"
     },
-    "L4_knee_min_horn_M3x6_2": {
-      "id": "MwFjXcx82WGWVtjfr",
+    "L6_hip_M3x6_1_3": {
+      "id": "MvLVc+mh11NtUb2Jq",
       "partId": "KFbT"
     },
-    "L4_knee_min_horn_M3x6_3": {
-      "id": "Mp7N5Jvzh9gWavNOh",
+    "L6_hip_M3x6_1_4": {
+      "id": "M9w5011udw1DTxyP9",
       "partId": "KFfT"
     },
-    "L4_knee_min_horn_M3x6_4": {
-      "id": "M25a7RAOUpoKQ1tMH",
+    "L6_knee_horn_-1": {
+      "id": "MkzHSovfm4ec0x9rw",
       "partId": "KFjT"
     },
-    "L5_yaw_disc_min": {
-      "id": "MzYP0VtQdkAQUxrPK",
-      "partId": "KFjW"
+    "L6_knee_M3x6_-1_1": {
+      "id": "M75LV5st72FM85qsl",
+      "partId": "KFnT"
     },
-    "L5_yaw_plus_horn_M3x6_1": {
-      "id": "MvLsOYaBZfNO+TmaX",
-      "partId": "KFnW"
+    "L6_knee_M3x6_-1_2": {
+      "id": "MJ+dtiKGWkI+BxeHP",
+      "partId": "KFrT"
     },
-    "L5_yaw_plus_horn_M3x6_2": {
-      "id": "MFDaHf3RQmlX1LFvP",
-      "partId": "KFrW"
+    "L6_knee_M3x6_-1_3": {
+      "id": "MFoxtDI+RXo0Yuhr1",
+      "partId": "KFvT"
     },
-    "L5_yaw_plus_horn_M3x6_3": {
-      "id": "M3QGb97i4C2LMxdh2",
-      "partId": "KFvW"
+    "L6_knee_M3x6_-1_4": {
+      "id": "MkOExJzdwGjohASVN",
+      "partId": "KFzT"
     },
-    "L5_yaw_plus_horn_M3x6_4": {
-      "id": "MvSht+Z6JBWZ19hls",
-      "partId": "KFzW"
+    "L6_knee_horn_1": {
+      "id": "MbW+7DD/51Z4o2di5",
+      "partId": "KF3T"
     },
-    "L5_yaw_min_horn_M3x6_1": {
-      "id": "MVMQD/2dnyrAMcwZr",
-      "partId": "KF3W"
+    "L6_knee_M3x6_1_1": {
+      "id": "MBupUZo+VUQaMxId1",
+      "partId": "KF7T"
     },
-    "L5_yaw_min_horn_M3x6_2": {
-      "id": "MdT300qIbANVQiM53",
-      "partId": "KF7W"
+    "L6_knee_M3x6_1_2": {
+      "id": "Mrd3VYlUS7WPoRaGm",
+      "partId": "KF/T"
     },
-    "L5_yaw_min_horn_M3x6_3": {
-      "id": "MYGRyJQjqIwKBDHzE",
-      "partId": "KF/W"
+    "L6_knee_M3x6_1_3": {
+      "id": "MkL/nmAUYhzjWsvUn",
+      "partId": "KFDU"
     },
-    "L5_yaw_min_horn_M3x6_4": {
-      "id": "M/qLf+Kk4UnWSnOk/",
-      "partId": "KFDX"
+    "L6_knee_M3x6_1_4": {
+      "id": "MBEDk2z2AEbtiCEQ2",
+      "partId": "KFHU"
     },
-    "L5_hip_disc_plus": {
-      "id": "MAFjzblOdULFCnmDh",
-      "partId": "KFHX"
+    "L6_yaw_factory_PA2_-29_-10.25": {
+      "id": "MCXRuYbyQkVrNaBZA",
+      "partId": "KFLU"
     },
-    "L5_hip_disc_min": {
-      "id": "MWA50qYi6cHrlOcvJ",
-      "partId": "KFLX"
+    "L6_yaw_factory_PA2_-29_10.25": {
+      "id": "MXP5IOXFUFY8q1n+S",
+      "partId": "KFPU"
     },
-    "L5_hip_plus_horn_M3x6_1": {
-      "id": "Mi/FJglquSCG9X0kO",
-      "partId": "KFPX"
+    "L6_yaw_factory_PA2_-8.3_-10.25": {
+      "id": "MxYsete+JVODGxR/s",
+      "partId": "KFTU"
     },
-    "L5_hip_plus_horn_M3x6_2": {
-      "id": "MkfN99kSKCh83E/0f",
-      "partId": "KFTX"
+    "L6_yaw_factory_PA2_-8.3_10.25": {
+      "id": "MHcxaDiJVDIieQXNA",
+      "partId": "KFXU"
     },
-    "L5_hip_plus_horn_M3x6_3": {
-      "id": "MG9LlBIUKgOShl9TL",
-      "partId": "KFXX"
+    "L6_hip_factory_PA2_-29_-10.25": {
+      "id": "MD8kQA6e4kBnF9goK",
+      "partId": "KFbU"
     },
-    "L5_hip_plus_horn_M3x6_4": {
-      "id": "M35qx8o7GLwI5E9CU",
-      "partId": "KFbX"
+    "L6_hip_factory_PA2_-29_10.25": {
+      "id": "MqMyQ+SDb4NRtbIEG",
+      "partId": "KFfU"
     },
-    "L5_hip_min_horn_M3x6_1": {
-      "id": "MCymp42788paBezr6",
-      "partId": "KFfX"
+    "L6_hip_factory_PA2_-8.3_-10.25": {
+      "id": "MQoF+Bw/HRMyBVCSd",
+      "partId": "KFjU"
     },
-    "L5_hip_min_horn_M3x6_2": {
-      "id": "Mlyz7K57f8JPT3TLS",
-      "partId": "KFjX"
+    "L6_hip_factory_PA2_-8.3_10.25": {
+      "id": "M5+pk/B3hiOZl3h0w",
+      "partId": "KFnU"
     },
-    "L5_hip_min_horn_M3x6_3": {
-      "id": "MjUG0fLhOgz+lwf29",
-      "partId": "KFnX"
+    "L6_knee_factory_PA2_-29_-10.25": {
+      "id": "MUiZ6KRhXy+dgfyqb",
+      "partId": "KFrU"
     },
-    "L5_hip_min_horn_M3x6_4": {
-      "id": "M4KDrNdZCWoq2ZRHe",
-      "partId": "KFrX"
+    "L6_knee_factory_PA2_-29_10.25": {
+      "id": "MA8m4eH3p66ZNmk03",
+      "partId": "KFvU"
     },
-    "L5_knee_disc_plus": {
-      "id": "Mq+U5Zo6CY+di8nlG",
-      "partId": "KFvX"
+    "L6_knee_factory_PA2_-8.3_-10.25": {
+      "id": "MSEfm0N4b9tI4wuOO",
+      "partId": "KFzU"
     },
-    "L5_knee_disc_min": {
-      "id": "M9s5ioPKvj20jo510",
-      "partId": "KFzX"
+    "L6_knee_factory_PA2_-8.3_10.25": {
+      "id": "MdRzsc1mhRIISraxP",
+      "partId": "KF3U"
     },
-    "L5_knee_plus_horn_M3x6_1": {
-      "id": "Md+aTL1T2wjoobob9",
-      "partId": "KF3X"
+    "L6_shoe_insert": {
+      "id": "M1zcRDZPOwIwCVNGk",
+      "partId": "KF7U"
     },
-    "L5_knee_plus_horn_M3x6_2": {
-      "id": "MsCPc4iqtYZohiAp7",
-      "partId": "KF7X"
-    },
-    "L5_knee_plus_horn_M3x6_3": {
-      "id": "MbcDiyfUMi5UhBbly",
-      "partId": "KF/X"
-    },
-    "L5_knee_plus_horn_M3x6_4": {
-      "id": "MYLo990MFA3vIJJ1p",
-      "partId": "KFDY"
-    },
-    "L5_knee_min_horn_M3x6_1": {
-      "id": "M+8h2e+6cRGhYWYad",
-      "partId": "KFHY"
-    },
-    "L5_knee_min_horn_M3x6_2": {
-      "id": "MXf4HFdMWKo3wlcLV",
-      "partId": "KFLY"
-    },
-    "L5_knee_min_horn_M3x6_3": {
-      "id": "MhFonhSv9WiSK93ux",
-      "partId": "KFPY"
-    },
-    "L5_knee_min_horn_M3x6_4": {
-      "id": "MBVAu+7uOi31PEVrM",
-      "partId": "KFTY"
-    },
-    "L6_yaw_disc_min": {
-      "id": "Mnini9YB9JisrzaSI",
-      "partId": "KFTb"
-    },
-    "L6_yaw_plus_horn_M3x6_1": {
-      "id": "MwpgL28D/2xiX4NB1",
-      "partId": "KFXb"
-    },
-    "L6_yaw_plus_horn_M3x6_2": {
-      "id": "MLDA1qm9t6p8tlqCd",
-      "partId": "KFbb"
-    },
-    "L6_yaw_plus_horn_M3x6_3": {
-      "id": "Mwxcatcmv3wU0kApx",
-      "partId": "KFfb"
-    },
-    "L6_yaw_plus_horn_M3x6_4": {
-      "id": "MsPyhEk+kKmwgKkUS",
-      "partId": "KFjb"
-    },
-    "L6_yaw_min_horn_M3x6_1": {
-      "id": "M1Sq/96nvmqYiEswV",
-      "partId": "KFnb"
-    },
-    "L6_yaw_min_horn_M3x6_2": {
-      "id": "MfId5VKBvCpKPhxU/",
-      "partId": "KFrb"
-    },
-    "L6_yaw_min_horn_M3x6_3": {
-      "id": "MIU2mpu5DX7O+Dxzf",
-      "partId": "KFvb"
-    },
-    "L6_yaw_min_horn_M3x6_4": {
-      "id": "M+NawLgcAq5gwIaq1",
-      "partId": "KFzb"
-    },
-    "L6_hip_plus_horn_M3x6_1": {
-      "id": "MjOM69ZcKp7ljm1cR",
-      "partId": "KF/b"
-    },
-    "L6_hip_plus_horn_M3x6_2": {
-      "id": "Mq4TgxhvFPTJd8olC",
-      "partId": "KFDc"
-    },
-    "L6_hip_plus_horn_M3x6_3": {
-      "id": "MPqbGhIfLVXW/labz",
-      "partId": "KFHc"
-    },
-    "L6_hip_plus_horn_M3x6_4": {
-      "id": "MwzASnO4c0Hv/o2ic",
-      "partId": "KFLc"
-    },
-    "L6_hip_min_horn_M3x6_1": {
-      "id": "MkUlqintbF6fcizZQ",
-      "partId": "KFPc"
-    },
-    "L6_hip_min_horn_M3x6_2": {
-      "id": "MvWQ3gl78POHB2lrq",
-      "partId": "KFTc"
-    },
-    "L6_hip_min_horn_M3x6_3": {
-      "id": "M02IQkmgydT5vgrIw",
-      "partId": "KFXc"
-    },
-    "L6_hip_min_horn_M3x6_4": {
-      "id": "M9PKCpwbTC67ZXINb",
-      "partId": "KFbc"
-    },
-    "L6_knee_plus_horn_M3x6_1": {
-      "id": "M0qd2LVouTrObm7j8",
-      "partId": "KFnc"
-    },
-    "L6_knee_plus_horn_M3x6_2": {
-      "id": "MDs07++EhoZ/qXdii",
-      "partId": "KFrc"
-    },
-    "L6_knee_plus_horn_M3x6_3": {
-      "id": "MEo7ttNxOGAKrlutt",
-      "partId": "KFvc"
-    },
-    "L6_knee_plus_horn_M3x6_4": {
-      "id": "M/RWYTlZDIycmIF4j",
-      "partId": "KFzc"
-    },
-    "L6_knee_min_horn_M3x6_1": {
-      "id": "M/RW1ICdzp3Hqto/O",
-      "partId": "KF3c"
-    },
-    "L6_knee_min_horn_M3x6_2": {
-      "id": "Mv/jEQI8VLxVoFltr",
-      "partId": "KF7c"
-    },
-    "L6_knee_min_horn_M3x6_3": {
-      "id": "M7R1AFi4tr8cWxR/v",
-      "partId": "KF/c"
-    },
-    "L6_knee_min_horn_M3x6_4": {
-      "id": "MNm/j+xlWRf5c/PYc",
-      "partId": "KFDd"
+    "L6_shoe_M3x8": {
+      "id": "MRg5p02dk70EF6kye",
+      "partId": "KF/U"
     }
   },
   "fastened": [
     {
-      "name": "F_02_DORSAL_DECK",
+      "name": "F_02_CONTROLLER_CARRIER",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "02_DORSAL_DECK"
-    },
-    {
-      "name": "F_03_BATTERY_TRAY",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "03_BATTERY_TRAY"
-    },
-    {
-      "name": "F_04_CONTROLLER_PLATE",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "04_CONTROLLER_PLATE"
+      "child": "02_CONTROLLER_CARRIER"
     },
     {
       "name": "F_05_SHELL",
@@ -2033,886 +1371,520 @@
       "child": "REF_3S_BATTERY_115x40x35"
     },
     {
-      "name": "F_REF_CONTROLLER_90x60x18",
+      "name": "F_REF_CONTROLLER_PCB_90x60",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "REF_CONTROLLER_90x60x18"
+      "child": "REF_CONTROLLER_PCB_90x60"
     },
     {
-      "name": "F_PCB_spacer_-32_-24",
+      "name": "F_REF_CONTROLLER_COMPONENTS",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "PCB_spacer_-32_-24"
+      "child": "REF_CONTROLLER_COMPONENTS"
     },
     {
-      "name": "F_PCB_spacer_-32_24",
+      "name": "F_BODY_carrier_insert_-64_-25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "PCB_spacer_-32_24"
+      "child": "BODY_carrier_insert_-64_-25"
     },
     {
-      "name": "F_PCB_spacer_32_-24",
+      "name": "F_BODY_carrier_M3x10_-64_-25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "PCB_spacer_32_-24"
+      "child": "BODY_carrier_M3x10_-64_-25"
     },
     {
-      "name": "F_PCB_spacer_32_24",
+      "name": "F_BODY_carrier_insert_-64_25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "PCB_spacer_32_24"
+      "child": "BODY_carrier_insert_-64_25"
     },
     {
-      "name": "F_BODY_deck_M3x8_-68_-18",
+      "name": "F_BODY_carrier_M3x10_-64_25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_M3x8_-68_-18"
+      "child": "BODY_carrier_M3x10_-64_25"
     },
     {
-      "name": "F_BODY_deck_RXM3x5p7_-68_-18",
+      "name": "F_BODY_carrier_insert_64_-25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_RXM3x5p7_-68_-18"
+      "child": "BODY_carrier_insert_64_-25"
     },
     {
-      "name": "F_BODY_deck_M3x8_-68_18",
+      "name": "F_BODY_carrier_M3x10_64_-25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_M3x8_-68_18"
+      "child": "BODY_carrier_M3x10_64_-25"
     },
     {
-      "name": "F_BODY_deck_RXM3x5p7_-68_18",
+      "name": "F_BODY_carrier_insert_64_25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_RXM3x5p7_-68_18"
+      "child": "BODY_carrier_insert_64_25"
     },
     {
-      "name": "F_BODY_deck_M3x8_68_-18",
+      "name": "F_BODY_carrier_M3x10_64_25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_M3x8_68_-18"
+      "child": "BODY_carrier_M3x10_64_25"
     },
     {
-      "name": "F_BODY_deck_RXM3x5p7_68_-18",
+      "name": "F_BODY_cover_insert_-68_0",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_RXM3x5p7_68_-18"
+      "child": "BODY_cover_insert_-68_0"
     },
     {
-      "name": "F_BODY_deck_M3x8_68_18",
+      "name": "F_BODY_cover_M3x10_-68_0",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_M3x8_68_18"
+      "child": "BODY_cover_M3x10_-68_0"
     },
     {
-      "name": "F_BODY_deck_RXM3x5p7_68_18",
+      "name": "F_BODY_cover_insert_68_0",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_deck_RXM3x5p7_68_18"
+      "child": "BODY_cover_insert_68_0"
     },
     {
-      "name": "F_BODY_tray_M3x8_-32_-30",
+      "name": "F_BODY_cover_M3x10_68_0",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_M3x8_-32_-30"
+      "child": "BODY_cover_M3x10_68_0"
     },
     {
-      "name": "F_BODY_tray_RXM3x5p7_-32_-30",
+      "name": "F_BODY_PCB_standoff_-32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_RXM3x5p7_-32_-30"
+      "child": "BODY_PCB_standoff_-32_-24"
     },
     {
-      "name": "F_BODY_tray_M3x8_-32_30",
+      "name": "F_BODY_PCB_insert_-32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_M3x8_-32_30"
+      "child": "BODY_PCB_insert_-32_-24"
     },
     {
-      "name": "F_BODY_tray_RXM3x5p7_-32_30",
+      "name": "F_BODY_PCB_M3x12_-32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_RXM3x5p7_-32_30"
+      "child": "BODY_PCB_M3x12_-32_-24"
     },
     {
-      "name": "F_BODY_tray_M3x8_32_-30",
+      "name": "F_BODY_PCB_standoff_-32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_M3x8_32_-30"
+      "child": "BODY_PCB_standoff_-32_24"
     },
     {
-      "name": "F_BODY_tray_RXM3x5p7_32_-30",
+      "name": "F_BODY_PCB_insert_-32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_RXM3x5p7_32_-30"
+      "child": "BODY_PCB_insert_-32_24"
     },
     {
-      "name": "F_BODY_tray_M3x8_32_30",
+      "name": "F_BODY_PCB_M3x12_-32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_M3x8_32_30"
+      "child": "BODY_PCB_M3x12_-32_24"
     },
     {
-      "name": "F_BODY_tray_RXM3x5p7_32_30",
+      "name": "F_BODY_PCB_standoff_32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_tray_RXM3x5p7_32_30"
+      "child": "BODY_PCB_standoff_32_-24"
     },
     {
-      "name": "F_BODY_controller_M3x8_-48_-31",
+      "name": "F_BODY_PCB_insert_32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_M3x8_-48_-31"
+      "child": "BODY_PCB_insert_32_-24"
     },
     {
-      "name": "F_BODY_controller_RXM3x5p7_-48_-31",
+      "name": "F_BODY_PCB_M3x12_32_-24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_RXM3x5p7_-48_-31"
+      "child": "BODY_PCB_M3x12_32_-24"
     },
     {
-      "name": "F_BODY_controller_M3x8_-48_31",
+      "name": "F_BODY_PCB_standoff_32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_M3x8_-48_31"
+      "child": "BODY_PCB_standoff_32_24"
     },
     {
-      "name": "F_BODY_controller_RXM3x5p7_-48_31",
+      "name": "F_BODY_PCB_insert_32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_RXM3x5p7_-48_31"
+      "child": "BODY_PCB_insert_32_24"
     },
     {
-      "name": "F_BODY_controller_M3x8_48_-31",
+      "name": "F_BODY_PCB_M3x12_32_24",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_M3x8_48_-31"
+      "child": "BODY_PCB_M3x12_32_24"
     },
     {
-      "name": "F_BODY_controller_RXM3x5p7_48_-31",
+      "name": "F_L1_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_RXM3x5p7_48_-31"
+      "child": "L1_YAW_STS3215"
     },
     {
-      "name": "F_BODY_controller_M3x8_48_31",
+      "name": "F_L1_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_M3x8_48_31"
+      "child": "L1_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_BODY_controller_RXM3x5p7_48_31",
+      "name": "F_L1_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_controller_RXM3x5p7_48_31"
+      "child": "L1_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_BODY_shell_M3x8_-40_-42",
+      "name": "F_L1_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_M3x8_-40_-42"
+      "child": "L1_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_BODY_shell_RXM3x5p7_-40_-42",
+      "name": "F_L1_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_RXM3x5p7_-40_-42"
+      "child": "L1_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_BODY_shell_M3x8_-40_42",
+      "name": "F_L2_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_M3x8_-40_42"
+      "child": "L2_YAW_STS3215"
     },
     {
-      "name": "F_BODY_shell_RXM3x5p7_-40_42",
+      "name": "F_L2_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_RXM3x5p7_-40_42"
+      "child": "L2_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_BODY_shell_M3x8_40_-42",
+      "name": "F_L2_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_M3x8_40_-42"
+      "child": "L2_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_BODY_shell_RXM3x5p7_40_-42",
+      "name": "F_L2_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_RXM3x5p7_40_-42"
+      "child": "L2_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_BODY_shell_M3x8_40_42",
+      "name": "F_L2_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_M3x8_40_42"
+      "child": "L2_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_BODY_shell_RXM3x5p7_40_42",
+      "name": "F_L3_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "BODY_shell_RXM3x5p7_40_42"
+      "child": "L3_YAW_STS3215"
     },
     {
-      "name": "F_L1_S01_YAW_STS3215",
+      "name": "F_L3_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_S01_YAW_STS3215"
+      "child": "L3_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L1_yaw_clamp",
+      "name": "F_L3_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp"
+      "child": "L3_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_M3x8_-31_-18.3",
+      "name": "F_L3_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_M3x8_-31_-18.3"
+      "child": "L3_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L3_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L3_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_M3x8_-31_18.3",
+      "name": "F_L4_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_M3x8_-31_18.3"
+      "child": "L4_YAW_STS3215"
     },
     {
-      "name": "F_L1_yaw_clamp_RXM3x5p7_-31_18.3",
+      "name": "F_L4_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_RXM3x5p7_-31_18.3"
+      "child": "L4_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_M3x8_-20_-18.3",
+      "name": "F_L4_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_M3x8_-20_-18.3"
+      "child": "L4_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_RXM3x5p7_-20_-18.3",
+      "name": "F_L4_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_RXM3x5p7_-20_-18.3"
+      "child": "L4_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_M3x8_-20_18.3",
+      "name": "F_L4_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_M3x8_-20_18.3"
+      "child": "L4_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L1_yaw_clamp_RXM3x5p7_-20_18.3",
+      "name": "F_L5_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L1_yaw_clamp_RXM3x5p7_-20_18.3"
+      "child": "L5_YAW_STS3215"
     },
     {
-      "name": "F_L2_S04_YAW_STS3215",
+      "name": "F_L5_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_S04_YAW_STS3215"
+      "child": "L5_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L2_yaw_clamp",
+      "name": "F_L5_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp"
+      "child": "L5_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_M3x8_-31_-18.3",
+      "name": "F_L5_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_M3x8_-31_-18.3"
+      "child": "L5_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L5_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L5_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_M3x8_-31_18.3",
+      "name": "F_L6_YAW_STS3215",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_M3x8_-31_18.3"
+      "child": "L6_YAW_STS3215"
     },
     {
-      "name": "F_L2_yaw_clamp_RXM3x5p7_-31_18.3",
+      "name": "F_L6_yaw_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_RXM3x5p7_-31_18.3"
+      "child": "L6_yaw_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_M3x8_-20_-18.3",
+      "name": "F_L6_yaw_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_M3x8_-20_-18.3"
+      "child": "L6_yaw_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_RXM3x5p7_-20_-18.3",
+      "name": "F_L6_yaw_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_RXM3x5p7_-20_-18.3"
+      "child": "L6_yaw_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_M3x8_-20_18.3",
+      "name": "F_L6_yaw_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_M3x8_-20_18.3"
+      "child": "L6_yaw_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L2_yaw_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L2_yaw_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L3_S07_YAW_STS3215",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_S07_YAW_STS3215"
-    },
-    {
-      "name": "F_L3_yaw_clamp",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp"
-    },
-    {
-      "name": "F_L3_yaw_clamp_M3x8_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_M3x8_-31_-18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_RXM3x5p7_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L3_yaw_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L3_yaw_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L4_S10_YAW_STS3215",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_S10_YAW_STS3215"
-    },
-    {
-      "name": "F_L4_yaw_clamp",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp"
-    },
-    {
-      "name": "F_L4_yaw_clamp_M3x8_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_M3x8_-31_-18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_RXM3x5p7_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L4_yaw_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L4_yaw_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L5_S13_YAW_STS3215",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_S13_YAW_STS3215"
-    },
-    {
-      "name": "F_L5_yaw_clamp",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp"
-    },
-    {
-      "name": "F_L5_yaw_clamp_M3x8_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_M3x8_-31_-18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_RXM3x5p7_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L5_yaw_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L5_yaw_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L6_S16_YAW_STS3215",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_S16_YAW_STS3215"
-    },
-    {
-      "name": "F_L6_yaw_clamp",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp"
-    },
-    {
-      "name": "F_L6_yaw_clamp_M3x8_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_M3x8_-31_-18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_RXM3x5p7_-31_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L6_yaw_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "01_CHASSIS",
-      "child": "L6_yaw_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L1_coxa_bottom",
+      "name": "F_L1_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_coxa_bottom"
+      "child": "L1_HIP_STS3215"
     },
     {
-      "name": "F_L1_S02_HIP_STS3215",
+      "name": "F_L1_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_S02_HIP_STS3215"
+      "child": "L1_yaw_horn_-1"
     },
     {
-      "name": "F_L1_hip_clamp",
+      "name": "F_L1_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_hip_clamp"
+      "child": "L1_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L1_yaw_disc_plus",
+      "name": "F_L1_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_disc_plus"
+      "child": "L1_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L1_yaw_disc_min",
+      "name": "F_L1_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_disc_min"
+      "child": "L1_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L1_yaw_plus_horn_M3x6_1",
+      "name": "F_L1_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_plus_horn_M3x6_1"
+      "child": "L1_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L1_yaw_plus_horn_M3x6_2",
+      "name": "F_L1_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_plus_horn_M3x6_2"
+      "child": "L1_yaw_horn_1"
     },
     {
-      "name": "F_L1_yaw_plus_horn_M3x6_3",
+      "name": "F_L1_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_plus_horn_M3x6_3"
+      "child": "L1_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L1_yaw_plus_horn_M3x6_4",
+      "name": "F_L1_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_plus_horn_M3x6_4"
+      "child": "L1_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L1_yaw_min_horn_M3x6_1",
+      "name": "F_L1_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_min_horn_M3x6_1"
+      "child": "L1_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L1_yaw_min_horn_M3x6_2",
+      "name": "F_L1_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_min_horn_M3x6_2"
+      "child": "L1_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L1_yaw_min_horn_M3x6_3",
+      "name": "F_L1_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_min_horn_M3x6_3"
+      "child": "L1_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L1_yaw_min_horn_M3x6_4",
+      "name": "F_L1_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_yaw_min_horn_M3x6_4"
+      "child": "L1_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L1_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L1_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_hip_clamp_M3x8_-31_-18.3"
+      "child": "L1_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L1_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L1_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L1_coxa",
-      "child": "L1_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L1_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L1_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L1_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L1_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L1_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L1_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L1_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L1_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L1_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L1_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L1_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L1_coxa",
-      "child": "L1_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L1_femur_side_plate",
+      "name": "F_L1_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_femur_side_plate"
+      "child": "L1_KNEE_STS3215"
     },
     {
-      "name": "F_L1_S03_KNEE_STS3215",
+      "name": "F_L1_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_S03_KNEE_STS3215"
+      "child": "L1_hip_horn_-1"
     },
     {
-      "name": "F_L1_knee_clamp",
+      "name": "F_L1_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_knee_clamp"
+      "child": "L1_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L1_hip_disc_plus",
+      "name": "F_L1_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_disc_plus"
+      "child": "L1_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L1_hip_disc_min",
+      "name": "F_L1_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_disc_min"
+      "child": "L1_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L1_hip_plus_horn_M3x6_1",
+      "name": "F_L1_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_plus_horn_M3x6_1"
+      "child": "L1_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L1_hip_plus_horn_M3x6_2",
+      "name": "F_L1_hip_horn_1",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_plus_horn_M3x6_2"
+      "child": "L1_hip_horn_1"
     },
     {
-      "name": "F_L1_hip_plus_horn_M3x6_3",
+      "name": "F_L1_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_plus_horn_M3x6_3"
+      "child": "L1_hip_M3x6_1_1"
     },
     {
-      "name": "F_L1_hip_plus_horn_M3x6_4",
+      "name": "F_L1_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_plus_horn_M3x6_4"
+      "child": "L1_hip_M3x6_1_2"
     },
     {
-      "name": "F_L1_hip_min_horn_M3x6_1",
+      "name": "F_L1_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_min_horn_M3x6_1"
+      "child": "L1_hip_M3x6_1_3"
     },
     {
-      "name": "F_L1_hip_min_horn_M3x6_2",
+      "name": "F_L1_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_min_horn_M3x6_2"
+      "child": "L1_hip_M3x6_1_4"
     },
     {
-      "name": "F_L1_hip_min_horn_M3x6_3",
+      "name": "F_L1_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_min_horn_M3x6_3"
+      "child": "L1_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L1_hip_min_horn_M3x6_4",
+      "name": "F_L1_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_hip_min_horn_M3x6_4"
+      "child": "L1_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L1_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L1_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_knee_clamp_M3x8_-31_-18.3"
+      "child": "L1_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L1_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L1_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L1_femur",
-      "child": "L1_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L1_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L1_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L1_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L1_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L1_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L1_femur",
-      "child": "L1_femur_join_RXM3x5p7_-8"
+      "child": "L1_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L1_foot",
@@ -2921,376 +1893,256 @@
       "child": "L1_foot"
     },
     {
-      "name": "F_L1_knee_disc_plus",
+      "name": "F_L1_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_disc_plus"
+      "child": "L1_knee_horn_-1"
     },
     {
-      "name": "F_L1_knee_disc_min",
+      "name": "F_L1_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_disc_min"
+      "child": "L1_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L1_knee_plus_horn_M3x6_1",
+      "name": "F_L1_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_plus_horn_M3x6_1"
+      "child": "L1_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L1_knee_plus_horn_M3x6_2",
+      "name": "F_L1_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_plus_horn_M3x6_2"
+      "child": "L1_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L1_knee_plus_horn_M3x6_3",
+      "name": "F_L1_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_plus_horn_M3x6_3"
+      "child": "L1_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L1_knee_plus_horn_M3x6_4",
+      "name": "F_L1_knee_horn_1",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_plus_horn_M3x6_4"
+      "child": "L1_knee_horn_1"
     },
     {
-      "name": "F_L1_knee_min_horn_M3x6_1",
+      "name": "F_L1_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_min_horn_M3x6_1"
+      "child": "L1_knee_M3x6_1_1"
     },
     {
-      "name": "F_L1_knee_min_horn_M3x6_2",
+      "name": "F_L1_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_min_horn_M3x6_2"
+      "child": "L1_knee_M3x6_1_2"
     },
     {
-      "name": "F_L1_knee_min_horn_M3x6_3",
+      "name": "F_L1_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_min_horn_M3x6_3"
+      "child": "L1_knee_M3x6_1_3"
     },
     {
-      "name": "F_L1_knee_min_horn_M3x6_4",
+      "name": "F_L1_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_knee_min_horn_M3x6_4"
+      "child": "L1_knee_M3x6_1_4"
     },
     {
-      "name": "F_L1_foot_M3x25",
+      "name": "F_L1_shoe_insert",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_foot_M3x25"
+      "child": "L1_shoe_insert"
     },
     {
-      "name": "F_L1_foot_M3_locknut",
+      "name": "F_L1_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L1_tibia",
-      "child": "L1_foot_M3_locknut"
+      "child": "L1_shoe_M3x8"
     },
     {
-      "name": "F_L2_coxa_bottom",
+      "name": "F_L2_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_coxa_bottom"
+      "child": "L2_HIP_STS3215"
     },
     {
-      "name": "F_L2_S05_HIP_STS3215",
+      "name": "F_L2_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_S05_HIP_STS3215"
+      "child": "L2_yaw_horn_-1"
     },
     {
-      "name": "F_L2_hip_clamp",
+      "name": "F_L2_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_hip_clamp"
+      "child": "L2_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L2_yaw_disc_plus",
+      "name": "F_L2_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_disc_plus"
+      "child": "L2_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L2_yaw_disc_min",
+      "name": "F_L2_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_disc_min"
+      "child": "L2_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L2_yaw_plus_horn_M3x6_1",
+      "name": "F_L2_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_plus_horn_M3x6_1"
+      "child": "L2_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L2_yaw_plus_horn_M3x6_2",
+      "name": "F_L2_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_plus_horn_M3x6_2"
+      "child": "L2_yaw_horn_1"
     },
     {
-      "name": "F_L2_yaw_plus_horn_M3x6_3",
+      "name": "F_L2_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_plus_horn_M3x6_3"
+      "child": "L2_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L2_yaw_plus_horn_M3x6_4",
+      "name": "F_L2_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_plus_horn_M3x6_4"
+      "child": "L2_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L2_yaw_min_horn_M3x6_1",
+      "name": "F_L2_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_min_horn_M3x6_1"
+      "child": "L2_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L2_yaw_min_horn_M3x6_2",
+      "name": "F_L2_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_min_horn_M3x6_2"
+      "child": "L2_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L2_yaw_min_horn_M3x6_3",
+      "name": "F_L2_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_min_horn_M3x6_3"
+      "child": "L2_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L2_yaw_min_horn_M3x6_4",
+      "name": "F_L2_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_yaw_min_horn_M3x6_4"
+      "child": "L2_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L2_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L2_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_hip_clamp_M3x8_-31_-18.3"
+      "child": "L2_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L2_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L2_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L2_coxa",
-      "child": "L2_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L2_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L2_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L2_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L2_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L2_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L2_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L2_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L2_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L2_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L2_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L2_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L2_coxa",
-      "child": "L2_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L2_femur_side_plate",
+      "name": "F_L2_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_femur_side_plate"
+      "child": "L2_KNEE_STS3215"
     },
     {
-      "name": "F_L2_S06_KNEE_STS3215",
+      "name": "F_L2_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_S06_KNEE_STS3215"
+      "child": "L2_hip_horn_-1"
     },
     {
-      "name": "F_L2_knee_clamp",
+      "name": "F_L2_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_knee_clamp"
+      "child": "L2_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L2_hip_disc_plus",
+      "name": "F_L2_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_disc_plus"
+      "child": "L2_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L2_hip_disc_min",
+      "name": "F_L2_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_disc_min"
+      "child": "L2_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L2_hip_plus_horn_M3x6_1",
+      "name": "F_L2_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_plus_horn_M3x6_1"
+      "child": "L2_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L2_hip_plus_horn_M3x6_2",
+      "name": "F_L2_hip_horn_1",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_plus_horn_M3x6_2"
+      "child": "L2_hip_horn_1"
     },
     {
-      "name": "F_L2_hip_plus_horn_M3x6_3",
+      "name": "F_L2_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_plus_horn_M3x6_3"
+      "child": "L2_hip_M3x6_1_1"
     },
     {
-      "name": "F_L2_hip_plus_horn_M3x6_4",
+      "name": "F_L2_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_plus_horn_M3x6_4"
+      "child": "L2_hip_M3x6_1_2"
     },
     {
-      "name": "F_L2_hip_min_horn_M3x6_1",
+      "name": "F_L2_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_min_horn_M3x6_1"
+      "child": "L2_hip_M3x6_1_3"
     },
     {
-      "name": "F_L2_hip_min_horn_M3x6_2",
+      "name": "F_L2_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_min_horn_M3x6_2"
+      "child": "L2_hip_M3x6_1_4"
     },
     {
-      "name": "F_L2_hip_min_horn_M3x6_3",
+      "name": "F_L2_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_min_horn_M3x6_3"
+      "child": "L2_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L2_hip_min_horn_M3x6_4",
+      "name": "F_L2_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_hip_min_horn_M3x6_4"
+      "child": "L2_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L2_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L2_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_knee_clamp_M3x8_-31_-18.3"
+      "child": "L2_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L2_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L2_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L2_femur",
-      "child": "L2_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L2_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L2_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L2_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L2_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L2_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L2_femur",
-      "child": "L2_femur_join_RXM3x5p7_-8"
+      "child": "L2_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L2_foot",
@@ -3299,376 +2151,256 @@
       "child": "L2_foot"
     },
     {
-      "name": "F_L2_knee_disc_plus",
+      "name": "F_L2_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_disc_plus"
+      "child": "L2_knee_horn_-1"
     },
     {
-      "name": "F_L2_knee_disc_min",
+      "name": "F_L2_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_disc_min"
+      "child": "L2_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L2_knee_plus_horn_M3x6_1",
+      "name": "F_L2_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_plus_horn_M3x6_1"
+      "child": "L2_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L2_knee_plus_horn_M3x6_2",
+      "name": "F_L2_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_plus_horn_M3x6_2"
+      "child": "L2_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L2_knee_plus_horn_M3x6_3",
+      "name": "F_L2_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_plus_horn_M3x6_3"
+      "child": "L2_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L2_knee_plus_horn_M3x6_4",
+      "name": "F_L2_knee_horn_1",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_plus_horn_M3x6_4"
+      "child": "L2_knee_horn_1"
     },
     {
-      "name": "F_L2_knee_min_horn_M3x6_1",
+      "name": "F_L2_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_min_horn_M3x6_1"
+      "child": "L2_knee_M3x6_1_1"
     },
     {
-      "name": "F_L2_knee_min_horn_M3x6_2",
+      "name": "F_L2_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_min_horn_M3x6_2"
+      "child": "L2_knee_M3x6_1_2"
     },
     {
-      "name": "F_L2_knee_min_horn_M3x6_3",
+      "name": "F_L2_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_min_horn_M3x6_3"
+      "child": "L2_knee_M3x6_1_3"
     },
     {
-      "name": "F_L2_knee_min_horn_M3x6_4",
+      "name": "F_L2_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_knee_min_horn_M3x6_4"
+      "child": "L2_knee_M3x6_1_4"
     },
     {
-      "name": "F_L2_foot_M3x25",
+      "name": "F_L2_shoe_insert",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_foot_M3x25"
+      "child": "L2_shoe_insert"
     },
     {
-      "name": "F_L2_foot_M3_locknut",
+      "name": "F_L2_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L2_tibia",
-      "child": "L2_foot_M3_locknut"
+      "child": "L2_shoe_M3x8"
     },
     {
-      "name": "F_L3_coxa_bottom",
+      "name": "F_L3_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_coxa_bottom"
+      "child": "L3_HIP_STS3215"
     },
     {
-      "name": "F_L3_S08_HIP_STS3215",
+      "name": "F_L3_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_S08_HIP_STS3215"
+      "child": "L3_yaw_horn_-1"
     },
     {
-      "name": "F_L3_hip_clamp",
+      "name": "F_L3_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_hip_clamp"
+      "child": "L3_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L3_yaw_disc_plus",
+      "name": "F_L3_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_disc_plus"
+      "child": "L3_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L3_yaw_disc_min",
+      "name": "F_L3_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_disc_min"
+      "child": "L3_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L3_yaw_plus_horn_M3x6_1",
+      "name": "F_L3_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_plus_horn_M3x6_1"
+      "child": "L3_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L3_yaw_plus_horn_M3x6_2",
+      "name": "F_L3_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_plus_horn_M3x6_2"
+      "child": "L3_yaw_horn_1"
     },
     {
-      "name": "F_L3_yaw_plus_horn_M3x6_3",
+      "name": "F_L3_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_plus_horn_M3x6_3"
+      "child": "L3_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L3_yaw_plus_horn_M3x6_4",
+      "name": "F_L3_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_plus_horn_M3x6_4"
+      "child": "L3_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L3_yaw_min_horn_M3x6_1",
+      "name": "F_L3_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_min_horn_M3x6_1"
+      "child": "L3_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L3_yaw_min_horn_M3x6_2",
+      "name": "F_L3_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_min_horn_M3x6_2"
+      "child": "L3_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L3_yaw_min_horn_M3x6_3",
+      "name": "F_L3_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_min_horn_M3x6_3"
+      "child": "L3_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L3_yaw_min_horn_M3x6_4",
+      "name": "F_L3_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_yaw_min_horn_M3x6_4"
+      "child": "L3_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L3_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L3_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_hip_clamp_M3x8_-31_-18.3"
+      "child": "L3_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L3_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L3_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L3_coxa",
-      "child": "L3_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L3_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L3_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L3_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L3_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L3_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L3_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L3_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L3_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L3_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L3_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L3_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L3_coxa",
-      "child": "L3_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L3_femur_side_plate",
+      "name": "F_L3_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_femur_side_plate"
+      "child": "L3_KNEE_STS3215"
     },
     {
-      "name": "F_L3_S09_KNEE_STS3215",
+      "name": "F_L3_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_S09_KNEE_STS3215"
+      "child": "L3_hip_horn_-1"
     },
     {
-      "name": "F_L3_knee_clamp",
+      "name": "F_L3_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_knee_clamp"
+      "child": "L3_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L3_hip_disc_plus",
+      "name": "F_L3_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_disc_plus"
+      "child": "L3_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L3_hip_disc_min",
+      "name": "F_L3_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_disc_min"
+      "child": "L3_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L3_hip_plus_horn_M3x6_1",
+      "name": "F_L3_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_plus_horn_M3x6_1"
+      "child": "L3_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L3_hip_plus_horn_M3x6_2",
+      "name": "F_L3_hip_horn_1",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_plus_horn_M3x6_2"
+      "child": "L3_hip_horn_1"
     },
     {
-      "name": "F_L3_hip_plus_horn_M3x6_3",
+      "name": "F_L3_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_plus_horn_M3x6_3"
+      "child": "L3_hip_M3x6_1_1"
     },
     {
-      "name": "F_L3_hip_plus_horn_M3x6_4",
+      "name": "F_L3_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_plus_horn_M3x6_4"
+      "child": "L3_hip_M3x6_1_2"
     },
     {
-      "name": "F_L3_hip_min_horn_M3x6_1",
+      "name": "F_L3_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_min_horn_M3x6_1"
+      "child": "L3_hip_M3x6_1_3"
     },
     {
-      "name": "F_L3_hip_min_horn_M3x6_2",
+      "name": "F_L3_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_min_horn_M3x6_2"
+      "child": "L3_hip_M3x6_1_4"
     },
     {
-      "name": "F_L3_hip_min_horn_M3x6_3",
+      "name": "F_L3_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_min_horn_M3x6_3"
+      "child": "L3_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L3_hip_min_horn_M3x6_4",
+      "name": "F_L3_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_hip_min_horn_M3x6_4"
+      "child": "L3_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L3_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L3_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_knee_clamp_M3x8_-31_-18.3"
+      "child": "L3_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L3_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L3_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L3_femur",
-      "child": "L3_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L3_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L3_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L3_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L3_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L3_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L3_femur",
-      "child": "L3_femur_join_RXM3x5p7_-8"
+      "child": "L3_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L3_foot",
@@ -3677,376 +2409,256 @@
       "child": "L3_foot"
     },
     {
-      "name": "F_L3_knee_disc_plus",
+      "name": "F_L3_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_disc_plus"
+      "child": "L3_knee_horn_-1"
     },
     {
-      "name": "F_L3_knee_disc_min",
+      "name": "F_L3_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_disc_min"
+      "child": "L3_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L3_knee_plus_horn_M3x6_1",
+      "name": "F_L3_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_plus_horn_M3x6_1"
+      "child": "L3_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L3_knee_plus_horn_M3x6_2",
+      "name": "F_L3_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_plus_horn_M3x6_2"
+      "child": "L3_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L3_knee_plus_horn_M3x6_3",
+      "name": "F_L3_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_plus_horn_M3x6_3"
+      "child": "L3_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L3_knee_plus_horn_M3x6_4",
+      "name": "F_L3_knee_horn_1",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_plus_horn_M3x6_4"
+      "child": "L3_knee_horn_1"
     },
     {
-      "name": "F_L3_knee_min_horn_M3x6_1",
+      "name": "F_L3_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_min_horn_M3x6_1"
+      "child": "L3_knee_M3x6_1_1"
     },
     {
-      "name": "F_L3_knee_min_horn_M3x6_2",
+      "name": "F_L3_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_min_horn_M3x6_2"
+      "child": "L3_knee_M3x6_1_2"
     },
     {
-      "name": "F_L3_knee_min_horn_M3x6_3",
+      "name": "F_L3_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_min_horn_M3x6_3"
+      "child": "L3_knee_M3x6_1_3"
     },
     {
-      "name": "F_L3_knee_min_horn_M3x6_4",
+      "name": "F_L3_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_knee_min_horn_M3x6_4"
+      "child": "L3_knee_M3x6_1_4"
     },
     {
-      "name": "F_L3_foot_M3x25",
+      "name": "F_L3_shoe_insert",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_foot_M3x25"
+      "child": "L3_shoe_insert"
     },
     {
-      "name": "F_L3_foot_M3_locknut",
+      "name": "F_L3_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L3_tibia",
-      "child": "L3_foot_M3_locknut"
+      "child": "L3_shoe_M3x8"
     },
     {
-      "name": "F_L4_coxa_bottom",
+      "name": "F_L4_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_coxa_bottom"
+      "child": "L4_HIP_STS3215"
     },
     {
-      "name": "F_L4_S11_HIP_STS3215",
+      "name": "F_L4_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_S11_HIP_STS3215"
+      "child": "L4_yaw_horn_-1"
     },
     {
-      "name": "F_L4_hip_clamp",
+      "name": "F_L4_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_hip_clamp"
+      "child": "L4_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L4_yaw_disc_plus",
+      "name": "F_L4_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_disc_plus"
+      "child": "L4_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L4_yaw_disc_min",
+      "name": "F_L4_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_disc_min"
+      "child": "L4_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L4_yaw_plus_horn_M3x6_1",
+      "name": "F_L4_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_plus_horn_M3x6_1"
+      "child": "L4_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L4_yaw_plus_horn_M3x6_2",
+      "name": "F_L4_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_plus_horn_M3x6_2"
+      "child": "L4_yaw_horn_1"
     },
     {
-      "name": "F_L4_yaw_plus_horn_M3x6_3",
+      "name": "F_L4_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_plus_horn_M3x6_3"
+      "child": "L4_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L4_yaw_plus_horn_M3x6_4",
+      "name": "F_L4_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_plus_horn_M3x6_4"
+      "child": "L4_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L4_yaw_min_horn_M3x6_1",
+      "name": "F_L4_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_min_horn_M3x6_1"
+      "child": "L4_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L4_yaw_min_horn_M3x6_2",
+      "name": "F_L4_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_min_horn_M3x6_2"
+      "child": "L4_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L4_yaw_min_horn_M3x6_3",
+      "name": "F_L4_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_min_horn_M3x6_3"
+      "child": "L4_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L4_yaw_min_horn_M3x6_4",
+      "name": "F_L4_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_yaw_min_horn_M3x6_4"
+      "child": "L4_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L4_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L4_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_hip_clamp_M3x8_-31_-18.3"
+      "child": "L4_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L4_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L4_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L4_coxa",
-      "child": "L4_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L4_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L4_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L4_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L4_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L4_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L4_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L4_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L4_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L4_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L4_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L4_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L4_coxa",
-      "child": "L4_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L4_femur_side_plate",
+      "name": "F_L4_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_femur_side_plate"
+      "child": "L4_KNEE_STS3215"
     },
     {
-      "name": "F_L4_S12_KNEE_STS3215",
+      "name": "F_L4_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_S12_KNEE_STS3215"
+      "child": "L4_hip_horn_-1"
     },
     {
-      "name": "F_L4_knee_clamp",
+      "name": "F_L4_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_knee_clamp"
+      "child": "L4_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L4_hip_disc_plus",
+      "name": "F_L4_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_disc_plus"
+      "child": "L4_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L4_hip_disc_min",
+      "name": "F_L4_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_disc_min"
+      "child": "L4_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L4_hip_plus_horn_M3x6_1",
+      "name": "F_L4_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_plus_horn_M3x6_1"
+      "child": "L4_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L4_hip_plus_horn_M3x6_2",
+      "name": "F_L4_hip_horn_1",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_plus_horn_M3x6_2"
+      "child": "L4_hip_horn_1"
     },
     {
-      "name": "F_L4_hip_plus_horn_M3x6_3",
+      "name": "F_L4_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_plus_horn_M3x6_3"
+      "child": "L4_hip_M3x6_1_1"
     },
     {
-      "name": "F_L4_hip_plus_horn_M3x6_4",
+      "name": "F_L4_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_plus_horn_M3x6_4"
+      "child": "L4_hip_M3x6_1_2"
     },
     {
-      "name": "F_L4_hip_min_horn_M3x6_1",
+      "name": "F_L4_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_min_horn_M3x6_1"
+      "child": "L4_hip_M3x6_1_3"
     },
     {
-      "name": "F_L4_hip_min_horn_M3x6_2",
+      "name": "F_L4_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_min_horn_M3x6_2"
+      "child": "L4_hip_M3x6_1_4"
     },
     {
-      "name": "F_L4_hip_min_horn_M3x6_3",
+      "name": "F_L4_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_min_horn_M3x6_3"
+      "child": "L4_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L4_hip_min_horn_M3x6_4",
+      "name": "F_L4_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_hip_min_horn_M3x6_4"
+      "child": "L4_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L4_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L4_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_knee_clamp_M3x8_-31_-18.3"
+      "child": "L4_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L4_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L4_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L4_femur",
-      "child": "L4_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L4_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L4_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L4_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L4_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L4_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L4_femur",
-      "child": "L4_femur_join_RXM3x5p7_-8"
+      "child": "L4_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L4_foot",
@@ -4055,376 +2667,256 @@
       "child": "L4_foot"
     },
     {
-      "name": "F_L4_knee_disc_plus",
+      "name": "F_L4_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_disc_plus"
+      "child": "L4_knee_horn_-1"
     },
     {
-      "name": "F_L4_knee_disc_min",
+      "name": "F_L4_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_disc_min"
+      "child": "L4_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L4_knee_plus_horn_M3x6_1",
+      "name": "F_L4_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_plus_horn_M3x6_1"
+      "child": "L4_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L4_knee_plus_horn_M3x6_2",
+      "name": "F_L4_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_plus_horn_M3x6_2"
+      "child": "L4_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L4_knee_plus_horn_M3x6_3",
+      "name": "F_L4_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_plus_horn_M3x6_3"
+      "child": "L4_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L4_knee_plus_horn_M3x6_4",
+      "name": "F_L4_knee_horn_1",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_plus_horn_M3x6_4"
+      "child": "L4_knee_horn_1"
     },
     {
-      "name": "F_L4_knee_min_horn_M3x6_1",
+      "name": "F_L4_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_min_horn_M3x6_1"
+      "child": "L4_knee_M3x6_1_1"
     },
     {
-      "name": "F_L4_knee_min_horn_M3x6_2",
+      "name": "F_L4_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_min_horn_M3x6_2"
+      "child": "L4_knee_M3x6_1_2"
     },
     {
-      "name": "F_L4_knee_min_horn_M3x6_3",
+      "name": "F_L4_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_min_horn_M3x6_3"
+      "child": "L4_knee_M3x6_1_3"
     },
     {
-      "name": "F_L4_knee_min_horn_M3x6_4",
+      "name": "F_L4_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_knee_min_horn_M3x6_4"
+      "child": "L4_knee_M3x6_1_4"
     },
     {
-      "name": "F_L4_foot_M3x25",
+      "name": "F_L4_shoe_insert",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_foot_M3x25"
+      "child": "L4_shoe_insert"
     },
     {
-      "name": "F_L4_foot_M3_locknut",
+      "name": "F_L4_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L4_tibia",
-      "child": "L4_foot_M3_locknut"
+      "child": "L4_shoe_M3x8"
     },
     {
-      "name": "F_L5_coxa_bottom",
+      "name": "F_L5_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_coxa_bottom"
+      "child": "L5_HIP_STS3215"
     },
     {
-      "name": "F_L5_S14_HIP_STS3215",
+      "name": "F_L5_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_S14_HIP_STS3215"
+      "child": "L5_yaw_horn_-1"
     },
     {
-      "name": "F_L5_hip_clamp",
+      "name": "F_L5_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_hip_clamp"
+      "child": "L5_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L5_yaw_disc_plus",
+      "name": "F_L5_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_disc_plus"
+      "child": "L5_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L5_yaw_disc_min",
+      "name": "F_L5_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_disc_min"
+      "child": "L5_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L5_yaw_plus_horn_M3x6_1",
+      "name": "F_L5_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_plus_horn_M3x6_1"
+      "child": "L5_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L5_yaw_plus_horn_M3x6_2",
+      "name": "F_L5_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_plus_horn_M3x6_2"
+      "child": "L5_yaw_horn_1"
     },
     {
-      "name": "F_L5_yaw_plus_horn_M3x6_3",
+      "name": "F_L5_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_plus_horn_M3x6_3"
+      "child": "L5_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L5_yaw_plus_horn_M3x6_4",
+      "name": "F_L5_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_plus_horn_M3x6_4"
+      "child": "L5_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L5_yaw_min_horn_M3x6_1",
+      "name": "F_L5_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_min_horn_M3x6_1"
+      "child": "L5_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L5_yaw_min_horn_M3x6_2",
+      "name": "F_L5_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_min_horn_M3x6_2"
+      "child": "L5_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L5_yaw_min_horn_M3x6_3",
+      "name": "F_L5_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_min_horn_M3x6_3"
+      "child": "L5_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L5_yaw_min_horn_M3x6_4",
+      "name": "F_L5_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_yaw_min_horn_M3x6_4"
+      "child": "L5_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L5_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L5_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_hip_clamp_M3x8_-31_-18.3"
+      "child": "L5_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L5_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L5_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L5_coxa",
-      "child": "L5_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L5_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L5_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L5_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L5_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L5_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L5_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L5_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L5_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L5_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L5_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L5_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L5_coxa",
-      "child": "L5_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L5_femur_side_plate",
+      "name": "F_L5_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_femur_side_plate"
+      "child": "L5_KNEE_STS3215"
     },
     {
-      "name": "F_L5_S15_KNEE_STS3215",
+      "name": "F_L5_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_S15_KNEE_STS3215"
+      "child": "L5_hip_horn_-1"
     },
     {
-      "name": "F_L5_knee_clamp",
+      "name": "F_L5_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_knee_clamp"
+      "child": "L5_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L5_hip_disc_plus",
+      "name": "F_L5_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_disc_plus"
+      "child": "L5_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L5_hip_disc_min",
+      "name": "F_L5_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_disc_min"
+      "child": "L5_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L5_hip_plus_horn_M3x6_1",
+      "name": "F_L5_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_plus_horn_M3x6_1"
+      "child": "L5_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L5_hip_plus_horn_M3x6_2",
+      "name": "F_L5_hip_horn_1",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_plus_horn_M3x6_2"
+      "child": "L5_hip_horn_1"
     },
     {
-      "name": "F_L5_hip_plus_horn_M3x6_3",
+      "name": "F_L5_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_plus_horn_M3x6_3"
+      "child": "L5_hip_M3x6_1_1"
     },
     {
-      "name": "F_L5_hip_plus_horn_M3x6_4",
+      "name": "F_L5_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_plus_horn_M3x6_4"
+      "child": "L5_hip_M3x6_1_2"
     },
     {
-      "name": "F_L5_hip_min_horn_M3x6_1",
+      "name": "F_L5_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_min_horn_M3x6_1"
+      "child": "L5_hip_M3x6_1_3"
     },
     {
-      "name": "F_L5_hip_min_horn_M3x6_2",
+      "name": "F_L5_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_min_horn_M3x6_2"
+      "child": "L5_hip_M3x6_1_4"
     },
     {
-      "name": "F_L5_hip_min_horn_M3x6_3",
+      "name": "F_L5_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_min_horn_M3x6_3"
+      "child": "L5_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L5_hip_min_horn_M3x6_4",
+      "name": "F_L5_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_hip_min_horn_M3x6_4"
+      "child": "L5_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L5_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L5_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_knee_clamp_M3x8_-31_-18.3"
+      "child": "L5_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L5_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L5_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L5_femur",
-      "child": "L5_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L5_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L5_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L5_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L5_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L5_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L5_femur",
-      "child": "L5_femur_join_RXM3x5p7_-8"
+      "child": "L5_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L5_foot",
@@ -4433,376 +2925,256 @@
       "child": "L5_foot"
     },
     {
-      "name": "F_L5_knee_disc_plus",
+      "name": "F_L5_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_disc_plus"
+      "child": "L5_knee_horn_-1"
     },
     {
-      "name": "F_L5_knee_disc_min",
+      "name": "F_L5_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_disc_min"
+      "child": "L5_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L5_knee_plus_horn_M3x6_1",
+      "name": "F_L5_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_plus_horn_M3x6_1"
+      "child": "L5_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L5_knee_plus_horn_M3x6_2",
+      "name": "F_L5_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_plus_horn_M3x6_2"
+      "child": "L5_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L5_knee_plus_horn_M3x6_3",
+      "name": "F_L5_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_plus_horn_M3x6_3"
+      "child": "L5_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L5_knee_plus_horn_M3x6_4",
+      "name": "F_L5_knee_horn_1",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_plus_horn_M3x6_4"
+      "child": "L5_knee_horn_1"
     },
     {
-      "name": "F_L5_knee_min_horn_M3x6_1",
+      "name": "F_L5_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_min_horn_M3x6_1"
+      "child": "L5_knee_M3x6_1_1"
     },
     {
-      "name": "F_L5_knee_min_horn_M3x6_2",
+      "name": "F_L5_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_min_horn_M3x6_2"
+      "child": "L5_knee_M3x6_1_2"
     },
     {
-      "name": "F_L5_knee_min_horn_M3x6_3",
+      "name": "F_L5_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_min_horn_M3x6_3"
+      "child": "L5_knee_M3x6_1_3"
     },
     {
-      "name": "F_L5_knee_min_horn_M3x6_4",
+      "name": "F_L5_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_knee_min_horn_M3x6_4"
+      "child": "L5_knee_M3x6_1_4"
     },
     {
-      "name": "F_L5_foot_M3x25",
+      "name": "F_L5_shoe_insert",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_foot_M3x25"
+      "child": "L5_shoe_insert"
     },
     {
-      "name": "F_L5_foot_M3_locknut",
+      "name": "F_L5_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L5_tibia",
-      "child": "L5_foot_M3_locknut"
+      "child": "L5_shoe_M3x8"
     },
     {
-      "name": "F_L6_coxa_bottom",
+      "name": "F_L6_HIP_STS3215",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_coxa_bottom"
+      "child": "L6_HIP_STS3215"
     },
     {
-      "name": "F_L6_S17_HIP_STS3215",
+      "name": "F_L6_yaw_horn_-1",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_S17_HIP_STS3215"
+      "child": "L6_yaw_horn_-1"
     },
     {
-      "name": "F_L6_hip_clamp",
+      "name": "F_L6_yaw_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_hip_clamp"
+      "child": "L6_yaw_M3x6_-1_1"
     },
     {
-      "name": "F_L6_yaw_disc_plus",
+      "name": "F_L6_yaw_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_disc_plus"
+      "child": "L6_yaw_M3x6_-1_2"
     },
     {
-      "name": "F_L6_yaw_disc_min",
+      "name": "F_L6_yaw_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_disc_min"
+      "child": "L6_yaw_M3x6_-1_3"
     },
     {
-      "name": "F_L6_yaw_plus_horn_M3x6_1",
+      "name": "F_L6_yaw_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_plus_horn_M3x6_1"
+      "child": "L6_yaw_M3x6_-1_4"
     },
     {
-      "name": "F_L6_yaw_plus_horn_M3x6_2",
+      "name": "F_L6_yaw_horn_1",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_plus_horn_M3x6_2"
+      "child": "L6_yaw_horn_1"
     },
     {
-      "name": "F_L6_yaw_plus_horn_M3x6_3",
+      "name": "F_L6_yaw_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_plus_horn_M3x6_3"
+      "child": "L6_yaw_M3x6_1_1"
     },
     {
-      "name": "F_L6_yaw_plus_horn_M3x6_4",
+      "name": "F_L6_yaw_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_plus_horn_M3x6_4"
+      "child": "L6_yaw_M3x6_1_2"
     },
     {
-      "name": "F_L6_yaw_min_horn_M3x6_1",
+      "name": "F_L6_yaw_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_min_horn_M3x6_1"
+      "child": "L6_yaw_M3x6_1_3"
     },
     {
-      "name": "F_L6_yaw_min_horn_M3x6_2",
+      "name": "F_L6_yaw_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_min_horn_M3x6_2"
+      "child": "L6_yaw_M3x6_1_4"
     },
     {
-      "name": "F_L6_yaw_min_horn_M3x6_3",
+      "name": "F_L6_hip_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_min_horn_M3x6_3"
+      "child": "L6_hip_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L6_yaw_min_horn_M3x6_4",
+      "name": "F_L6_hip_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_yaw_min_horn_M3x6_4"
+      "child": "L6_hip_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L6_hip_clamp_M3x8_-31_-18.3",
+      "name": "F_L6_hip_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_hip_clamp_M3x8_-31_-18.3"
+      "child": "L6_hip_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L6_hip_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L6_hip_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L6_coxa",
-      "child": "L6_hip_clamp_RXM3x5p7_-31_-18.3"
+      "child": "L6_hip_factory_PA2_-8.3_10.25"
     },
     {
-      "name": "F_L6_hip_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L6_hip_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L6_hip_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L6_hip_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L6_hip_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L6_hip_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_hip_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L6_coxa_join_M3x10_-7",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_coxa_join_M3x10_-7"
-    },
-    {
-      "name": "F_L6_coxa_join_RXM3x5p7_-7",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_coxa_join_RXM3x5p7_-7"
-    },
-    {
-      "name": "F_L6_coxa_join_M3x10_7",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_coxa_join_M3x10_7"
-    },
-    {
-      "name": "F_L6_coxa_join_RXM3x5p7_7",
-      "type": "FASTENED",
-      "parent": "L6_coxa",
-      "child": "L6_coxa_join_RXM3x5p7_7"
-    },
-    {
-      "name": "F_L6_femur_side_plate",
+      "name": "F_L6_KNEE_STS3215",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_femur_side_plate"
+      "child": "L6_KNEE_STS3215"
     },
     {
-      "name": "F_L6_S18_KNEE_STS3215",
+      "name": "F_L6_hip_horn_-1",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_S18_KNEE_STS3215"
+      "child": "L6_hip_horn_-1"
     },
     {
-      "name": "F_L6_knee_clamp",
+      "name": "F_L6_hip_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_knee_clamp"
+      "child": "L6_hip_M3x6_-1_1"
     },
     {
-      "name": "F_L6_hip_disc_plus",
+      "name": "F_L6_hip_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_disc_plus"
+      "child": "L6_hip_M3x6_-1_2"
     },
     {
-      "name": "F_L6_hip_disc_min",
+      "name": "F_L6_hip_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_disc_min"
+      "child": "L6_hip_M3x6_-1_3"
     },
     {
-      "name": "F_L6_hip_plus_horn_M3x6_1",
+      "name": "F_L6_hip_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_plus_horn_M3x6_1"
+      "child": "L6_hip_M3x6_-1_4"
     },
     {
-      "name": "F_L6_hip_plus_horn_M3x6_2",
+      "name": "F_L6_hip_horn_1",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_plus_horn_M3x6_2"
+      "child": "L6_hip_horn_1"
     },
     {
-      "name": "F_L6_hip_plus_horn_M3x6_3",
+      "name": "F_L6_hip_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_plus_horn_M3x6_3"
+      "child": "L6_hip_M3x6_1_1"
     },
     {
-      "name": "F_L6_hip_plus_horn_M3x6_4",
+      "name": "F_L6_hip_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_plus_horn_M3x6_4"
+      "child": "L6_hip_M3x6_1_2"
     },
     {
-      "name": "F_L6_hip_min_horn_M3x6_1",
+      "name": "F_L6_hip_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_min_horn_M3x6_1"
+      "child": "L6_hip_M3x6_1_3"
     },
     {
-      "name": "F_L6_hip_min_horn_M3x6_2",
+      "name": "F_L6_hip_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_min_horn_M3x6_2"
+      "child": "L6_hip_M3x6_1_4"
     },
     {
-      "name": "F_L6_hip_min_horn_M3x6_3",
+      "name": "F_L6_knee_factory_PA2_-29_-10.25",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_min_horn_M3x6_3"
+      "child": "L6_knee_factory_PA2_-29_-10.25"
     },
     {
-      "name": "F_L6_hip_min_horn_M3x6_4",
+      "name": "F_L6_knee_factory_PA2_-29_10.25",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_hip_min_horn_M3x6_4"
+      "child": "L6_knee_factory_PA2_-29_10.25"
     },
     {
-      "name": "F_L6_knee_clamp_M3x8_-31_-18.3",
+      "name": "F_L6_knee_factory_PA2_-8.3_-10.25",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_knee_clamp_M3x8_-31_-18.3"
+      "child": "L6_knee_factory_PA2_-8.3_-10.25"
     },
     {
-      "name": "F_L6_knee_clamp_RXM3x5p7_-31_-18.3",
+      "name": "F_L6_knee_factory_PA2_-8.3_10.25",
       "type": "FASTENED",
       "parent": "L6_femur",
-      "child": "L6_knee_clamp_RXM3x5p7_-31_-18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_M3x8_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_M3x8_-31_18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_RXM3x5p7_-31_18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_RXM3x5p7_-31_18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_M3x8_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_M3x8_-20_-18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_RXM3x5p7_-20_-18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_RXM3x5p7_-20_-18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_M3x8_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_M3x8_-20_18.3"
-    },
-    {
-      "name": "F_L6_knee_clamp_RXM3x5p7_-20_18.3",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_knee_clamp_RXM3x5p7_-20_18.3"
-    },
-    {
-      "name": "F_L6_femur_join_M3x10_10",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_femur_join_M3x10_10"
-    },
-    {
-      "name": "F_L6_femur_join_RXM3x5p7_10",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_femur_join_RXM3x5p7_10"
-    },
-    {
-      "name": "F_L6_femur_join_M3x10_-8",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_femur_join_M3x10_-8"
-    },
-    {
-      "name": "F_L6_femur_join_RXM3x5p7_-8",
-      "type": "FASTENED",
-      "parent": "L6_femur",
-      "child": "L6_femur_join_RXM3x5p7_-8"
+      "child": "L6_knee_factory_PA2_-8.3_10.25"
     },
     {
       "name": "F_L6_foot",
@@ -4811,76 +3183,76 @@
       "child": "L6_foot"
     },
     {
-      "name": "F_L6_knee_disc_plus",
+      "name": "F_L6_knee_horn_-1",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_disc_plus"
+      "child": "L6_knee_horn_-1"
     },
     {
-      "name": "F_L6_knee_disc_min",
+      "name": "F_L6_knee_M3x6_-1_1",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_disc_min"
+      "child": "L6_knee_M3x6_-1_1"
     },
     {
-      "name": "F_L6_knee_plus_horn_M3x6_1",
+      "name": "F_L6_knee_M3x6_-1_2",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_plus_horn_M3x6_1"
+      "child": "L6_knee_M3x6_-1_2"
     },
     {
-      "name": "F_L6_knee_plus_horn_M3x6_2",
+      "name": "F_L6_knee_M3x6_-1_3",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_plus_horn_M3x6_2"
+      "child": "L6_knee_M3x6_-1_3"
     },
     {
-      "name": "F_L6_knee_plus_horn_M3x6_3",
+      "name": "F_L6_knee_M3x6_-1_4",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_plus_horn_M3x6_3"
+      "child": "L6_knee_M3x6_-1_4"
     },
     {
-      "name": "F_L6_knee_plus_horn_M3x6_4",
+      "name": "F_L6_knee_horn_1",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_plus_horn_M3x6_4"
+      "child": "L6_knee_horn_1"
     },
     {
-      "name": "F_L6_knee_min_horn_M3x6_1",
+      "name": "F_L6_knee_M3x6_1_1",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_min_horn_M3x6_1"
+      "child": "L6_knee_M3x6_1_1"
     },
     {
-      "name": "F_L6_knee_min_horn_M3x6_2",
+      "name": "F_L6_knee_M3x6_1_2",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_min_horn_M3x6_2"
+      "child": "L6_knee_M3x6_1_2"
     },
     {
-      "name": "F_L6_knee_min_horn_M3x6_3",
+      "name": "F_L6_knee_M3x6_1_3",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_min_horn_M3x6_3"
+      "child": "L6_knee_M3x6_1_3"
     },
     {
-      "name": "F_L6_knee_min_horn_M3x6_4",
+      "name": "F_L6_knee_M3x6_1_4",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_knee_min_horn_M3x6_4"
+      "child": "L6_knee_M3x6_1_4"
     },
     {
-      "name": "F_L6_foot_M3x25",
+      "name": "F_L6_shoe_insert",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_foot_M3x25"
+      "child": "L6_shoe_insert"
     },
     {
-      "name": "F_L6_foot_M3_locknut",
+      "name": "F_L6_shoe_M3x8",
       "type": "FASTENED",
       "parent": "L6_tibia",
-      "child": "L6_foot_M3_locknut"
+      "child": "L6_shoe_M3x8"
     }
   ],
   "revolute": [
@@ -4900,7 +3272,7 @@
         1.0
       ],
       "range_delta_deg": [
-        -64,
+        -60,
         35
       ]
     },
@@ -4910,9 +3282,9 @@
       "parent": "L1_coxa",
       "child": "L1_femur",
       "origin_m": [
-        0.09616652224137047,
-        0.09616652224137046,
-        0.0
+        0.10465180361560904,
+        0.10465180361560902,
+        -0.0069500000000000004
       ],
       "axis": [
         0.7071067811865475,
@@ -4920,8 +3292,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -4930,9 +3302,9 @@
       "parent": "L1_femur",
       "child": "L1_tibia",
       "origin_m": [
-        0.14944151298896358,
-        0.14944151298896355,
-        0.020187885517996617
+        0.15647991951792567,
+        0.15647991951792564,
+        0.01972757117940216
       ],
       "axis": [
         0.7071067811865475,
@@ -4940,8 +3312,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     },
     {
@@ -4970,9 +3342,9 @@
       "parent": "L2_coxa",
       "child": "L2_femur",
       "origin_m": [
-        8.327598234202002e-18,
-        0.136,
-        0.0
+        9.062386313690414e-18,
+        0.14800000000000002,
+        -0.0069500000000000004
       ],
       "axis": [
         1.0,
@@ -4980,8 +3352,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -4990,9 +3362,9 @@
       "parent": "L2_femur",
       "child": "L2_tibia",
       "origin_m": [
-        1.2940978322578814e-17,
-        0.21134221445054735,
-        0.020187885517996617
+        1.355047339857903e-17,
+        0.22129602442130086,
+        0.01972757117940216
       ],
       "axis": [
         1.0,
@@ -5000,8 +3372,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     },
     {
@@ -5021,7 +3393,7 @@
       ],
       "range_delta_deg": [
         -35,
-        64
+        60
       ]
     },
     {
@@ -5030,9 +3402,9 @@
       "parent": "L3_coxa",
       "child": "L3_femur",
       "origin_m": [
-        -0.09616652224137046,
-        0.09616652224137047,
-        0.0
+        -0.10465180361560902,
+        0.10465180361560904,
+        -0.0069500000000000004
       ],
       "axis": [
         0.7071067811865476,
@@ -5040,8 +3412,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -5050,9 +3422,9 @@
       "parent": "L3_femur",
       "child": "L3_tibia",
       "origin_m": [
-        -0.14944151298896355,
-        0.14944151298896358,
-        0.020187885517996617
+        -0.15647991951792564,
+        0.15647991951792567,
+        0.01972757117940216
       ],
       "axis": [
         0.7071067811865476,
@@ -5060,8 +3432,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     },
     {
@@ -5080,7 +3452,7 @@
         1.0
       ],
       "range_delta_deg": [
-        -64,
+        -60,
         35
       ]
     },
@@ -5090,9 +3462,9 @@
       "parent": "L4_coxa",
       "child": "L4_femur",
       "origin_m": [
-        -0.09616652224137048,
-        -0.09616652224137046,
-        0.0
+        -0.10465180361560905,
+        -0.10465180361560902,
+        -0.0069500000000000004
       ],
       "axis": [
         -0.7071067811865475,
@@ -5100,8 +3472,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -5110,9 +3482,9 @@
       "parent": "L4_femur",
       "child": "L4_tibia",
       "origin_m": [
-        -0.1494415129889636,
-        -0.14944151298896355,
-        0.020187885517996617
+        -0.1564799195179257,
+        -0.15647991951792564,
+        0.01972757117940216
       ],
       "axis": [
         -0.7071067811865475,
@@ -5120,8 +3492,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     },
     {
@@ -5150,9 +3522,9 @@
       "parent": "L5_coxa",
       "child": "L5_femur",
       "origin_m": [
-        -2.4982794702606006e-17,
-        -0.136,
-        0.0
+        -2.718715894107124e-17,
+        -0.14800000000000002,
+        -0.0069500000000000004
       ],
       "axis": [
         -1.0,
@@ -5160,8 +3532,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -5170,9 +3542,9 @@
       "parent": "L5_femur",
       "child": "L5_tibia",
       "origin_m": [
-        -3.882293496773644e-17,
-        -0.21134221445054735,
-        0.020187885517996617
+        -4.065142019573709e-17,
+        -0.22129602442130086,
+        0.01972757117940216
       ],
       "axis": [
         -1.0,
@@ -5180,8 +3552,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     },
     {
@@ -5201,7 +3573,7 @@
       ],
       "range_delta_deg": [
         -35,
-        64
+        60
       ]
     },
     {
@@ -5210,9 +3582,9 @@
       "parent": "L6_coxa",
       "child": "L6_femur",
       "origin_m": [
-        0.09616652224137044,
-        -0.09616652224137048,
-        0.0
+        0.10465180361560901,
+        -0.10465180361560905,
+        -0.0069500000000000004
       ],
       "axis": [
         -0.7071067811865477,
@@ -5220,8 +3592,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -35,
-        15
+        -50,
+        25
       ]
     },
     {
@@ -5230,9 +3602,9 @@
       "parent": "L6_femur",
       "child": "L6_tibia",
       "origin_m": [
-        0.14944151298896352,
-        -0.1494415129889636,
-        0.020187885517996617
+        0.15647991951792561,
+        -0.1564799195179257,
+        0.01972757117940216
       ],
       "axis": [
         -0.7071067811865477,
@@ -5240,8 +3612,8 @@
         0.0
       ],
       "range_delta_deg": [
-        -15,
-        80
+        -20,
+        100
       ]
     }
   ]

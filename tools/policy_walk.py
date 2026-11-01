@@ -81,8 +81,9 @@ def fk(q):
     """Foot positions [6,3] in the body frame, with the policy's own leg model (inverse of gait.leg_ik)."""
     q = np.asarray(q).reshape(6, 3)
     az = gait.AZIMUTH + q[:, 0]; a, b = gait.A0 + q[:, 1], gait.B0 + q[:, 2]
-    r = .05 + gait.L1*np.cos(a) + gait.L2*np.cos(a + b)
-    return np.stack([gait.COXA[:, 0] + r*np.cos(az), gait.COXA[:, 1] + r*np.sin(az), gait.L1*np.sin(a) + gait.L2*np.sin(a + b)], -1)
+    r = gait.COXA_LENGTH + gait.L1*np.cos(a) + gait.L2*np.cos(a + b)
+    z = gait.HIP_Z + gait.L1*np.sin(a) + gait.L2*np.sin(a + b)
+    return np.stack([gait.COXA[:, 0] + r*np.cos(az), gait.COXA[:, 1] + r*np.sin(az), z], -1)
 
 
 def ik(feet, low, high): return gait.leg_ik(feet[None, :, 0], feet[None, :, 1], feet[None, :, 2], low=low, high=high)[0]
