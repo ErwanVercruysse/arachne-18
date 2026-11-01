@@ -1,0 +1,75 @@
+{
+ "status": "MEASURED_12V_PENDULUM_FIT",
+ "data": "bam_data/identify/raw: 80 recordings, 2026-09-27, one STS3215 12 V on a pendulum rig through the ESP32-C3 bridge",
+ "rig": {
+  "arm_mass_kg": 0.0524,
+  "length_m": 0.22,
+  "tip_masses_g": [
+   38,
+   173,
+   263,
+   383
+  ],
+  "kp": [
+   4,
+   8,
+   16,
+   32
+  ],
+  "trajectories": [
+   "sin_time_square",
+   "sin_sin",
+   "up_and_down",
+   "lift_and_drop",
+   "nothing"
+  ],
+  "sample_rate_hz": "735-1463",
+  "supply_V": "11.80-11.88"
+ },
+ "fit": {
+  "tool": "bam.fit (better-actuator-models 1.0.2), model m6, CMA-ES, 4 workers x 3000 trials, processed at dt 0.005 s",
+  "training_logs": "kp 4, 8, 32 (60 logs)",
+  "validation_logs": "kp 16 (20 logs), never seen by the fit"
+ },
+ "post_fit": {
+  "max_velocity": "set to the datasheet 4.717 rad/s: the recordings never reach the firmware speed limit, so the fit could not identify it (it drifted to 47.9); score with it set: 6.40 deg vs 6.44 deg",
+  "command_delay": "0.00498 s from the original BAM 7.4 V identification; bam 1.0.2 does not fit it",
+  "q_offset": "set to 0: the fitted -0.0356 rad is the pendulum rig's zero, not a robot joint offset"
+ },
+ "score_mean_abs_position_error_deg": {
+  "datasheet_approx": {
+   "all": 10.69,
+   "kp16_validation": 11.64,
+   "lift_and_drop": 17.8,
+   "sin_time_square": 22.5,
+   "sin_sin": 11.89,
+   "mass_38g": 14.58
+  },
+  "measured": {
+   "all": 6.4,
+   "kp16_validation": 6.74,
+   "lift_and_drop": 8.3,
+   "sin_time_square": 15.0,
+   "sin_sin": 7.8,
+   "mass_38g": 5.1
+  },
+  "measured_robot_file_q_offset_0": {
+   "all": 6.49,
+   "kp16_validation": 6.82
+  }
+ },
+ "rejected": {
+  "all_80_logs_fit": {
+   "score_all_deg": 6.29,
+   "R": 0.72,
+   "kt": 2.46,
+   "why": "stall torque implied ~40 Nm (13x the datasheet 2.9 Nm): the pendulum loads (< 1 Nm) do not constrain R; that model would make simulated servos far too strong under body weight, pushes and falls"
+  }
+ },
+ "implied": {
+  "stall_torque_before_friction_Nm": 2.89,
+  "no_load_speed_rad_s": 4.83
+ },
+ "limits": "One servo, pendulum loads below ~1 Nm: torque near stall, temperature, voltage sag and gearbox backlash are not identified. A heavier-load or stall test would pin kt/R.",
+ "sha256": "430e40734a4ac18b64b14205c2b912f1a0e3106c7f161b6d4b016e3cd77e6215"
+}

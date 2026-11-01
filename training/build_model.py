@@ -21,7 +21,7 @@ def build():
                                       cone='pyramidal', iterations='12')
     root.remove(root.find('sensor'))  # IMU observations are assembled from simulator state.
     default = root.find('default')
-    p = json.loads((ROOT / 'simulation/bam_sts3215_12v_approx_m6.json').read_text())
+    p = json.loads((ROOT / 'simulation/bam_sts3215_12v_measured_m6.json').read_text())
     damping = p['friction_viscous'] + p['kt']**2 / p['R']
     kp = .166 * 32 * p['error_gain_ratio'] * 12 * p['kt'] / p['R']
     torque = .97 * 12 * p['kt'] / p['R']

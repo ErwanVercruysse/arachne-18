@@ -15,7 +15,7 @@ DRY=(); [[ "${1:-}" == "--dry" ]] && DRY=(--dry-run)
 echo "== code naar $PI"
 rsync -az --itemize-changes ${DRY[@]+"${DRY[@]}"} --exclude __pycache__ --exclude '*.pyc' tools/ "$PI:arachne-18/tools/"
 rsync -az --itemize-changes ${DRY[@]+"${DRY[@]}"} --exclude __pycache__ --exclude meshes \
-  simulation/arachne.xml simulation/arachne_fixed.xml simulation/joint_map.json simulation/bam_sts3215_12v_approx_m6.json \
+  simulation/arachne.xml simulation/arachne_fixed.xml simulation/joint_map.json simulation/bam_sts3215_12v_measured_m6.json \
   "$PI:arachne-18/simulation/"
 rsync -az --ignore-existing ${DRY[@]+"${DRY[@]}"} simulation/meshes/ "$PI:arachne-18/simulation/meshes/"
 # the walking policy that tools/policy_walk.py runs live (self-walk mode)

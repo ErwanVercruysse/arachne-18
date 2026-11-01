@@ -4,7 +4,7 @@ MuJoCo (simulation/arachne.xml, free-floating body) with 18 virtual STS3215 serv
 same registers as the real ones (goal 42, speed 46, torque 40, torque limit 48), so the robot
 scripts (stand.py, walk.py, spin.py, dance.py) run unchanged against /sim/state + /sim/cmd.
 
-Servo model = the BAM 'm6' STS3215 fit (simulation/bam_sts3215_12v_approx_m6.json) without the
+Servo model = the BAM 'm6' STS3215 fit (simulation/bam_sts3215_12v_measured_m6.json, measured) without the
 BAM package: speed-limited internal target, P-controller to a PWM duty, DC motor with back-EMF.
 The 12 V supply has an internal resistance and a current limit, so the voltage sags like the lab
 supply does; below the brown-out voltage every servo resets (torque off), as on the real robot.
@@ -22,7 +22,7 @@ from motion import Motion, Kinematics, JOINTS, LEGS, TICK, load_model
 ROOT = Path(__file__).resolve().parents[1]
 SIM = ROOT/'simulation'
 SID = {j['name']: j['servo_id'] for j in json.loads((SIM/'joint_map.json').read_text())['joints']}
-P = json.loads((SIM/'bam_sts3215_12v_approx_m6.json').read_text())
+P = json.loads((SIM/'bam_sts3215_12v_measured_m6.json').read_text())
 KP, ERROR_GAIN, MAX_PWM = 32, .166, .97                                   # STS3215 firmware (BAM)
 HOLD_FRICTION = 1.2           # Nm, gearbox friction with torque off (the robot keeps standing)
 IDLE_CURRENT = .3             # A, Pi 4 + adapters through the buck converter

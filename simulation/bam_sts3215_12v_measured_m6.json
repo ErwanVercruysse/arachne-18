@@ -1,0 +1,22 @@
+{
+  "R": 9.705340895705367,
+  "actuator": "sts3215",
+  "alpha": 4.1060465173641205,
+  "armature": 0.03980696451781135,
+  "command_delay": 0.0049807526194816515,
+  "dtheta_stribeck": 0.015195209273520206,
+  "error_gain_ratio": 2.2743643437336067,
+  "friction_base": 0.006821379409457584,
+  "friction_stribeck": 0.14278906979270656,
+  "friction_viscous": 0.5438496995799853,
+  "kt": 2.4098433581599377,
+  "load_friction_external": 0.0004978964623233457,
+  "load_friction_external_quad": 0.003061671514349405,
+  "load_friction_external_stribeck": 0.09412902860877276,
+  "load_friction_motor": 0.4802411648425527,
+  "load_friction_motor_quad": 0.002300866719027617,
+  "load_friction_motor_stribeck": 0.014510086074524454,
+  "max_velocity": 4.71710608647116,
+  "model": "m6",
+  "q_offset": 0.0
+}

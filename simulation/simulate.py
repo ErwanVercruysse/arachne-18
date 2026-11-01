@@ -22,7 +22,7 @@ class Robot:
         self.data=mujoco.MjData(self.model)
         self.joint_map=json.loads((HERE/'joint_map.json').read_text())['joints']
         self.names=[j['name'] for j in self.joint_map]
-        parameter_file=Path(parameter_file or HERE/'bam_sts3215_12v_approx_m6.json')
+        parameter_file=Path(parameter_file or HERE/'bam_sts3215_12v_measured_m6.json')
         self.bam=load_model(str(parameter_file))
         self.bam.actuator.vin=float(voltage)
         # One controller shares the state model across all 18 motors. Voltage

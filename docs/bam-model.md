@@ -1,4 +1,34 @@
-# STS3215 12 V: provisional BAM M6 model
+# STS3215 12 V: measured BAM M6 model
+
+**The simulator now uses `simulation/bam_sts3215_12v_measured_m6.json`**, fitted to 80 pendulum recordings of one of
+the robot's own 12 V servos (`bam_data/identify/raw`, recorded 2026-09-27 through the ESP32-C3 bridge): a 52 g, 22 cm
+arm with 38 / 173 / 263 / 383 g at the tip, position gains Kp 4 / 8 / 16 / 32, BAM's five test trajectories, about
+1 kHz sampling at 11.8-11.9 V. Details and numbers: [`simulation/bam_12v_measured_report.json`](../simulation/bam_12v_measured_report.json).
+
+| Mean position error when the model replays the recordings | Datasheet approximation | Measured |
+|---|---:|---:|
+| All 80 recordings | 10.7° | **6.5°** |
+| Kp 16, held out of the fit | 11.6° | **6.8°** |
+| Lift and drop | 17.8° | 8.3° |
+| Fast sine sweeps (hardest) | 22.5° | 15.0° |
+| Light 38 g load | 14.6° | 5.1° |
+
+How it was made: `bam.fit` (M6, CMA-ES, 4 workers x 3000 trials) on the Kp 4, 8 and 32 recordings, with Kp 16 kept out
+to check that it predicts runs it never saw. The recordings never reach the servo's speed limit, so `max_velocity`
+was set back to the datasheet 4.72 rad/s; `command_delay` (5 ms) comes from the original BAM identification, which
+BAM 1.0.2 does not fit; `q_offset` is the rig's zero and is 0 for the robot. Implied stall torque before friction is
+2.9 Nm and no-load speed 4.8 rad/s, both in line with the datasheet.
+
+A fit on all 80 recordings scored slightly better (6.3°) but was rejected: it implied a ~40 Nm stall torque, because
+pendulum loads below ~1 Nm do not pin down the winding resistance. Torque near stall, heat, voltage sag and gear
+backlash are still not identified; a heavier-load or stall test would complete the model.
+
+Refit after new recordings: `python simulation/bam_identify.py --fit-only` (it now also removes the hand-written
+note fields that some recordings carry and BAM cannot batch).
+
+## Earlier: provisional datasheet approximation
+
+`simulation/bam_sts3215_12v_approx_m6.json` remains available (`--parameters` / `actuator_params=`) for comparison.
 
 The upstream BAM project provides an identified **STS3215 7.4 V** model. This project uses a separately labeled **12 V approximation**, authorized for this prototype. It is not an identification of the user's 12 V hardware.
 
