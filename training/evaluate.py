@@ -10,9 +10,11 @@ from gait import ROOT, INITIAL, target, rotate, feet, load, frequency
 
 def evaluate(params, command, seconds=10., backend='bam', video=None, width=960, height=640,
              schedule=None, friction=None, payload=0., imu_noise=0., seed=23, terrain=None, video_label=None,
-             controller=None):
+             controller=None, pushes=None, voltage=12., extra_delay=0., actuator_params=None):
     """controller: optional factory (model, data, rng) -> act(data, command, time) returning the filtered
-    joint targets [18]; it replaces the policy, filter and slew below (e.g. tools/terrain_gait.py)."""
+    joint targets [18]; it replaces the policy, filter and slew below (e.g. tools/terrain_gait.py).
+    pushes: [(start_s, duration_s, fx_N, fy_N)] horizontal shoves on the body (world frame).
+    voltage: servo supply (V); extra_delay: added command latency (s); actuator_params: BAM parameter file."""
     terrain_info=None
     if terrain is not None and backend!='bam':
         raise ValueError('Terrain requires the original MuJoCo/BAM backend')
@@ -23,7 +25,8 @@ def evaluate(params, command, seconds=10., backend='bam', video=None, width=960,
         if terrain is not None:
             from terrain import make_model, height_below
             scene,terrain_info=make_model(terrain,seed)
-        robot=Robot(model=scene); m,d=robot.model,robot.data
+        robot=Robot(model=scene,voltage=voltage,parameter_file=actuator_params); m,d=robot.model,robot.data
+        robot.delay+=extra_delay
     else:
         m=mujoco.MjModel.from_xml_path(str(ROOT/'training/arachne_metal.xml'))
         d=mujoco.MjData(m); mujoco.mj_resetDataKeyframe(m,d,0)
@@ -98,6 +101,10 @@ def evaluate(params, command, seconds=10., backend='bam', video=None, width=960,
                 desired=target(p,phase,cmd,obs_q,i*dt,gyro=gyro)
                 filtered=np.clip(sm+.35*(desired-sm),sm-.047171,sm+.047171)
             # Same one-control-step delay/filter as training; BAM adds its real delay.
+            if pushes:
+                body_id=m.body('BODY').id; d.xfrc_applied[body_id,:3]=0
+                for start,length,fx,fy in pushes:
+                    if start<=i*dt<start+length:d.xfrc_applied[body_id,:2]+=(fx,fy)
             for _ in range(substeps):
                 if robot:robot.step(sm[0])
                 else:d.ctrl[:]=sm[0];mujoco.mj_step(m,d)

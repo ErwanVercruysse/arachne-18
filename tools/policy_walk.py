@@ -146,11 +146,11 @@ def write_status(**k):
     except OSError: pass
 
 
-def dry_run(J, params, hz):
+def dry_run(J, params, hz, gains=None):
     """Everything except the servos: stand pose -> policy stance -> 12 s of commands -> back, on a level IMU."""
-    q0 = J.stand_q(); q_n = TerrainGait(params, *J.policy).neutral()
+    q0 = J.stand_q(); q_n = TerrainGait(params, *J.policy, **(gains or {})).neutral()
     frames = [q0] + list(restance(q0, q_n, *J.real, hz, False))
-    g = TerrainGait(params, *J.policy); g.reset(q_now=frames[-1]); w0 = len(frames)
+    g = TerrainGait(params, *J.policy, **(gains or {})); g.reset(q_now=frames[-1]); w0 = len(frames)
     sched = [(0, [.10, 0, 0]), (3, [0, .10, 0]), (5, [-.08, 0, 0]), (7, [0, 0, .3]), (9, [.14, 0, 0]), (11, [0, 0, 0])]
     for k in range(int(12*hz)):
         c = next(v for t0, v in reversed(sched) if k/hz >= t0)
@@ -182,7 +182,8 @@ def main():
     ap.add_argument('--no-imu', action='store_true', help='no IMU: open loop (and no adaptation)')
     a = ap.parse_args()
     J = Joints(); params = gait.load(a.policy); hz = a.hz; dt = 1/hz
-    if a.dry: return dry_run(J, params, hz)
+    gains = json.loads(a.policy.read_text()).get('adaptation', {})    # trained adaptation settings (train_terrain.py)
+    if a.dry: return dry_run(J, params, hz, gains)
 
     s = get('/sense')
     if s['servos'] < 18: raise SystemExit(f"maar {s['servos']} servo's gevonden, ik verwacht er 18")
@@ -195,7 +196,7 @@ def main():
     cmds = None
     if not a.drive: cmds = Commands(a.udp); cmds.start()
 
-    g = TerrainGait(params, *J.policy, adapt=not (a.no_adapt or a.no_imu))
+    g = TerrainGait(params, *J.policy, adapt=not (a.no_adapt or a.no_imu), **gains)
     q_neutral = g.neutral()
     q_start = J.q_of(s['ticks'])
     send = lambda q: post('/sync', {'ticks': J.ticks_of(q)})

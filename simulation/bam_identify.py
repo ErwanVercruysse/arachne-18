@@ -301,6 +301,12 @@ def main():
 
     for f in processed.glob('*.json'): f.unlink()
     bam('process', '--raw', str(raw), '--logdir', str(processed), '--dt', '0.005')
+    # bam.fit batches every metadata field of the first log: drop fields only some logs have
+    # (hand-written notes such as mass_note, servo_flags on older recordings).
+    logs = {f: json.loads(f.read_text()) for f in processed.glob('*.json')}
+    shared = set.intersection(*(set(d) for d in logs.values())) if logs else set()
+    for f, d in logs.items():
+        if set(d) != shared: f.write_text(json.dumps({k: v for k, v in d.items() if k in shared}))
     output = args.output.with_name('dry_run_m6.json') if args.dry_run else args.output
     bam('fit', '--actuator', 'sts3215', '--model', 'm6', '--logdir', str(processed), '--method', 'cmaes',
         '--trials', str(100 if args.dry_run else args.trials), '--workers', str(os.cpu_count() or 1), '--output', str(output))
