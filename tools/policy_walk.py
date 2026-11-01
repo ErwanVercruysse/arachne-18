@@ -170,7 +170,8 @@ def dry_run(J, params, hz, gains=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--policy', type=Path, default=ROOT/'training/policies/omni.json')
+    ap.add_argument('--policy', type=Path, default=ROOT/'training/policies/terrain_dr.json',
+                    help='default: trained on randomized rough terrain with pushes (train_terrain.py); omni.json = the original')
     ap.add_argument('--hz', type=float, default=50)
     ap.add_argument('--dry', action='store_true', help='plan and check, no motion')
     ap.add_argument('--drive', nargs=3, type=float, metavar=('VX', 'VY', 'WZ'), help='fixed command instead of UDP')

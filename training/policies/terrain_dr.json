@@ -1,0 +1,71 @@
+{
+  "algorithm": "CEM, mixed terrain + domain randomization + pushes (training/train_terrain.py)",
+  "parameter_names": [
+    "frequency_hz",
+    "stance_fraction",
+    "lift_m",
+    "stride_gain",
+    "yaw_gain",
+    "height_offset_m",
+    "radial_offset_m",
+    "tilt_feedback",
+    "phase_front",
+    "phase_middle",
+    "phase_rear",
+    "lateral_gain"
+  ],
+  "parameters": [
+    2.0410281920576967,
+    0.5219934063373508,
+    0.014341672625121208,
+    0.8671560428307463,
+    0.9145192650381837,
+    0.0037445472397165513,
+    -0.007743159759640816,
+    0.015809844868115232,
+    -0.00942435893293749,
+    0.0016921256728894953,
+    -0.005062499831399903,
+    0.9861965639533128
+  ],
+  "adaptation": {
+    "level": 2.46119972020948,
+    "level_dead": 0.9671275323878683,
+    "rough_lo": 0.04902102208502067,
+    "rough_hi": 0.16833820634882735,
+    "lift_max": 1.9084632184319856
+  },
+  "actuator": "simulation/bam_sts3215_12v_measured_m6.json (measured, default)",
+  "generations": 20,
+  "population": 16,
+  "episodes_per_generation": 4,
+  "start": "training/policies/omni.json",
+  "robot": "v4 (Tom Michiels, merged)",
+  "held_out": {
+    "episodes": 24,
+    "seconds": 8,
+    "seed": 999,
+    "start_omni": {
+      "mean": 2.481,
+      "falls": 0
+    },
+    "trained": {
+      "mean": 2.806,
+      "falls": 0
+    }
+  },
+  "curriculum_gates": {
+    "flat": {
+      "start": "3/13",
+      "trained": "10/13",
+      "tilt_rms_deg": {
+        "start": 0.52,
+        "trained": 0.27
+      }
+    },
+    "steps_8mm": {
+      "start": "10/10",
+      "trained": "10/10"
+    }
+  }
+}

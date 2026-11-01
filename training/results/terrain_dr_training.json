@@ -1,0 +1,322 @@
+{
+ "history": [
+  {
+   "generation": 0,
+   "seconds": 68.1,
+   "incumbent": 1.7459890257380806,
+   "best": 2.1862289600877363,
+   "median": 1.7776315733428203,
+   "incumbent_falls": 0,
+   "terrains": [
+    "bumps",
+    "cobbles",
+    "slope",
+    "cobbles"
+   ]
+  },
+  {
+   "generation": 1,
+   "seconds": 56.1,
+   "incumbent": 2.3100375355168015,
+   "best": 2.39311668696354,
+   "median": 2.0224777860902883,
+   "incumbent_falls": 0,
+   "terrains": [
+    "slope",
+    "slope",
+    "bumps",
+    "cobbles"
+   ]
+  },
+  {
+   "generation": 2,
+   "seconds": 56.0,
+   "incumbent": 2.1663138991726423,
+   "best": 2.425568201800606,
+   "median": 2.113821015019789,
+   "incumbent_falls": 0,
+   "terrains": [
+    "terraces",
+    "mixed",
+    "terraces",
+    "slope"
+   ]
+  },
+  {
+   "generation": 3,
+   "seconds": 63.0,
+   "incumbent": 0.7858751240383238,
+   "best": 1.2962260579668479,
+   "median": 1.0029200657852855,
+   "incumbent_falls": 0,
+   "terrains": [
+    "slope",
+    "cobbles",
+    "flat",
+    "cobbles"
+   ]
+  },
+  {
+   "generation": 4,
+   "seconds": 51.7,
+   "incumbent": 1.1478548673301685,
+   "best": 1.5189448526497231,
+   "median": 1.1832645518677332,
+   "incumbent_falls": 0,
+   "terrains": [
+    "mixed",
+    "bumps",
+    "flat",
+    "terraces"
+   ]
+  },
+  {
+   "generation": 5,
+   "seconds": 54.1,
+   "incumbent": 1.1486922422367198,
+   "best": 1.3138252290527554,
+   "median": 1.050264724853837,
+   "incumbent_falls": 0,
+   "terrains": [
+    "mixed",
+    "flat",
+    "slope",
+    "slope"
+   ]
+  },
+  {
+   "generation": 6,
+   "seconds": 67.2,
+   "incumbent": 2.2009559731271575,
+   "best": 2.2009559731271575,
+   "median": 1.940835174515564,
+   "incumbent_falls": 0,
+   "terrains": [
+    "flat",
+    "terraces",
+    "bumps",
+    "cobbles"
+   ]
+  },
+  {
+   "generation": 7,
+   "seconds": 61.9,
+   "incumbent": 0.7618337356636331,
+   "best": 0.9322303689925566,
+   "median": 0.7451803496445317,
+   "incumbent_falls": 0,
+   "terrains": [
+    "terraces",
+    "bumps",
+    "flat",
+    "cobbles"
+   ]
+  },
+  {
+   "generation": 8,
+   "seconds": 55.9,
+   "incumbent": 2.0274307126640565,
+   "best": 2.2205167094526077,
+   "median": 2.1032849907502804,
+   "incumbent_falls": 0,
+   "terrains": [
+    "slope",
+    "mixed",
+    "bumps",
+    "slope"
+   ]
+  },
+  {
+   "generation": 9,
+   "seconds": 60.6,
+   "incumbent": 0.11473373370891382,
+   "best": 1.2672394529866535,
+   "median": 0.2726949545311859,
+   "incumbent_falls": 0,
+   "terrains": [
+    "bumps",
+    "bumps",
+    "cobbles",
+    "flat"
+   ]
+  },
+  {
+   "generation": 10,
+   "seconds": 51.6,
+   "incumbent": 1.1540738535375847,
+   "best": 1.3035598036632667,
+   "median": 1.177973389461941,
+   "incumbent_falls": 0,
+   "terrains": [
+    "slope",
+    "bumps",
+    "flat",
+    "terraces"
+   ]
+  },
+  {
+   "generation": 11,
+   "seconds": 54.5,
+   "incumbent": 1.5387050947231202,
+   "best": 1.606758515531673,
+   "median": 1.5330008547053382,
+   "incumbent_falls": 0,
+   "terrains": [
+    "flat",
+    "mixed",
+    "bumps",
+    "terraces"
+   ]
+  },
+  {
+   "generation": 12,
+   "seconds": 57.4,
+   "incumbent": 0.3673614131588122,
+   "best": 0.6560050863572496,
+   "median": 0.3977812148862916,
+   "incumbent_falls": 0,
+   "terrains": [
+    "slope",
+    "cobbles",
+    "terraces",
+    "bumps"
+   ]
+  },
+  {
+   "generation": 13,
+   "seconds": 54.0,
+   "incumbent": 3.345080358074278,
+   "best": 3.489580818418116,
+   "median": 3.329677654397834,
+   "incumbent_falls": 0,
+   "terrains": [
+    "cobbles",
+    "terraces",
+    "bumps",
+    "flat"
+   ]
+  },
+  {
+   "generation": 14,
+   "seconds": 50.5,
+   "incumbent": 1.9262513803185575,
+   "best": 2.179868220602857,
+   "median": 1.9764265330600286,
+   "incumbent_falls": 0,
+   "terrains": [
+    "mixed",
+    "terraces",
+    "bumps",
+    "mixed"
+   ]
+  },
+  {
+   "generation": 15,
+   "seconds": 51.5,
+   "incumbent": 1.861881548777413,
+   "best": 2.054875298642422,
+   "median": 1.8350220745036523,
+   "incumbent_falls": 0,
+   "terrains": [
+    "bumps",
+    "terraces",
+    "terraces",
+    "terraces"
+   ]
+  },
+  {
+   "generation": 16,
+   "seconds": 47.8,
+   "incumbent": 2.934605315535088,
+   "best": 3.6411661420512234,
+   "median": 3.1465465736243887,
+   "incumbent_falls": 0,
+   "terrains": [
+    "mixed",
+    "slope",
+    "bumps",
+    "flat"
+   ]
+  },
+  {
+   "generation": 17,
+   "seconds": 51.5,
+   "incumbent": 2.330343520682214,
+   "best": 2.4817470882594694,
+   "median": 2.4117639882340867,
+   "incumbent_falls": 0,
+   "terrains": [
+    "bumps",
+    "bumps",
+    "bumps",
+    "flat"
+   ]
+  },
+  {
+   "generation": 18,
+   "seconds": 52.8,
+   "incumbent": 1.265864353691686,
+   "best": 1.629535706504549,
+   "median": 1.3474172450343742,
+   "incumbent_falls": 0,
+   "terrains": [
+    "mixed",
+    "bumps",
+    "bumps",
+    "slope"
+   ]
+  },
+  {
+   "generation": 19,
+   "seconds": 58.8,
+   "incumbent": 1.602919761988865,
+   "best": 1.6618277769945191,
+   "median": 1.4664308791473928,
+   "incumbent_falls": 0,
+   "terrains": [
+    "terraces",
+    "terraces",
+    "mixed",
+    "cobbles"
+   ]
+  }
+ ],
+ "final_mean": [
+  2.0410281920576967,
+  0.5219934063373508,
+  0.014341672625121208,
+  0.8671560428307463,
+  0.9145192650381837,
+  0.0037445472397165513,
+  -0.007743159759640816,
+  0.015809844868115232,
+  -0.00942435893293749,
+  0.0016921256728894953,
+  -0.005062499831399903,
+  0.9861965639533128,
+  2.46119972020948,
+  0.9671275323878683,
+  0.04902102208502067,
+  0.11931718426380666,
+  1.9084632184319856
+ ],
+ "final_std": [
+  0.027999999999999997,
+  0.0022012241058686002,
+  0.00016,
+  0.009697338146447382,
+  0.018449801931189374,
+  0.00013000000000000002,
+  0.00016,
+  0.008,
+  0.001775191194364382,
+  0.0009,
+  0.0009,
+  0.006999999999999999,
+  0.06,
+  0.017,
+  0.0013000000000000002,
+  0.004723162867511701,
+  0.016005737193774457
+ ]
+}

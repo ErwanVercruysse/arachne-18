@@ -13,6 +13,40 @@ so stand/lie/dance keep working.
 
 Everything below is measured in simulation. **None of it has been tried on the hardware yet.**
 
+## Latest: v4 robot, measured servos, trained on randomized rough terrain
+
+Since the first version three things changed, all in simulation:
+
+- **v4 robot**: Tom Michiels' v4 parts (one-piece links, 62 mm coxa, TPU shoe) and their MuJoCo model are merged;
+  the policy's leg geometry comes from `simulation/joint_map.json`.
+- **Measured servo model**: `simulation/bam_sts3215_12v_measured_m6.json`, fitted to the pendulum recordings of one
+  of the robot's own servos (6.8° error on held-out recordings against 11.6° for the datasheet model; see
+  [the BAM notes](bam-model.md)). It is now the default everywhere.
+- **Trained controller** `training/policies/terrain_dr.json`, now the default for Zelf lopen: CEM
+  ([`training/train_terrain.py`](../training/train_terrain.py)), 20 generations x 16 candidates x 4 new episodes,
+  over the 12 policy parameters and the 5 adaptation settings. Every episode draws a terrain (flat, bumps 3-9 mm,
+  slopes 2-8°, steps 4-12 mm, cobblestones, mixed), a command, friction 0.5-1.2, 0-300 g payload, 11.1-12.6 V,
+  0-15 ms extra latency, a new IMU gyro bias and 1-3 shoves of 8-25 N (the feet's friction holds about 18 N).
+
+| On the v4 robot with the measured servos | Starting controller | Trained |
+|---|---:|---:|
+| 24 held-out randomized episodes with shoves: mean score | 2.48 | **2.81** (better on every terrain type) |
+| Falls in those 24 episodes | 0 | 0 |
+| Flat-ground curriculum gates (strict smoothness, 0.5° tilt RMS) | 3/13 | **10/13** |
+| Body tilt RMS on flat ground | 0.52° | **0.27°** |
+| 8 mm steps, curriculum gates | 10/10 | 10/10 |
+
+It mostly calmed the gait down: a slightly slower step rhythm (2.04 instead of 2.17 Hz), slightly shorter
+strides and less tilt feedback; the adaptation settings stayed close to the hand-picked ones. Raw data:
+[`results/terrain_dr_training.json`](../training/results/terrain_dr_training.json),
+[`results/terrain_dr_assessment.json`](../training/results/terrain_dr_assessment.json). `--policy
+training/policies/omni.json` runs the original.
+
+**Calibration check needed on a v4 robot.** `calibration/twin_map.json` was made with the pre-v4 model. In v4 the
+neutral hip is 20° (was 15°) and the straight-leg knee angle differs by about 8°, so the live twin and the
+self-walking poses can be off by that much until the zeros are re-checked on the robot. It is left unchanged here
+because changing it would change how the real robot stands.
+
 ## What the controller adds to the policy
 
 The policy already reads the IMU (gravity and gyro). The adaptations use only the IMU too, the same observation
@@ -30,7 +64,7 @@ With adaptation off (`--no-adapt`) the output is exactly the trained policy (che
 Foot contact sensing was tried and left out: in the BAM servo model the gearbox friction carries most of the weight,
 so neither the load register nor the position error separates stance from swing reliably.
 
-## Results in simulation
+## Results in simulation (first version: pre-v4 robot, datasheet servo model)
 
 [`training/terrain_adapt.py`](../training/terrain_adapt.py), reference MuJoCo + full BAM, the curriculum's own gates,
 two terrain seeds × ten held-out directions per stage. The adaptive controller gets a realistic MPU6050 (accelerometer
